@@ -13,18 +13,22 @@
   </div>
 </div>
 
-This site is a practical beginner-friendly guide for:
-
-- `Sonarr`
-- `Radarr`
-- `Lidarr`
-- `SABnzbd`
-- `Jackett`
-- `Plex`
-- German-friendly indexer strategy
-- language-aware automation
-- size control
-- safe downgrade workflows
+<div class="scope-card">
+  <h3>✨ What you get in this guide</h3>
+  <p>This site is a practical beginner-friendly guide for the full stack and the rules around it:</p>
+  <div class="scope-tags">
+    <span><code>Sonarr</code></span>
+    <span><code>Radarr</code></span>
+    <span><code>Lidarr</code></span>
+    <span><code>SABnzbd</code></span>
+    <span><code>Jackett</code></span>
+    <span><code>Plex</code></span>
+    <span>German-friendly indexer strategy</span>
+    <span>language-aware automation</span>
+    <span>size control</span>
+    <span>safe downgrade workflows</span>
+  </div>
+</div>
 
 <div class="card-grid">
   <div class="guide-card">
