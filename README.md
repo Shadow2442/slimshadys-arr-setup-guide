@@ -14,6 +14,45 @@ It focuses on:
 
 This guide is based on a real-world setup that was tuned and tested live, not just copied from disconnected wiki pages.
 
+## Background and Personal Experience
+
+This guide was not written from the perspective of a full-time software developer trying to impress other developers.
+
+It was built from the perspective of someone who:
+
+- has technical experience
+- works mainly in security
+- is comfortable troubleshooting systems
+- but does not live inside `Sonarr`, `Radarr`, `SABnzbd`, and indexer APIs every day
+
+That matters, because a lot of ARR documentation assumes:
+
+- you already know the terminology
+- you already understand the side effects of each setting
+- and you enjoy reading four different wiki pages just to understand one checkbox
+
+This guide tries to do the opposite.
+
+It is meant to help someone who is technical, practical, and willing to learn, but who does not want to reverse-engineer the whole ARR ecosystem from scratch.
+
+It also reflects a real setup journey that was improved step by step with the support of `OpenAI Codex`:
+
+- testing indexers
+- tuning priorities
+- fixing import problems
+- building language preference logic
+- tightening quality and size settings
+- and designing safe downgrade workflows without wrecking the library
+
+So if you are not a developer by default, that is completely fine.
+
+You do not need to be one to build a very strong ARR setup.
+You just need:
+
+- a practical guide
+- a bit of patience
+- and, if you want, a tool like `Codex` to help implement and verify the details
+
 ## Quick Start
 
 If you only want the short version:
@@ -476,3 +515,27 @@ That is slower than random checkbox enthusiasm, but much less likely to end with
 - [PCJones Usenet Guide](https://github.com/PCJones/usenet-guide#2-usenet-indexer)
 - Servarr docs for `Sonarr`, `Radarr`, and indexer priorities
 - real-world ARR tuning and live testing
+
+## More Sources and Inspiration
+
+This guide was shaped by a mix of:
+
+- official `Servarr` documentation
+- public `Newznab` and indexer capability endpoints
+- public Usenet and indexer discussions
+- hands-on testing inside a real `Sonarr` / `Radarr` / `SABnzbd` setup
+- practical debugging of quota limits, failed grabs, language mismatches, and import problems
+
+In other words:
+
+- part documentation
+- part experimentation
+- part cleanup after ARR tools did something “technically logical” and practically ridiculous
+
+The personal experience behind this guide matters a lot:
+
+- it was not assembled as a theoretical best-practices checklist
+- it was built while solving real issues in a live setup
+- and it was refined with the help of `OpenAI Codex`, which was used to inspect, verify, compare, implement, and explain configuration changes step by step
+
+That combination is exactly why this guide is more operational than most generic setup guides.

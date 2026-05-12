@@ -2,6 +2,8 @@
 
 Use this as the short, practical checklist after installation.
 
+This checklist is meant for people who are willing to configure things properly, but who do not want to become ARR archaeologists in the process.
+
 ## 1. Core Apps
 
 - Install `SABnzbd`
@@ -161,3 +163,15 @@ Useful prompts include:
 - create a safe downgrade workflow
 
 This guide can be used directly as the configuration reference for Codex.
+
+## 13. Where This Checklist Came From
+
+This checklist is based on:
+
+- official Servarr behavior
+- practical indexer testing
+- quota-limit debugging
+- language scoring work
+- real import and downgrade troubleshooting
+
+It was built from actual setup experience, with the support of `OpenAI Codex`, not just copied from generic default settings.
