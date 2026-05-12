@@ -56,6 +56,18 @@ The lists you showed break down nicely into movie and TV lanes.
 
 The descriptions below are based on the current list names and intended use. The exact filter logic still lives inside `MDBList`, so if you later tighten or broaden a filter there, the list behavior changes without you having to rewrite ARR itself.
 
+## Quick List Overview
+
+| List | ARR App | What it is for | What happens when it updates |
+| --- | --- | --- | --- |
+| `Auto Cinema Anticipated 2026+` | `Radarr` | upcoming cinema-focused movies from `2026` onward | new movie is added to `Radarr`, monitored, then handled by your normal movie rules |
+| `Auto Cinema + Anime Best Rated 2025+` | `Radarr` | highly rated modern movies including anime films | new movie is imported, then your language, quality, and size rules decide what gets grabbed |
+| `Auto Anime Best Rated 2020+ (Track)` | `Radarr` | anime-heavy movie discovery from `2020` onward | new title enters `Radarr` and follows your anime-friendly movie logic |
+| `Auto Streaming Best Rated 2025+` | `Radarr` | strong streaming-first movie discovery | new title lands in `Radarr` quickly and follows the compact `1080p` movie setup |
+| `Auto Series Anticipated 2026+` | `Sonarr` | anticipated new shows from `2026` onward | new series is added to `Sonarr` and monitored under your TV rules |
+| `Auto Series Best Rated 2025+` | `Sonarr` | highly rated newer series | new series enters `Sonarr` and follows your `720p`-first series setup |
+| `Auto Upcoming Anime 2026+` | `Sonarr` | upcoming anime series | new anime series is added to `Sonarr` and handled by your anime/series rules |
+
 ### Radarr Lists
 
 #### Auto Cinema Anticipated 2026+
