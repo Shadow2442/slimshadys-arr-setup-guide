@@ -1,7 +1,7 @@
 ![SlimShady's ARR Setup Guide banner](docs/assets/arr-banner.svg)
 
 <div class="hero-intro">
-  <h2>What this guide is about</h2>
+  <h2>🧭 What this guide is about</h2>
   <p>This site is a practical beginner-friendly walkthrough for building a mostly automated media setup with <code>Sonarr</code>, <code>Radarr</code>, <code>Lidarr</code>, <code>SABnzbd</code>, <code>Jackett</code>, and <code>Plex</code>.</p>
   <p>It focuses on German-friendly content, smarter quality rules, safer quotas, cleaner storage, and the kind of real-world fixes you only learn after ARR tools do something deeply confident and slightly cursed.</p>
   <div class="quick-links">
@@ -28,20 +28,20 @@ This site is a practical beginner-friendly guide for:
 
 <div class="card-grid">
   <div class="guide-card">
-    <h3>German-friendly by design</h3>
+    <h3>🇩🇪 German-friendly by design</h3>
     <p>Indexers, custom formats, and import-list workflows tuned for stronger German coverage without burning fragile quotas.</p>
   </div>
   <div class="guide-card">
-    <h3>Storage-aware quality rules</h3>
+    <h3>💾 Storage-aware quality rules</h3>
     <p>Compact <code>1080p</code> movies, <code>720p</code>-first series, and downgrade workflows that actually save space instead of creating comedy.</p>
   </div>
   <div class="guide-card">
-    <h3>Beginner-safe automation</h3>
+    <h3>🛠️ Beginner-safe automation</h3>
     <p>Step-by-step setup guidance for people who are technical, lightly technical, or wisely willing to let Codex do the fiddly parts.</p>
   </div>
 </div>
 
-## Download the Apps
+## 📦 Download the Apps
 
 These are the main applications used in this setup:
 
@@ -63,7 +63,7 @@ Optional but useful:
 | `Jellyseerr` | Requests and discovery frontend | [GitHub](https://github.com/Fallenbagel/jellyseerr) |
 | `Prowlarr` | Central ARR indexer management | [prowlarr.com](https://prowlarr.com/) |
 
-## The Setup at a Glance
+## 🔄 The Setup at a Glance
 
 ```mermaid
 flowchart LR
@@ -87,7 +87,7 @@ flowchart LR
     class E,F,G library
 ```
 
-## What the Full Stack Does
+## 🧩 What the Full Stack Does
 
 This guide covers more than just choosing a few quality settings.
 
@@ -101,7 +101,7 @@ The real stack works like this:
 
 When everything is configured properly, it becomes a mostly automated media pipeline instead of a pile of separate tools.
 
-## Who This Is For
+## 👥 Who This Is For
 
 This guide is especially useful if:
 
@@ -120,7 +120,7 @@ It comes from real setup work done by someone with technical experience and a pr
 
 It was also built and refined with the support of `OpenAI Codex`, which helped inspect the live configuration, test ideas, compare indexers, and apply changes safely.
 
-## Start Here
+## 🚀 Start Here
 
 - [Full Guide on GitHub](https://github.com/Shadow2442/slimshadys-arr-setup-guide#readme)
 - [Setup Checklist](/slimshadys-arr-setup-guide/docs/setup-checklist.html)
@@ -128,7 +128,7 @@ It was also built and refined with the support of `OpenAI Codex`, which helped i
 - [Indexers and German Content Strategy](/slimshadys-arr-setup-guide/docs/indexers-and-german-content.html)
 - [Quality, Sizes, and Downgrades](/slimshadys-arr-setup-guide/docs/quality-sizing-and-downgrades.html)
 
-## MDBList and Auto-Import
+## 📚 MDBList and Auto-Import
 
 `MDBList` is one of the easiest ways to build automated movie and TV discovery without maintaining giant manual watchlists by hand.
 
@@ -141,7 +141,7 @@ In this setup, it works like this:
 
 That makes `MDBList` the front door of the automation chain, while ARR still controls the download rules and final library behavior.
 
-## What This Guide Tries to Do
+## 🎯 What This Guide Tries to Do
 
 Most ARR guides explain features.
 
@@ -153,7 +153,7 @@ This one tries to answer:
 - how do you keep German content quality high without burning through quotas
 - how do you save disk space without downloading worse files by accident
 
-## Want Help Applying It?
+## 🤖 Want Help Applying It?
 
 If you do not want to implement everything manually, you can use `OpenAI Codex` as a practical ARR setup copilot.
 
@@ -176,7 +176,7 @@ This guide works well as input for Codex, for example if you want help to:
 
 So yes, this guide is not only meant to be read by humans. It can also be handed to `Codex` so it can help implement the configuration in your own setup.
 
-## Short Version
+## ⚡ Short Version
 
 - use broad indexers for daily work
 - preserve German specialist sources for when they matter

@@ -4,14 +4,14 @@ This site is aimed at beginners who want a practical, German-friendly `Sonarr` +
 
 <p class="section-intro">Think of this as the smaller orientation page. The main homepage is the polished front door, while this page is the quick map for readers who want the supporting docs directly.</p>
 
-## Start Here
+## 🚀 Start Here
 
 - [Full Guide on GitHub](https://github.com/Shadow2442/slimshadys-arr-setup-guide#readme)
 - [Setup Checklist](/slimshadys-arr-setup-guide/docs/setup-checklist.html)
 - [Indexers and German Content Strategy](/slimshadys-arr-setup-guide/docs/indexers-and-german-content.html)
 - [Quality, Sizes, and Downgrades](/slimshadys-arr-setup-guide/docs/quality-sizing-and-downgrades.html)
 
-## What This Guide Covers
+## 🧭 What This Guide Covers
 
 - German-friendly indexer strategy
 - sane priority and quota handling
@@ -21,14 +21,14 @@ This site is aimed at beginners who want a practical, German-friendly `Sonarr` +
 - safe downgrade workflows
 - practical lessons from real testing
 
-## Recommended Reading Order
+## 📖 Recommended Reading Order
 
 1. [Setup Checklist](/slimshadys-arr-setup-guide/docs/setup-checklist.html)
 2. [Indexers and German Content Strategy](/slimshadys-arr-setup-guide/docs/indexers-and-german-content.html)
 3. [Quality, Sizes, and Downgrades](/slimshadys-arr-setup-guide/docs/quality-sizing-and-downgrades.html)
 4. [Full Guide on GitHub](https://github.com/Shadow2442/slimshadys-arr-setup-guide#readme)
 
-## Quick Philosophy
+## ⚡ Quick Philosophy
 
 - Use broad indexers for daily work
 - Preserve German-specialist sources for when they really matter
