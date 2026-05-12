@@ -1,4 +1,4 @@
-# ARR Setup Guide for German-Friendly Automation
+# SlimShady's ARR Setup Guide
 
 This is a practical beginner guide for setting up `Sonarr`, `Radarr`, and `SABnzbd` for a German-friendly media workflow without letting the system turn into a chaos goblin.
 

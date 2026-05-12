@@ -1,4 +1,4 @@
-# ARR Guide Home
+# SlimShady's ARR Setup Guide
 
 Welcome to the GitHub Pages version of this ARR setup guide.
 
@@ -35,4 +35,3 @@ This site is aimed at beginners who want a practical, German-friendly `Sonarr` +
 - Treat `720p downgrade` as a controlled workflow, not a magic button
 
 If a setting sounds too clever, test it on a few titles before unleashing it on your whole library. Your hard drive will thank you.
-

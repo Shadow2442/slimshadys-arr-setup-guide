@@ -1,4 +1,4 @@
-# ARR Setup Guide
+# SlimShady's ARR Setup Guide
 
 Welcome to the GitHub Pages version of this ARR setup guide.
 
