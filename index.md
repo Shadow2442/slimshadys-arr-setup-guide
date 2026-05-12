@@ -1,3 +1,5 @@
+![SlimShady's ARR Setup Guide banner](docs/assets/arr-banner.svg)
+
 Welcome to the GitHub Pages version of this ARR setup guide.
 
 This site is a practical beginner-friendly guide for:
@@ -11,6 +13,38 @@ This site is a practical beginner-friendly guide for:
 - language-aware automation
 - size control
 - safe downgrade workflows
+
+## Download the Apps
+
+These are the main applications used in this setup:
+
+| App | Purpose | Download |
+| --- | --- | --- |
+| `Sonarr` | TV series and anime automation | [sonarr.tv](https://sonarr.tv/#download) |
+| `Radarr` | Movie and anime movie automation | [radarr.video](https://radarr.video/#download) |
+| `SABnzbd` | Main Usenet downloader | [sabnzbd.org/downloads](https://sabnzbd.org/downloads) |
+| `Jackett` | Torrent indexer bridge | [GitHub Releases](https://github.com/Jackett/Jackett/releases) |
+| `Plex` | Media server, scraping, and playback | [plex.tv/media-server-downloads](https://www.plex.tv/media-server-downloads/) |
+| `FlareSolverr` | Optional helper for protected torrent sites | [GitHub Releases](https://github.com/FlareSolverr/FlareSolverr/releases) |
+
+Optional but useful:
+
+| App | Purpose | Download |
+| --- | --- | --- |
+| `Jellyseerr` | Requests and discovery frontend | [GitHub](https://github.com/Fallenbagel/jellyseerr) |
+| `Prowlarr` | Central ARR indexer management | [prowlarr.com](https://prowlarr.com/) |
+
+## The Setup at a Glance
+
+```mermaid
+flowchart LR
+    A["Import Lists / Manual Add"] --> B["Sonarr / Radarr"]
+    B --> C["Usenet Indexers / Jackett"]
+    C --> D["SABnzbd / Torrent Client"]
+    D --> E["Sonarr / Radarr Import + Rename"]
+    E --> F["Plex Library Scan"]
+    F --> G["Ready to Watch"]
+```
 
 ## What the Full Stack Does
 

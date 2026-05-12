@@ -72,6 +72,26 @@ Optional but very useful additions:
 - `Jellyseerr` or similar request/discovery frontends
 - `FlareSolverr` if some torrent sites behind `Jackett` need anti-bot handling
 
+## Download Links
+
+Core apps used in this guide:
+
+| App | Purpose | Download |
+| --- | --- | --- |
+| `Sonarr` | TV series and anime automation | [sonarr.tv](https://sonarr.tv/#download) |
+| `Radarr` | Movie and anime movie automation | [radarr.video](https://radarr.video/#download) |
+| `SABnzbd` | Main Usenet downloader | [sabnzbd.org/downloads](https://sabnzbd.org/downloads) |
+| `Jackett` | Torrent indexer bridge | [GitHub Releases](https://github.com/Jackett/Jackett/releases) |
+| `Plex` | Media server and playback | [plex.tv/media-server-downloads](https://www.plex.tv/media-server-downloads/) |
+| `FlareSolverr` | Optional helper for protected torrent sites | [GitHub Releases](https://github.com/FlareSolverr/FlareSolverr/releases) |
+
+Optional:
+
+| App | Purpose | Download |
+| --- | --- | --- |
+| `Jellyseerr` | Requests and discovery frontend | [GitHub](https://github.com/Fallenbagel/jellyseerr) |
+| `Prowlarr` | Central indexer management across ARR apps | [prowlarr.com](https://prowlarr.com/) |
+
 ## How the Full Automation Flow Works
 
 At a high level, the process looks like this:
@@ -84,6 +104,18 @@ At a high level, the process looks like this:
 6. `Sonarr` or `Radarr` imports the file into the final library folder according to your naming, quality, and upgrade rules
 7. `Plex` scans the library folder, scrapes metadata, and updates the library
 8. The media is ready to watch without further manual work
+
+Simple flow:
+
+```mermaid
+flowchart LR
+    A["Import Lists / Manual Add"] --> B["Sonarr / Radarr"]
+    B --> C["Usenet Indexers / Jackett"]
+    C --> D["SABnzbd / Torrent Client"]
+    D --> E["Sonarr / Radarr Import + Rename"]
+    E --> F["Plex Library Scan"]
+    F --> G["Ready to Watch"]
+```
 
 So yes, when the setup is working properly, it can become a fully automated pipeline:
 

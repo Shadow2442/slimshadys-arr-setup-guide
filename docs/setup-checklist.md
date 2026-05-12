@@ -17,6 +17,15 @@ Optional:
 
 - install `FlareSolverr` if some Jackett-backed torrent sites require challenge solving
 
+Useful downloads:
+
+- `Sonarr`: [sonarr.tv](https://sonarr.tv/#download)
+- `Radarr`: [radarr.video](https://radarr.video/#download)
+- `SABnzbd`: [sabnzbd.org/downloads](https://sabnzbd.org/downloads)
+- `Jackett`: [GitHub Releases](https://github.com/Jackett/Jackett/releases)
+- `Plex`: [plex.tv/media-server-downloads](https://www.plex.tv/media-server-downloads/)
+- `FlareSolverr`: [GitHub Releases](https://github.com/FlareSolverr/FlareSolverr/releases)
+
 ## 1a. Understand the Flow
 
 The normal end-to-end process is:

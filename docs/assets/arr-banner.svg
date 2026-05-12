@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-labelledby="title desc">
+  <title id="title">SlimShady's ARR Setup Guide</title>
+  <desc id="desc">Banner for a practical Sonarr, Radarr, SABnzbd, Jackett, and Plex setup guide.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#1f2937"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22c55e"/>
+      <stop offset="50%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="320" fill="url(#bg)"/>
+  <circle cx="1030" cy="68" r="112" fill="#0f172a" opacity="0.55"/>
+  <circle cx="1115" cy="262" r="78" fill="#111827" opacity="0.45"/>
+  <rect x="54" y="46" width="190" height="18" rx="9" fill="url(#accent)"/>
+  <text x="54" y="118" fill="#f8fafc" font-family="Segoe UI, Arial, sans-serif" font-size="46" font-weight="700">
+    SlimShady's ARR Setup Guide
+  </text>
+  <text x="54" y="158" fill="#cbd5e1" font-family="Segoe UI, Arial, sans-serif" font-size="22">
+    Practical Sonarr, Radarr, SABnzbd, Jackett, and Plex automation
+  </text>
+  <text x="54" y="197" fill="#94a3b8" font-family="Segoe UI, Arial, sans-serif" font-size="19">
+    German-friendly content • sane quality rules • safer quotas • cleaner storage
+  </text>
+  <g transform="translate(54,228)">
+    <rect x="0" y="0" width="138" height="38" rx="10" fill="#1d4ed8"/>
+    <text x="69" y="25" text-anchor="middle" fill="#eff6ff" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="600">Sonarr</text>
+    <rect x="152" y="0" width="138" height="38" rx="10" fill="#0f766e"/>
+    <text x="221" y="25" text-anchor="middle" fill="#ecfeff" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="600">Radarr</text>
+    <rect x="304" y="0" width="138" height="38" rx="10" fill="#a16207"/>
+    <text x="373" y="25" text-anchor="middle" fill="#fffbeb" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="600">SABnzbd</text>
+    <rect x="456" y="0" width="138" height="38" rx="10" fill="#7c3aed"/>
+    <text x="525" y="25" text-anchor="middle" fill="#f5f3ff" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="600">Plex</text>
+  </g>
+</svg>
