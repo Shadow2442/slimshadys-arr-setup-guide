@@ -26,6 +26,21 @@ This site is a practical beginner-friendly guide for:
 - size control
 - safe downgrade workflows
 
+<div class="card-grid">
+  <div class="guide-card">
+    <h3>German-friendly by design</h3>
+    <p>Indexers, custom formats, and import-list workflows tuned for stronger German coverage without burning fragile quotas.</p>
+  </div>
+  <div class="guide-card">
+    <h3>Storage-aware quality rules</h3>
+    <p>Compact <code>1080p</code> movies, <code>720p</code>-first series, and downgrade workflows that actually save space instead of creating comedy.</p>
+  </div>
+  <div class="guide-card">
+    <h3>Beginner-safe automation</h3>
+    <p>Step-by-step setup guidance for people who are technical, lightly technical, or wisely willing to let Codex do the fiddly parts.</p>
+  </div>
+</div>
+
 ## Download the Apps
 
 These are the main applications used in this setup:

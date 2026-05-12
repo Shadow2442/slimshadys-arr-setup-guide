@@ -2,6 +2,8 @@ Welcome to the GitHub Pages version of this ARR setup guide.
 
 This site is aimed at beginners who want a practical, German-friendly `Sonarr` + `Radarr` + `Lidarr` + `SABnzbd` setup without stumbling into the usual ARR nonsense at full speed.
 
+<p class="section-intro">Think of this as the smaller orientation page. The main homepage is the polished front door, while this page is the quick map for readers who want the supporting docs directly.</p>
+
 ## Start Here
 
 - [Full Guide on GitHub](https://github.com/Shadow2442/slimshadys-arr-setup-guide#readme)
