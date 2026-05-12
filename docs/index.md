@@ -4,10 +4,10 @@ This site is aimed at beginners who want a practical, German-friendly `Sonarr` +
 
 ## Start Here
 
-- [Main Guide](../README.md)
-- [Setup Checklist](setup-checklist.md)
-- [Indexers and German Content Strategy](indexers-and-german-content.md)
-- [Quality, Sizes, and Downgrades](quality-sizing-and-downgrades.md)
+- [Full Guide on GitHub](https://github.com/Shadow2442/slimshadys-arr-setup-guide#readme)
+- [Setup Checklist](/slimshadys-arr-setup-guide/docs/setup-checklist.html)
+- [Indexers and German Content Strategy](/slimshadys-arr-setup-guide/docs/indexers-and-german-content.html)
+- [Quality, Sizes, and Downgrades](/slimshadys-arr-setup-guide/docs/quality-sizing-and-downgrades.html)
 
 ## What This Guide Covers
 
@@ -22,9 +22,9 @@ This site is aimed at beginners who want a practical, German-friendly `Sonarr` +
 ## Recommended Reading Order
 
 1. [Setup Checklist](setup-checklist.md)
-2. [Indexers and German Content Strategy](indexers-and-german-content.md)
-3. [Quality, Sizes, and Downgrades](quality-sizing-and-downgrades.md)
-4. [Main Guide](../README.md)
+2. [Indexers and German Content Strategy](/slimshadys-arr-setup-guide/docs/indexers-and-german-content.html)
+3. [Quality, Sizes, and Downgrades](/slimshadys-arr-setup-guide/docs/quality-sizing-and-downgrades.html)
+4. [Full Guide on GitHub](https://github.com/Shadow2442/slimshadys-arr-setup-guide#readme)
 
 ## Quick Philosophy
 

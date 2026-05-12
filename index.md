@@ -5,10 +5,10 @@
   <p>This site is a practical beginner-friendly walkthrough for building a mostly automated media setup with <code>Sonarr</code>, <code>Radarr</code>, <code>Lidarr</code>, <code>SABnzbd</code>, <code>Jackett</code>, and <code>Plex</code>.</p>
   <p>It focuses on German-friendly content, smarter quality rules, safer quotas, cleaner storage, and the kind of real-world fixes you only learn after ARR tools do something deeply confident and slightly cursed.</p>
   <div class="quick-links">
-    <a href="docs/setup-checklist.md">Start with the checklist</a>
-    <a href="docs/mdblist-import-lists.md">See MDBList automation</a>
-    <a href="docs/indexers-and-german-content.md">See indexer strategy</a>
-    <a href="docs/quality-sizing-and-downgrades.md">Review quality and sizes</a>
+    <a href="/slimshadys-arr-setup-guide/docs/setup-checklist.html">Start with the checklist</a>
+    <a href="/slimshadys-arr-setup-guide/docs/mdblist-import-lists.html">See MDBList automation</a>
+    <a href="/slimshadys-arr-setup-guide/docs/indexers-and-german-content.html">See indexer strategy</a>
+    <a href="/slimshadys-arr-setup-guide/docs/quality-sizing-and-downgrades.html">Review quality and sizes</a>
     <a href="https://github.com/Shadow2442/slimshadys-arr-setup-guide">Open the GitHub repo</a>
   </div>
 </div>
@@ -108,10 +108,10 @@ It was also built and refined with the support of `OpenAI Codex`, which helped i
 ## Start Here
 
 - [Full Guide on GitHub](https://github.com/Shadow2442/slimshadys-arr-setup-guide#readme)
-- [Setup Checklist](docs/setup-checklist.md)
-- [MDBList Import Lists](docs/mdblist-import-lists.md)
-- [Indexers and German Content Strategy](docs/indexers-and-german-content.md)
-- [Quality, Sizes, and Downgrades](docs/quality-sizing-and-downgrades.md)
+- [Setup Checklist](/slimshadys-arr-setup-guide/docs/setup-checklist.html)
+- [MDBList Import Lists](/slimshadys-arr-setup-guide/docs/mdblist-import-lists.html)
+- [Indexers and German Content Strategy](/slimshadys-arr-setup-guide/docs/indexers-and-german-content.html)
+- [Quality, Sizes, and Downgrades](/slimshadys-arr-setup-guide/docs/quality-sizing-and-downgrades.html)
 
 ## MDBList and Auto-Import
 
