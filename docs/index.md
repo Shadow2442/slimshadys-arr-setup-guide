@@ -23,7 +23,7 @@ This site is aimed at beginners who want a practical, German-friendly `Sonarr` +
 
 ## Recommended Reading Order
 
-1. [Setup Checklist](setup-checklist.md)
+1. [Setup Checklist](/slimshadys-arr-setup-guide/docs/setup-checklist.html)
 2. [Indexers and German Content Strategy](/slimshadys-arr-setup-guide/docs/indexers-and-german-content.html)
 3. [Quality, Sizes, and Downgrades](/slimshadys-arr-setup-guide/docs/quality-sizing-and-downgrades.html)
 4. [Full Guide on GitHub](https://github.com/Shadow2442/slimshadys-arr-setup-guide#readme)
