@@ -31,6 +31,21 @@ This one tries to answer:
 - how do you keep German content quality high without burning through quotas
 - how do you save disk space without downloading worse files by accident
 
+## Want Help Applying It?
+
+If you do not want to implement everything manually, you can use `OpenAI Codex` as a practical ARR setup copilot.
+
+This guide works well as input for Codex, for example if you want help to:
+
+- audit your current `Sonarr`, `Radarr`, and `SABnzbd` setup
+- apply the recommended indexer priorities
+- implement language-scoring rules
+- tune quality profiles and size limits
+- build safe downgrade workflows
+- debug import or search issues
+
+So yes, this guide is not only meant to be read by humans. It can also be handed to `Codex` so it can help implement the configuration in your own setup.
+
 ## Short Version
 
 - use broad indexers for daily work
@@ -40,4 +55,3 @@ This one tries to answer:
 - treat downgrades as a controlled workflow, not a magic button
 
 If a setting sounds too clever, test it on a few titles first. ARR tools are excellent at turning confidence into comedy.
-

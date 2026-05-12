@@ -147,3 +147,17 @@ Always consider:
 - audio tracks
 
 Compact `1080p x265` files can be smaller than bloated `720p x264` replacements.
+
+## 12. If You Want Help Automating This
+
+If you do not want to apply all settings manually, you can use `OpenAI Codex` to help configure your ARR stack.
+
+Useful prompts include:
+
+- audit my current Sonarr and Radarr setup against this guide
+- implement the recommended indexer priorities
+- add the custom formats and scoring from this guide
+- tune movie and TV size limits
+- create a safe downgrade workflow
+
+This guide can be used directly as the configuration reference for Codex.

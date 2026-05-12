@@ -26,6 +26,26 @@ If you only want the short version:
 - `NZB.su`: solid fallback
 - `SceneNZBs`: German specialist, but preserve its quota
 
+## Use Codex as a Setup Copilot
+
+If you do not want to work through all of this manually, you can use `OpenAI Codex` to help with the configuration and implementation.
+
+Practical use cases:
+
+- inspect your current `Sonarr`, `Radarr`, and `SABnzbd` configuration
+- compare your setup against this guide
+- apply recommended changes step by step
+- test indexers and priorities
+- tune language scoring, size caps, and downgrade workflows
+- troubleshoot strange ARR behavior
+
+In other words:
+
+- you can use this guide as the blueprint
+- and use `Codex` to implement the setup into your own `Sonarr` and `Radarr` environment accordingly
+
+That is often much easier than manually clicking through every ARR screen and hoping you did not accidentally teach your indexers to download interpretive nonsense.
+
 ## Repository Guide
 
 This repository is split into a few simple pages:
