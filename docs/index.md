@@ -1,5 +1,3 @@
-# SlimShady's ARR Setup Guide
-
 Welcome to the GitHub Pages version of this ARR setup guide.
 
 This site is aimed at beginners who want a practical, German-friendly `Sonarr` + `Radarr` + `SABnzbd` setup without stumbling into the usual ARR nonsense at full speed.

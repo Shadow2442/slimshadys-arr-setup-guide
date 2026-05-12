@@ -1,5 +1,3 @@
-# SlimShady's ARR Setup Guide
-
 Welcome to the GitHub Pages version of this ARR setup guide.
 
 This site is a practical beginner-friendly guide for:
@@ -21,7 +19,7 @@ This guide is especially useful if:
 - you are comfortable learning systems
 - but you do not want to spend days decoding every Sonarr and Radarr setting from scratch
 
-It comes from real setup work done by someone with technical experience and a practical mindset, not from a “developer-only” perspective.
+It comes from real setup work done by someone with technical experience and a practical mindset, not from a "developer-only" perspective.
 
 It was also built and refined with the support of `OpenAI Codex`, which helped inspect the live configuration, test ideas, compare indexers, and apply changes safely.
 
