@@ -1,4 +1,4 @@
-# MDBList Import Lists
+﻿# MDBList Import Lists
 
 This page explains why `mdblist.com` is one of the easiest ways to automate discovery for `Radarr` and `Sonarr`, and how it fits into the rest of the ARR stack.
 
@@ -14,7 +14,7 @@ Instead of manually adding every new movie or show inside `Radarr` or `Sonarr`, 
 
 That makes `MDBList` the discovery layer, while ARR remains the automation and download layer.
 
-## 🔗 Official Compatibility
+## Official Compatibility
 
 Official MDBList docs say you can add MDBList list URLs directly to:
 
@@ -27,7 +27,7 @@ Sources:
 - [MDBList Sonarr integration](https://docs.mdblist.com/docs/third-party/sonarr)
 - [MDBList overview](https://docs.mdblist.com/)
 
-## 🔄 How ARR Uses the Lists
+## How ARR Uses the Lists
 
 In the current live setup:
 
@@ -50,13 +50,17 @@ In this live setup, the related background timing is:
 
 So list import is fast, and grabbing follows your existing search/RSS behavior.
 
-## 📚 Your Current MDBList Lineup
+## Your Current MDBList Lineup
 
 The lists you showed break down nicely into movie and TV lanes.
 
 The descriptions below are based on the current list names and intended use. The exact filter logic still lives inside `MDBList`, so if you later tighten or broaden a filter there, the list behavior changes without you having to rewrite ARR itself.
 
-## 🗂️ Quick List Overview
+![MDBList dynamic lists overview](assets/mdblist-lists-overview.png)
+
+_Example of the current `MDBList` dynamic-list dashboard used in this setup._
+
+## Quick List Overview
 
 | List | ARR App | What it is for | What happens when it updates |
 | --- | --- | --- | --- |
@@ -114,7 +118,7 @@ The descriptions below are based on the current list names and intended use. The
 - best use: give `Sonarr` a dedicated anime discovery stream
 - behavior: once imported, the show follows your Sonarr anime/series handling, language scoring, and delayed `720p` strategy
 
-## ⏱️ What Happens When a List Updates
+## What Happens When a List Updates
 
 If an `MDBList` dynamic list gains a new item:
 
@@ -133,7 +137,7 @@ It feeds ARR better input.
 
 That is exactly why it works so well in a beginner-friendly setup.
 
-## 🙂 Why This is Simpler Than Manual Adding
+## Why This is Simpler Than Manual Adding
 
 Without `MDBList`, you often have to:
 
@@ -149,7 +153,7 @@ With `MDBList`:
 
 It is one of the cleanest ways to build a mostly automated media pipeline without making the setup feel like a second job.
 
-## 🧠 Recommended Operating Model
+## Recommended Operating Model
 
 Use `MDBList` to answer:
 
