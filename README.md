@@ -114,12 +114,24 @@ Simple flow:
 
 ```mermaid
 flowchart LR
-    A["Import Lists / Manual Add"] --> B["Sonarr / Radarr / Lidarr"]
-    B --> C["Usenet Indexers / Jackett"]
-    C --> D["SABnzbd / Torrent Client"]
-    D --> E["ARR Import + Rename"]
-    E --> F["Plex Library Scan"]
+    classDef source fill:#0f172a,stroke:#38bdf8,stroke-width:2px,color:#e0f2fe
+    classDef arr fill:#172554,stroke:#60a5fa,stroke-width:2px,color:#dbeafe
+    classDef search fill:#052e16,stroke:#4ade80,stroke-width:2px,color:#dcfce7
+    classDef download fill:#3f2a00,stroke:#fbbf24,stroke-width:2px,color:#fef3c7
+    classDef library fill:#3b0764,stroke:#c084fc,stroke-width:2px,color:#f3e8ff
+
+    A["Discovery Layer<br/>MDBList / Import Lists / Manual Add"] --> B["ARR Apps<br/>Sonarr / Radarr / Lidarr"]
+    B --> C["Search Layer<br/>Usenet Indexers / Jackett"]
+    C --> D["Download Layer<br/>SABnzbd / Torrent Client"]
+    D --> E["Library Processing<br/>Import / Rename / Organize"]
+    E --> F["Playback Layer<br/>Plex Library Scan"]
     F --> G["Ready to Watch / Listen"]
+
+    class A source
+    class B arr
+    class C search
+    class D download
+    class E,F,G library
 ```
 
 So yes, when the setup is working properly, it can become a fully automated pipeline:
