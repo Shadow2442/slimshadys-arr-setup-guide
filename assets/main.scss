@@ -294,6 +294,87 @@ a:hover {
   line-height: 1.2;
 }
 
+.doc-hero {
+  margin: 0.8rem 0 1.4rem;
+  padding: 1.2rem 1.2rem 1.25rem;
+  border-radius: 20px;
+  border: 1px solid rgba(96, 165, 250, 0.18);
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.96), rgba(22, 32, 51, 0.92));
+  box-shadow: 0 18px 34px rgba(2, 6, 23, 0.22);
+}
+
+.doc-hero h2 {
+  margin: 0 0 0.55rem;
+  color: #f8fafc;
+  border-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+.doc-hero p {
+  margin: 0 0 0.8rem;
+  color: #dbeafe;
+}
+
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.hero-badges span {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.48rem 0.78rem;
+  border-radius: 999px;
+  border: 1px solid rgba(74, 222, 128, 0.22);
+  background: rgba(34, 197, 94, 0.08);
+  color: #dcfce7;
+  font-size: 0.95rem;
+  line-height: 1.2;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 14px;
+  margin: 1rem 0 1.5rem;
+}
+
+.info-card {
+  padding: 1rem 1rem 0.95rem;
+  border-radius: 18px;
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.92), rgba(22, 32, 51, 0.88));
+  box-shadow: 0 14px 28px rgba(2, 6, 23, 0.18);
+}
+
+.info-card h3 {
+  margin: 0 0 0.45rem;
+  color: #f8fafc;
+  font-size: 1.02rem;
+}
+
+.info-card p {
+  margin: 0;
+  color: #cbd5e1;
+}
+
+.image-frame {
+  margin: 1rem 0 1.2rem;
+  padding: 0.8rem;
+  border-radius: 18px;
+  border: 1px solid rgba(96, 165, 250, 0.16);
+  background: rgba(15, 23, 42, 0.78);
+  box-shadow: 0 16px 30px rgba(2, 6, 23, 0.2);
+}
+
+.image-frame img {
+  display: block;
+  width: 100%;
+  border-radius: 14px;
+  border: 1px solid rgba(148, 163, 184, 0.12);
+}
+
 .section-intro {
   color: #cbd5e1;
   font-size: 1.03rem;

@@ -1,4 +1,25 @@
-# Indexers and German Content Strategy
+﻿# Indexers and German Content Strategy
+
+<div class="doc-hero">
+  <h2>Give each indexer the right job</h2>
+  <p>The goal is not one magical source. The goal is a stack where broad indexers do the heavy lifting, German specialists stay preserved, and your quotas do not die in a dramatic bulk-search accident.</p>
+  <div class="hero-badges">
+    <span>German-friendly strategy</span>
+    <span>Quota-aware priorities</span>
+    <span>Usenet first</span>
+    <span>Torrent fallback when useful</span>
+  </div>
+</div>
+<div class="info-grid">
+  <div class="info-card">
+    <h3>Main idea</h3>
+    <p>Use broad indexers for daily volume, stronger German sources for precision, and keep fragile grab caps reserved for the content that really needs them.</p>
+  </div>
+  <div class="info-card">
+    <h3>Practical result</h3>
+    <p>Better German coverage, fewer failed grabs, saner queue behavior, and a setup that does not burn premium sources on background busywork.</p>
+  </div>
+</div>
 
 This page focuses on the practical role of each Usenet indexer in a German-friendly ARR setup that includes `Sonarr`, `Radarr`, and `Lidarr`.
 
@@ -200,3 +221,4 @@ The following German Usenet guide aligns well with the practical experience behi
 - [PCJones Usenet Guide](https://github.com/PCJones/usenet-guide#2-usenet-indexer)
 
 Its main indexer ranking and German-content emphasis match this real-world ARR tuning surprisingly well.
+

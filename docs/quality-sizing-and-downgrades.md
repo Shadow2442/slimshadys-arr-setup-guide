@@ -1,4 +1,25 @@
-# Quality, Sizing, and Downgrades
+﻿# Quality, Sizing, and Downgrades
+
+<div class="doc-hero">
+  <h2>Better quality rules, less storage nonsense</h2>
+  <p>This is where you decide what ARR is allowed to accept, how large files may get, and how to save space without replacing good files with worse and larger ones by accident.</p>
+  <div class="hero-badges">
+    <span>Compact 1080p movies</span>
+    <span>720p-first series</span>
+    <span>Codec-aware downgrades</span>
+    <span>Safer storage control</span>
+  </div>
+</div>
+<div class="info-grid">
+  <div class="info-card">
+    <h3>Best use</h3>
+    <p>Set realistic size caps, keep movies sharp without letting them balloon, and build downgrade lanes that save space for real instead of performing clown magic.</p>
+  </div>
+  <div class="info-card">
+    <h3>Key lesson</h3>
+    <p>Resolution alone is not enough. Codec, bitrate, runtime, and audio tracks matter just as much when you are trying to control quality and disk usage.</p>
+  </div>
+</div>
 
 This page focuses on quality profiles, size limits, and how to downgrade safely without accidentally downloading worse and larger files.
 
@@ -200,3 +221,4 @@ If you push max sizes too low:
 - you save space by not downloading anything, which is technically efficient but emotionally rude
 
 So tune size caps in measured steps.
+

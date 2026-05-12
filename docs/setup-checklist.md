@@ -1,8 +1,30 @@
-# ARR Setup Checklist
+﻿# ARR Setup Checklist
+
+<div class="doc-hero">
+  <h2>Build the stack in the right order</h2>
+  <p>This is the short operational checklist for getting the full ARR setup online without wandering into five side quests before the downloader even works.</p>
+  <div class="hero-badges">
+    <span>Core apps first</span>
+    <span>Categories next</span>
+    <span>Import and naming flow</span>
+    <span>Quota-safe automation</span>
+  </div>
+</div>
 
 Use this as the short, practical checklist after installation.
 
 This checklist is meant for people who are willing to configure things properly, but who do not want to become ARR archaeologists in the process.
+
+<div class="info-grid">
+  <div class="info-card">
+    <h3>Start here if</h3>
+    <p>You want the cleanest order of operations for <code>Sonarr</code>, <code>Radarr</code>, <code>Lidarr</code>, <code>SABnzbd</code>, <code>Jackett</code>, and <code>Plex</code>.</p>
+  </div>
+  <div class="info-card">
+    <h3>Main outcome</h3>
+    <p>Working categories, correct import paths, sane quality defaults, and a setup that behaves predictably instead of improvising in production.</p>
+  </div>
+</div>
 
 ## 1. Core Apps
 
@@ -261,3 +283,4 @@ The best way to use this checklist is:
 4. do not rush into changing everything at once
 
 This setup is much easier when treated like a guided walkthrough instead of a one-night speedrun against six different apps.
+

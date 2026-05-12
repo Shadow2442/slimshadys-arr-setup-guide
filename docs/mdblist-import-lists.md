@@ -1,5 +1,26 @@
 ﻿# MDBList Import Lists
 
+<div class="doc-hero">
+  <h2>Let discovery run itself</h2>
+  <p><code>MDBList</code> is the easiest way in this stack to keep movies and shows flowing in automatically while <code>Sonarr</code> and <code>Radarr</code> still enforce all the real download rules.</p>
+  <div class="hero-badges">
+    <span>Movies and shows</span>
+    <span>5 minute import sync</span>
+    <span>Dynamic lists</span>
+    <span>Great with Codex-assisted setup</span>
+  </div>
+</div>
+<div class="info-grid">
+  <div class="info-card">
+    <h3>Use MDBList for</h3>
+    <p>Movies, TV series, anime, anticipation lists, best-rated lanes, and streaming-heavy discovery that should automatically feed into ARR.</p>
+  </div>
+  <div class="info-card">
+    <h3>Do not use it for</h3>
+    <p><code>Lidarr</code> music discovery. Keep music on music-oriented sources such as <code>Last.fm</code> and <code>Headphones</code> instead.</p>
+  </div>
+</div>
+
 This page explains why `mdblist.com` is one of the easiest ways to automate discovery for `Radarr` and `Sonarr`, and how it fits into the rest of the ARR stack.
 
 ## Why MDBList is Useful
@@ -59,7 +80,7 @@ This kind of lineup breaks down nicely into movie and TV lanes.
 
 The descriptions below use a practical sample lineup based on the real setup shown here. The exact filter logic still lives inside `MDBList`, so if you later tighten or broaden a filter there, the list behavior changes without you having to rewrite ARR itself.
 
-![MDBList dynamic lists overview](assets/mdblist-lists-overview.png)
+<div class="image-frame"><img src="/slimshadys-arr-setup-guide/docs/assets/mdblist-lists-overview.png" alt="MDBList dynamic lists overview" /></div>
 
 _Example of a practical `MDBList` dynamic-list dashboard you can use as inspiration for your own setup._
 
@@ -175,3 +196,4 @@ Use `Plex` to answer:
 - how should it be presented
 
 That separation makes the stack much easier to understand and maintain.
+
