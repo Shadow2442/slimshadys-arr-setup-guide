@@ -44,6 +44,7 @@ Optional but useful:
 
 | App | Purpose | Download |
 | --- | --- | --- |
+| `OpenAI Codex` | Optional configuration assistant and implementation copilot | [OpenAI Academy](https://openai.com/academy/codex/) |
 | `Jellyseerr` | Requests and discovery frontend | [GitHub](https://github.com/Fallenbagel/jellyseerr) |
 | `Prowlarr` | Central ARR indexer management | [prowlarr.com](https://prowlarr.com/) |
 

@@ -93,6 +93,7 @@ Optional:
 
 | App | Purpose | Download |
 | --- | --- | --- |
+| `OpenAI Codex` | Optional configuration assistant and implementation copilot | [Codex overview](https://openai.com/academy/codex/) |
 | `Jellyseerr` | Requests and discovery frontend | [GitHub](https://github.com/Fallenbagel/jellyseerr) |
 | `Prowlarr` | Central indexer management across ARR apps | [prowlarr.com](https://prowlarr.com/) |
 
@@ -272,6 +273,12 @@ If you only want the short version:
 ## Use Codex as a Setup Copilot
 
 If you do not want to work through all of this manually, you can use `OpenAI Codex` to help with the configuration and implementation.
+
+Useful official links:
+
+- [What is Codex?](https://openai.com/academy/what-is-codex)
+- [Codex overview and getting started](https://openai.com/academy/codex/)
+- [Introducing the Codex app](https://openai.com/index/introducing-the-codex-app/)
 
 Practical use cases:
 

@@ -17,6 +17,7 @@ This checklist is meant for people who are willing to configure things properly,
 Optional:
 
 - install `FlareSolverr` if some Jackett-backed torrent sites require challenge solving
+- use `OpenAI Codex` if you want a practical setup assistant instead of configuring everything by hand
 
 Useful downloads:
 
@@ -27,6 +28,7 @@ Useful downloads:
 - `Jackett`: [GitHub Releases](https://github.com/Jackett/Jackett/releases)
 - `Plex`: [plex.tv/media-server-downloads](https://www.plex.tv/media-server-downloads/)
 - `FlareSolverr`: [GitHub Releases](https://github.com/FlareSolverr/FlareSolverr/releases)
+- `OpenAI Codex`: [OpenAI Academy](https://openai.com/academy/codex/)
 
 ## 1a. Understand the Flow
 
