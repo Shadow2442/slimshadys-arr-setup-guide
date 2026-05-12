@@ -21,11 +21,14 @@ Official MDBList docs say you can add MDBList list URLs directly to:
 - `Radarr`
 - `Sonarr` version `4`
 
+They do not document direct `Lidarr` support. In this setup, `MDBList` is the discovery layer for movies and shows, while `Lidarr` should use music-oriented import-list sources instead.
+
 Sources:
 
 - [MDBList to Radarr](https://docs.mdblist.com/docs/howto/mdblist_to_radarr.html)
 - [MDBList Sonarr integration](https://docs.mdblist.com/docs/third-party/sonarr)
 - [MDBList overview](https://docs.mdblist.com/)
+- [Lidarr features: import lists from Last.fm and Headphones](https://lidarr.org/)
 
 ## How ARR Uses the Lists
 
@@ -157,11 +160,15 @@ It is one of the cleanest ways to build a mostly automated media pipeline withou
 
 Use `MDBList` to answer:
 
-- what should be tracked
+- what movies and shows should be tracked
 
-Use `Sonarr`, `Radarr`, and `Lidarr` to answer:
+Use `Sonarr` and `Radarr` to answer:
 
 - how should it be downloaded
+
+Use `Lidarr` to answer:
+
+- how should music be tracked and downloaded
 
 Use `Plex` to answer:
 

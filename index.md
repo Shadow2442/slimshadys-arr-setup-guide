@@ -73,7 +73,7 @@ flowchart LR
     classDef download fill:#3f2a00,stroke:#fbbf24,stroke-width:2px,color:#fef3c7
     classDef library fill:#3b0764,stroke:#c084fc,stroke-width:2px,color:#f3e8ff
 
-    A["Discovery Layer<br/>MDBList / Import Lists / Manual Add"] --> B["ARR Apps<br/>Sonarr / Radarr / Lidarr"]
+    A["Discovery Layer<br/>MDBList (movies/shows) / Music Import Lists / Manual Add"] --> B["ARR Apps<br/>Sonarr / Radarr / Lidarr"]
     B --> C["Search Layer<br/>Usenet Indexers / Jackett"]
     C --> D["Download Layer<br/>SABnzbd / Torrent Client"]
     D --> E["Library Processing<br/>Import / Rename / Organize"]
@@ -134,12 +134,14 @@ It was also built and refined with the support of `OpenAI Codex`, which helped i
 
 In this setup, it works like this:
 
-- your `MDBList` dynamic lists act as the discovery layer
+- your `MDBList` dynamic lists act as the discovery layer for movies and shows
 - `Radarr` and `Sonarr` poll those lists every `5 minutes` in the current live setup
 - new items found on the list are added into the ARR app with your existing quality, language, and root-folder rules
 - once added, they are monitored and then picked up by normal RSS/search behavior
 
-That makes `MDBList` the front door of the automation chain, while ARR still controls the download rules and final library behavior.
+For `Lidarr`, keep the same overall idea but use music-oriented import-list sources instead of `MDBList`.
+
+That makes `MDBList` the front door of the automation chain for movies and shows, while ARR still controls the download rules and final library behavior.
 
 ## 🎯 What This Guide Tries to Do
 

@@ -119,6 +119,8 @@ Why:
 - both `Radarr` and `Sonarr` can use MDBList list URLs directly
 - it keeps discovery separate from downloading, which is exactly what you want
 
+For `Lidarr`, use music-oriented import-list sources instead. Official `Lidarr` features mention import lists from services like `Last.fm` and `Headphones`, not `MDBList`.
+
 In the current live setup:
 
 - `Sonarr Import List Sync = every 5 minutes`

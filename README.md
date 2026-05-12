@@ -79,6 +79,7 @@ Optional but very useful additions:
 
 - `Import Lists` in `Sonarr`, `Radarr`, and `Lidarr`
 - `MDBList` as one of the easiest ways to build dynamic auto-import lists for movies and shows
+- `Lidarr` import lists for music-oriented sources like `Last.fm` and `Headphones`
 - `Jellyseerr` or similar request/discovery frontends
 - `FlareSolverr` if some torrent sites behind `Jackett` need anti-bot handling
 
@@ -127,7 +128,7 @@ flowchart LR
     classDef download fill:#3f2a00,stroke:#fbbf24,stroke-width:2px,color:#fef3c7
     classDef library fill:#3b0764,stroke:#c084fc,stroke-width:2px,color:#f3e8ff
 
-    A["Discovery Layer<br/>MDBList / Import Lists / Manual Add"] --> B["ARR Apps<br/>Sonarr / Radarr / Lidarr"]
+    A["Discovery Layer<br/>MDBList (movies/shows) / Music Import Lists / Manual Add"] --> B["ARR Apps<br/>Sonarr / Radarr / Lidarr"]
     B --> C["Search Layer<br/>Usenet Indexers / Jackett"]
     C --> D["Download Layer<br/>SABnzbd / Torrent Client"]
     D --> E["Library Processing<br/>Import / Rename / Organize"]
@@ -191,11 +192,14 @@ Official MDBList docs support adding MDBList list URLs directly to:
 - `Radarr`
 - `Sonarr` version `4`
 
+They do not document direct `Lidarr` support. In this setup, `MDBList` is the discovery layer for movies and shows, while `Lidarr` should use music-oriented import-list sources instead.
+
 Sources:
 
 - [MDBList Radarr docs](https://docs.mdblist.com/docs/howto/mdblist_to_radarr.html)
 - [MDBList Sonarr docs](https://docs.mdblist.com/docs/third-party/sonarr)
 - [MDBList home/docs](https://docs.mdblist.com/)
+- [Lidarr features: import lists from Last.fm and Headphones](https://lidarr.org/)
 
 ### How it works in practice
 
@@ -270,7 +274,8 @@ If one of those lists gains a new movie or show:
 
 In plain English:
 
-- `MDBList` decides what is worth tracking
+- `MDBList` decides what is worth tracking for movies and shows
+- music discovery should come from `Lidarr`-friendly music sources
 - ARR decides how to download it
 - `Plex` decides how to present it
 
