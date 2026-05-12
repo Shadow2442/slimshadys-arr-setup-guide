@@ -6,4 +6,5 @@ header_pages:
   - docs/indexers-and-german-content.md
   - docs/quality-sizing-and-downgrades.md
 exclude:
+  - README.md
   - live.html

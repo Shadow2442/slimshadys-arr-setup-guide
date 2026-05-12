@@ -87,7 +87,7 @@ It was also built and refined with the support of `OpenAI Codex`, which helped i
 
 ## Start Here
 
-- [Main Guide](README.md)
+- [Full Guide on GitHub](https://github.com/Shadow2442/slimshadys-arr-setup-guide#readme)
 - [Setup Checklist](docs/setup-checklist.md)
 - [Indexers and German Content Strategy](docs/indexers-and-german-content.md)
 - [Quality, Sizes, and Downgrades](docs/quality-sizing-and-downgrades.md)
