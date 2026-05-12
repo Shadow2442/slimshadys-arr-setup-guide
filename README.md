@@ -54,6 +54,13 @@ You just need:
 - a bit of patience
 - and, if you want, a tool like `Codex` to help implement and verify the details
 
+If you are non-technical or only lightly technical, the safest way to use this guide is:
+
+- do it step by step
+- use `OpenAI Codex` as your configuration assistant
+- make one change at a time
+- verify each change before moving on
+
 ## What This Setup Actually Includes
 
 This guide does not assume a single app in isolation.
@@ -286,6 +293,14 @@ If you only want the short version:
 
 If you do not want to work through all of this manually, you can use `OpenAI Codex` to help with the configuration and implementation.
 
+For non-technical users, this is usually the best path:
+
+- open this guide
+- hand one section at a time to `Codex`
+- ask it to explain the step in plain English
+- let it implement or verify the configuration change
+- review the result before continuing
+
 Useful official links:
 
 - [What is Codex?](https://openai.com/academy/what-is-codex)
@@ -305,6 +320,8 @@ In other words:
 
 - you can use this guide as the blueprint
 - and use `Codex` to implement the setup into your own `Sonarr`, `Radarr`, and `Lidarr` environment accordingly
+
+If you are not comfortable doing the configuration by hand, that is not a weakness. It is exactly the kind of situation where a step-by-step Codex workflow makes the project much easier and much less chaotic.
 
 That is often much easier than manually clicking through every ARR screen and hoping you did not accidentally teach your indexers to download interpretive nonsense.
 

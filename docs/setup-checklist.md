@@ -246,3 +246,16 @@ This checklist is based on:
 - real import and downgrade troubleshooting
 
 It was built from actual setup experience, with the support of `OpenAI Codex`, not just copied from generic default settings.
+
+## 15. If You Are Non-Technical
+
+That is fine.
+
+The best way to use this checklist is:
+
+1. work through it one section at a time
+2. ask `OpenAI Codex` to explain each step in plain English
+3. let `Codex` help apply or verify that step
+4. do not rush into changing everything at once
+
+This setup is much easier when treated like a guided walkthrough instead of a one-night speedrun against six different apps.

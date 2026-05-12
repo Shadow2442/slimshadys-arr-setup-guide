@@ -95,6 +95,12 @@ This guide is especially useful if:
 - you are comfortable learning systems
 - but you do not want to spend days decoding every Sonarr and Radarr setting from scratch
 
+It is also useful if you are not especially technical, but are willing to:
+
+- work step by step
+- follow a practical checklist
+- use `OpenAI Codex` as a setup assistant instead of trying to configure the whole stack from memory
+
 It comes from real setup work done by someone with technical experience and a practical mindset, not from a "developer-only" perspective.
 
 It was also built and refined with the support of `OpenAI Codex`, which helped inspect the live configuration, test ideas, compare indexers, and apply changes safely.
@@ -135,6 +141,14 @@ This one tries to answer:
 ## Want Help Applying It?
 
 If you do not want to implement everything manually, you can use `OpenAI Codex` as a practical ARR setup copilot.
+
+For non-technical users, this is often the easiest way to approach the project:
+
+1. open one section of the guide
+2. ask `Codex` to explain that section in plain English
+3. let `Codex` help apply that exact step
+4. verify the result
+5. then move to the next section
 
 This guide works well as input for Codex, for example if you want help to:
 
