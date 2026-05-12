@@ -121,7 +121,7 @@ Why:
 
 For `Lidarr`, use music-oriented import-list sources instead. Official `Lidarr` features mention import lists from services like `Last.fm` and `Headphones`, not `MDBList`.
 
-In the current live setup:
+In the live reference setup used for this guide:
 
 - `Sonarr Import List Sync = every 5 minutes`
 - `Radarr Import List Sync = every 5 minutes`

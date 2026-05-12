@@ -135,7 +135,7 @@ It was also built and refined with the support of `OpenAI Codex`, which helped i
 In this setup, it works like this:
 
 - your `MDBList` dynamic lists act as the discovery layer for movies and shows
-- `Radarr` and `Sonarr` poll those lists every `5 minutes` in the current live setup
+- `Radarr` and `Sonarr` poll those lists every `5 minutes` in the live reference setup used for this guide
 - new items found on the list are added into the ARR app with your existing quality, language, and root-folder rules
 - once added, they are monitored and then picked up by normal RSS/search behavior
 

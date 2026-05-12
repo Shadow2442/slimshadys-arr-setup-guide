@@ -32,7 +32,7 @@ Sources:
 
 ## How ARR Uses the Lists
 
-In the current live setup:
+In the live reference setup used for this guide:
 
 - `Sonarr Import List Sync` runs every `5 minutes`
 - `Radarr Import List Sync` runs every `5 minutes`
@@ -46,7 +46,7 @@ That means when a new title is added to one of your `MDBList` lists:
 5. the downloader grabs the release
 6. ARR imports it and `Plex` picks it up
 
-In this live setup, the related background timing is:
+In this guide's live reference setup, the related background timing is:
 
 - `Sonarr RSS Sync = every 15 minutes`
 - `Radarr RSS Sync = every 30 minutes`
