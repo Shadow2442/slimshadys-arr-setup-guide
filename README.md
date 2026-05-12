@@ -71,6 +71,7 @@ A practical home-media automation stack usually includes:
 Optional but very useful additions:
 
 - `Import Lists` in `Sonarr`, `Radarr`, and `Lidarr`
+- `MDBList` as one of the easiest ways to build dynamic auto-import lists for movies and shows
 - `Jellyseerr` or similar request/discovery frontends
 - `FlareSolverr` if some torrent sites behind `Jackett` need anti-bot handling
 
@@ -155,6 +156,105 @@ Then:
 From there, `Plex` picks them up automatically and makes them available in the UI.
 
 This is where the setup starts to feel less like a set of tools and more like a proper media pipeline.
+
+## MDBList as the Discovery Layer
+
+If you want a practical answer to:
+
+- how do I keep movies and series flowing in automatically
+- without manually curating everything inside ARR
+
+then `MDBList` is one of the simplest answers.
+
+Official MDBList docs support adding MDBList list URLs directly to:
+
+- `Radarr`
+- `Sonarr` version `4`
+
+Sources:
+
+- [MDBList Radarr docs](https://docs.mdblist.com/docs/howto/mdblist_to_radarr.html)
+- [MDBList Sonarr docs](https://docs.mdblist.com/docs/third-party/sonarr)
+- [MDBList home/docs](https://docs.mdblist.com/)
+
+### How it works in practice
+
+In this setup:
+
+- `MDBList` creates and maintains the dynamic discovery lists
+- `Radarr` and `Sonarr` poll their import lists every `5 minutes`
+- if a new movie or series appears on one of those lists, ARR adds it on the next import-list sync cycle
+- after that, your normal quality profiles, language scoring, and indexer strategy take over
+
+Current live sync behavior in this setup:
+
+- `Sonarr Import List Sync = every 5 minutes`
+- `Radarr Import List Sync = every 5 minutes`
+- `Sonarr RSS Sync = every 15 minutes`
+- `Radarr RSS Sync = every 30 minutes`
+
+So the usual sequence is:
+
+1. a title is added to an `MDBList` list
+2. `Sonarr` or `Radarr` sees it within about `5 minutes`
+3. the title gets added and monitored
+4. ARR either searches immediately if configured that way, or picks it up via the normal RSS/search cycle
+5. the downloader grabs it according to your existing rules
+6. it gets imported and lands in `Plex`
+
+### Your current MDBList lineup
+
+From the lists you showed, the setup currently includes:
+
+#### For Radarr
+
+- `Auto Cinema Anticipated 2026+`
+  - purpose: upcoming or highly anticipated cinema-focused movies from `2026` onward
+  - ARR role: feed future theatrical movie candidates into `Radarr`
+- `Auto Cinema + Anime Best Rated 2025+`
+  - purpose: highly rated modern movies, including anime films, from `2025` onward
+  - ARR role: quality-focused discovery for `Radarr`
+- `Auto Anime Best Rated 2020+ (Track)`
+  - purpose: top-rated anime movie-style entries or anime-heavy titles from `2020` onward
+  - ARR role: anime-leaning movie discovery for `Radarr`
+- `Auto Streaming Best Rated 2025+`
+  - purpose: strong streaming-first movie releases from `2025` onward
+  - ARR role: catch digital/streaming titles early through `Radarr`
+
+#### For Sonarr
+
+- `Auto Series Anticipated 2026+`
+  - purpose: anticipated upcoming series beginning in `2026` and later
+  - ARR role: future show pipeline for `Sonarr`
+- `Auto Series Best Rated 2025+`
+  - purpose: top-rated newer series from `2025` onward
+  - ARR role: higher-quality TV discovery for `Sonarr`
+- `Auto Upcoming Anime 2026+`
+  - purpose: upcoming anime series from `2026` onward
+  - ARR role: anime discovery lane for `Sonarr`
+
+### What happens when a new item appears on a list
+
+If one of those lists gains a new movie or show:
+
+- `Radarr` or `Sonarr` notices it on the next list sync
+- the item is added with the root folder, quality profile, and monitoring behavior tied to that list
+- it becomes part of your normal automation workflow
+- ARR then applies:
+  - custom formats
+  - language scoring
+  - size limits
+  - indexer priorities
+  - download client categories
+- the item eventually downloads and imports if a matching release is found
+
+In plain English:
+
+- `MDBList` decides what is worth tracking
+- ARR decides how to download it
+- `Plex` decides how to present it
+
+That division of labor is one of the cleanest ways to keep the stack understandable.
 
 ## Quick Start
 

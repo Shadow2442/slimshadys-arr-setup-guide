@@ -107,6 +107,23 @@ The benefit:
 - completed files land in the library automatically
 - `Plex` picks them up automatically
 
+### Recommended simple list source: MDBList
+
+If you want the easiest practical way to create dynamic import lists, use `mdblist.com`.
+
+Why:
+
+- it is simple to build movie and show lists from ratings, popularity, anticipation, streaming sources, anime filters, and more
+- both `Radarr` and `Sonarr` can use MDBList list URLs directly
+- it keeps discovery separate from downloading, which is exactly what you want
+
+In the current live setup:
+
+- `Sonarr Import List Sync = every 5 minutes`
+- `Radarr Import List Sync = every 5 minutes`
+
+So if a new movie or show is added to one of your MDBList lists, ARR usually notices it within about `5 minutes`, adds it, and then lets the normal RSS/search pipeline handle the download side.
+
 ## 7. Indexers
 
 Recommended order for this German-friendly setup:

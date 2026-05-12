@@ -6,6 +6,7 @@
   <p>It focuses on German-friendly content, smarter quality rules, safer quotas, cleaner storage, and the kind of real-world fixes you only learn after ARR tools do something deeply confident and slightly cursed.</p>
   <div class="quick-links">
     <a href="docs/setup-checklist.md">Start with the checklist</a>
+    <a href="docs/mdblist-import-lists.md">See MDBList automation</a>
     <a href="docs/indexers-and-german-content.md">See indexer strategy</a>
     <a href="docs/quality-sizing-and-downgrades.md">Review quality and sizes</a>
     <a href="https://github.com/Shadow2442/slimshadys-arr-setup-guide">Open the GitHub repo</a>
@@ -89,8 +90,22 @@ It was also built and refined with the support of `OpenAI Codex`, which helped i
 
 - [Full Guide on GitHub](https://github.com/Shadow2442/slimshadys-arr-setup-guide#readme)
 - [Setup Checklist](docs/setup-checklist.md)
+- [MDBList Import Lists](docs/mdblist-import-lists.md)
 - [Indexers and German Content Strategy](docs/indexers-and-german-content.md)
 - [Quality, Sizes, and Downgrades](docs/quality-sizing-and-downgrades.md)
+
+## MDBList and Auto-Import
+
+`MDBList` is one of the easiest ways to build automated movie and TV discovery without maintaining giant manual watchlists by hand.
+
+In this setup, it works like this:
+
+- your `MDBList` dynamic lists act as the discovery layer
+- `Radarr` and `Sonarr` poll those lists every `5 minutes` in the current live setup
+- new items found on the list are added into the ARR app with your existing quality, language, and root-folder rules
+- once added, they are monitored and then picked up by normal RSS/search behavior
+
+That makes `MDBList` the front door of the automation chain, while ARR still controls the download rules and final library behavior.
 
 ## What This Guide Tries to Do
 
