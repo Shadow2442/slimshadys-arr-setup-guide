@@ -1,6 +1,6 @@
 Welcome to the GitHub Pages version of this ARR setup guide.
 
-This site is aimed at beginners who want a practical, German-friendly `Sonarr` + `Radarr` + `SABnzbd` setup without stumbling into the usual ARR nonsense at full speed.
+This site is aimed at beginners who want a practical, German-friendly `Sonarr` + `Radarr` + `Lidarr` + `SABnzbd` setup without stumbling into the usual ARR nonsense at full speed.
 
 ## Start Here
 
@@ -14,6 +14,7 @@ This site is aimed at beginners who want a practical, German-friendly `Sonarr` +
 - German-friendly indexer strategy
 - sane priority and quota handling
 - language preference scoring logic
+- music support through `Lidarr`
 - `720p`/`1080p` size limits that actually make sense
 - safe downgrade workflows
 - practical lessons from real testing
@@ -30,6 +31,7 @@ This site is aimed at beginners who want a practical, German-friendly `Sonarr` +
 - Use broad indexers for daily work
 - Preserve German-specialist sources for when they really matter
 - Prefer `720p` for series and compact `1080p` for movies
+- Let `Lidarr` handle artists and albums with its own quality and metadata flow
 - Treat `720p downgrade` as a controlled workflow, not a magic button
 
 If a setting sounds too clever, test it on a few titles before unleashing it on your whole library. Your hard drive will thank you.

@@ -1,23 +1,22 @@
 # Indexers and German Content Strategy
 
-This page focuses on the practical role of each Usenet indexer in a German-friendly ARR setup.
+This page focuses on the practical role of each Usenet indexer in a German-friendly ARR setup that includes `Sonarr`, `Radarr`, and `Lidarr`.
 
 ## The Big Picture
 
 Not all indexers are equally useful.
 
-Some are broad generalists.
-Some are excellent for German content.
-Some are excellent but quota-fragile.
+Some are broad generalists. Some are excellent for German content. Some are excellent but quota-fragile.
 
-The trick is not to find one “perfect” indexer. It is to give each one the right job.
+The trick is not to find one "perfect" indexer. It is to give each one the right job.
 
 In a practical setup, this usually means:
 
 - `Sonarr` and `Radarr` search across multiple indexers
+- `Lidarr` can use the same broad Usenet layer for artists and albums
 - the download client fetches the chosen release
 - the ARR apps import it into the final library
-- `Plex` exposes the finished result
+- `Plex` exposes the finished movie and series result
 
 So indexer strategy affects the entire rest of the stack, not just search results.
 
@@ -59,7 +58,7 @@ Strengths:
 
 - large quota
 - good broad coverage
-- useful for both Sonarr and Radarr
+- useful for `Sonarr`, `Radarr`, and potentially `Lidarr`
 
 Weaknesses:
 
@@ -71,6 +70,7 @@ Use it for:
 - daily automatic work
 - broad search coverage
 - quota-heavy tasks
+- general library growth where German specificity is helpful but not everything
 
 ### NZBFinder
 
@@ -92,7 +92,8 @@ Use it for:
 
 - normal automation
 - additional German-friendly breadth
-- secondary preferred source behind NinjaCentral
+- secondary preferred source behind `NinjaCentral`
+- another strong candidate for mixed movie, series, and music searches
 
 ### NZB.su
 

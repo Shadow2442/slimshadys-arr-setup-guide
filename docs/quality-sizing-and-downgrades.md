@@ -8,8 +8,8 @@ These settings sit in the middle of the automation chain:
 - indexers decide what can be found
 - quality and size settings decide what gets accepted
 - the downloader fetches it
-- `Sonarr` / `Radarr` imports it
-- `Plex` surfaces the final result
+- `Sonarr` / `Radarr` / `Lidarr` imports it
+- `Plex` surfaces the final movie and series result while your music app of choice handles the audio library
 
 So if quality or size rules are wrong, the whole automation pipeline can still work perfectly and produce the wrong media. That is why these settings deserve real attention.
 
@@ -92,6 +92,19 @@ Recommended:
 - `WEBDL-1080p = preferred 22, max 38`
 - `WEBRip-1080p = preferred 24, max 42`
 - `Bluray-1080p = preferred 24, max 42`
+
+## Music Philosophy
+
+`Lidarr` is different from `Sonarr` and `Radarr`.
+
+You are not usually tuning music by `720p` or `1080p` style size limits. Instead, the practical guidance is:
+
+- decide whether you want lossless, lossy, or a mixed library
+- use `Lidarr` quality profiles to keep that consistent
+- let `Lidarr` handle artist monitoring, album grabs, and metadata organization
+- keep downloader categories separate, for example `music`
+
+For a beginner-friendly stack, the important thing is not overcomplicating music on day one. Get the movie and TV logic stable first, then expand cleanly into albums and artists.
 
 ## Safe Downgrade Strategy
 

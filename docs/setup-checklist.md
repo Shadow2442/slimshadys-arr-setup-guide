@@ -9,6 +9,7 @@ This checklist is meant for people who are willing to configure things properly,
 - Install `SABnzbd`
 - Install `Sonarr`
 - Install `Radarr`
+- Install `Lidarr`
 - Install `Plex`
 - Install `Jackett` if you want torrent sources as well
 - Keep downloads and libraries on the same drive if you want hardlinks
@@ -21,6 +22,7 @@ Useful downloads:
 
 - `Sonarr`: [sonarr.tv](https://sonarr.tv/#download)
 - `Radarr`: [radarr.video](https://radarr.video/#download)
+- `Lidarr`: [lidarr.audio](https://lidarr.audio/#download)
 - `SABnzbd`: [sabnzbd.org/downloads](https://sabnzbd.org/downloads)
 - `Jackett`: [GitHub Releases](https://github.com/Jackett/Jackett/releases)
 - `Plex`: [plex.tv/media-server-downloads](https://www.plex.tv/media-server-downloads/)
@@ -30,12 +32,12 @@ Useful downloads:
 
 The normal end-to-end process is:
 
-1. movie or series gets added manually or by `Import List`
-2. `Sonarr` / `Radarr` searches the configured indexers
+1. movie, series, artist, or album gets added manually or by `Import List`
+2. the ARR app searches the configured indexers
 3. matching release is sent to `SABnzbd` or the torrent client
 4. download completes and is unpacked
-5. `Sonarr` / `Radarr` imports and renames the media
-6. `Plex` scans the library and makes it available to watch
+5. the ARR app imports and renames the media
+6. `Plex` scans the library and makes it available to watch or listen to
 
 That is the full automation loop this guide is trying to support.
 
@@ -45,6 +47,7 @@ Create separate download categories:
 
 - `tv` for `Sonarr`
 - `movies` for `Radarr`
+- `music` for `Lidarr`
 
 Make sure those categories point to folders that the ARR apps can access.
 
@@ -94,12 +97,13 @@ Examples:
 - latest movies
 - new and ongoing TV series
 - seasonal anime
+- artists and albums where supported
 - custom watchlists
 
 The benefit:
 
 - items are added automatically
-- `Sonarr` and `Radarr` apply your rules automatically
+- the ARR apps apply your rules automatically
 - completed files land in the library automatically
 - `Plex` picks them up automatically
 

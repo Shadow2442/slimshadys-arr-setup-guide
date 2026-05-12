@@ -1,11 +1,12 @@
 # SlimShady's ARR Setup Guide
 
-This is a practical beginner guide for setting up `Sonarr`, `Radarr`, and `SABnzbd` for a German-friendly media workflow without letting the system turn into a chaos goblin.
+This is a practical beginner guide for setting up `Sonarr`, `Radarr`, `Lidarr`, and `SABnzbd` for a German-friendly media workflow without letting the system turn into a chaos goblin.
 
 It focuses on:
 
 - `Sonarr` for series and anime
 - `Radarr` for movies and anime movies
+- `Lidarr` for music
 - `SABnzbd` for Usenet downloads
 - indexer strategy for German content
 - language preference scoring
@@ -23,7 +24,7 @@ It was built from the perspective of someone who:
 - has technical experience
 - works mainly in security
 - is comfortable troubleshooting systems
-- but does not live inside `Sonarr`, `Radarr`, `SABnzbd`, and indexer APIs every day
+- but does not live inside `Sonarr`, `Radarr`, `Lidarr`, `SABnzbd`, and indexer APIs every day
 
 That matters, because a lot of ARR documentation assumes:
 
@@ -61,6 +62,7 @@ A practical home-media automation stack usually includes:
 
 - `Sonarr` for series and anime series
 - `Radarr` for movies and anime movies
+- `Lidarr` for music and artist/album monitoring
 - `SABnzbd` as the main Usenet downloader
 - `Jackett` if you also want torrent indexers or mixed-source support
 - one or more Usenet indexers for search and NZB retrieval
@@ -68,7 +70,7 @@ A practical home-media automation stack usually includes:
 
 Optional but very useful additions:
 
-- `Import Lists` in `Sonarr` and `Radarr`
+- `Import Lists` in `Sonarr`, `Radarr`, and `Lidarr`
 - `Jellyseerr` or similar request/discovery frontends
 - `FlareSolverr` if some torrent sites behind `Jackett` need anti-bot handling
 
@@ -80,6 +82,7 @@ Core apps used in this guide:
 | --- | --- | --- |
 | `Sonarr` | TV series and anime automation | [sonarr.tv](https://sonarr.tv/#download) |
 | `Radarr` | Movie and anime movie automation | [radarr.video](https://radarr.video/#download) |
+| `Lidarr` | Music automation | [lidarr.audio](https://lidarr.audio/#download) |
 | `SABnzbd` | Main Usenet downloader | [sabnzbd.org/downloads](https://sabnzbd.org/downloads) |
 | `Jackett` | Torrent indexer bridge | [GitHub Releases](https://github.com/Jackett/Jackett/releases) |
 | `Plex` | Media server and playback | [plex.tv/media-server-downloads](https://www.plex.tv/media-server-downloads/) |
@@ -96,25 +99,25 @@ Optional:
 
 At a high level, the process looks like this:
 
-1. You add a movie or series manually, or it gets added through an `Import List`
-2. `Sonarr` or `Radarr` checks your profiles, custom formats, language scoring, and indexers
+1. You add a movie, series, artist, or album manually, or it gets added through an `Import List`
+2. `Sonarr`, `Radarr`, or `Lidarr` checks your profiles, custom formats, language scoring, and indexers
 3. The ARR app searches your configured sources
 4. A matching NZB or torrent is sent to the download client
 5. `SABnzbd` or your torrent client downloads and unpacks the release
-6. `Sonarr` or `Radarr` imports the file into the final library folder according to your naming, quality, and upgrade rules
-7. `Plex` scans the library folder, scrapes metadata, and updates the library
-8. The media is ready to watch without further manual work
+6. the ARR app imports the file into the final library folder according to your naming, quality, and upgrade rules
+7. `Plex` scans the library folders, scrapes metadata, and updates the libraries
+8. The media is ready to watch or listen to without further manual work
 
 Simple flow:
 
 ```mermaid
 flowchart LR
-    A["Import Lists / Manual Add"] --> B["Sonarr / Radarr"]
+    A["Import Lists / Manual Add"] --> B["Sonarr / Radarr / Lidarr"]
     B --> C["Usenet Indexers / Jackett"]
     C --> D["SABnzbd / Torrent Client"]
-    D --> E["Sonarr / Radarr Import + Rename"]
+    D --> E["ARR Import + Rename"]
     E --> F["Plex Library Scan"]
-    F --> G["Ready to Watch"]
+    F --> G["Ready to Watch / Listen"]
 ```
 
 So yes, when the setup is working properly, it can become a fully automated pipeline:
@@ -139,11 +142,12 @@ With the right list source, you can automatically bring in:
 - latest movies
 - ongoing TV series
 - seasonal anime
+- artists and albums where supported
 - curated watchlists
 
 Then:
 
-- `Sonarr` and `Radarr` monitor those items
+- the ARR apps monitor those items
 - apply your quality and language rules
 - download matching releases automatically
 - and pass the finished files into your library
@@ -158,6 +162,7 @@ If you only want the short version:
 
 - `Sonarr`: prefer `720p`, allow `1080p` fallback, use compact TV size limits
 - `Radarr`: prefer compact `1080p`, disable `1080p remux` in the main profile
+- `Lidarr`: use it for artists and albums, with its own quality and metadata flow
 - `SABnzbd`: enable `Ignore samples`, clean junk files, blacklist executable extensions
 - `NinjaCentral`: daily Usenet workhorse
 - `NZBFinder`: strong secondary source with meaningful German coverage
@@ -170,7 +175,7 @@ If you do not want to work through all of this manually, you can use `OpenAI Cod
 
 Practical use cases:
 
-- inspect your current `Sonarr`, `Radarr`, and `SABnzbd` configuration
+- inspect your current `Sonarr`, `Radarr`, `Lidarr`, and `SABnzbd` configuration
 - compare your setup against this guide
 - apply recommended changes step by step
 - test indexers and priorities
@@ -180,7 +185,7 @@ Practical use cases:
 In other words:
 
 - you can use this guide as the blueprint
-- and use `Codex` to implement the setup into your own `Sonarr` and `Radarr` environment accordingly
+- and use `Codex` to implement the setup into your own `Sonarr`, `Radarr`, and `Lidarr` environment accordingly
 
 That is often much easier than manually clicking through every ARR screen and hoping you did not accidentally teach your indexers to download interpretive nonsense.
 
@@ -214,6 +219,7 @@ This repository is split into a few simple pages:
 
 - Use `Sonarr` for `TV series` and `anime series`
 - Use `Radarr` for `movies` and `anime movies`
+- Use `Lidarr` for `music`
 - Use `SABnzbd` as the primary downloader for Usenet
 - Use `Jackett` if you want torrent indexers in the same ecosystem
 - Use `Plex` to serve and scrape the completed media library
@@ -230,10 +236,11 @@ Example categories:
 
 - `tv` for `Sonarr`
 - `movies` for `Radarr`
+- `music` for `Lidarr`
 
 Also make sure:
 
-- your download client categories match what `Sonarr` and `Radarr` expect
+- your download client categories match what `Sonarr`, `Radarr`, and `Lidarr` expect
 - your final library folders are the same folders `Plex` watches
 - `Completed Download Handling` is enabled in the ARR apps
 
@@ -590,6 +597,12 @@ If you want a simple starting point:
 - `Remux-1080p` disabled
 - German-aware custom format scoring
 - separate `720p downgrade` profile for oversized movies only
+
+### Lidarr
+
+- use it to automate artists, albums, and music library imports
+- keep its download category separate from TV and movies
+- let it handle music naming and organization instead of forcing music into the video ARR apps
 
 ### SABnzbd
 

@@ -6,6 +6,7 @@ This site is a practical beginner-friendly guide for:
 
 - `Sonarr`
 - `Radarr`
+- `Lidarr`
 - `SABnzbd`
 - `Jackett`
 - `Plex`
@@ -22,6 +23,7 @@ These are the main applications used in this setup:
 | --- | --- | --- |
 | `Sonarr` | TV series and anime automation | [sonarr.tv](https://sonarr.tv/#download) |
 | `Radarr` | Movie and anime movie automation | [radarr.video](https://radarr.video/#download) |
+| `Lidarr` | Music automation | [lidarr.audio](https://lidarr.audio/#download) |
 | `SABnzbd` | Main Usenet downloader | [sabnzbd.org/downloads](https://sabnzbd.org/downloads) |
 | `Jackett` | Torrent indexer bridge | [GitHub Releases](https://github.com/Jackett/Jackett/releases) |
 | `Plex` | Media server, scraping, and playback | [plex.tv/media-server-downloads](https://www.plex.tv/media-server-downloads/) |
@@ -38,12 +40,12 @@ Optional but useful:
 
 ```mermaid
 flowchart LR
-    A["Import Lists / Manual Add"] --> B["Sonarr / Radarr"]
+    A["Import Lists / Manual Add"] --> B["Sonarr / Radarr / Lidarr"]
     B --> C["Usenet Indexers / Jackett"]
     C --> D["SABnzbd / Torrent Client"]
-    D --> E["Sonarr / Radarr Import + Rename"]
+    D --> E["ARR Import + Rename"]
     E --> F["Plex Library Scan"]
-    F --> G["Ready to Watch"]
+    F --> G["Ready to Watch / Listen"]
 ```
 
 ## What the Full Stack Does
@@ -52,11 +54,11 @@ This guide covers more than just choosing a few quality settings.
 
 The real stack works like this:
 
-- `Import Lists` or manual additions feed new movies and series into `Sonarr` and `Radarr`
+- `Import Lists` or manual additions feed new movies, series, artists, and albums into the ARR apps
 - the ARR apps search indexers using your rules
 - the download client fetches the release
 - the ARR apps import, rename, and organize the final files
-- `Plex` scans the finished library and makes it available to watch
+- `Plex` scans the finished library and makes it available to watch or listen to
 
 When everything is configured properly, it becomes a mostly automated media pipeline instead of a pile of separate tools.
 
@@ -98,7 +100,7 @@ If you do not want to implement everything manually, you can use `OpenAI Codex` 
 
 This guide works well as input for Codex, for example if you want help to:
 
-- audit your current `Sonarr`, `Radarr`, and `SABnzbd` setup
+- audit your current `Sonarr`, `Radarr`, `Lidarr`, and `SABnzbd` setup
 - apply the recommended indexer priorities
 - implement language-scoring rules
 - tune quality profiles and size limits
