@@ -9,7 +9,26 @@ This checklist is meant for people who are willing to configure things properly,
 - Install `SABnzbd`
 - Install `Sonarr`
 - Install `Radarr`
+- Install `Plex`
+- Install `Jackett` if you want torrent sources as well
 - Keep downloads and libraries on the same drive if you want hardlinks
+
+Optional:
+
+- install `FlareSolverr` if some Jackett-backed torrent sites require challenge solving
+
+## 1a. Understand the Flow
+
+The normal end-to-end process is:
+
+1. movie or series gets added manually or by `Import List`
+2. `Sonarr` / `Radarr` searches the configured indexers
+3. matching release is sent to `SABnzbd` or the torrent client
+4. download completes and is unpacked
+5. `Sonarr` / `Radarr` imports and renames the media
+6. `Plex` scans the library and makes it available to watch
+
+That is the full automation loop this guide is trying to support.
 
 ## 2. Categories
 
@@ -19,6 +38,8 @@ Create separate download categories:
 - `movies` for `Radarr`
 
 Make sure those categories point to folders that the ARR apps can access.
+
+Also make sure Plex points to the final library folders, not the incomplete or temporary download paths.
 
 ## 3. SABnzbd
 
@@ -55,7 +76,25 @@ Recommended extra settings:
 - built-in profile language = `Any`
 - disable `Remux-1080p` in main profile
 
-## 6. Indexers
+## 6. Import Lists
+
+Set up `Import Lists` if you want automatic discovery and monitoring.
+
+Examples:
+
+- latest movies
+- new and ongoing TV series
+- seasonal anime
+- custom watchlists
+
+The benefit:
+
+- items are added automatically
+- `Sonarr` and `Radarr` apply your rules automatically
+- completed files land in the library automatically
+- `Plex` picks them up automatically
+
+## 7. Indexers
 
 Recommended order for this German-friendly setup:
 
@@ -77,7 +116,7 @@ Remember:
 - priority is only a tiebreaker
 - all enabled indexers are still searched
 
-## 7. Language Strategy
+## 8. Language Strategy
 
 Recommended universal preference:
 
@@ -92,7 +131,7 @@ Important:
 - do not trust `MULTi` alone as proof of German
 - use custom formats and title logic instead
 
-## 8. Movie Size Targets
+## 9. Movie Size Targets
 
 Recommended:
 
@@ -108,7 +147,7 @@ Recommended:
 - `WEBRip-720p = preferred 20, max 35`
 - `Bluray-720p = preferred 20, max 35`
 
-## 9. TV Size Targets
+## 10. TV Size Targets
 
 Recommended:
 
@@ -126,7 +165,7 @@ Recommended:
 - `WEBRip-1080p = preferred 24, max 42`
 - `Bluray-1080p = preferred 24, max 42`
 
-## 10. Safe Testing Rules
+## 11. Safe Testing Rules
 
 - change one thing at a time
 - test on a few real titles
@@ -135,7 +174,7 @@ Recommended:
   - movies: `10-20`
   - episodes: `5-10`
 
-## 11. Downgrade Warnings
+## 12. Downgrade Warnings
 
 Never assume:
 
@@ -150,7 +189,7 @@ Always consider:
 
 Compact `1080p x265` files can be smaller than bloated `720p x264` replacements.
 
-## 12. If You Want Help Automating This
+## 13. If You Want Help Automating This
 
 If you do not want to apply all settings manually, you can use `OpenAI Codex` to help configure your ARR stack.
 
@@ -164,7 +203,7 @@ Useful prompts include:
 
 This guide can be used directly as the configuration reference for Codex.
 
-## 13. Where This Checklist Came From
+## 14. Where This Checklist Came From
 
 This checklist is based on:
 

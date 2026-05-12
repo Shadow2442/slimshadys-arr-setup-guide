@@ -53,6 +53,73 @@ You just need:
 - a bit of patience
 - and, if you want, a tool like `Codex` to help implement and verify the details
 
+## What This Setup Actually Includes
+
+This guide does not assume a single app in isolation.
+
+A practical home-media automation stack usually includes:
+
+- `Sonarr` for series and anime series
+- `Radarr` for movies and anime movies
+- `SABnzbd` as the main Usenet downloader
+- `Jackett` if you also want torrent indexers or mixed-source support
+- one or more Usenet indexers for search and NZB retrieval
+- `Plex` as the media server that watches the finished library and makes it available for playback
+
+Optional but very useful additions:
+
+- `Import Lists` in `Sonarr` and `Radarr`
+- `Jellyseerr` or similar request/discovery frontends
+- `FlareSolverr` if some torrent sites behind `Jackett` need anti-bot handling
+
+## How the Full Automation Flow Works
+
+At a high level, the process looks like this:
+
+1. You add a movie or series manually, or it gets added through an `Import List`
+2. `Sonarr` or `Radarr` checks your profiles, custom formats, language scoring, and indexers
+3. The ARR app searches your configured sources
+4. A matching NZB or torrent is sent to the download client
+5. `SABnzbd` or your torrent client downloads and unpacks the release
+6. `Sonarr` or `Radarr` imports the file into the final library folder according to your naming, quality, and upgrade rules
+7. `Plex` scans the library folder, scrapes metadata, and updates the library
+8. The media is ready to watch without further manual work
+
+So yes, when the setup is working properly, it can become a fully automated pipeline:
+
+- discover
+- import
+- download
+- process
+- rename
+- organize
+- scrape
+- watch
+
+That is the real goal of this stack.
+
+## Import Lists and Auto-Discovery
+
+One of the most useful advanced features is `Import Lists`.
+
+With the right list source, you can automatically bring in:
+
+- latest movies
+- ongoing TV series
+- seasonal anime
+- curated watchlists
+
+Then:
+
+- `Sonarr` and `Radarr` monitor those items
+- apply your quality and language rules
+- download matching releases automatically
+- and pass the finished files into your library
+
+From there, `Plex` picks them up automatically and makes them available in the UI.
+
+This is where the setup starts to feel less like a set of tools and more like a proper media pipeline.
+
 ## Quick Start
 
 If you only want the short version:
@@ -116,6 +183,8 @@ This repository is split into a few simple pages:
 - Use `Sonarr` for `TV series` and `anime series`
 - Use `Radarr` for `movies` and `anime movies`
 - Use `SABnzbd` as the primary downloader for Usenet
+- Use `Jackett` if you want torrent indexers in the same ecosystem
+- Use `Plex` to serve and scrape the completed media library
 - Use torrents only as a fallback if needed
 - Keep your library and completed download folders on the same drive if you want hardlinks to work efficiently
 
@@ -129,6 +198,12 @@ Example categories:
 
 - `tv` for `Sonarr`
 - `movies` for `Radarr`
+
+Also make sure:
+
+- your download client categories match what `Sonarr` and `Radarr` expect
+- your final library folders are the same folders `Plex` watches
+- `Completed Download Handling` is enabled in the ARR apps
 
 ## 2. German Content Strategy
 
@@ -489,6 +564,18 @@ If you want a simple starting point:
 - ignore samples
 - clean junk files
 - block executable extensions
+
+### Jackett
+
+- only add the torrent indexers you actually want
+- keep flaky sources under control
+- use `FlareSolverr` if specific sites need anti-bot handling
+
+### Plex
+
+- point Plex at the final movie and series library folders
+- let `Sonarr` and `Radarr` handle naming and organization
+- let Plex handle scraping, library presentation, and playback
 
 ### Indexers
 

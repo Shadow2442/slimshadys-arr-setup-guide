@@ -12,6 +12,15 @@ Some are excellent but quota-fragile.
 
 The trick is not to find one “perfect” indexer. It is to give each one the right job.
 
+In a practical setup, this usually means:
+
+- `Sonarr` and `Radarr` search across multiple indexers
+- the download client fetches the chosen release
+- the ARR apps import it into the final library
+- `Plex` exposes the finished result
+
+So indexer strategy affects the entire rest of the stack, not just search results.
+
 ## Recommended Roles
 
 ### SceneNZBs

@@ -5,10 +5,26 @@ This site is a practical beginner-friendly guide for:
 - `Sonarr`
 - `Radarr`
 - `SABnzbd`
+- `Jackett`
+- `Plex`
 - German-friendly indexer strategy
 - language-aware automation
 - size control
 - safe downgrade workflows
+
+## What the Full Stack Does
+
+This guide covers more than just choosing a few quality settings.
+
+The real stack works like this:
+
+- `Import Lists` or manual additions feed new movies and series into `Sonarr` and `Radarr`
+- the ARR apps search indexers using your rules
+- the download client fetches the release
+- the ARR apps import, rename, and organize the final files
+- `Plex` scans the finished library and makes it available to watch
+
+When everything is configured properly, it becomes a mostly automated media pipeline instead of a pile of separate tools.
 
 ## Who This Is For
 

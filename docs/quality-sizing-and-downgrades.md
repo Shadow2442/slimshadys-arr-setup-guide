@@ -2,6 +2,17 @@
 
 This page focuses on quality profiles, size limits, and how to downgrade safely without accidentally downloading worse and larger files.
 
+These settings sit in the middle of the automation chain:
+
+- import lists or manual additions decide what gets monitored
+- indexers decide what can be found
+- quality and size settings decide what gets accepted
+- the downloader fetches it
+- `Sonarr` / `Radarr` imports it
+- `Plex` surfaces the final result
+
+So if quality or size rules are wrong, the whole automation pipeline can still work perfectly and produce the wrong media. That is why these settings deserve real attention.
+
 ## Core Principle
 
 Do not optimize by resolution alone.
