@@ -10,6 +10,13 @@
     <span>Great with Codex-assisted setup</span>
   </div>
 </div>
+
+<div class="doc-nav">
+  <a href="/slimshadys-arr-setup-guide/docs/setup-checklist.html">✅ Checklist</a>
+  <a href="/slimshadys-arr-setup-guide/docs/indexers-and-german-content.html">🛰️ Indexers</a>
+  <a href="/slimshadys-arr-setup-guide/docs/quality-sizing-and-downgrades.html">💾 Quality & Sizes</a>
+  <a href="/slimshadys-arr-setup-guide/">🏠 Home</a>
+</div>
 <div class="info-grid">
   <div class="info-card">
     <h3>Use MDBList for</h3>
@@ -18,6 +25,21 @@
   <div class="info-card">
     <h3>Do not use it for</h3>
     <p><code>Lidarr</code> music discovery. Keep music on music-oriented sources such as <code>Last.fm</code> and <code>Headphones</code> instead.</p>
+  </div>
+</div>
+
+<div class="mini-grid">
+  <div class="mini-card">
+    <h4>Use it for</h4>
+    <p>Movies, shows, anime, streaming lanes, and best-rated discovery flows.</p>
+  </div>
+  <div class="mini-card">
+    <h4>Sync speed</h4>
+    <p>In this guide’s live reference setup, ARR checks import lists every 5 minutes.</p>
+  </div>
+  <div class="mini-card">
+    <h4>Do not confuse it with</h4>
+    <p><code>Lidarr</code> music-list sources, which should stay music-specific.</p>
   </div>
 </div>
 

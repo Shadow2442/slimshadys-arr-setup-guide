@@ -11,6 +11,13 @@
   </div>
 </div>
 
+<div class="doc-nav">
+  <a href="/slimshadys-arr-setup-guide/docs/mdblist-import-lists.html">📚 MDBList</a>
+  <a href="/slimshadys-arr-setup-guide/docs/indexers-and-german-content.html">🛰️ Indexers</a>
+  <a href="/slimshadys-arr-setup-guide/docs/quality-sizing-and-downgrades.html">💾 Quality & Sizes</a>
+  <a href="/slimshadys-arr-setup-guide/">🏠 Home</a>
+</div>
+
 Use this as the short, practical checklist after installation.
 
 This checklist is meant for people who are willing to configure things properly, but who do not want to become ARR archaeologists in the process.
@@ -23,6 +30,21 @@ This checklist is meant for people who are willing to configure things properly,
   <div class="info-card">
     <h3>Main outcome</h3>
     <p>Working categories, correct import paths, sane quality defaults, and a setup that behaves predictably instead of improvising in production.</p>
+  </div>
+</div>
+
+<div class="mini-grid">
+  <div class="mini-card">
+    <h4>Best use</h4>
+    <p>Follow this page in order when you install or reset the stack.</p>
+  </div>
+  <div class="mini-card">
+    <h4>Main risk avoided</h4>
+    <p>Broken categories, wrong folders, and ARR apps fighting each other.</p>
+  </div>
+  <div class="mini-card">
+    <h4>Ideal helper</h4>
+    <p>Use Codex step by step if you do not want to configure everything manually.</p>
   </div>
 </div>
 

@@ -10,6 +10,13 @@
     <span>Safer storage control</span>
   </div>
 </div>
+
+<div class="doc-nav">
+  <a href="/slimshadys-arr-setup-guide/docs/setup-checklist.html">✅ Checklist</a>
+  <a href="/slimshadys-arr-setup-guide/docs/mdblist-import-lists.html">📚 MDBList</a>
+  <a href="/slimshadys-arr-setup-guide/docs/indexers-and-german-content.html">🛰️ Indexers</a>
+  <a href="/slimshadys-arr-setup-guide/">🏠 Home</a>
+</div>
 <div class="info-grid">
   <div class="info-card">
     <h3>Best use</h3>
@@ -18,6 +25,21 @@
   <div class="info-card">
     <h3>Key lesson</h3>
     <p>Resolution alone is not enough. Codec, bitrate, runtime, and audio tracks matter just as much when you are trying to control quality and disk usage.</p>
+  </div>
+</div>
+
+<div class="mini-grid">
+  <div class="mini-card">
+    <h4>Movie rule</h4>
+    <p>Prefer compact 1080p by default and keep giant premium versions manual.</p>
+  </div>
+  <div class="mini-card">
+    <h4>Series rule</h4>
+    <p>Prefer 720p for everyday TV, with 1080p allowed as a fallback when needed.</p>
+  </div>
+  <div class="mini-card">
+    <h4>Downgrade rule</h4>
+    <p>Never trust resolution alone. Codec and actual file size matter just as much.</p>
   </div>
 </div>
 

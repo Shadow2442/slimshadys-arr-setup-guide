@@ -308,6 +308,7 @@ a:hover {
   color: #f8fafc;
   border-top: 0 !important;
   padding-top: 0 !important;
+  font-size: 1.9rem;
 }
 
 .doc-hero p {
@@ -331,6 +332,31 @@ a:hover {
   color: #dcfce7;
   font-size: 0.95rem;
   line-height: 1.2;
+}
+
+.doc-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0.2rem 0 1.2rem;
+}
+
+.doc-nav a {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.56rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid rgba(192, 132, 252, 0.2);
+  background: rgba(76, 29, 149, 0.14);
+  color: #f3e8ff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.96rem;
+}
+
+.doc-nav a:hover {
+  background: rgba(91, 33, 182, 0.22);
+  color: #ffffff;
 }
 
 .info-grid {
@@ -359,6 +385,33 @@ a:hover {
   color: #cbd5e1;
 }
 
+.mini-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin: 0.8rem 0 1.5rem;
+}
+
+.mini-card {
+  padding: 0.9rem 0.95rem;
+  border-radius: 16px;
+  border: 1px solid rgba(251, 191, 36, 0.16);
+  background: linear-gradient(180deg, rgba(30, 41, 59, 0.82), rgba(15, 23, 42, 0.9));
+  box-shadow: 0 12px 24px rgba(2, 6, 23, 0.16);
+}
+
+.mini-card h4 {
+  margin: 0 0 0.35rem;
+  color: #f8fafc;
+  font-size: 0.96rem;
+}
+
+.mini-card p {
+  margin: 0;
+  color: #d6e2f4;
+  font-size: 0.94rem;
+}
+
 .image-frame {
   margin: 1rem 0 1.2rem;
   padding: 0.8rem;
@@ -378,6 +431,19 @@ a:hover {
 .section-intro {
   color: #cbd5e1;
   font-size: 1.03rem;
+}
+
+.page-content h2 {
+  display: inline-block;
+  background: linear-gradient(90deg, rgba(37, 99, 235, 0.14), rgba(192, 132, 252, 0.08));
+  padding: 0.45rem 0.75rem;
+  border-radius: 14px;
+  border: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+.page-content h3 {
+  border-left: 3px solid rgba(74, 222, 128, 0.6);
+  padding-left: 0.7rem;
 }
 
 @media (max-width: 640px) {

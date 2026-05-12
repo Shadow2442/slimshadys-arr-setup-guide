@@ -10,6 +10,13 @@
     <span>Torrent fallback when useful</span>
   </div>
 </div>
+
+<div class="doc-nav">
+  <a href="/slimshadys-arr-setup-guide/docs/setup-checklist.html">✅ Checklist</a>
+  <a href="/slimshadys-arr-setup-guide/docs/mdblist-import-lists.html">📚 MDBList</a>
+  <a href="/slimshadys-arr-setup-guide/docs/quality-sizing-and-downgrades.html">💾 Quality & Sizes</a>
+  <a href="/slimshadys-arr-setup-guide/">🏠 Home</a>
+</div>
 <div class="info-grid">
   <div class="info-card">
     <h3>Main idea</h3>
@@ -18,6 +25,21 @@
   <div class="info-card">
     <h3>Practical result</h3>
     <p>Better German coverage, fewer failed grabs, saner queue behavior, and a setup that does not burn premium sources on background busywork.</p>
+  </div>
+</div>
+
+<div class="mini-grid">
+  <div class="mini-card">
+    <h4>Main takeaway</h4>
+    <p>Broad sources should carry the traffic. Specialist German sources should stay preserved.</p>
+  </div>
+  <div class="mini-card">
+    <h4>Priority rule</h4>
+    <p>Lower number means higher priority, but indexer priority is still only a tiebreaker.</p>
+  </div>
+  <div class="mini-card">
+    <h4>What to watch</h4>
+    <p>429 errors, grab caps, noisy matches, and temporary ARR cooldowns on failed sources.</p>
   </div>
 </div>
 
