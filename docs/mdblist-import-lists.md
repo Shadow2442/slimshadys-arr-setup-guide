@@ -53,15 +53,15 @@ In this live setup, the related background timing is:
 
 So list import is fast, and grabbing follows your existing search/RSS behavior.
 
-## Your Current MDBList Lineup
+## Recommended MDBList Sample Lineup
 
-The lists you showed break down nicely into movie and TV lanes.
+This kind of lineup breaks down nicely into movie and TV lanes.
 
-The descriptions below are based on the current list names and intended use. The exact filter logic still lives inside `MDBList`, so if you later tighten or broaden a filter there, the list behavior changes without you having to rewrite ARR itself.
+The descriptions below use a practical sample lineup based on the real setup shown here. The exact filter logic still lives inside `MDBList`, so if you later tighten or broaden a filter there, the list behavior changes without you having to rewrite ARR itself.
 
 ![MDBList dynamic lists overview](assets/mdblist-lists-overview.png)
 
-_Example of the current `MDBList` dynamic-list dashboard used in this setup._
+_Example of a practical `MDBList` dynamic-list dashboard you can use as inspiration for your own setup._
 
 ## Quick List Overview
 

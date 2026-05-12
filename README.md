@@ -226,9 +226,9 @@ So the usual sequence is:
 5. the downloader grabs it according to your existing rules
 6. it gets imported and lands in `Plex`
 
-### Your current MDBList lineup
+### Recommended MDBList sample lineup
 
-From the lists you showed, the setup currently includes:
+Here is a practical example of how you can structure MDBList-driven discovery lanes:
 
 #### For Radarr
 
