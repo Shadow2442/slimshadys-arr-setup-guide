@@ -1,6 +1,4 @@
-﻿# ARR Setup Checklist
-
-<div class="doc-hero">
+﻿<div class="doc-hero">
   <h2>Build the stack in the right order</h2>
   <p>This is the short operational checklist for getting the full ARR setup online without wandering into five side quests before the downloader even works.</p>
   <div class="hero-badges">
@@ -324,4 +322,5 @@ The best way to use this checklist is:
 4. do not rush into changing everything at once
 
 This setup is much easier when treated like a guided walkthrough instead of a one-night speedrun against six different apps.
+
 

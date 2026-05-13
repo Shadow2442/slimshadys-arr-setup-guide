@@ -1,6 +1,4 @@
-# Lidarr Setup and Workflows
-
-<div class="doc-hero">
+﻿<div class="doc-hero">
   <h2>Music automation without pretending music works like movies</h2>
   <p>This page covers the practical role of <code>Lidarr</code> in the stack: what it should do, how it differs from Sonarr and Radarr, how to think about artist and album monitoring, and how to keep its workflow clean instead of forcing music into video-style habits.</p>
   <div class="hero-badges">
@@ -124,3 +122,4 @@ This avoids crossover clutter and keeps import logic sane.
 5. Let Lidarr handle naming and organization instead of doing it by hand.
 
 That is enough to get a practical music lane online without turning the setup into a side project inside the side project.
+

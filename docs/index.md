@@ -1,6 +1,4 @@
-# Guide Map
-
-<div class="doc-hero">
+﻿<div class="doc-hero">
   <h2>The supporting-docs front door</h2>
   <p>This page is the quick map for the full guide system. The homepage is the polished introduction, while this page is the fast route for readers who want the docs structure directly.</p>
   <div class="hero-badges">
@@ -97,3 +95,4 @@
 - Let `Lidarr` handle music with its own sources and workflow.
 
 If a setting sounds too clever, test it on a few titles before unleashing it on the whole library. Your hard drive will thank you, and SAB might stop composing little tragedies. 
+

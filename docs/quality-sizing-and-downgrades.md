@@ -1,6 +1,4 @@
-﻿# Quality, Sizing, and Downgrades
-
-<div class="doc-hero">
+﻿<div class="doc-hero">
   <h2>Better quality rules, less storage nonsense</h2>
   <p>This is where you decide what ARR is allowed to accept, how large files may get, and how to save space without replacing good files with worse and larger ones by accident.</p>
   <div class="hero-badges">
@@ -279,4 +277,5 @@ If you push max sizes too low:
 - you save space by not downloading anything, which is technically efficient but emotionally rude
 
 So tune size caps in measured steps.
+
 

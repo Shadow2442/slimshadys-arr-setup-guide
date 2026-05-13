@@ -1,6 +1,4 @@
-﻿# Indexers and German Content Strategy
-
-<div class="doc-hero">
+﻿<div class="doc-hero">
   <h2>Give each indexer the right job</h2>
   <p>The goal is not one magical source. The goal is a stack where broad indexers do the heavy lifting, German specialists stay preserved, and your quotas do not die in a dramatic bulk-search accident.</p>
   <div class="hero-badges">
@@ -246,4 +244,5 @@ The following German Usenet guide aligns well with the practical experience behi
 - [PCJones Usenet Guide](https://github.com/PCJones/usenet-guide#2-usenet-indexer)
 
 Its main indexer ranking and German-content emphasis match this real-world ARR tuning surprisingly well.
+
 

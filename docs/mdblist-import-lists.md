@@ -1,6 +1,4 @@
-﻿# MDBList Import Lists
-
-<div class="doc-hero">
+﻿<div class="doc-hero">
   <h2>Let discovery run itself</h2>
   <p><code>MDBList</code> is the easiest way in this stack to keep movies and shows flowing in automatically while <code>Sonarr</code> and <code>Radarr</code> still enforce all the real download rules.</p>
   <div class="hero-badges">
@@ -221,4 +219,5 @@ Use `Plex` to answer:
 - how should it be presented
 
 That separation makes the stack much easier to understand and maintain.
+
 

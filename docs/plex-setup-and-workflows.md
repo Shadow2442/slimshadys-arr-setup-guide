@@ -1,6 +1,4 @@
-# Plex Setup and Workflows
-
-<div class="doc-hero">
+﻿<div class="doc-hero">
   <h2>The final library layer that should feel boring in the best way</h2>
   <p>This page covers the practical role of <code>Plex</code> in the stack: where it sits, what it should do, what ARR should do instead, and how to keep the final playback library clean and dependable.</p>
   <div class="hero-badges">
@@ -71,6 +69,39 @@ That means:
 
 That division of labor is one of the simplest ways to keep the whole stack understandable.
 
+## Recommended Archival HDD Layout
+
+For an archival HDD setup, keep the final library simple, boring, and separate from every temporary path.
+
+A practical example looks like this:
+
+```text
+F:\
+  media\
+    movies\
+      Movie Title (Year)\
+        Movie Title (Year).ext
+    series\
+      Series Title\
+        Season 01\
+          Series Title - S01E01.ext
+    music\
+      Artist Name\
+        Album Title\
+          01 - Track Name.ext
+  downloads-temporary\
+    incomplete\
+    complete\
+```
+
+The important rule is:
+
+- `Plex` points only at `F:\media\movies`, `F:\media\series`, and `F:\media\music`
+- `SABnzbd` and any torrent client use the temporary download side
+- `Sonarr`, `Radarr`, and `Lidarr` move files from temporary paths into the final library
+
+That keeps the archival drive tidy and makes future migrations, backups, and sanity checks much less annoying.
+
 ## Folder Boundaries
 
 Plex should point at:
@@ -100,9 +131,14 @@ That boringness is a compliment.
 
 ## Recommended Step-by-Step
 
-1. Let ARR apps own the import and rename logic.
-2. Point Plex only at the final library folders.
-3. Keep temporary download paths out of Plex.
-4. Verify a few movie and series imports before calling the library done.
+1. Create the final archival library roots for movies, series, and music on the HDD.
+2. Keep temporary and incomplete download paths outside those final library roots.
+3. Let `Sonarr`, `Radarr`, and `Lidarr` own the import and rename logic.
+4. In Plex, create separate libraries for movies, series, and music.
+5. Point each Plex library only at its final ARR-managed folder.
+6. Run a first scan and verify metadata matching on a few known-good imports.
+7. Check that Plex is not indexing temporary folders, samples, failed downloads, or staging leftovers.
+8. Only after that, treat the library structure as production-ready.
 
 If those basics are clean, Plex usually becomes the easiest part of the whole stack.
+

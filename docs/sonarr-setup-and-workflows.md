@@ -1,6 +1,4 @@
-# Sonarr Setup and Workflows
-
-<div class="doc-hero">
+﻿<div class="doc-hero">
   <h2>Series automation that prefers smaller files without becoming weird</h2>
   <p>This page covers the practical Sonarr setup used in this guide: language-aware scoring, 720p-first quality logic, compact TV sizing, safe downgrade rules, and the specific lessons learned from real queue and import testing.</p>
   <div class="hero-badges">
@@ -12,11 +10,11 @@
 </div>
 
 <div class="doc-nav">
-  <a href="/slimshadys-arr-setup-guide/docs/setup-checklist.html">✅ Checklist</a>
-  <a href="/slimshadys-arr-setup-guide/docs/sabnzbd-tuning-and-reliability.html">⚙️ SAB</a>
-  <a href="/slimshadys-arr-setup-guide/docs/indexers-and-german-content.html">🛰️ Indexers</a>
-  <a href="/slimshadys-arr-setup-guide/docs/radarr-setup-and-workflows.html">🎬 Radarr</a>
-  <a href="/slimshadys-arr-setup-guide/">🏠 Home</a>
+  <a href="/slimshadys-arr-setup-guide/docs/setup-checklist.html">âœ… Checklist</a>
+  <a href="/slimshadys-arr-setup-guide/docs/sabnzbd-tuning-and-reliability.html">âš™ï¸ SAB</a>
+  <a href="/slimshadys-arr-setup-guide/docs/indexers-and-german-content.html">ðŸ›°ï¸ Indexers</a>
+  <a href="/slimshadys-arr-setup-guide/docs/radarr-setup-and-workflows.html">ðŸŽ¬ Radarr</a>
+  <a href="/slimshadys-arr-setup-guide/">ðŸ  Home</a>
 </div>
 
 <div class="info-grid">
@@ -37,7 +35,7 @@
   </div>
   <div class="mini-card">
     <h4>Main risk avoided</h4>
-    <p>Downloading larger “downgrades,” weakly matched language results, and queue chaos from overly aggressive bulk work.</p>
+    <p>Downloading larger â€œdowngrades,â€ weakly matched language results, and queue chaos from overly aggressive bulk work.</p>
   </div>
   <div class="mini-card">
     <h4>Cross-link</h4>
@@ -75,7 +73,7 @@ Why:
 - `720p` is a good default balance for size and quality
 - `1080p` stays available when `720p` never appears
 
-That gives you smaller day-to-day downloads without forcing the library into a stubborn “720p or nothing” ideology.
+That gives you smaller day-to-day downloads without forcing the library into a stubborn â€œ720p or nothingâ€ ideology.
 
 ## Language Strategy
 
@@ -245,3 +243,4 @@ If a setting sounds too clever, test it on a real series before giving it a seas
 6. Test on a few real shows before searching broadly.
 
 That order keeps Sonarr understandable and makes the final behavior much easier to trust.
+

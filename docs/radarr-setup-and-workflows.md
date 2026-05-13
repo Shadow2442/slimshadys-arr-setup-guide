@@ -1,6 +1,4 @@
-# Radarr Setup and Workflows
-
-<div class="doc-hero">
+﻿<div class="doc-hero">
   <h2>Movie automation that stays compact without losing the plot</h2>
   <p>This page covers the practical Radarr setup used in this guide: compact movie profiles, German-aware custom formats, interactive filtering, 720p and 480p downgrade lanes, and the specific workflow lessons learned from real search, import, and queue testing.</p>
   <div class="hero-badges">
@@ -12,11 +10,11 @@
 </div>
 
 <div class="doc-nav">
-  <a href="/slimshadys-arr-setup-guide/docs/setup-checklist.html">✅ Checklist</a>
-  <a href="/slimshadys-arr-setup-guide/docs/sabnzbd-tuning-and-reliability.html">⚙️ SAB</a>
-  <a href="/slimshadys-arr-setup-guide/docs/indexers-and-german-content.html">🛰️ Indexers</a>
-  <a href="/slimshadys-arr-setup-guide/docs/sonarr-setup-and-workflows.html">📺 Sonarr</a>
-  <a href="/slimshadys-arr-setup-guide/">🏠 Home</a>
+  <a href="/slimshadys-arr-setup-guide/docs/setup-checklist.html">âœ… Checklist</a>
+  <a href="/slimshadys-arr-setup-guide/docs/sabnzbd-tuning-and-reliability.html">âš™ï¸ SAB</a>
+  <a href="/slimshadys-arr-setup-guide/docs/indexers-and-german-content.html">ðŸ›°ï¸ Indexers</a>
+  <a href="/slimshadys-arr-setup-guide/docs/sonarr-setup-and-workflows.html">ðŸ“º Sonarr</a>
+  <a href="/slimshadys-arr-setup-guide/">ðŸ  Home</a>
 </div>
 
 <div class="info-grid">
@@ -55,7 +53,7 @@ In this setup, `Radarr` is responsible for:
 - interactive search curation
 - file-size-aware replacement logic
 
-Its job is not just “download a movie somehow.” Its job is to:
+Its job is not just â€œdownload a movie somehow.â€ Its job is to:
 
 - prefer sensible file sizes
 - preserve German-friendly logic
@@ -182,7 +180,7 @@ That makes `480p` different from `720p`:
 
 ## Interactive Search and Filtering
 
-Radarr’s interactive search became much more useful once filters matched real workflow questions instead of decorative title text.
+Radarrâ€™s interactive search became much more useful once filters matched real workflow questions instead of decorative title text.
 
 Useful filter ideas from this setup:
 
@@ -201,7 +199,7 @@ The practical lesson:
 
 Radarr does not automatically think:
 
-- “smaller file = better file”
+- â€œsmaller file = better fileâ€
 
 It thinks in terms of:
 
@@ -225,7 +223,7 @@ This is especially useful for:
 - `DVD`
 - intentionally tiny old-movie replacements
 
-Otherwise Radarr may eventually “improve” the movie again under normal monitoring logic.
+Otherwise Radarr may eventually â€œimproveâ€ the movie again under normal monitoring logic.
 
 ## Batch Strategy
 
@@ -260,3 +258,4 @@ If the profile sounds clever enough to save the universe, test it on ten movies 
 6. Unmonitor manual low-res keepers once you are happy with them.
 
 That order matches how the setup became more reliable in live testing instead of more decorative.
+

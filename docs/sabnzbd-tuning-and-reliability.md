@@ -1,6 +1,4 @@
-# SABnzbd Tuning and Reliability
-
-<div class="doc-hero">
+﻿<div class="doc-hero">
   <h2>Make the downloader calmer, cleaner, and slightly faster</h2>
   <p>This page turns the SAB guidance from the rest of the guide into one practical playbook: what to enable, what to avoid, what improved stability in real testing, and how to squeeze a little more speed out without waking the goblins.</p>
   <div class="hero-badges">
@@ -12,12 +10,12 @@
 </div>
 
 <div class="doc-nav">
-  <a href="/slimshadys-arr-setup-guide/docs/setup-checklist.html">✅ Checklist</a>
-  <a href="/slimshadys-arr-setup-guide/docs/sonarr-setup-and-workflows.html">📺 Sonarr</a>
-  <a href="/slimshadys-arr-setup-guide/docs/radarr-setup-and-workflows.html">🎬 Radarr</a>
-  <a href="/slimshadys-arr-setup-guide/docs/indexers-and-german-content.html">🛰️ Indexers</a>
-  <a href="/slimshadys-arr-setup-guide/docs/quality-sizing-and-downgrades.html">💾 Quality & Sizes</a>
-  <a href="/slimshadys-arr-setup-guide/">🏠 Home</a>
+  <a href="/slimshadys-arr-setup-guide/docs/setup-checklist.html">âœ… Checklist</a>
+  <a href="/slimshadys-arr-setup-guide/docs/sonarr-setup-and-workflows.html">ðŸ“º Sonarr</a>
+  <a href="/slimshadys-arr-setup-guide/docs/radarr-setup-and-workflows.html">ðŸŽ¬ Radarr</a>
+  <a href="/slimshadys-arr-setup-guide/docs/indexers-and-german-content.html">ðŸ›°ï¸ Indexers</a>
+  <a href="/slimshadys-arr-setup-guide/docs/quality-sizing-and-downgrades.html">ðŸ’¾ Quality & Sizes</a>
+  <a href="/slimshadys-arr-setup-guide/">ðŸ  Home</a>
 </div>
 
 <div class="info-grid">
@@ -235,3 +233,4 @@ That combination ended up:
 - and much easier to trust
 
 Which is about the nicest thing one can say about home-media automation.
+

@@ -1,6 +1,4 @@
-# Jackett Setup and Workflows
-
-<div class="doc-hero">
+﻿<div class="doc-hero">
   <h2>Torrent support without turning the stack into a pirate carnival</h2>
   <p>This page covers the practical role of <code>Jackett</code> in the guide: when it is useful, how it fits alongside Usenet, why it should stay selective, and how to keep torrent-side noise and breakage under control.</p>
   <div class="hero-badges">
@@ -103,3 +101,4 @@ That is clutter wearing a fake moustache.
 4. Keep Jackett as the torrent bridge, not the center of the entire architecture.
 
 That is the most practical way to keep torrent support helpful instead of decorative and fragile.
+
