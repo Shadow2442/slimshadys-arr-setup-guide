@@ -358,7 +358,10 @@ This repository is split into a few simple pages:
 - [Setup Checklist](docs/setup-checklist.md)
 - [Sonarr Setup and Workflows](docs/sonarr-setup-and-workflows.md)
 - [Radarr Setup and Workflows](docs/radarr-setup-and-workflows.md)
+- [Lidarr Setup and Workflows](docs/lidarr-setup-and-workflows.md)
 - [SABnzbd Tuning and Reliability](docs/sabnzbd-tuning-and-reliability.md)
+- [Jackett Setup and Workflows](docs/jackett-setup-and-workflows.md)
+- [Plex Setup and Workflows](docs/plex-setup-and-workflows.md)
 - [Indexers and German Content Strategy](docs/indexers-and-german-content.md)
 - [Quality, Sizes, and Downgrades](docs/quality-sizing-and-downgrades.md)
 

@@ -51,7 +51,10 @@
 - [Setup Checklist](/slimshadys-arr-setup-guide/docs/setup-checklist.html)
 - [Sonarr Setup and Workflows](/slimshadys-arr-setup-guide/docs/sonarr-setup-and-workflows.html)
 - [Radarr Setup and Workflows](/slimshadys-arr-setup-guide/docs/radarr-setup-and-workflows.html)
+- [Lidarr Setup and Workflows](/slimshadys-arr-setup-guide/docs/lidarr-setup-and-workflows.html)
 - [SABnzbd Tuning and Reliability](/slimshadys-arr-setup-guide/docs/sabnzbd-tuning-and-reliability.html)
+- [Jackett Setup and Workflows](/slimshadys-arr-setup-guide/docs/jackett-setup-and-workflows.html)
+- [Plex Setup and Workflows](/slimshadys-arr-setup-guide/docs/plex-setup-and-workflows.html)
 - [MDBList Import Lists](/slimshadys-arr-setup-guide/docs/mdblist-import-lists.html)
 - [Indexers and German Content Strategy](/slimshadys-arr-setup-guide/docs/indexers-and-german-content.html)
 - [Quality, Sizes, and Downgrades](/slimshadys-arr-setup-guide/docs/quality-sizing-and-downgrades.html)
@@ -61,7 +64,10 @@
 - general ARR setup order
 - dedicated `Sonarr` workflow guidance
 - dedicated `Radarr` workflow guidance
+- dedicated `Lidarr` workflow guidance
 - dedicated `SABnzbd` tuning and reliability guidance
+- dedicated `Jackett` workflow guidance
+- dedicated `Plex` workflow guidance
 - German-friendly indexer strategy
 - `MDBList` discovery workflows
 - compact quality and sizing rules
@@ -73,11 +79,14 @@
 1. [Setup Checklist](/slimshadys-arr-setup-guide/docs/setup-checklist.html)
 2. [Sonarr Setup and Workflows](/slimshadys-arr-setup-guide/docs/sonarr-setup-and-workflows.html)
 3. [Radarr Setup and Workflows](/slimshadys-arr-setup-guide/docs/radarr-setup-and-workflows.html)
-4. [SABnzbd Tuning and Reliability](/slimshadys-arr-setup-guide/docs/sabnzbd-tuning-and-reliability.html)
-5. [Indexers and German Content Strategy](/slimshadys-arr-setup-guide/docs/indexers-and-german-content.html)
-6. [MDBList Import Lists](/slimshadys-arr-setup-guide/docs/mdblist-import-lists.html)
-7. [Quality, Sizes, and Downgrades](/slimshadys-arr-setup-guide/docs/quality-sizing-and-downgrades.html)
-8. [Full Guide on GitHub](https://github.com/Shadow2442/slimshadys-arr-setup-guide#readme)
+4. [Lidarr Setup and Workflows](/slimshadys-arr-setup-guide/docs/lidarr-setup-and-workflows.html)
+5. [SABnzbd Tuning and Reliability](/slimshadys-arr-setup-guide/docs/sabnzbd-tuning-and-reliability.html)
+6. [Jackett Setup and Workflows](/slimshadys-arr-setup-guide/docs/jackett-setup-and-workflows.html)
+7. [Plex Setup and Workflows](/slimshadys-arr-setup-guide/docs/plex-setup-and-workflows.html)
+8. [Indexers and German Content Strategy](/slimshadys-arr-setup-guide/docs/indexers-and-german-content.html)
+9. [MDBList Import Lists](/slimshadys-arr-setup-guide/docs/mdblist-import-lists.html)
+10. [Quality, Sizes, and Downgrades](/slimshadys-arr-setup-guide/docs/quality-sizing-and-downgrades.html)
+11. [Full Guide on GitHub](https://github.com/Shadow2442/slimshadys-arr-setup-guide#readme)
 
 ## Quick Philosophy
 
