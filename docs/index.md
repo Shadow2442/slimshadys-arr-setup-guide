@@ -8,6 +8,8 @@ This site is aimed at beginners who want a practical, German-friendly `Sonarr` +
 
 - [Full Guide on GitHub](https://github.com/Shadow2442/slimshadys-arr-setup-guide#readme)
 - [Setup Checklist](/slimshadys-arr-setup-guide/docs/setup-checklist.html)
+- [Sonarr Setup and Workflows](/slimshadys-arr-setup-guide/docs/sonarr-setup-and-workflows.html)
+- [Radarr Setup and Workflows](/slimshadys-arr-setup-guide/docs/radarr-setup-and-workflows.html)
 - [SABnzbd Tuning and Reliability](/slimshadys-arr-setup-guide/docs/sabnzbd-tuning-and-reliability.html)
 - [Indexers and German Content Strategy](/slimshadys-arr-setup-guide/docs/indexers-and-german-content.html)
 - [Quality, Sizes, and Downgrades](/slimshadys-arr-setup-guide/docs/quality-sizing-and-downgrades.html)
@@ -15,6 +17,8 @@ This site is aimed at beginners who want a practical, German-friendly `Sonarr` +
 ## 🧭 What This Guide Covers
 
 - German-friendly indexer strategy
+- dedicated Sonarr workflow guidance
+- dedicated Radarr workflow guidance
 - SAB tuning and reliability
 - sane priority and quota handling
 - language preference scoring logic
@@ -26,10 +30,12 @@ This site is aimed at beginners who want a practical, German-friendly `Sonarr` +
 ## 📖 Recommended Reading Order
 
 1. [Setup Checklist](/slimshadys-arr-setup-guide/docs/setup-checklist.html)
-2. [SABnzbd Tuning and Reliability](/slimshadys-arr-setup-guide/docs/sabnzbd-tuning-and-reliability.html)
-3. [Indexers and German Content Strategy](/slimshadys-arr-setup-guide/docs/indexers-and-german-content.html)
-4. [Quality, Sizes, and Downgrades](/slimshadys-arr-setup-guide/docs/quality-sizing-and-downgrades.html)
-5. [Full Guide on GitHub](https://github.com/Shadow2442/slimshadys-arr-setup-guide#readme)
+2. [Sonarr Setup and Workflows](/slimshadys-arr-setup-guide/docs/sonarr-setup-and-workflows.html)
+3. [Radarr Setup and Workflows](/slimshadys-arr-setup-guide/docs/radarr-setup-and-workflows.html)
+4. [SABnzbd Tuning and Reliability](/slimshadys-arr-setup-guide/docs/sabnzbd-tuning-and-reliability.html)
+5. [Indexers and German Content Strategy](/slimshadys-arr-setup-guide/docs/indexers-and-german-content.html)
+6. [Quality, Sizes, and Downgrades](/slimshadys-arr-setup-guide/docs/quality-sizing-and-downgrades.html)
+7. [Full Guide on GitHub](https://github.com/Shadow2442/slimshadys-arr-setup-guide#readme)
 
 ## ⚡ Quick Philosophy
 

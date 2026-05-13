@@ -6,6 +6,8 @@
   <p>It focuses on German-friendly content, smarter quality rules, safer quotas, cleaner storage, and the kind of real-world fixes you only learn after ARR tools do something deeply confident and slightly cursed.</p>
   <div class="quick-links">
     <a href="/slimshadys-arr-setup-guide/docs/setup-checklist.html">Start with the checklist</a>
+    <a href="/slimshadys-arr-setup-guide/docs/sonarr-setup-and-workflows.html">See Sonarr setup</a>
+    <a href="/slimshadys-arr-setup-guide/docs/radarr-setup-and-workflows.html">See Radarr setup</a>
     <a href="/slimshadys-arr-setup-guide/docs/sabnzbd-tuning-and-reliability.html">See SAB tuning</a>
     <a href="/slimshadys-arr-setup-guide/docs/mdblist-import-lists.html">See MDBList automation</a>
     <a href="/slimshadys-arr-setup-guide/docs/indexers-and-german-content.html">See indexer strategy</a>
@@ -142,6 +144,8 @@ It was also built and refined with the support of `OpenAI Codex`, which helped i
 
 - [Full Guide on GitHub](https://github.com/Shadow2442/slimshadys-arr-setup-guide#readme)
 - [Setup Checklist](/slimshadys-arr-setup-guide/docs/setup-checklist.html)
+- [Sonarr Setup and Workflows](/slimshadys-arr-setup-guide/docs/sonarr-setup-and-workflows.html)
+- [Radarr Setup and Workflows](/slimshadys-arr-setup-guide/docs/radarr-setup-and-workflows.html)
 - [SABnzbd Tuning and Reliability](/slimshadys-arr-setup-guide/docs/sabnzbd-tuning-and-reliability.html)
 - [MDBList Import Lists](/slimshadys-arr-setup-guide/docs/mdblist-import-lists.html)
 - [Indexers and German Content Strategy](/slimshadys-arr-setup-guide/docs/indexers-and-german-content.html)
