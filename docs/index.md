@@ -8,12 +8,14 @@ This site is aimed at beginners who want a practical, German-friendly `Sonarr` +
 
 - [Full Guide on GitHub](https://github.com/Shadow2442/slimshadys-arr-setup-guide#readme)
 - [Setup Checklist](/slimshadys-arr-setup-guide/docs/setup-checklist.html)
+- [SABnzbd Tuning and Reliability](/slimshadys-arr-setup-guide/docs/sabnzbd-tuning-and-reliability.html)
 - [Indexers and German Content Strategy](/slimshadys-arr-setup-guide/docs/indexers-and-german-content.html)
 - [Quality, Sizes, and Downgrades](/slimshadys-arr-setup-guide/docs/quality-sizing-and-downgrades.html)
 
 ## 🧭 What This Guide Covers
 
 - German-friendly indexer strategy
+- SAB tuning and reliability
 - sane priority and quota handling
 - language preference scoring logic
 - music support through `Lidarr`
@@ -24,9 +26,10 @@ This site is aimed at beginners who want a practical, German-friendly `Sonarr` +
 ## 📖 Recommended Reading Order
 
 1. [Setup Checklist](/slimshadys-arr-setup-guide/docs/setup-checklist.html)
-2. [Indexers and German Content Strategy](/slimshadys-arr-setup-guide/docs/indexers-and-german-content.html)
-3. [Quality, Sizes, and Downgrades](/slimshadys-arr-setup-guide/docs/quality-sizing-and-downgrades.html)
-4. [Full Guide on GitHub](https://github.com/Shadow2442/slimshadys-arr-setup-guide#readme)
+2. [SABnzbd Tuning and Reliability](/slimshadys-arr-setup-guide/docs/sabnzbd-tuning-and-reliability.html)
+3. [Indexers and German Content Strategy](/slimshadys-arr-setup-guide/docs/indexers-and-german-content.html)
+4. [Quality, Sizes, and Downgrades](/slimshadys-arr-setup-guide/docs/quality-sizing-and-downgrades.html)
+5. [Full Guide on GitHub](https://github.com/Shadow2442/slimshadys-arr-setup-guide#readme)
 
 ## ⚡ Quick Philosophy
 

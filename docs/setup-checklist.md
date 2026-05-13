@@ -12,6 +12,7 @@
 </div>
 
 <div class="doc-nav">
+  <a href="/slimshadys-arr-setup-guide/docs/sabnzbd-tuning-and-reliability.html">⚙️ SAB</a>
   <a href="/slimshadys-arr-setup-guide/docs/mdblist-import-lists.html">📚 MDBList</a>
   <a href="/slimshadys-arr-setup-guide/docs/indexers-and-german-content.html">🛰️ Indexers</a>
   <a href="/slimshadys-arr-setup-guide/docs/quality-sizing-and-downgrades.html">💾 Quality & Sizes</a>
@@ -116,6 +117,10 @@ Why this specific mix:
 - `Direct Unpack` looked clever but caused more queue and post-processing weirdness in live testing
 - a modest connection bump improved throughput without overloading SAB
 - `timeout = 45` is a bit less patient than `60` without becoming too twitchy
+
+If you want the deeper reasoning and troubleshooting flow, read the dedicated page:
+
+- [SABnzbd Tuning and Reliability](/slimshadys-arr-setup-guide/docs/sabnzbd-tuning-and-reliability.html)
 
 ## 4. Sonarr
 

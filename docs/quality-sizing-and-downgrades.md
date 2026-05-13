@@ -13,6 +13,7 @@
 
 <div class="doc-nav">
   <a href="/slimshadys-arr-setup-guide/docs/setup-checklist.html">✅ Checklist</a>
+  <a href="/slimshadys-arr-setup-guide/docs/sabnzbd-tuning-and-reliability.html">⚙️ SAB</a>
   <a href="/slimshadys-arr-setup-guide/docs/mdblist-import-lists.html">📚 MDBList</a>
   <a href="/slimshadys-arr-setup-guide/docs/indexers-and-german-content.html">🛰️ Indexers</a>
   <a href="/slimshadys-arr-setup-guide/">🏠 Home</a>

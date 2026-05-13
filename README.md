@@ -356,6 +356,7 @@ This repository is split into a few simple pages:
 
 - [Main Guide](README.md)
 - [Setup Checklist](docs/setup-checklist.md)
+- [SABnzbd Tuning and Reliability](docs/sabnzbd-tuning-and-reliability.md)
 - [Indexers and German Content Strategy](docs/indexers-and-german-content.md)
 - [Quality, Sizes, and Downgrades](docs/quality-sizing-and-downgrades.md)
 

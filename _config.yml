@@ -3,6 +3,7 @@ description: Practical Sonarr, Radarr, Lidarr, and SABnzbd guidance for German-f
 theme: minima
 header_pages:
   - docs/setup-checklist.md
+  - docs/sabnzbd-tuning-and-reliability.md
   - docs/mdblist-import-lists.md
   - docs/indexers-and-german-content.md
   - docs/quality-sizing-and-downgrades.md
