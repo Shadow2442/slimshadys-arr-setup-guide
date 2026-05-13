@@ -1,30 +1,77 @@
-﻿<div class="doc-hero">
-  <h2>The supporting-docs front door</h2>
-  <p>This page is the quick map for the full guide system. The homepage is the polished introduction, while this page is the fast route for readers who want the docs structure directly.</p>
-  <div class="hero-badges">
-    <span>Clear reading order</span>
-    <span>App-by-app docs</span>
-    <span>German-friendly setup</span>
-    <span>Real tested advice</span>
-  </div>
-</div>
+<div class="guide-hub">
+  <h2>What this guide is about</h2>
+  <p>This page is the clean front door for the full guide system. It explains what the project covers, how the stack fits together, and gives you one tidy place to jump into each part without fighting duplicate navigation like it owes you money.</p>
+  <p>Use it as the map for the whole ARR setup: the homepage is the polished welcome mat, while this page is the prettier control panel for the full docs collection.</p>
 
-<div class="doc-nav">
-  <a href="/slimshadys-arr-setup-guide/docs/setup-checklist.html">Checklist</a>
-  <a href="/slimshadys-arr-setup-guide/docs/sonarr-setup-and-workflows.html">Sonarr</a>
-  <a href="/slimshadys-arr-setup-guide/docs/radarr-setup-and-workflows.html">Radarr</a>
-  <a href="/slimshadys-arr-setup-guide/docs/sabnzbd-tuning-and-reliability.html">SAB</a>
-  <a href="/slimshadys-arr-setup-guide/">Home</a>
+  <div class="hero-badges">
+    <span>One clear navigation hub</span>
+    <span>App-by-app guides</span>
+    <span>German-friendly setup</span>
+    <span>Live-tested advice</span>
+  </div>
+
+  <div class="hub-actions">
+    <a class="primary-link" href="/slimshadys-arr-setup-guide/">Go to Home</a>
+    <a class="secondary-link" href="https://github.com/Shadow2442/slimshadys-arr-setup-guide">Open GitHub Repo</a>
+  </div>
+
+  <div class="hub-section-title">Core guides</div>
+  <div class="hub-link-grid">
+    <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/setup-checklist.html">
+      <strong>ARR Setup Checklist</strong>
+      <span>Install order, folder basics, categories, and the safest path to getting the whole stack online.</span>
+    </a>
+    <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/sonarr-setup-and-workflows.html">
+      <strong>Sonarr</strong>
+      <span>Series and anime workflows, 720p-first logic, language scoring, and downgrade lessons that behaved well in practice.</span>
+    </a>
+    <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/radarr-setup-and-workflows.html">
+      <strong>Radarr</strong>
+      <span>Compact movie profiles, interactive filtering, 720p and 480p downgrade lanes, and safe batch strategy.</span>
+    </a>
+    <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/lidarr-setup-and-workflows.html">
+      <strong>Lidarr</strong>
+      <span>Music-specific categories, artist and album monitoring, and why music should not be bullied into movie logic.</span>
+    </a>
+  </div>
+
+  <div class="hub-section-title">Support guides</div>
+  <div class="hub-link-grid">
+    <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/sabnzbd-tuning-and-reliability.html">
+      <strong>SABnzbd</strong>
+      <span>Reliability tuning, queue sanity, post-processing lessons, and the settings that made the downloader calmer and faster.</span>
+    </a>
+    <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/jackett-setup-and-workflows.html">
+      <strong>Jackett</strong>
+      <span>Selective torrent support, fallback thinking, and how not to build a tracker zoo by accident.</span>
+    </a>
+    <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/plex-setup-and-workflows.html">
+      <strong>Plex</strong>
+      <span>Final library setup, archival HDD organization, metadata boundaries, and clean library scanning.</span>
+    </a>
+    <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/mdblist-import-lists.html">
+      <strong>MDBList</strong>
+      <span>Automated discovery lists for movies and shows and how they feed into ARR without taking over the whole system.</span>
+    </a>
+    <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/indexers-and-german-content.html">
+      <strong>Indexer Strategy</strong>
+      <span>How to balance broad providers, German specialists, quotas, and fallback sources without turning the stack feral.</span>
+    </a>
+    <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/quality-sizing-and-downgrades.html">
+      <strong>Quality, Sizes, and Downgrades</strong>
+      <span>Profile logic, size rules, compact keepers, and storage-aware workflows that save space for real.</span>
+    </a>
+  </div>
 </div>
 
 <div class="info-grid">
   <div class="info-card">
     <h3>Best use</h3>
-    <p>Use this page when you want the shortest route to the specific part of the stack you are configuring, fixing, or trying not to accidentally weaponize.</p>
+    <p>Use this page when you want the shortest route to the exact part of the stack you are configuring, fixing, or trying not to accidentally weaponize.</p>
   </div>
   <div class="info-card">
     <h3>Main outcome</h3>
-    <p>A clearer reading order, cleaner topic separation, and easier handoff to Codex or another human without sending them into a documentation hedge maze.</p>
+    <p>A cleaner reading order, clearer topic separation, and an easier handoff to Codex or another human without sending them into a documentation hedge maze.</p>
   </div>
 </div>
 
@@ -35,42 +82,13 @@
   </div>
   <div class="mini-card">
     <h4>Then split by app</h4>
-    <p>Read the dedicated Sonarr, Radarr, and SAB pages when you want practical app-by-app tuning.</p>
+    <p>Read the dedicated Sonarr, Radarr, Lidarr, and SAB pages when you want practical app-by-app tuning.</p>
   </div>
   <div class="mini-card">
     <h4>Keep the rest nearby</h4>
-    <p>Use the indexer, MDBList, and quality pages as shared strategy references across the whole stack.</p>
+    <p>Use the indexer, MDBList, quality, Jackett, and Plex guides as shared strategy references across the whole stack.</p>
   </div>
 </div>
-
-## Start Here
-
-- [Full Guide on GitHub](https://github.com/Shadow2442/slimshadys-arr-setup-guide#readme)
-- [Setup Checklist](/slimshadys-arr-setup-guide/docs/setup-checklist.html)
-- [Sonarr Setup and Workflows](/slimshadys-arr-setup-guide/docs/sonarr-setup-and-workflows.html)
-- [Radarr Setup and Workflows](/slimshadys-arr-setup-guide/docs/radarr-setup-and-workflows.html)
-- [Lidarr Setup and Workflows](/slimshadys-arr-setup-guide/docs/lidarr-setup-and-workflows.html)
-- [SABnzbd Tuning and Reliability](/slimshadys-arr-setup-guide/docs/sabnzbd-tuning-and-reliability.html)
-- [Jackett Setup and Workflows](/slimshadys-arr-setup-guide/docs/jackett-setup-and-workflows.html)
-- [Plex Setup and Workflows](/slimshadys-arr-setup-guide/docs/plex-setup-and-workflows.html)
-- [MDBList Import Lists](/slimshadys-arr-setup-guide/docs/mdblist-import-lists.html)
-- [Indexers and German Content Strategy](/slimshadys-arr-setup-guide/docs/indexers-and-german-content.html)
-- [Quality, Sizes, and Downgrades](/slimshadys-arr-setup-guide/docs/quality-sizing-and-downgrades.html)
-
-## What This Guide Covers
-
-- general ARR setup order
-- dedicated `Sonarr` workflow guidance
-- dedicated `Radarr` workflow guidance
-- dedicated `Lidarr` workflow guidance
-- dedicated `SABnzbd` tuning and reliability guidance
-- dedicated `Jackett` workflow guidance
-- dedicated `Plex` workflow guidance
-- German-friendly indexer strategy
-- `MDBList` discovery workflows
-- compact quality and sizing rules
-- safer downgrade workflows
-- practical lessons from live testing
 
 ## Recommended Reading Order
 
@@ -94,5 +112,4 @@
 - Treat `480p` as a curated old-movie lane rather than a magical bulk shortcut.
 - Let `Lidarr` handle music with its own sources and workflow.
 
-If a setting sounds too clever, test it on a few titles before unleashing it on the whole library. Your hard drive will thank you, and SAB might stop composing little tragedies. 
-
+If a setting sounds too clever, test it on a few titles before unleashing it on the whole library. Your hard drive will thank you, and SAB might stop composing little tragedies.
