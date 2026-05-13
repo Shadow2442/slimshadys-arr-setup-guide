@@ -15,6 +15,26 @@ It focuses on:
 
 This guide is based on a real-world setup that was tuned and tested live, not just copied from disconnected wiki pages.
 
+## Latest Stability and Speed Notes
+
+The setup behind this guide was refined further after heavier downgrade testing and queue troubleshooting.
+
+The most useful real-world improvements were:
+
+- `SABnzbd Direct Unpack = off`
+- `SABnzbd connections = 14`
+- `SABnzbd receive_threads = 4`
+- `SABnzbd server timeout = 45`
+- smaller `Radarr` and `Sonarr` downgrade waves instead of giant batch floods
+- treating `480p` as a curated old-movie workflow instead of a mass automation lane
+
+That combination made the live setup:
+
+- more reliable
+- less likely to jam in post-processing
+- less likely to leave ghost `downloading` rows in ARR
+- and slightly faster during normal download work
+
 ## Background and Personal Experience
 
 This guide was not written from the perspective of a full-time software developer trying to impress other developers.
@@ -288,7 +308,7 @@ If you only want the short version:
 - `Sonarr`: prefer `720p`, allow `1080p` fallback, use compact TV size limits
 - `Radarr`: prefer compact `1080p`, disable `1080p remux` in the main profile
 - `Lidarr`: use it for artists and albums, with its own quality and metadata flow
-- `SABnzbd`: enable `Ignore samples`, clean junk files, blacklist executable extensions
+- `SABnzbd`: enable `Ignore samples`, clean junk files, blacklist executable extensions, keep `Direct Unpack` off, and use modestly tuned server settings
 - `NinjaCentral`: daily Usenet workhorse
 - `NZBFinder`: strong secondary source with meaningful German coverage
 - `NZB.su`: solid fallback
@@ -444,12 +464,19 @@ Best immediate settings:
 - `Cleanup List = nfo, sfv, srr, txt, jpg, jpeg, png, url`
 - `Unwanted extensions = exe, com, cmd, bat, scr, pif`
 - `Unwanted extensions mode = blacklist`
+- `Direct Unpack = off`
+- `Connections = 14` on the main server as a safe tuned starting point
+- `Receive Threads = 4`
+- `Server Timeout = 45`
 
 Why:
 
 - sample files can interfere with manual imports and clutter
 - junk metadata files add no value to media libraries
 - executable files in media downloads are at best useless and at worst suspicious
+- disabling `Direct Unpack` reduced queue and post-processing weirdness in live testing
+- a small connection bump improved speed without turning SAB back into a forklift accident
+- lowering timeout from `60` to `45` made SAB a bit less patient with hanging article fetches without making it twitchy
 
 ## 5. Sonarr Language Preference Setup
 
@@ -577,6 +604,18 @@ Recommended:
 - `WEBRip-720p = preferred 20, max 35`
 - `Bluray-720p = preferred 20, max 35`
 
+Later live testing justified a slightly looser movie `720p` ceiling:
+
+- `HDTV-720p = preferred 18, max 45`
+- `WEBDL-720p = preferred 18, max 45`
+- `WEBRip-720p = preferred 20, max 45`
+- `Bluray-720p = preferred 20, max 45`
+
+Why:
+
+- the original stricter cap rejected some perfectly reasonable long-movie `720p` releases
+- `45` still keeps things sane while giving runtime-heavy titles enough breathing room
+
 ### Sonarr episode sizes
 
 Recommended:
@@ -606,6 +645,7 @@ Downgrading is where people usually manage to save disk space and accidentally c
 Create a separate profile:
 
 - `HD 720p downgrade`
+- optional stricter old-cinema profile: `SD 480p downgrade`
 
 Rules:
 
@@ -625,6 +665,12 @@ Recommended workflow:
 2. run `Search Selected`
 3. review imports
 4. repeat if the results look good
+
+Practical update from live testing:
+
+- `720p downgrade` works well as a semi-automated bulk lane
+- `480p downgrade` works better as a curated/manual lane for older films
+- once a movie lands on a compact `480p`, `DVD`, or otherwise intentionally tiny replacement you want to keep, unmonitoring it is the cleanest way to stop ARR from "improving" it again later
 
 ### Sonarr downgrade workflow
 
@@ -696,11 +742,28 @@ That is not a bug.
 
 That is the indexer telling you to calm down.
 
+There is a second reason to stay small:
+
+- large downgrade waves magnify bad releases
+- one corrupt archive can poison post-processing and confuse ARR queue state
+- the downloader and import chain stay much happier when you move in controlled waves instead of a heroic migration of `200` movies at once
+
 ## 12. What to Watch For
 
 ### Sample files
 
 Use SAB’s `Ignore samples`.
+
+### Downloader cleverness
+
+Do not assume every SAB speed feature is worth enabling.
+
+In this live setup, stability improved when:
+
+- `Direct Unpack` was turned off
+- SAB was allowed to finish a download cleanly before unpacking it
+
+It was a little less flashy and a lot less haunted.
 
 ### Split or multipart movie releases
 

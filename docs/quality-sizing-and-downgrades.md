@@ -43,6 +43,17 @@
   </div>
 </div>
 
+<div class="info-grid">
+  <div class="info-card">
+    <h3>Latest live tuning</h3>
+    <p><code>SABnzbd</code> ran more reliably with <code>Direct Unpack</code> turned off, a modest server bump to <code>14</code> connections, <code>receive_threads = 4</code>, and a slightly tighter server timeout of <code>45</code>.</p>
+  </div>
+  <div class="info-card">
+    <h3>Practical result</h3>
+    <p>The stack became calmer, queue handling became cleaner, and overall download behavior got a little faster without dragging SAB back into clown mode.</p>
+  </div>
+</div>
+
 This page focuses on quality profiles, size limits, and how to downgrade safely without accidentally downloading worse and larger files.
 
 These settings sit in the middle of the automation chain:
@@ -103,6 +114,15 @@ Recommended:
 - `WEBRip-720p = preferred 20, max 35`
 - `Bluray-720p = preferred 20, max 35`
 
+Later live testing justified a slightly looser movie `720p` ceiling:
+
+- `HDTV-720p = preferred 18, max 45`
+- `WEBDL-720p = preferred 18, max 45`
+- `WEBRip-720p = preferred 20, max 45`
+- `Bluray-720p = preferred 20, max 45`
+
+That kept the storage philosophy intact while allowing reasonable long-movie `720p` files to pass.
+
 ## Series Philosophy
 
 Recommended default:
@@ -160,6 +180,7 @@ Do not turn your main profile into a downgrade profile.
 Create:
 
 - `HD 720p downgrade`
+- optional stricter old-cinema profile: `SD 480p downgrade`
 
 Use it for:
 
@@ -173,6 +194,12 @@ Workflow:
 2. search a small batch
 3. inspect imports
 4. keep only what actually saves space sensibly
+
+Real-world update:
+
+- `720p downgrade` works well as the semi-automated bulk lane
+- `480p downgrade` is better used as a curated/manual lane for older films
+- once you deliberately keep a compact `480p`, `DVD`, or other small old-title result, unmonitoring that movie is the safest way to stop ARR from replacing it again later
 
 ### Sonarr Downgrade Profile
 
@@ -216,6 +243,12 @@ Recommended batch sizes:
 
 - movies: `10-20`
 - episodes: `5-10`
+
+After live testing, that advice got stronger rather than weaker:
+
+- small waves keep SAB calmer
+- smaller waves expose bad releases earlier
+- giant downgrade pushes create more queue drama than value
 
 Why:
 

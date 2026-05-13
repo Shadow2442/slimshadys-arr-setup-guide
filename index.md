@@ -30,6 +30,19 @@
   </div>
 </div>
 
+<div class="scope-card">
+  <h3>Latest live tuning that helped</h3>
+  <p>The guide now reflects the newer, more stable configuration that behaved better in real testing:</p>
+  <div class="scope-tags">
+    <span><code>SABnzbd Direct Unpack = off</code></span>
+    <span><code>connections = 14</code></span>
+    <span><code>receive_threads = 4</code></span>
+    <span><code>timeout = 45</code></span>
+    <span>smaller downgrade waves</span>
+    <span>curated 480p old-movie lane</span>
+  </div>
+</div>
+
 <div class="card-grid">
   <div class="guide-card">
     <h3>🇩🇪 German-friendly by design</h3>

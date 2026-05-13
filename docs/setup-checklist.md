@@ -106,6 +106,16 @@ Enable:
 - `Ignore samples`
 - executable blacklist: `exe, com, cmd, bat, scr, pif`
 - cleanup list: `nfo, sfv, srr, txt, jpg, jpeg, png, url`
+- `Direct Unpack = off`
+- `Connections = 14` on the main server as a safe tuned starting point
+- `Receive Threads = 4`
+- `Server Timeout = 45`
+
+Why this specific mix:
+
+- `Direct Unpack` looked clever but caused more queue and post-processing weirdness in live testing
+- a modest connection bump improved throughput without overloading SAB
+- `timeout = 45` is a bit less patient than `60` without becoming too twitchy
 
 ## 4. Sonarr
 
@@ -251,6 +261,8 @@ Recommended:
 - use small batches:
   - movies: `10-20`
   - episodes: `5-10`
+
+That is not just theory. In the live setup, smaller batches were a major stability upgrade for both ARR apps and SAB.
 
 ## 12. Downgrade Warnings
 
