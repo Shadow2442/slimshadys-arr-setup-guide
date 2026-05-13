@@ -63,22 +63,96 @@
   </div>
 </div>
 
-## What Radarr Should Do in This Stack
+## What Radarr Is and Why You Need It
 
-In this setup, `Radarr` is responsible for:
+`Radarr` is the ARR app for movies and anime movies.
 
-- movies
-- anime movies
-- import-list-driven movie discovery
-- interactive search curation
-- file-size-aware replacement logic
+In a healthy stack, Radarr should:
 
-Its job is not just to download a movie somehow. Its job is to:
+- monitor the movies you want
+- search automatically or on demand
+- send the chosen release to your downloader
+- import and rename the final file correctly
+- make future upgrades or replacements predictable
 
-- prefer sensible file sizes
-- preserve your real language preferences where possible
-- allow manual premium exceptions
-- and keep the movie library from slowly turning into an obese storage museum
+Its job is not just to download a movie somehow. Its job is to prefer sensible file sizes, preserve your real preferences where possible, and stop the movie library from slowly turning into an obese storage museum.
+
+## Download Radarr
+
+- Official site: [radarr.video](https://radarr.video/)
+- Direct download page: [radarr.video/#download](https://radarr.video/#download)
+
+For Windows, the standard installer is the easiest place to start.
+
+## Install Radarr Step by Step
+
+1. Download the current installer from the official Radarr site.
+2. Run the installer and let it install the app and service.
+3. Open Radarr in your browser, usually on `http://localhost:7878`.
+4. Confirm the dashboard opens cleanly.
+5. Before you start importing large movie lists, wire up the boring basics first.
+
+The safe order is:
+
+- create the final movie library folder
+- create the downloader category for movies, such as `movies`
+- connect Radarr to the downloader
+- connect Radarr to your indexers
+
+## Basic Configuration First
+
+Get these four things right before you chase advanced tuning:
+
+- root movie folder
+- downloader connection
+- indexer connection
+- media management naming and import behavior
+
+Recommended final library idea:
+
+- final library: `F:\media\movies`
+
+Recommended downloader category:
+
+- `movies`
+
+The final library and the temporary download folder should stay separate. Radarr should move finished movies into the clean library, not ask Plex to sort through a crime scene later.
+
+## Base Settings I Recommend
+
+### Media Management
+
+Set Radarr up so it:
+
+- renames movies on import
+- uses clear folder naming
+- keeps the final movie library consistent
+
+That makes future scanning, backups, and manual review much easier.
+
+### Download Client
+
+Connect Radarr to your downloader and verify:
+
+- host and port are correct
+- category is `movies`
+- test passes
+
+If the test fails, stop there and fix that first. Advanced profile tuning on top of a broken download path is just decorative suffering.
+
+### Indexers
+
+Add only the sources you actually want.
+
+The goal is:
+
+- a few reliable broad providers
+- optional specialist sources when you need them
+- no giant pile of junk that only exists to waste search time
+
+If you want the regional language-specific logic used in this project, keep that part on the dedicated page:
+
+- [Indexers and German Content Strategy](/slimshadys-arr-setup-guide/docs/indexers-and-german-content.html)
 
 ## Recommended Philosophy
 
@@ -93,23 +167,7 @@ That means:
 - disable `Remux-1080p` in the main profile
 - treat downgrade profiles as special-purpose tools, not as the main profile
 
-## Language Strategy
-
-Use the same language-aware philosophy as Sonarr:
-
-- keep the built-in profile language broad
-- use custom formats to express your actual audio and subtitle preferences
-- avoid treating parser guesses as truth
-
-One especially useful Radarr rule from this setup is:
-
-- set the built-in profile language to `Any`
-
-That keeps Radarr from over-trusting weak parser signals.
-
-If you want the exact German-friendly scoring model used in this project, use:
-
-- [Indexers and German Content Strategy](/slimshadys-arr-setup-guide/docs/indexers-and-german-content.html)
+This keeps the normal movie lane practical while leaving room for manual exceptions when you genuinely want a huge premium release.
 
 ## Main Quality Profile
 
@@ -118,9 +176,15 @@ Recommended default:
 - compact `1080p`
 - `Remux-1080p` disabled
 
-This keeps the normal movie lane practical while leaving room for manual exceptions when you genuinely want a huge premium release.
+One especially useful Radarr rule from this setup is:
+
+- set the built-in profile language to `Any`
+
+That keeps Radarr from over-trusting weak parser signals and lets custom formats do the real language work.
 
 ## Movie Size Limits
+
+Once the base setup works, apply the practical size rules.
 
 Recommended compact movie defaults:
 
@@ -136,7 +200,30 @@ Recommended compact movie defaults:
 - `WEBRip-720p = preferred 20, max 45`
 - `Bluray-720p = preferred 20, max 45`
 
-Those `720p` values are the later live-tested version, not the original stricter ones. The looser ceiling was needed because some perfectly reasonable long-movie `720p` releases were getting rejected.
+Those `720p` values are the later live-tested version. The looser ceiling was needed because some perfectly reasonable long-movie `720p` releases were getting rejected.
+
+## Language and Custom Format Strategy
+
+Use the same language-aware philosophy as Sonarr:
+
+- keep the built-in profile language broad
+- use custom formats to express your real audio and subtitle preferences
+- avoid treating parser guesses as truth
+
+This gives you much more control than relying on title text and hope.
+
+## Recommended Refinements and Enhancements
+
+Once the basic app is working, these are the improvements that mattered most in real use:
+
+- compact `1080p` as the default movie lane
+- practical `720p` caps
+- interactive search filters that match real questions
+- a dedicated `720p` downgrade profile
+- a stricter curated `480p` lane for old movies
+- unmonitoring curated low-res keepers
+
+Those are the changes that turn Radarr from “movie downloader” into “movie workflow with a brain.”
 
 ## 720p Downgrade Workflow
 
@@ -182,7 +269,7 @@ That makes `480p` different from `720p`:
 
 ## Interactive Search and Filtering
 
-Radarr's interactive search became much more useful once filters matched real workflow questions instead of decorative title text.
+Radarr's interactive search becomes far more useful when filters match real workflow questions instead of decorative title text.
 
 Useful filter ideas from this setup:
 
@@ -192,7 +279,7 @@ Useful filter ideas from this setup:
 - downgrade-profile library views
 - older-movie candidate lists
 
-If you are building a German-friendly stack, keep that part on the dedicated German strategy page instead of making every main Radarr filter about one region by default.
+This matters because sometimes a compact `1080p x265` is more useful than a technically lower-resolution but bloated `720p` file.
 
 ## When Radarr Will Not Auto-Grab Your Favorite Manual Pick
 
@@ -224,24 +311,13 @@ This is especially useful for:
 
 Otherwise Radarr may eventually improve the movie again under normal monitoring logic.
 
-## Batch Strategy
-
-Recommended movie batch sizes:
-
-- `10-20`
-
-This became one of the clearest real-world lessons:
-
-- smaller waves keep SAB calmer
-- smaller waves expose bad releases sooner
-- giant downgrade pushes create more queue pain than value
-
 ## Common Mistakes
 
 Watch out for:
 
 - treating lower resolution as automatically smaller
 - trusting misleading parser language behavior
+- skipping the basic folder and downloader setup
 - letting downgrade profiles become the default for the whole library
 - assuming automatic search can replace curation for older sparse `480p` titles
 
@@ -249,12 +325,16 @@ If the profile sounds clever enough to save the universe, test it on ten movies 
 
 ## Recommended Step-by-Step
 
-1. Set the main movie profile to compact `1080p`.
-2. Apply your language-aware custom-format logic.
-3. Use the newer `720p` size caps.
-4. Build the `HD 720p downgrade` lane for controlled space-saving waves.
-5. Build the stricter `SD 480p downgrade` lane only for curated older-movie work.
-6. Unmonitor manual low-res keepers once you are happy with them.
-7. Use the German strategy page only if you actually need that regional tuning.
+1. Download and install Radarr.
+2. Create the final movie library folder.
+3. Connect the downloader and confirm the `movies` category works.
+4. Add indexers and test them.
+5. Turn on clean media management and naming.
+6. Set the main movie profile to compact `1080p`.
+7. Apply your language-aware custom-format logic.
+8. Use the newer `720p` size caps.
+9. Build the `HD 720p downgrade` lane for controlled space-saving waves.
+10. Build the stricter `SD 480p downgrade` lane only for curated older-movie work.
+11. Unmonitor manual low-res keepers once you are happy with them.
 
 That order matches how the setup became more reliable in live testing instead of more decorative.

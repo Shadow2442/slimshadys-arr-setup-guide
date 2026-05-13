@@ -64,37 +64,108 @@
   </div>
 </div>
 
-## What Lidarr Should Do in This Stack
+## What Lidarr Is and Why You Need It
 
-In this setup, `Lidarr` is responsible for:
+`Lidarr` is the ARR app for music.
 
-- artists
-- albums
-- music-library imports
-- music-specific metadata flow
-- music-oriented import lists
+In a healthy stack, Lidarr should:
 
-Its role is not to imitate `Sonarr` or `Radarr`.
+- monitor artists and albums
+- search for wanted albums
+- send downloads to the downloader
+- import and organize music cleanly
+- keep music metadata and folder structure consistent
 
-Its role is to:
+Its role is not to imitate Sonarr or Radarr. Music has different discovery patterns, different quality decisions, and a very different relationship to metadata.
 
-- monitor artists and albums cleanly
-- keep music downloads in a separate category
-- organize the library in a way your music player understands
+## Download Lidarr
+
+- Official site: [lidarr.audio](https://lidarr.audio/)
+- Direct download page: [lidarr.audio/#download](https://lidarr.audio/#download)
+
+For Windows, the standard installer is the easiest place to begin.
+
+## Install Lidarr Step by Step
+
+1. Download the current installer from the Lidarr site.
+2. Run the installer and let it install the app and service.
+3. Open Lidarr in your browser, usually on `http://localhost:8686`.
+4. Confirm the dashboard loads cleanly.
+5. Before adding a giant artist wishlist, get the base folders and category right.
+
+The safe order is:
+
+- create the final music library folder
+- create a separate downloader category for music
+- connect Lidarr to the downloader
+- connect Lidarr to the sources you want to use
+
+## Basic Configuration First
+
+Before you worry about perfect quality philosophy, get these basics in place:
+
+- final music root folder
+- downloader connection
+- music category
+- naming and metadata settings
+
+Recommended final library idea:
+
+- final library: `F:\media\music`
+
+Recommended downloader category:
+
+- `music`
+
+Keep music isolated from TV and movie categories. That sounds obvious, but mixed categories are how automation starts dressing albums like season packs.
+
+## Base Settings I Recommend
+
+### Media Management
+
+Let Lidarr handle:
+
+- artist folders
+- album folders
+- track naming
+- metadata cleanup
+
+The point is to end up with a music library that your player understands immediately.
+
+### Download Client
+
+Connect Lidarr to your downloader and verify:
+
+- host and port are correct
+- category is `music`
+- test passes
+
+If the test fails, fix that before you spend any time on artist monitoring or list imports.
+
+### Sources and Discovery
+
+Unlike movies and shows, `MDBList` is not the right discovery layer here.
+
+For music, use music-oriented sources like:
+
+- `Last.fm`
+- `Headphones`
+
+That keeps discovery aligned with the type of library you are actually building.
 
 ## Recommended Philosophy
 
 The simplest working Lidarr philosophy is:
 
-- keep music in its own download category, such as `music`
-- let Lidarr manage music naming and metadata
+- keep music in its own download category
+- let Lidarr manage naming and metadata
 - avoid overcomplicating quality rules on day one
 
 Music automation becomes much easier once you stop trying to make it behave like episodic video automation.
 
 ## Quality Approach
 
-Lidarr is not about `720p` vs `1080p`.
+Lidarr is not about `720p` versus `1080p`.
 
 The practical decision is usually:
 
@@ -104,42 +175,57 @@ The practical decision is usually:
 
 For a beginner-friendly stack:
 
-- choose a consistent music-quality philosophy
+- choose one clear music-quality philosophy
 - keep it simple at first
-- let Lidarr enforce it rather than improvising manually forever
+- let Lidarr enforce it instead of improvising manually forever
 
-## Import Lists and Discovery
+## Recommended Refinements and Enhancements
 
-`MDBList` is not the right discovery layer for `Lidarr`.
+Once the basic setup works, the most useful refinements are:
 
-For music, use music-oriented sources like:
+- keeping music in its own category
+- using music-specific discovery sources
+- letting Lidarr own metadata and naming
+- resisting the temptation to overbuild quality rules before the workflow is stable
 
-- `Last.fm`
-- `Headphones`
+This page is intentionally less aggressive than the Sonarr and Radarr pages because music automation gets messy fast when you try to be too clever too early.
 
-That keeps discovery aligned with the type of library you are actually building.
+## Folder and Library Layout
 
-## Categories and Paths
+Recommended final layout:
 
-Keep the downloader category separate:
+```text
+F:\
+  media\
+    music\
+      Artist Name\
+        Album Title\
+          01 - Track Name.ext
+```
 
-- `music`
+Keep temporary downloads outside the final music library. Lidarr should import into the final path only after the download is actually ready.
 
-And keep the final library path separate from:
+## Common Mistakes
 
-- temporary downloads
-- TV folders
-- movie folders
+Watch out for:
 
-This avoids crossover clutter and keeps import logic sane.
+- mixing music into the TV or movie category
+- expecting `MDBList` to solve music discovery
+- skipping metadata cleanup and naming
+- overcomplicating quality logic before the basic flow works
+
+Music libraries go weird in quieter ways than movie libraries, but they absolutely still go weird.
 
 ## Recommended Step-by-Step
 
-1. Create the `music` category in the downloader.
-2. Point Lidarr at the correct final music library root.
-3. Choose a simple quality philosophy.
-4. Add artists or import lists from music-specific sources.
-5. Let Lidarr handle naming and organization instead of doing it by hand.
+1. Download and install Lidarr.
+2. Create the final music library root.
+3. Create the `music` category in the downloader.
+4. Connect Lidarr to the downloader and test it.
+5. Turn on clean naming and metadata handling.
+6. Choose a simple quality philosophy.
+7. Add artists manually or from music-specific discovery sources.
+8. Let Lidarr own organization instead of doing it by hand.
 
 That is enough to get a practical music lane online without turning the setup into a side project inside the side project.
 

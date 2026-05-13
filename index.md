@@ -21,6 +21,7 @@
 </div><div class="hero-intro">
   <h2>What this guide is about</h2>
   <p>This site is a practical beginner-friendly walkthrough for building a mostly automated media setup with <code>Sonarr</code>, <code>Radarr</code>, <code>Lidarr</code>, <code>SABnzbd</code>, <code>Jackett</code>, and <code>Plex</code>.</p>
+  <p>It is designed for people who want more than a vague feature list. Each major app page explains what the tool is for, where to download it, how to install it, how to do the basic configuration, and only then how to apply the smarter refinements that made this setup cleaner, faster, and more reliable in real testing.</p>
   <p>It focuses on smarter quality rules, safer quotas, cleaner storage, and the kind of real-world fixes you only learn after ARR tools do something deeply confident and slightly cursed.</p>
   <div class="hero-meta">
     <span class="hero-meta-label">Guide traffic:</span>
@@ -55,6 +56,18 @@
     <span>language-aware automation</span>
     <span>size control</span>
     <span>safe downgrade workflows</span>
+  </div>
+</div>
+
+<div class="scope-card">
+  <h3>How to work through it without losing your mind</h3>
+  <p>If you are new, do not try to configure the whole stack in one dramatic weekend battle. Start with the checklist, install one app at a time, confirm the base setup works, and then return for the recommended refinements once the boring foundations are solid.</p>
+  <div class="scope-tags">
+    <span>Understand the app first</span>
+    <span>Install it cleanly</span>
+    <span>Do the base config</span>
+    <span>Add our refinements after that</span>
+    <span>Test on a few titles first</span>
   </div>
 </div>
 

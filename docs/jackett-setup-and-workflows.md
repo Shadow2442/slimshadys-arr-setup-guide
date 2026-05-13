@@ -64,18 +64,57 @@
   </div>
 </div>
 
-## What Jackett Should Do in This Stack
+## What Jackett Is and Why You Need It
 
-In this setup, `Jackett` is:
+`Jackett` is the bridge between ARR apps and torrent indexers.
 
-- the torrent indexer bridge
-- the optional torrent side of a mostly Usenet-first setup
+Its job is to:
 
-It is useful for:
+- connect to torrent sites
+- expose them in a format Sonarr and Radarr can understand
+- act as the optional torrent side of a mostly Usenet-first setup
+
+Jackett is useful for:
 
 - fallback searching
 - occasional releases not available on Usenet
-- mixed-source ARR setups where torrent support is genuinely wanted
+- mixed-source setups where torrent support is genuinely wanted
+
+## Download Jackett
+
+- Official releases: [Jackett GitHub Releases](https://github.com/Jackett/Jackett/releases)
+
+There is no polished marketing site here, which is a very Jackett kind of detail.
+
+## Install Jackett Step by Step
+
+1. Download the current Windows release from GitHub.
+2. Extract or install it according to the release type you chose.
+3. Start Jackett and open the web interface, usually on `http://localhost:9117`.
+4. Confirm the dashboard loads.
+5. Before adding a dozen trackers, add one and test it properly first.
+
+## Basic Configuration First
+
+Before you worry about “coverage,” get these basics right:
+
+- one or two tracker sources that actually work
+- the API key
+- the Torznab feed URL for each tracker you want to use
+- a clear understanding of which trackers are worth keeping
+
+Jackett should be a clean bridge, not a museum of sources that disappointed you historically.
+
+## Base Settings I Recommend
+
+For the base setup:
+
+- add only the torrent sources you actually care about
+- test each source manually in Jackett
+- copy the working Torznab feed into Sonarr or Radarr
+- keep notes on which ones are stable and which are just loud
+
+That is enough to get useful torrent fallback online without immediately creating a tracker zoo.
 
 ## Recommended Philosophy
 
@@ -87,7 +126,7 @@ That means:
 - keep weak or flaky sources under control
 - treat torrents as fallback when that matches your setup goals
 
-The goal is not "as many indexers as possible."
+The goal is not “as many indexers as possible.”
 
 The goal is:
 
@@ -104,21 +143,35 @@ Use it only where needed.
 
 Not every site requires it, and not every setup benefits from turning the stack into a browser-automation hobby.
 
+## Recommended Refinements and Enhancements
+
+Once Jackett is working, the useful refinements are:
+
+- keeping the good trackers
+- removing the consistently noisy ones
+- using FlareSolverr only where required
+- treating Jackett as a fallback bridge instead of the center of the entire system
+
+That keeps torrent support helpful instead of decorative and fragile.
+
 ## Good Habits
 
 - test sources manually
 - remove the ones that consistently return junk
 - avoid keeping broken or dead sources just because they used to work once
 
-If a source creates more weird matches than useful results, that is not "coverage."
+If a source creates more weird matches than useful results, that is not “coverage.”
 That is clutter wearing a fake moustache.
 
 ## Recommended Step-by-Step
 
-1. Add only the torrent sources you actually care about.
-2. Test them before feeding them to ARR.
-3. Use FlareSolverr only for the sites that truly need it.
-4. Keep Jackett as the torrent bridge, not the center of the entire architecture.
+1. Download and install Jackett.
+2. Open the web interface and confirm it starts cleanly.
+3. Add one tracker you actually care about.
+4. Test it inside Jackett first.
+5. Copy the working Torznab feed into Sonarr or Radarr.
+6. Add FlareSolverr only if a tracker truly needs it.
+7. Expand slowly instead of adding every tracker with a pulse.
 
 That is the most practical way to keep torrent support helpful instead of decorative and fragile.
 

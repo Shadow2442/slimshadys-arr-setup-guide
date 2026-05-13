@@ -63,51 +63,116 @@
   </div>
 </div>
 
-## What Sonarr Should Do in This Stack
+## What Sonarr Is and Why You Need It
 
-In this setup, `Sonarr` is responsible for:
+`Sonarr` is the ARR app for television, anime series, and ongoing episodic content.
 
-- TV series
-- anime series
-- ongoing episode monitoring
-- import-list-driven show discovery
-- quality and language decisions for episodic content
+In a healthy stack, Sonarr should:
 
-Its job is not just to download episodes. Its job is to:
+- monitor shows you care about
+- search for new episodes automatically
+- send downloads to your downloader
+- import and rename finished episodes cleanly
+- keep quality and language decisions consistent over time
 
-- pick sane releases
-- keep the library compact
-- preserve your actual language preferences where possible
-- and avoid replacing good files with larger nonsense
+What Sonarr should not be is a random episode collector that grabs anything with the right season number and then hopes for forgiveness later.
+
+## Download Sonarr
+
+- Official site: [sonarr.tv](https://sonarr.tv/)
+- Direct download page: [sonarr.tv/#download](https://sonarr.tv/#download)
+
+If you are on Windows, the normal installer is the easiest starting point.
+
+## Install Sonarr Step by Step
+
+1. Download the current Sonarr installer from the official site.
+2. Run the installer and allow it to install the app and service.
+3. Open Sonarr in your browser, usually on `http://localhost:8989`.
+4. Make sure the app loads and the main dashboard opens without errors.
+5. Do not start importing hundreds of shows yet. First get the boring wiring right.
+
+If you want the shortest safe order, do this before any deeper tuning:
+
+- create your final TV library folder
+- create your downloader category for TV, such as `tv`
+- connect Sonarr to the downloader
+- connect Sonarr to your indexers
+
+## Basic Configuration First
+
+Before you care about advanced profiles, get these basics working:
+
+- root folder for series
+- downloader connection
+- indexer connection
+- media management naming
+- one sane default quality profile
+
+Recommended basic folder idea:
+
+- final library: `F:\media\series`
+- temporary downloads live elsewhere and are handled by your downloader
+
+Recommended base category:
+
+- `tv`
+
+That separation matters. Sonarr should import into the final library, not live forever inside your download folder like a raccoon with admin access.
+
+## Base Settings I Recommend
+
+### Media Management
+
+Set Sonarr up so it:
+
+- renames episodes on import
+- creates season folders
+- keeps the final library clean and predictable
+
+The goal is simple:
+
+- Sonarr should own TV naming
+- Plex should only scan the final organized library
+
+### Download Client
+
+Connect Sonarr to your downloader and verify:
+
+- host and port are correct
+- category is `tv`
+- test passes
+
+If the test does not pass, do not move on to refinements yet. Fix the pipe before decorating the bathroom.
+
+### Indexers
+
+Add only the sources you actually want.
+
+The app needs:
+
+- usable Usenet or torrent indexers
+- sensible priorities
+- no giant pile of decorative dead sites
+
+If you want the optional regional language strategy used in this project, keep that logic on the dedicated page:
+
+- [Indexers and German Content Strategy](/slimshadys-arr-setup-guide/docs/indexers-and-german-content.html)
 
 ## Recommended Philosophy
 
-The default Sonarr rule used in this guide is:
+For a compact and reliable TV setup, the main Sonarr rule used in this guide is:
 
 - prefer `720p`
-- allow `1080p` fallback
+- allow `1080p` as fallback
 
 Why:
 
 - everyday TV usually does not need giant `1080p` encodes
-- `720p` is a good default balance for size and quality
-- `1080p` stays available when `720p` never appears
+- `720p` is a strong quality-to-size compromise
+- fallback keeps the library moving when smaller releases do not exist
 
 That gives you smaller day-to-day downloads without forcing the library into a stubborn `720p or nothing` ideology.
-
-## Language Strategy
-
-Build `Sonarr` around language-aware custom formats instead of trusting parser labels on faith.
-
-The general principle is:
-
-- use custom formats for the audio and subtitle combinations you actually care about
-- keep the main profile logic simple
-- let scoring handle the nuance
-
-If you want the exact German-friendly scoring model used in this project, including the custom-format ideas and example scores, use:
-
-- [Indexers and German Content Strategy](/slimshadys-arr-setup-guide/docs/indexers-and-german-content.html)
 
 ## Quality Profiles
 
@@ -127,7 +192,9 @@ That lets Sonarr improve releases over time without forcing bizarre all-or-nothi
 
 ## Size Limits
 
-Recommended compact TV size limits:
+Once the base setup works, apply the compact TV size limits.
+
+Recommended limits:
 
 `720p`
 
@@ -143,7 +210,33 @@ Recommended compact TV size limits:
 - `WEBRip-1080p = preferred 24, max 42`
 - `Bluray-1080p = preferred 24, max 42`
 
-These values are much more practical than the loose defaults if the goal is a compact library instead of quiet file-size inflation.
+These are much more practical than the loose defaults if the goal is a compact library instead of quiet file-size inflation.
+
+## Language and Custom Format Strategy
+
+Build Sonarr around custom formats instead of trusting parser labels on faith.
+
+The general principle is:
+
+- use custom formats for the audio and subtitle combinations you actually care about
+- keep the main profile logic simple
+- let scoring handle the nuance
+
+This makes Sonarr much less gullible when release names look convincing but the actual content is less honest.
+
+## Import Lists and Discovery
+
+In this guide, Sonarr pairs well with:
+
+- `MDBList` for shows and anime discovery
+- normal RSS sync for ongoing releases
+
+Live setup timing used for this guide:
+
+- `Import List Sync = every 5 minutes`
+- `RSS Sync = every 15 minutes`
+
+That is frequent enough to feel responsive without turning discovery into constant traffic noise.
 
 ## Delay and Search Behavior
 
@@ -156,19 +249,17 @@ Recommended delay example:
 
 Apply it only to the shows that should wait for smaller releases.
 
-## Import Lists and Discovery
+## Recommended Refinements and Enhancements
 
-In this guide, `Sonarr` pairs well with:
+Once the base app is working, these are the refinements that made the biggest difference in real testing:
 
-- `MDBList` for shows and anime discovery
-- normal RSS sync for ongoing releases
+- `720p` first with `1080p` fallback
+- compact TV size caps
+- language-aware custom formats
+- codec-aware downgrade logic
+- scoped delay profiles instead of global waiting
 
-Live setup timing used for this guide:
-
-- `Import List Sync = every 5 minutes`
-- `RSS Sync = every 15 minutes`
-
-That is frequent enough to feel responsive without turning discovery into constant traffic noise.
+Those are the changes that make Sonarr feel intentional instead of merely operational.
 
 ## Downgrade Workflow
 
@@ -180,7 +271,7 @@ This matters because a naive downgrade can do this:
 - replacement = bloated `720p x264`
 - result = lower resolution and larger size
 
-That is not a downgrade.
+That is not a downgrade. That is sabotage wearing a tidy profile name.
 
 Recommended downgrade extras:
 
@@ -202,25 +293,13 @@ It proved:
 
 That test is why the downgrade logic in this guide is codec-aware now instead of naively worshipping lower numbers.
 
-## Batch Strategy
-
-For Sonarr, safe batch sizes are smaller than people want:
-
-- `5-10` episodes at a time
-
-Why:
-
-- easier to review
-- easier on specialist indexer quotas
-- easier on SAB post-processing
-- much easier to understand when something fails
-
 ## Common Mistakes
 
 Watch out for:
 
 - trusting parser language labels too much
 - forcing huge downgrade waves
+- skipping the basic downloader and folder setup
 - letting a weak `720p` replacement replace a compact `1080p x265`
 - assuming lower resolution automatically means better storage efficiency
 
@@ -228,11 +307,15 @@ If a setting sounds too clever, test it on a real series before giving it a seas
 
 ## Recommended Step-by-Step
 
-1. Build or review the language custom formats.
-2. Set the main profile to `720p` first with `1080p` fallback.
-3. Apply the compact TV size caps.
-4. Add the scoped delay profile only where it makes sense.
-5. Keep downgrade logic codec-aware.
-6. Use the dedicated German strategy page only if you actually need that regional setup.
+1. Download and install Sonarr.
+2. Create the final TV library folder.
+3. Connect the downloader and confirm the `tv` category works.
+4. Add indexers and test them.
+5. Turn on clean media management and naming.
+6. Set the main profile to `720p` first with `1080p` fallback.
+7. Apply the compact TV size caps.
+8. Add language-aware custom formats.
+9. Add delay logic only where it actually helps.
+10. Use codec-aware downgrade logic only after the normal workflow behaves properly.
 
 That order keeps Sonarr understandable and makes the final behavior much easier to trust.

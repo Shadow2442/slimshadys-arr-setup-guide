@@ -63,20 +63,47 @@
   </div>
 </div>
 
-## What Plex Should Do in This Stack
+## What Plex Is and Why You Need It
 
-In this setup, `Plex` should:
+`Plex` is the final playback and presentation layer in this stack.
+
+Its job is to:
 
 - watch the final movie, series, and music libraries
 - scrape metadata
-- present the media cleanly
-- provide playback
+- organize the viewing experience
+- stream or play the media to your devices
 
 Its role is not to:
 
 - manage temporary downloads
 - guess around bad importer behavior
 - clean up folders the ARR apps should already have organized
+
+## Download Plex
+
+- Official download page: [plex.tv/media-server-downloads](https://www.plex.tv/media-server-downloads/)
+
+For Windows, install the Plex Media Server package.
+
+## Install Plex Step by Step
+
+1. Download Plex Media Server from the official site.
+2. Install it on the machine that holds or can access your library.
+3. Sign in with your Plex account.
+4. Open the Plex web interface and confirm the server is visible.
+5. Do not point it at your download folders. That way lies comedy.
+
+## Basic Configuration First
+
+Before you worry about posters and polish, get the structure right:
+
+- final movies folder
+- final series folder
+- final music folder
+- no temporary download paths inside Plex libraries
+
+Plex should only ever see finished, ARR-managed media.
 
 ## Recommended Philosophy
 
@@ -138,6 +165,17 @@ Plex should **not** point at:
 
 If you point Plex at a messy downloader path, Plex will loyally index your bad decisions with great enthusiasm.
 
+## Base Settings I Recommend
+
+For a clean first configuration:
+
+- create separate Plex libraries for movies, TV, and music
+- point each one only at the final ARR-managed folder
+- enable normal metadata matching and scanning
+- verify the first few titles match correctly before you call it done
+
+This is intentionally boring. Boring is excellent here.
+
 ## Why This Matters
 
 When ARR handles naming and organization correctly:
@@ -149,16 +187,29 @@ When ARR handles naming and organization correctly:
 
 That boringness is a compliment.
 
+## Recommended Refinements and Enhancements
+
+Once the base Plex setup works, the refinements that matter most are:
+
+- keeping library roots clean and stable
+- letting ARR handle naming first
+- checking metadata matches on the first few imports
+- resisting the urge to aim Plex at staging folders just because the files are “there already”
+
+These are not glamorous settings, but they are the difference between a library and an evidence locker.
+
 ## Recommended Step-by-Step
 
-1. Create the final archival library roots for movies, series, and music on the HDD.
-2. Keep temporary and incomplete download paths outside those final library roots.
-3. Let `Sonarr`, `Radarr`, and `Lidarr` own the import and rename logic.
-4. In Plex, create separate libraries for movies, series, and music.
-5. Point each Plex library only at its final ARR-managed folder.
-6. Run a first scan and verify metadata matching on a few known-good imports.
-7. Check that Plex is not indexing temporary folders, samples, failed downloads, or staging leftovers.
-8. Only after that, treat the library structure as production-ready.
+1. Download and install Plex Media Server.
+2. Sign in and verify the server starts correctly.
+3. Create the final archival library roots for movies, series, and music on the HDD.
+4. Keep temporary and incomplete download paths outside those final library roots.
+5. Let `Sonarr`, `Radarr`, and `Lidarr` own the import and rename logic.
+6. In Plex, create separate libraries for movies, series, and music.
+7. Point each Plex library only at its final ARR-managed folder.
+8. Run a first scan and verify metadata matching on a few known-good imports.
+9. Check that Plex is not indexing temporary folders, samples, failed downloads, or staging leftovers.
+10. Only after that, treat the library structure as production-ready.
 
 If those basics are clean, Plex usually becomes the easiest part of the whole stack.
 

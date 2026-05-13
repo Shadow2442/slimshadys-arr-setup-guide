@@ -64,6 +64,90 @@
   </div>
 </div>
 
+## What SABnzbd Is and Why You Need It
+
+`SABnzbd` is the downloader in this stack.
+
+Its job is to:
+
+- receive download jobs from Sonarr, Radarr, or Lidarr
+- download the NZB data
+- repair or verify if needed
+- unpack the result
+- hand the finished job back so the ARR app can import it
+
+When SAB behaves well, the rest of the stack feels smooth. When SAB behaves badly, everything starts looking haunted even though the real problem is one stubborn archive in a back room.
+
+## Download SABnzbd
+
+- Official site: [sabnzbd.org](https://sabnzbd.org/)
+- Direct download page: [sabnzbd.org/downloads](https://sabnzbd.org/downloads)
+
+For Windows, the normal installer is the easiest starting point.
+
+## Install SABnzbd Step by Step
+
+1. Download the installer from the official site.
+2. Run the installer and complete the first-launch wizard.
+3. Open SABnzbd in your browser, usually on `http://localhost:8085`.
+4. Add your Usenet server details.
+5. Set a temporary download folder and a completed download folder.
+6. Create clear categories for the ARR apps before the first big search wave.
+
+Recommended categories:
+
+- `movies`
+- `tv`
+- `music`
+
+That alone prevents a lot of quiet nonsense later.
+
+## Basic Configuration First
+
+Before you tune speed, get these things right:
+
+- Usenet server connection
+- completed and incomplete download folders
+- categories for ARR apps
+- cleanup and safety basics
+
+Recommended folder idea:
+
+- incomplete downloads in a temporary folder
+- completed downloads in a separate temporary folder
+- final libraries managed later by Sonarr, Radarr, Lidarr, and Plex
+
+SAB should be a downloader and handoff point, not the final resting place of your media.
+
+## Base Settings I Recommend
+
+For a clean starting point:
+
+- `Ignore samples = enabled`
+- `Safe post-processing = enabled`
+- `Fast fail = enabled`
+- `Fail hopeless jobs = enabled`
+- cleanup list includes:
+  - `nfo`
+  - `sfv`
+  - `srr`
+  - `txt`
+  - `jpg`
+  - `jpeg`
+  - `png`
+  - `url`
+
+Recommended executable blacklist at minimum:
+
+- `exe`
+- `com`
+- `cmd`
+- `bat`
+- `scr`
+- `pif`
+
+These settings are not glamorous, but they remove a lot of avoidable junk.
+
 ## Known Good Baseline
 
 The live setup behind this guide behaved better once SAB was tuned like this:
@@ -72,15 +156,6 @@ The live setup behind this guide behaved better once SAB was tuned like this:
 - `Connections = 14`
 - `Receive Threads = 4`
 - `Server Timeout = 45`
-- `Ignore samples = enabled`
-- `Cleanup List = nfo, sfv, srr, txt, jpg, jpeg, png, url`
-- executable blacklist enabled for at least:
-  - `exe`
-  - `com`
-  - `cmd`
-  - `bat`
-  - `scr`
-  - `pif`
 
 This was not theoretical tuning. It came from watching real ARR downgrade waves behave better after the changes.
 
@@ -155,6 +230,18 @@ Why:
 - it does not become as twitchy as dropping straight to `30`
 
 This is a cleanup tweak, not a magic anti-corruption spell.
+
+## Recommended Refinements and Enhancements
+
+Once the basic downloader is stable, these are the refinements that mattered most:
+
+- turning `Direct Unpack` off
+- raising connections carefully instead of aggressively
+- using `receive_threads = 4`
+- lowering timeout from `60` to `45`
+- keeping batch sizes smaller so post-processing does not become a traffic accident
+
+Those changes made SAB both more reliable and slightly faster in real use, which is a nice rare moment when optimization does not immediately bite back.
 
 ## Why Some Jobs Still Fail
 
@@ -253,5 +340,22 @@ That combination ended up:
 - and much easier to trust
 
 Which is about the nicest thing one can say about home-media automation.
+
+## Recommended Step-by-Step
+
+1. Download and install SABnzbd.
+2. Add your Usenet server and confirm the connection works.
+3. Set incomplete and complete temporary download folders.
+4. Create the `movies`, `tv`, and `music` categories.
+5. Turn on the basic safety and cleanup settings.
+6. Test one movie and one episode from ARR before touching advanced tuning.
+7. Once the base flow works, apply the known-good tuning:
+   - `Direct Unpack = off`
+   - `Connections = 14`
+   - `Receive Threads = 4`
+   - `Timeout = 45`
+8. Keep batch sizes controlled and monitor post-processing behavior.
+
+That gives you a sane downloader foundation before you start asking it to survive your more ambitious ideas.
 
 
