@@ -63,6 +63,12 @@
   </div>
 </div>
 
+<div class="intro-box">
+  <h3>Introduction</h3>
+  <p>This page is your guided Sonarr walkthrough. It starts with what Sonarr is for, then shows you how to install it, how to do the first safe configuration, and only after that how to apply the stronger quality, language, and downgrade ideas used in this project.</p>
+  <p>If you are new to ARR tools, treat this page like a sequence, not a buffet. Get the downloader, folders, and one clean profile working first. The more advanced tuning is only helpful once that foundation exists.</p>
+</div>
+
 ## What Sonarr Is and Why You Need It
 
 `Sonarr` is the ARR app for television, anime series, and ongoing episodic content.

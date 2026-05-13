@@ -64,6 +64,12 @@
   </div>
 </div>
 
+<div class="intro-box">
+  <h3>Introduction</h3>
+  <p>This page is the downloader guide. It starts with the simple setup you need to get SAB online, then shows the safe baseline settings, and only after that moves into the speed and reliability tuning that improved this project in real testing.</p>
+  <p>If queues have ever looked stuck, ghosted, or emotionally unavailable, this is the page that explains what SAB is supposed to do and how to keep it from becoming the weakest link in the stack.</p>
+</div>
+
 ## What SABnzbd Is and Why You Need It
 
 `SABnzbd` is the downloader in this stack.

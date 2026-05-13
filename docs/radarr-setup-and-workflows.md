@@ -63,6 +63,12 @@
   </div>
 </div>
 
+<div class="intro-box">
+  <h3>Introduction</h3>
+  <p>This page walks you through Radarr in the order that tends to work best in real life: understand the app, install it, connect the basics, and only then move into compact profiles, downgrade lanes, and interactive search refinement.</p>
+  <p>The later sections are intentionally more advanced, but they are not the starting point. First make sure Radarr can find, send, and import a movie correctly. After that, the smarter storage and filter logic becomes much easier to trust.</p>
+</div>
+
 ## What Radarr Is and Why You Need It
 
 `Radarr` is the ARR app for movies and anime movies.

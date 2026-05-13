@@ -63,6 +63,12 @@
   </div>
 </div>
 
+<div class="intro-box">
+  <h3>Introduction</h3>
+  <p>This page is the final-library guide. It explains what Plex should do, how to install it, how to point it at the right folders, and how to avoid mixing final media libraries with temporary download paths.</p>
+  <p>The main idea is simple: ARR apps should prepare and organize the media first, and Plex should then present and play it. If those roles stay clean, Plex becomes one of the easiest parts of the whole setup.</p>
+</div>
+
 ## What Plex Is and Why You Need It
 
 `Plex` is the final playback and presentation layer in this stack.

@@ -64,6 +64,12 @@
   </div>
 </div>
 
+<div class="intro-box">
+  <h3>Introduction</h3>
+  <p>This page explains Lidarr as its own kind of tool, not as a weird cousin of the movie and TV apps. Read it from top to bottom if you are new: what it does, how to install it, how to organize the music side properly, and only then how to refine the workflow.</p>
+  <p>The goal is to get one clean music lane running without accidentally dragging music into your movie logic or drowning in metadata chaos on day one.</p>
+</div>
+
 ## What Lidarr Is and Why You Need It
 
 `Lidarr` is the ARR app for music.

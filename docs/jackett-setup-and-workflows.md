@@ -64,6 +64,12 @@
   </div>
 </div>
 
+<div class="intro-box">
+  <h3>Introduction</h3>
+  <p>This page explains the torrent side of the stack in a controlled way. It covers what Jackett is for, how to install it, how to connect one or two useful sources first, and only after that how to think about selective fallback and tracker hygiene.</p>
+  <p>Jackett works best when it stays tidy and deliberate. If you add twenty trackers before you understand one, you are not building coverage, you are building a small confusing zoo.</p>
+</div>
+
 ## What Jackett Is and Why You Need It
 
 `Jackett` is the bridge between ARR apps and torrent indexers.

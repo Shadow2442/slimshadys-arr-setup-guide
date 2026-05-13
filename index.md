@@ -84,6 +84,12 @@
   </div>
 </div>
 
+<div class="intro-box">
+  <h3>Introduction</h3>
+  <p>This guide is meant to be read in layers. First learn what each tool does in plain English. Then install it and get the basic folders, categories, and connections working. Only after the stack behaves normally should you apply the sharper refinements that make it more compact, more reliable, and more pleasant to live with.</p>
+  <p>If you are not highly technical, that is not a problem. The pages are structured so you can go step by step without needing to already understand how all six apps talk to each other on day one.</p>
+</div>
+
 <div class="card-grid">
   <div class="guide-card">
     <h3>General setup first</h3>
