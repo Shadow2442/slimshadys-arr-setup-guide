@@ -1,4 +1,24 @@
-﻿<div class="doc-hero">
+﻿<div class="guide-banner-frame">
+  <img class="guide-banner-image" src="/slimshadys-arr-setup-guide/docs/assets/guide-banner.png" alt="SlimShady's ARR Setup Guide banner">
+</div>
+<div class="guide-stats">
+  <div class="guide-stat-card">
+    <span class="guide-stat-value">6</span>
+    <span class="guide-stat-label">Core apps in the stack</span>
+  </div>
+  <div class="guide-stat-card">
+    <span class="guide-stat-value">10</span>
+    <span class="guide-stat-label">Deep-dive guide sections</span>
+  </div>
+  <div class="guide-stat-card">
+    <span class="guide-stat-value">14</span>
+    <span class="guide-stat-label">SAB connections tuned</span>
+  </div>
+  <div class="guide-stat-card">
+    <span class="guide-stat-value">45s</span>
+    <span class="guide-stat-label">Downloader timeout baseline</span>
+  </div>
+</div><div class="doc-hero">
   <h2>Series automation that prefers smaller files without becoming weird</h2>
   <p>This page covers the practical Sonarr setup used in this guide: language-aware scoring, 720p-first quality logic, compact TV sizing, safe downgrade rules, and the specific lessons learned from real queue and import testing.</p>
   <div class="hero-badges">
@@ -243,4 +263,5 @@ If a setting sounds too clever, test it on a real series before giving it a seas
 6. Test on a few real shows before searching broadly.
 
 That order keeps Sonarr understandable and makes the final behavior much easier to trust.
+
 

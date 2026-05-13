@@ -1,4 +1,24 @@
-﻿<div class="doc-hero">
+﻿<div class="guide-banner-frame">
+  <img class="guide-banner-image" src="/slimshadys-arr-setup-guide/docs/assets/guide-banner.png" alt="SlimShady's ARR Setup Guide banner">
+</div>
+<div class="guide-stats">
+  <div class="guide-stat-card">
+    <span class="guide-stat-value">6</span>
+    <span class="guide-stat-label">Core apps in the stack</span>
+  </div>
+  <div class="guide-stat-card">
+    <span class="guide-stat-value">10</span>
+    <span class="guide-stat-label">Deep-dive guide sections</span>
+  </div>
+  <div class="guide-stat-card">
+    <span class="guide-stat-value">14</span>
+    <span class="guide-stat-label">SAB connections tuned</span>
+  </div>
+  <div class="guide-stat-card">
+    <span class="guide-stat-value">45s</span>
+    <span class="guide-stat-label">Downloader timeout baseline</span>
+  </div>
+</div><div class="doc-hero">
   <h2>Let discovery run itself</h2>
   <p><code>MDBList</code> is the easiest way in this stack to keep movies and shows flowing in automatically while <code>Sonarr</code> and <code>Radarr</code> still enforce all the real download rules.</p>
   <div class="hero-badges">
@@ -219,5 +239,6 @@ Use `Plex` to answer:
 - how should it be presented
 
 That separation makes the stack much easier to understand and maintain.
+
 
 

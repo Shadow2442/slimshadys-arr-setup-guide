@@ -1,4 +1,24 @@
-﻿<div class="doc-hero">
+﻿<div class="guide-banner-frame">
+  <img class="guide-banner-image" src="/slimshadys-arr-setup-guide/docs/assets/guide-banner.png" alt="SlimShady's ARR Setup Guide banner">
+</div>
+<div class="guide-stats">
+  <div class="guide-stat-card">
+    <span class="guide-stat-value">6</span>
+    <span class="guide-stat-label">Core apps in the stack</span>
+  </div>
+  <div class="guide-stat-card">
+    <span class="guide-stat-value">10</span>
+    <span class="guide-stat-label">Deep-dive guide sections</span>
+  </div>
+  <div class="guide-stat-card">
+    <span class="guide-stat-value">14</span>
+    <span class="guide-stat-label">SAB connections tuned</span>
+  </div>
+  <div class="guide-stat-card">
+    <span class="guide-stat-value">45s</span>
+    <span class="guide-stat-label">Downloader timeout baseline</span>
+  </div>
+</div><div class="doc-hero">
   <h2>Music automation without pretending music works like movies</h2>
   <p>This page covers the practical role of <code>Lidarr</code> in the stack: what it should do, how it differs from Sonarr and Radarr, how to think about artist and album monitoring, and how to keep its workflow clean instead of forcing music into video-style habits.</p>
   <div class="hero-badges">
@@ -122,4 +142,5 @@ This avoids crossover clutter and keeps import logic sane.
 5. Let Lidarr handle naming and organization instead of doing it by hand.
 
 That is enough to get a practical music lane online without turning the setup into a side project inside the side project.
+
 

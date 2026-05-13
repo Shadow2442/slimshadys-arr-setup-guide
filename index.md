@@ -1,6 +1,24 @@
-![SlimShady's ARR Setup Guide banner](docs/assets/arr-banner.svg)
-
-<div class="hero-intro">
+﻿<div class="guide-banner-frame">
+  <img class="guide-banner-image" src="/slimshadys-arr-setup-guide/docs/assets/guide-banner.png" alt="SlimShady's ARR Setup Guide banner">
+</div>
+<div class="guide-stats">
+  <div class="guide-stat-card">
+    <span class="guide-stat-value">6</span>
+    <span class="guide-stat-label">Core apps in the stack</span>
+  </div>
+  <div class="guide-stat-card">
+    <span class="guide-stat-value">10</span>
+    <span class="guide-stat-label">Deep-dive guide sections</span>
+  </div>
+  <div class="guide-stat-card">
+    <span class="guide-stat-value">14</span>
+    <span class="guide-stat-label">SAB connections tuned</span>
+  </div>
+  <div class="guide-stat-card">
+    <span class="guide-stat-value">45s</span>
+    <span class="guide-stat-label">Downloader timeout baseline</span>
+  </div>
+</div><div class="hero-intro">
   <h2>What this guide is about</h2>
   <p>This site is a practical beginner-friendly walkthrough for building a mostly automated media setup with <code>Sonarr</code>, <code>Radarr</code>, <code>Lidarr</code>, <code>SABnzbd</code>, <code>Jackett</code>, and <code>Plex</code>.</p>
   <p>It focuses on German-friendly content, smarter quality rules, safer quotas, cleaner storage, and the kind of real-world fixes you only learn after ARR tools do something deeply confident and slightly cursed.</p>
@@ -216,3 +234,4 @@ So yes, this guide is not only meant to be read by humans. It can also be handed
 - treat downgrades as a controlled workflow, not a magic button
 
 If a setting sounds too clever, test it on a few titles first. ARR tools are excellent at turning confidence into comedy.
+

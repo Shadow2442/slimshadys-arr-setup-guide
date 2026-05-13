@@ -1,4 +1,24 @@
-<div class="guide-hub">
+﻿<div class="guide-banner-frame">
+  <img class="guide-banner-image" src="/slimshadys-arr-setup-guide/docs/assets/guide-banner.png" alt="SlimShady's ARR Setup Guide banner">
+</div>
+<div class="guide-stats">
+  <div class="guide-stat-card">
+    <span class="guide-stat-value">6</span>
+    <span class="guide-stat-label">Core apps in the stack</span>
+  </div>
+  <div class="guide-stat-card">
+    <span class="guide-stat-value">10</span>
+    <span class="guide-stat-label">Deep-dive guide sections</span>
+  </div>
+  <div class="guide-stat-card">
+    <span class="guide-stat-value">14</span>
+    <span class="guide-stat-label">SAB connections tuned</span>
+  </div>
+  <div class="guide-stat-card">
+    <span class="guide-stat-value">45s</span>
+    <span class="guide-stat-label">Downloader timeout baseline</span>
+  </div>
+</div><div class="guide-hub">
   <h2>What this guide is about</h2>
   <p>This page is the clean front door for the full guide system. It explains what the project covers, how the stack fits together, and gives you one tidy place to jump into each part without fighting duplicate navigation like it owes you money.</p>
   <p>Use it as the map for the whole ARR setup: the homepage is the polished welcome mat, while this page is the prettier control panel for the full docs collection.</p>
@@ -113,3 +133,4 @@
 - Let `Lidarr` handle music with its own sources and workflow.
 
 If a setting sounds too clever, test it on a few titles before unleashing it on the whole library. Your hard drive will thank you, and SAB might stop composing little tragedies.
+

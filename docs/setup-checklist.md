@@ -1,4 +1,24 @@
-﻿<div class="doc-hero">
+﻿<div class="guide-banner-frame">
+  <img class="guide-banner-image" src="/slimshadys-arr-setup-guide/docs/assets/guide-banner.png" alt="SlimShady's ARR Setup Guide banner">
+</div>
+<div class="guide-stats">
+  <div class="guide-stat-card">
+    <span class="guide-stat-value">6</span>
+    <span class="guide-stat-label">Core apps in the stack</span>
+  </div>
+  <div class="guide-stat-card">
+    <span class="guide-stat-value">10</span>
+    <span class="guide-stat-label">Deep-dive guide sections</span>
+  </div>
+  <div class="guide-stat-card">
+    <span class="guide-stat-value">14</span>
+    <span class="guide-stat-label">SAB connections tuned</span>
+  </div>
+  <div class="guide-stat-card">
+    <span class="guide-stat-value">45s</span>
+    <span class="guide-stat-label">Downloader timeout baseline</span>
+  </div>
+</div><div class="doc-hero">
   <h2>Build the stack in the right order</h2>
   <p>This is the short operational checklist for getting the full ARR setup online without wandering into five side quests before the downloader even works.</p>
   <div class="hero-badges">
@@ -322,5 +342,6 @@ The best way to use this checklist is:
 4. do not rush into changing everything at once
 
 This setup is much easier when treated like a guided walkthrough instead of a one-night speedrun against six different apps.
+
 
 
