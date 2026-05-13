@@ -22,6 +22,10 @@
   <h2>What this guide is about</h2>
   <p>This site is a practical beginner-friendly walkthrough for building a mostly automated media setup with <code>Sonarr</code>, <code>Radarr</code>, <code>Lidarr</code>, <code>SABnzbd</code>, <code>Jackett</code>, and <code>Plex</code>.</p>
   <p>It focuses on smarter quality rules, safer quotas, cleaner storage, and the kind of real-world fixes you only learn after ARR tools do something deeply confident and slightly cursed.</p>
+  <div class="hero-meta">
+    <span class="hero-meta-label">Guide traffic:</span>
+    <img class="visitor-counter-badge" src="https://visitor-badge.laobi.icu/badge?page_id=Shadow2442.slimshadys-arr-setup-guide&left_text=visitors" alt="Visitor counter">
+  </div>
   <div class="quick-links">
     <a href="/slimshadys-arr-setup-guide/docs/setup-checklist.html">Start with the checklist</a>
     <a href="/slimshadys-arr-setup-guide/docs/sonarr-setup-and-workflows.html">See Sonarr setup</a>
