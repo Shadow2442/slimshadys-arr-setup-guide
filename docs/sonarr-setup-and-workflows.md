@@ -23,39 +23,39 @@
   <p>This page covers the practical Sonarr setup used in this guide: language-aware scoring, 720p-first quality logic, compact TV sizing, safe downgrade rules, and the specific lessons learned from real queue and import testing.</p>
   <div class="hero-badges">
     <span>720p-first TV</span>
-    <span>German-aware scoring</span>
+    <span>Language-aware scoring</span>
     <span>Anime-safe fallback</span>
     <span>Codec-aware downgrades</span>
   </div>
 </div>
 
 <div class="doc-nav">
-  <a href="/slimshadys-arr-setup-guide/docs/setup-checklist.html">âœ… Checklist</a>
-  <a href="/slimshadys-arr-setup-guide/docs/sabnzbd-tuning-and-reliability.html">âš™ï¸ SAB</a>
-  <a href="/slimshadys-arr-setup-guide/docs/indexers-and-german-content.html">ðŸ›°ï¸ Indexers</a>
-  <a href="/slimshadys-arr-setup-guide/docs/radarr-setup-and-workflows.html">ðŸŽ¬ Radarr</a>
-  <a href="/slimshadys-arr-setup-guide/">ðŸ  Home</a>
+  <a href="/slimshadys-arr-setup-guide/docs/setup-checklist.html">Checklist</a>
+  <a href="/slimshadys-arr-setup-guide/docs/sabnzbd-tuning-and-reliability.html">SAB</a>
+  <a href="/slimshadys-arr-setup-guide/docs/indexers-and-german-content.html">German strategy</a>
+  <a href="/slimshadys-arr-setup-guide/docs/radarr-setup-and-workflows.html">Radarr</a>
+  <a href="/slimshadys-arr-setup-guide/">Home</a>
 </div>
 
 <div class="info-grid">
   <div class="info-card">
     <h3>Main outcome</h3>
-    <p>Smaller day-to-day TV grabs, better German logic, saner anime handling, and fewer cases where Sonarr downloads something technically valid but spiritually unhelpful.</p>
+    <p>Smaller day-to-day TV grabs, cleaner language logic, saner anime handling, and fewer cases where Sonarr downloads something technically valid but spiritually unhelpful.</p>
   </div>
   <div class="info-card">
     <h3>Core idea</h3>
-    <p>Let series prefer <code>720p</code>, allow <code>1080p</code> as fallback, and use custom formats so language and codec decisions are smarter than the parser alone.</p>
+    <p>Let series prefer <code>720p</code>, allow <code>1080p</code> as fallback, and use custom formats so audio, subtitle, and codec decisions are smarter than the parser alone.</p>
   </div>
 </div>
 
 <div class="mini-grid">
   <div class="mini-card">
     <h4>Best use</h4>
-    <p>Use this when setting up Sonarr from scratch or when your existing Sonarr feels too loose, too bloated, or too trusting of <code>MULTi</code>.</p>
+    <p>Use this when setting up Sonarr from scratch or when your existing Sonarr feels too loose, too bloated, or too trusting of parser guesses.</p>
   </div>
   <div class="mini-card">
     <h4>Main risk avoided</h4>
-    <p>Downloading larger â€œdowngrades,â€ weakly matched language results, and queue chaos from overly aggressive bulk work.</p>
+    <p>Downloading larger downgrades, weakly matched language results, and queue chaos from overly aggressive bulk work.</p>
   </div>
   <div class="mini-card">
     <h4>Cross-link</h4>
@@ -77,7 +77,7 @@ Its job is not just to download episodes. Its job is to:
 
 - pick sane releases
 - keep the library compact
-- preserve German preferences where possible
+- preserve your actual language preferences where possible
 - and avoid replacing good files with larger nonsense
 
 ## Recommended Philosophy
@@ -93,48 +93,21 @@ Why:
 - `720p` is a good default balance for size and quality
 - `1080p` stays available when `720p` never appears
 
-That gives you smaller day-to-day downloads without forcing the library into a stubborn â€œ720p or nothingâ€ ideology.
+That gives you smaller day-to-day downloads without forcing the library into a stubborn `720p or nothing` ideology.
 
 ## Language Strategy
 
-Do not trust `MULTi` alone as proof of German audio.
+Build `Sonarr` around language-aware custom formats instead of trusting parser labels on faith.
 
-In the live setup used for this guide, the more reliable approach was:
+The general principle is:
 
-1. proven `German + Japanese` multi-audio
-2. confirmed `German audio`
-3. `English audio`
-4. weak `multi-audio`
-5. `Japanese audio + German subtitles`
-6. other fallbacks
+- use custom formats for the audio and subtitle combinations you actually care about
+- keep the main profile logic simple
+- let scoring handle the nuance
 
-That keeps Sonarr from treating every shiny `MULTi` release as if it automatically understood your actual language intent.
+If you want the exact German-friendly scoring model used in this project, including the custom-format ideas and example scores, use:
 
-## Recommended Sonarr Custom Formats
-
-The practical Sonarr custom-format set used here includes:
-
-- `Language - German Parser Signal`
-- `Language - German Title Terms`
-- `Language - Dual Multi Audio`
-- `Language - English Audio Fallback`
-- `Language - Original Audio Fallback`
-- `Language - Japanese Audio Fallback`
-- `Subs - German Subtitles`
-- `Subs - English Subtitles`
-- `Language - German Japanese Proven Multi Audio`
-
-Suggested scoring:
-
-- `German Parser Signal = 0`
-- `German Title Terms = 1600`
-- `German Japanese Proven Multi Audio = 600`
-- `English Audio Fallback = 500`
-- `Dual Multi Audio = 300`
-- `German Subtitles = 180`
-- `English Subtitles = 120`
-- `Japanese Audio Fallback = 50`
-- `Original Audio Fallback = 75`
+- [Indexers and German Content Strategy](/slimshadys-arr-setup-guide/docs/indexers-and-german-content.html)
 
 ## Quality Profiles
 
@@ -247,9 +220,9 @@ Why:
 Watch out for:
 
 - trusting parser language labels too much
-- trusting `MULTi` as if it always means German
 - forcing huge downgrade waves
 - letting a weak `720p` replacement replace a compact `1080p x265`
+- assuming lower resolution automatically means better storage efficiency
 
 If a setting sounds too clever, test it on a real series before giving it a season pack and a megaphone.
 
@@ -260,8 +233,6 @@ If a setting sounds too clever, test it on a real series before giving it a seas
 3. Apply the compact TV size caps.
 4. Add the scoped delay profile only where it makes sense.
 5. Keep downgrade logic codec-aware.
-6. Test on a few real shows before searching broadly.
+6. Use the dedicated German strategy page only if you actually need that regional setup.
 
 That order keeps Sonarr understandable and makes the final behavior much easier to trust.
-
-

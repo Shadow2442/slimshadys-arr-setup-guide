@@ -26,7 +26,7 @@
   <div class="hero-badges">
     <span>One clear navigation hub</span>
     <span>App-by-app guides</span>
-    <span>German-friendly setup</span>
+    <span>Optional regional strategy</span>
     <span>Live-tested advice</span>
   </div>
 
@@ -75,7 +75,7 @@
     </a>
     <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/indexers-and-german-content.html">
       <strong>Indexer Strategy</strong>
-      <span>How to balance broad providers, German specialists, quotas, and fallback sources without turning the stack feral.</span>
+      <span>How to balance broad providers, optional specialist sources, quotas, and fallback logic without turning the stack feral.</span>
     </a>
     <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/quality-sizing-and-downgrades.html">
       <strong>Quality, Sizes, and Downgrades</strong>
@@ -127,7 +127,7 @@
 ## Quick Philosophy
 
 - Use broad indexers for daily work.
-- Preserve specialist German sources for when they really matter.
+- Preserve specialist or low-quota sources for when they really matter.
 - Prefer `720p` for series and compact `1080p` for movies.
 - Treat `480p` as a curated old-movie lane rather than a magical bulk shortcut.
 - Let `Lidarr` handle music with its own sources and workflow.

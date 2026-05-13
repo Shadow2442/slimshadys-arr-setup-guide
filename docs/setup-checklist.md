@@ -30,13 +30,13 @@
 </div>
 
 <div class="doc-nav">
-  <a href="/slimshadys-arr-setup-guide/docs/sonarr-setup-and-workflows.html">📺 Sonarr</a>
-  <a href="/slimshadys-arr-setup-guide/docs/radarr-setup-and-workflows.html">🎬 Radarr</a>
-  <a href="/slimshadys-arr-setup-guide/docs/sabnzbd-tuning-and-reliability.html">⚙️ SAB</a>
-  <a href="/slimshadys-arr-setup-guide/docs/mdblist-import-lists.html">📚 MDBList</a>
-  <a href="/slimshadys-arr-setup-guide/docs/indexers-and-german-content.html">🛰️ Indexers</a>
-  <a href="/slimshadys-arr-setup-guide/docs/quality-sizing-and-downgrades.html">💾 Quality & Sizes</a>
-  <a href="/slimshadys-arr-setup-guide/">🏠 Home</a>
+  <a href="/slimshadys-arr-setup-guide/docs/sonarr-setup-and-workflows.html">Sonarr</a>
+  <a href="/slimshadys-arr-setup-guide/docs/radarr-setup-and-workflows.html">Radarr</a>
+  <a href="/slimshadys-arr-setup-guide/docs/sabnzbd-tuning-and-reliability.html">SAB</a>
+  <a href="/slimshadys-arr-setup-guide/docs/mdblist-import-lists.html">MDBList</a>
+  <a href="/slimshadys-arr-setup-guide/docs/indexers-and-german-content.html">German strategy</a>
+  <a href="/slimshadys-arr-setup-guide/docs/quality-sizing-and-downgrades.html">Quality & Sizes</a>
+  <a href="/slimshadys-arr-setup-guide/">Home</a>
 </div>
 
 Use this as the short, practical checklist after installation.
@@ -132,12 +132,6 @@ Enable:
 - `Receive Threads = 4`
 - `Server Timeout = 45`
 
-Why this specific mix:
-
-- `Direct Unpack` looked clever but caused more queue and post-processing weirdness in live testing
-- a modest connection bump improved throughput without overloading SAB
-- `timeout = 45` is a bit less patient than `60` without becoming too twitchy
-
 If you want the deeper reasoning and troubleshooting flow, read the dedicated page:
 
 - [SABnzbd Tuning and Reliability](/slimshadys-arr-setup-guide/docs/sabnzbd-tuning-and-reliability.html)
@@ -198,30 +192,15 @@ Why:
 - both `Radarr` and `Sonarr` can use MDBList list URLs directly
 - it keeps discovery separate from downloading, which is exactly what you want
 
-For `Lidarr`, use music-oriented import-list sources instead. Official `Lidarr` features mention import lists from services like `Last.fm` and `Headphones`, not `MDBList`.
-
-In the live reference setup used for this guide:
-
-- `Sonarr Import List Sync = every 5 minutes`
-- `Radarr Import List Sync = every 5 minutes`
-
-So if a new movie or show is added to one of your MDBList lists, ARR usually notices it within about `5 minutes`, adds it, and then lets the normal RSS/search pipeline handle the download side.
+For `Lidarr`, use music-oriented import-list sources instead.
 
 ## 7. Indexers
 
-Recommended order for this German-friendly setup:
+Recommended general rule:
 
-- `NinjaCentral`
-- `NZBFinder`
-- `NZB.su`
-- `SceneNZBs`
-
-Suggested priorities:
-
-- `NinjaCentral = 15`
-- `NZBFinder = 18`
-- `NZB.su = 30`
-- `SceneNZBs = 45`
+- use broad healthy providers for daily work
+- keep quota-limited or specialist providers as selective backups
+- use the dedicated German strategy page only if you actually want that regional setup
 
 Remember:
 
@@ -231,18 +210,11 @@ Remember:
 
 ## 8. Language Strategy
 
-Recommended universal preference:
+Recommended universal rule:
 
-1. proven `German + Japanese` multi-audio
-2. confirmed `German audio`
-3. `English audio`
-4. weak `multi-audio`
-5. `Japanese + German subtitles`
-
-Important:
-
-- do not trust `MULTi` alone as proof of German
-- use custom formats and title logic instead
+- build language-aware custom formats for the audio and subtitle combinations you actually care about
+- do not trust parser labels on faith
+- keep the regional or German-specific model on the dedicated specialist page
 
 ## 9. Movie Size Targets
 
@@ -255,10 +227,10 @@ Recommended:
 
 `720p`
 
-- `HDTV-720p = preferred 18, max 35`
-- `WEBDL-720p = preferred 18, max 35`
-- `WEBRip-720p = preferred 20, max 35`
-- `Bluray-720p = preferred 20, max 35`
+- `HDTV-720p = preferred 18, max 45`
+- `WEBDL-720p = preferred 18, max 45`
+- `WEBRip-720p = preferred 20, max 45`
+- `Bluray-720p = preferred 20, max 45`
 
 ## 10. TV Size Targets
 
@@ -342,6 +314,3 @@ The best way to use this checklist is:
 4. do not rush into changing everything at once
 
 This setup is much easier when treated like a guided walkthrough instead of a one-night speedrun against six different apps.
-
-
-

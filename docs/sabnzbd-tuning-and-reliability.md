@@ -30,12 +30,12 @@
 </div>
 
 <div class="doc-nav">
-  <a href="/slimshadys-arr-setup-guide/docs/setup-checklist.html">âœ… Checklist</a>
-  <a href="/slimshadys-arr-setup-guide/docs/sonarr-setup-and-workflows.html">ðŸ“º Sonarr</a>
-  <a href="/slimshadys-arr-setup-guide/docs/radarr-setup-and-workflows.html">ðŸŽ¬ Radarr</a>
-  <a href="/slimshadys-arr-setup-guide/docs/indexers-and-german-content.html">ðŸ›°ï¸ Indexers</a>
-  <a href="/slimshadys-arr-setup-guide/docs/quality-sizing-and-downgrades.html">ðŸ’¾ Quality & Sizes</a>
-  <a href="/slimshadys-arr-setup-guide/">ðŸ  Home</a>
+  <a href="/slimshadys-arr-setup-guide/docs/setup-checklist.html">Checklist</a>
+  <a href="/slimshadys-arr-setup-guide/docs/sonarr-setup-and-workflows.html">Sonarr</a>
+  <a href="/slimshadys-arr-setup-guide/docs/radarr-setup-and-workflows.html">Radarr</a>
+  <a href="/slimshadys-arr-setup-guide/docs/indexers-and-german-content.html">German strategy</a>
+  <a href="/slimshadys-arr-setup-guide/docs/quality-sizing-and-downgrades.html">Quality & Sizes</a>
+  <a href="/slimshadys-arr-setup-guide/">Home</a>
 </div>
 
 <div class="info-grid">
@@ -242,7 +242,7 @@ Do **not** immediately nuke the whole queue unless you truly enjoy rebuilding co
 For this kind of ARR stack:
 
 - use broad indexers for daily traffic
-- preserve specialist sources for high-value German grabs
+- preserve specialist or quota-limited sources for the cases where they genuinely matter
 - keep downgrade batches controlled
 - let SAB stay a downloader, not an experimental performance-art engine
 

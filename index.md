@@ -21,7 +21,7 @@
 </div><div class="hero-intro">
   <h2>What this guide is about</h2>
   <p>This site is a practical beginner-friendly walkthrough for building a mostly automated media setup with <code>Sonarr</code>, <code>Radarr</code>, <code>Lidarr</code>, <code>SABnzbd</code>, <code>Jackett</code>, and <code>Plex</code>.</p>
-  <p>It focuses on German-friendly content, smarter quality rules, safer quotas, cleaner storage, and the kind of real-world fixes you only learn after ARR tools do something deeply confident and slightly cursed.</p>
+  <p>It focuses on smarter quality rules, safer quotas, cleaner storage, and the kind of real-world fixes you only learn after ARR tools do something deeply confident and slightly cursed.</p>
   <div class="quick-links">
     <a href="/slimshadys-arr-setup-guide/docs/setup-checklist.html">Start with the checklist</a>
     <a href="/slimshadys-arr-setup-guide/docs/sonarr-setup-and-workflows.html">See Sonarr setup</a>
@@ -31,7 +31,7 @@
     <a href="/slimshadys-arr-setup-guide/docs/jackett-setup-and-workflows.html">See Jackett setup</a>
     <a href="/slimshadys-arr-setup-guide/docs/plex-setup-and-workflows.html">See Plex setup</a>
     <a href="/slimshadys-arr-setup-guide/docs/mdblist-import-lists.html">See MDBList automation</a>
-    <a href="/slimshadys-arr-setup-guide/docs/indexers-and-german-content.html">See indexer strategy</a>
+    <a href="/slimshadys-arr-setup-guide/docs/indexers-and-german-content.html">See German-friendly strategy</a>
     <a href="/slimshadys-arr-setup-guide/docs/quality-sizing-and-downgrades.html">Review quality and sizes</a>
     <a href="https://github.com/Shadow2442/slimshadys-arr-setup-guide">Open the GitHub repo</a>
   </div>
@@ -47,7 +47,7 @@
     <span><code>SABnzbd</code></span>
     <span><code>Jackett</code></span>
     <span><code>Plex</code></span>
-    <span>German-friendly indexer strategy</span>
+    <span>regional language strategy</span>
     <span>language-aware automation</span>
     <span>size control</span>
     <span>safe downgrade workflows</span>
@@ -69,16 +69,16 @@
 
 <div class="card-grid">
   <div class="guide-card">
-    <h3>German-friendly by design</h3>
-    <p>Indexers, custom formats, and import-list workflows tuned for stronger German coverage without burning fragile quotas.</p>
+    <h3>General setup first</h3>
+    <p>The core docs stay broad on purpose so the main stack is easy to understand even if you are not building around one specific language or region.</p>
   </div>
   <div class="guide-card">
     <h3>Storage-aware quality rules</h3>
     <p>Compact <code>1080p</code> movies, <code>720p</code>-first series, and downgrade workflows that actually save space instead of creating comedy.</p>
   </div>
   <div class="guide-card">
-    <h3>Beginner-safe automation</h3>
-    <p>Step-by-step setup guidance for people who are technical, lightly technical, or wisely willing to let Codex do the fiddly parts.</p>
+    <h3>Regional strategy when you need it</h3>
+    <p>If you want a German-friendly setup, there is a dedicated specialist page for language scoring, provider roles, and quota-aware source strategy.</p>
   </div>
 </div>
 
@@ -199,7 +199,7 @@ This one tries to answer:
 - what should you actually enable
 - what should you avoid
 - how should you set priorities
-- how do you keep German content quality high without burning through quotas
+- how do you adapt the stack for language-specific needs without burning through quotas
 - how do you save disk space without downloading worse files by accident
 
 ## Want Help Applying It?
@@ -228,10 +228,9 @@ So yes, this guide is not only meant to be read by humans. It can also be handed
 ## Short Version
 
 - use broad indexers for daily work
-- preserve German specialist sources for when they matter
+- preserve specialist or quota-limited sources for when they matter
 - prefer `720p` for series
 - prefer compact `1080p` for movies
 - treat downgrades as a controlled workflow, not a magic button
 
 If a setting sounds too clever, test it on a few titles first. ARR tools are excellent at turning confidence into comedy.
-

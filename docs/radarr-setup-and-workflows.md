@@ -20,27 +20,27 @@
   </div>
 </div><div class="doc-hero">
   <h2>Movie automation that stays compact without losing the plot</h2>
-  <p>This page covers the practical Radarr setup used in this guide: compact movie profiles, German-aware custom formats, interactive filtering, 720p and 480p downgrade lanes, and the specific workflow lessons learned from real search, import, and queue testing.</p>
+  <p>This page covers the practical Radarr setup used in this guide: compact movie profiles, interactive filtering, 720p and 480p downgrade lanes, and the workflow lessons learned from real search, import, and queue testing.</p>
   <div class="hero-badges">
     <span>Compact 1080p</span>
-    <span>German-aware scoring</span>
+    <span>Language-aware scoring</span>
     <span>720p downgrade lane</span>
     <span>Curated 480p old-movie lane</span>
   </div>
 </div>
 
 <div class="doc-nav">
-  <a href="/slimshadys-arr-setup-guide/docs/setup-checklist.html">âœ… Checklist</a>
-  <a href="/slimshadys-arr-setup-guide/docs/sabnzbd-tuning-and-reliability.html">âš™ï¸ SAB</a>
-  <a href="/slimshadys-arr-setup-guide/docs/indexers-and-german-content.html">ðŸ›°ï¸ Indexers</a>
-  <a href="/slimshadys-arr-setup-guide/docs/sonarr-setup-and-workflows.html">ðŸ“º Sonarr</a>
-  <a href="/slimshadys-arr-setup-guide/">ðŸ  Home</a>
+  <a href="/slimshadys-arr-setup-guide/docs/setup-checklist.html">Checklist</a>
+  <a href="/slimshadys-arr-setup-guide/docs/sabnzbd-tuning-and-reliability.html">SAB</a>
+  <a href="/slimshadys-arr-setup-guide/docs/indexers-and-german-content.html">German strategy</a>
+  <a href="/slimshadys-arr-setup-guide/docs/sonarr-setup-and-workflows.html">Sonarr</a>
+  <a href="/slimshadys-arr-setup-guide/">Home</a>
 </div>
 
 <div class="info-grid">
   <div class="info-card">
     <h3>Main outcome</h3>
-    <p>Movies stay compact, German-friendly logic works more consistently, and downgrade workflows save real space instead of turning into accidental nonsense theatre.</p>
+    <p>Movies stay compact, language-aware logic works more consistently, and downgrade workflows save real space instead of turning into accidental nonsense theatre.</p>
   </div>
   <div class="info-card">
     <h3>Core idea</h3>
@@ -73,10 +73,10 @@ In this setup, `Radarr` is responsible for:
 - interactive search curation
 - file-size-aware replacement logic
 
-Its job is not just â€œdownload a movie somehow.â€ Its job is to:
+Its job is not just to download a movie somehow. Its job is to:
 
 - prefer sensible file sizes
-- preserve German-friendly logic
+- preserve your real language preferences where possible
 - allow manual premium exceptions
 - and keep the movie library from slowly turning into an obese storage museum
 
@@ -95,39 +95,21 @@ That means:
 
 ## Language Strategy
 
-Use the same language philosophy as Sonarr, but with one important Radarr-specific rule:
+Use the same language-aware philosophy as Sonarr:
+
+- keep the built-in profile language broad
+- use custom formats to express your actual audio and subtitle preferences
+- avoid treating parser guesses as truth
+
+One especially useful Radarr rule from this setup is:
 
 - set the built-in profile language to `Any`
 
-Why:
+That keeps Radarr from over-trusting weak parser signals.
 
-- it stops Radarr from placing too much trust in parser guesses
-- especially around weak `MULTi` releases
+If you want the exact German-friendly scoring model used in this project, use:
 
-Recommended language order:
-
-1. proven `German + Japanese` multi-audio
-2. confirmed `German audio`
-3. `English audio`
-4. weak `multi-audio`
-5. `Japanese + German subtitles`
-
-## Recommended Radarr Custom Formats
-
-The same general custom-format logic used across the guide applies here:
-
-- `Language - German Parser Signal`
-- `Language - German Title Terms`
-- `Language - Dual Multi Audio`
-- `Language - English Audio Fallback`
-- `Language - Original Audio Fallback`
-- `Language - Japanese Audio Fallback`
-- subtitle helpers where useful
-
-The important principle is the same:
-
-- do not trust parser language labels alone
-- use title logic and custom formats to score what you actually want
+- [Indexers and German Content Strategy](/slimshadys-arr-setup-guide/docs/indexers-and-german-content.html)
 
 ## Main Quality Profile
 
@@ -190,7 +172,7 @@ The stricter older-movie lane used in this guide is:
 What live testing showed:
 
 - `480p` is too sparse to treat like a normal mass automation lane
-- `480p` works better as a curated/manual lane for older movies
+- `480p` works better as a curated or manual lane for older movies
 - a strict profile makes sense here when the goal is actually low-res vintage-appropriate results
 
 That makes `480p` different from `720p`:
@@ -200,26 +182,23 @@ That makes `480p` different from `720p`:
 
 ## Interactive Search and Filtering
 
-Radarrâ€™s interactive search became much more useful once filters matched real workflow questions instead of decorative title text.
+Radarr's interactive search became much more useful once filters matched real workflow questions instead of decorative title text.
 
 Useful filter ideas from this setup:
 
-- compact German results under a size cap
-- accepted German `720p`
-- accepted compact German results regardless of resolution
+- compact accepted results under a size cap
+- accepted `720p` results for targeted downgrade work
+- compact accepted results regardless of resolution
 - downgrade-profile library views
 - older-movie candidate lists
 
-The practical lesson:
-
-- filters should reflect the real decision you are making
-- not just whether the title string contains a pretty word
+If you are building a German-friendly stack, keep that part on the dedicated German strategy page instead of making every main Radarr filter about one region by default.
 
 ## When Radarr Will Not Auto-Grab Your Favorite Manual Pick
 
 Radarr does not automatically think:
 
-- â€œsmaller file = better fileâ€
+- `smaller file = better file`
 
 It thinks in terms of:
 
@@ -243,7 +222,7 @@ This is especially useful for:
 - `DVD`
 - intentionally tiny old-movie replacements
 
-Otherwise Radarr may eventually â€œimproveâ€ the movie again under normal monitoring logic.
+Otherwise Radarr may eventually improve the movie again under normal monitoring logic.
 
 ## Batch Strategy
 
@@ -262,7 +241,7 @@ This became one of the clearest real-world lessons:
 Watch out for:
 
 - treating lower resolution as automatically smaller
-- trusting misleading `MULTi` behavior
+- trusting misleading parser language behavior
 - letting downgrade profiles become the default for the whole library
 - assuming automatic search can replace curation for older sparse `480p` titles
 
@@ -271,12 +250,11 @@ If the profile sounds clever enough to save the universe, test it on ten movies 
 ## Recommended Step-by-Step
 
 1. Set the main movie profile to compact `1080p`.
-2. Apply the German-aware custom-format logic.
+2. Apply your language-aware custom-format logic.
 3. Use the newer `720p` size caps.
 4. Build the `HD 720p downgrade` lane for controlled space-saving waves.
 5. Build the stricter `SD 480p downgrade` lane only for curated older-movie work.
 6. Unmonitor manual low-res keepers once you are happy with them.
+7. Use the German strategy page only if you actually need that regional tuning.
 
 That order matches how the setup became more reliable in live testing instead of more decorative.
-
-

@@ -157,7 +157,7 @@ _Example of a practical `MDBList` dynamic-list dashboard you can use as inspirat
 
 - purpose: strong anime-heavy movie discovery from `2020` onward
 - best use: keep a dedicated anime-friendly movie lane without mixing everything into one giant general list
-- behavior: `Radarr` imports new entries, then your movie custom formats decide whether German, English, or multi-audio releases win
+- behavior: `Radarr` imports new entries, then your movie custom formats decide which audio, subtitle, and quality preferences win
 
 #### Auto Streaming Best Rated 2025+
 
