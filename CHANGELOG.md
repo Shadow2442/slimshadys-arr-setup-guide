@@ -8,6 +8,7 @@ All notable guide updates for `SlimShady's ARR Setup Guide` are tracked here.
 
 - Added a real-world `Lucifer` case study to the Sonarr guide showing how a good German season can still get targeted by worse English-only source upgrades.
 - Added documentation for a safer per-series `German lock` profile strategy in Sonarr.
+- Added a homepage update table that shows what changed, when it changed, and which page to read for the updated guidance.
 
 ### Changed
 
