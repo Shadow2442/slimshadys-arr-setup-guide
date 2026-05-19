@@ -42,6 +42,21 @@
   </div>
 </div>
 
+## Latest Guide Updates
+
+Use this as the quick project pulse. If you come back after a few days, this table shows what changed, when it changed, and where to read the updated section first.
+
+| Updated | What changed | Read it here |
+| --- | --- | --- |
+| `2026-05-20` | Added the `Lucifer` case study and the safer `German lock` Sonarr profile logic. | [Sonarr Setup and Workflows](/slimshadys-arr-setup-guide/docs/sonarr-setup-and-workflows.html) |
+| `2026-05-20` | Clarified how compact `x265` should be preferred without blocking valid German `x264` releases. | [Quality, Sizing, and Downgrades](/slimshadys-arr-setup-guide/docs/quality-sizing-and-downgrades.html) |
+| `2026-05-19` | Added stronger introduction boxes and made the app guides easier for non-technical readers to follow step by step. | [Docs Index](/slimshadys-arr-setup-guide/docs/index.html) |
+| `2026-05-18` | Split the stack into dedicated app pages for `Sonarr`, `Radarr`, `Lidarr`, `Jackett`, `Plex`, and `SABnzbd`. | [Setup Checklist](/slimshadys-arr-setup-guide/docs/setup-checklist.html) |
+| `2026-05-16` | Documented the more stable live `SABnzbd` tuning and the newer downgrade workflow lessons. | [SABnzbd Tuning and Reliability](/slimshadys-arr-setup-guide/docs/sabnzbd-tuning-and-reliability.html) |
+| `2026-05-16` | Added the live-tested ARR quality and downgrade changes that made the setup smaller, calmer, and more reliable. | [Quality, Sizing, and Downgrades](/slimshadys-arr-setup-guide/docs/quality-sizing-and-downgrades.html) |
+
+For the full running history, see the [project changelog](https://github.com/Shadow2442/slimshadys-arr-setup-guide/blob/main/CHANGELOG.md).
+
 <div class="scope-card">
   <h3>What you get in this guide</h3>
   <p>This site is a practical beginner-friendly guide for the full stack and the rules around it:</p>
@@ -89,21 +104,6 @@
   <p>This guide is meant to be read in layers. First learn what each tool does in plain English. Then install it and get the basic folders, categories, and connections working. Only after the stack behaves normally should you apply the sharper refinements that make it more compact, more reliable, and more pleasant to live with.</p>
   <p>If you are not highly technical, that is not a problem. The pages are structured so you can go step by step without needing to already understand how all six apps talk to each other on day one.</p>
 </div>
-
-## Latest Guide Updates
-
-Use this as the quick project pulse. If you come back after a few days, this table shows what changed, when it changed, and where to read the updated section first.
-
-| Updated | What changed | Read it here |
-| --- | --- | --- |
-| `2026-05-20` | Added the `Lucifer` case study and the safer `German lock` Sonarr profile logic. | [Sonarr Setup and Workflows](/slimshadys-arr-setup-guide/docs/sonarr-setup-and-workflows.html) |
-| `2026-05-20` | Clarified how compact `x265` should be preferred without blocking valid German `x264` releases. | [Quality, Sizing, and Downgrades](/slimshadys-arr-setup-guide/docs/quality-sizing-and-downgrades.html) |
-| `2026-05-19` | Added stronger introduction boxes and made the app guides easier for non-technical readers to follow step by step. | [Docs Index](/slimshadys-arr-setup-guide/docs/index.html) |
-| `2026-05-18` | Split the stack into dedicated app pages for `Sonarr`, `Radarr`, `Lidarr`, `Jackett`, `Plex`, and `SABnzbd`. | [Setup Checklist](/slimshadys-arr-setup-guide/docs/setup-checklist.html) |
-| `2026-05-16` | Documented the more stable live `SABnzbd` tuning and the newer downgrade workflow lessons. | [SABnzbd Tuning and Reliability](/slimshadys-arr-setup-guide/docs/sabnzbd-tuning-and-reliability.html) |
-| `2026-05-16` | Added the live-tested ARR quality and downgrade changes that made the setup smaller, calmer, and more reliable. | [Quality, Sizing, and Downgrades](/slimshadys-arr-setup-guide/docs/quality-sizing-and-downgrades.html) |
-
-For the full running history, see the [project changelog](https://github.com/Shadow2442/slimshadys-arr-setup-guide/blob/main/CHANGELOG.md).
 
 <div class="card-grid">
   <div class="guide-card">
