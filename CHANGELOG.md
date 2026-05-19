@@ -1,8 +1,88 @@
 # Changelog
 
+All notable guide updates for `SlimShady's ARR Setup Guide` are tracked here.
+
 ## 2026-05-20
 
-- Added a real-world `Lucifer` case study to the Sonarr guide showing how German season files can get targeted by English-only source upgrades.
-- Documented the safer per-series `German lock` profile approach for Sonarr.
-- Clarified that compact `x265` releases should be preferred without locking out valid German `x264` releases.
-- Added a cross-reference in the quality and downgrade guide so the language-protection lesson is easy to find from the storage-tuning side too.
+### Added
+
+- Added a real-world `Lucifer` case study to the Sonarr guide showing how a good German season can still get targeted by worse English-only source upgrades.
+- Added documentation for a safer per-series `German lock` profile strategy in Sonarr.
+
+### Changed
+
+- Clarified that compact `x265` releases should be preferred without accidentally locking out valid German `x264` releases.
+- Added a cross-reference in the quality and downgrade guide so the language-protection lesson is easier to find from the storage-tuning side too.
+
+## 2026-05-19
+
+### Added
+
+- Added explicit introduction boxes to the homepage and all main application guides.
+- Expanded the app pages so they work better for non-technical readers, including download links, install guidance, basic setup flow, and deeper refinement sections.
+
+### Changed
+
+- Replaced the temporary banner confusion with the correct site banner and tightened the homepage top layout.
+- Added guide counters, restored the homepage hero flow, and improved the overall landing-page presentation.
+
+## 2026-05-18
+
+### Added
+
+- Added dedicated guide pages for `Sonarr`, `Radarr`, `Lidarr`, `Jackett`, `Plex`, and `SABnzbd`.
+- Added a dedicated `German-friendly indexer strategy` section so regional logic can live in one place instead of leaking through the whole guide.
+
+### Changed
+
+- Reworked the docs landing page into a cleaner navigation hub with in-page guide links.
+- Removed duplicate theme navigation and duplicate title clutter from the docs layout.
+- Improved `Plex` documentation with clearer archival HDD library structure and setup guidance.
+
+## 2026-05-17
+
+### Added
+
+- Added MDBList screenshots and clearer sample-list wording so the discovery setup reads as a recommended pattern rather than a personal dashboard dump.
+- Added more polished visual treatment across the docs, including icons, framed content blocks, and better section rhythm.
+
+### Fixed
+
+- Fixed remaining raw markdown links so guide navigation points to rendered HTML pages instead of text-file trapdoors.
+- Corrected the wording around `MDBList` so it is clearly described as a movie/show discovery tool rather than a music-discovery layer for `Lidarr`.
+
+## 2026-05-16
+
+### Changed
+
+- Updated the guide with live-tested `SABnzbd` tuning that proved more stable in practice:
+  - `Direct Unpack = off`
+  - `connections = 14`
+  - `receive_threads = 4`
+  - `timeout = 45`
+- Documented the practical ARR lessons from real queue and downgrade testing:
+  - smaller downgrade waves are safer
+  - `720p` bulk downgrades work well
+  - `480p` is better as a curated/manual old-movie lane
+  - compact keepers should often be unmonitored once you are happy with them
+
+## 2026-05-15
+
+### Changed
+
+- Performed a final guide sanity pass to make the wording more consistent and less tied to one personal setup voice.
+- Simplified the Pages configuration and removed redundant configuration clutter.
+
+### Fixed
+
+- Fixed remaining wording mismatches around live setup references and guide framing.
+
+## 2026-05-14
+
+### Added
+
+- Added stronger homepage and subpage visual polish, including improved cards, flow sections, and decorative content blocks.
+
+### Fixed
+
+- Fixed remaining broken or stale internal documentation links.
