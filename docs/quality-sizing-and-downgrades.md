@@ -151,6 +151,12 @@ Recommended default:
 - everyday `720p`
 - `1080p` fallback if `720p` does not appear
 
+One extra real-world refinement is worth calling out:
+
+- if a finished season already has good German files, do not let Sonarr replace them with larger or English-only releases just because the source tier looks shinier
+
+That is where a stricter per-series profile and selective unmonitoring become more useful than endless theoretical scoring arguments.
+
 ### Sonarr Series Profile
 
 Recommended:
@@ -158,6 +164,7 @@ Recommended:
 - put `720p` above `1080p`
 - leave `1080p` enabled as fallback
 - use a delay profile for `720p-first` series if you want to give smaller releases time to appear
+- keep a separate stricter profile for curated or finished German seasons where language protection matters more than chasing tiny source-tier upgrades
 
 ### Sonarr TV Size Targets
 

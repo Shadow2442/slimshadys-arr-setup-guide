@@ -267,6 +267,42 @@ Once the base app is working, these are the refinements that made the biggest di
 
 Those are the changes that make Sonarr feel intentional instead of merely operational.
 
+## Real-World Example: Preventing English Overwrites
+
+One of the best live examples from this setup came from `Lucifer`.
+
+The existing season files were already good:
+
+- `German + English dual-audio`
+- compact `x265`
+- `WEBRip-1080p`
+
+Later, Sonarr found English-only `Bluray-1080p` releases and tried to queue them as upgrades.
+
+Why this happened:
+
+- `Bluray-1080p` is treated as a higher source tier than `WEBRip-1080p`
+- the normal profile still allowed upgrades
+- custom format scoring expressed a strong German preference, but it did not act as a hard lock by itself
+
+So Sonarr did the very Sonarr thing of seeing a shinier source and temporarily forgetting that the current German files were already the right answer.
+
+The fix used here was:
+
+- create a stricter profile such as `HD-720p (German lock)`
+- set `minFormatScore = 1500`
+- keep a modest `Codec - HEVC x265 Bonus`
+- do **not** use a codec penalty so harsh that valid German `x264` releases are locked out
+- unmonitor finished seasons you want to preserve exactly as they are
+
+That combination gives you the useful behavior:
+
+- weak English-only releases stop qualifying
+- compact `x265` releases are still preferred
+- valid German `x264` releases still remain possible when they are the best realistic option
+
+This is the practical pattern to copy whenever a finished German season keeps attracting flashy but worse English upgrades.
+
 ## Downgrade Workflow
 
 If you create a Sonarr downgrade lane, make it codec-aware.
