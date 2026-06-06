@@ -48,12 +48,12 @@ Use this as the quick project pulse. If you come back after a few days, this tab
 
 | Updated | What changed | Read it here |
 | --- | --- | --- |
-| `2026-05-20` | Added the `Lucifer` case study and the safer `German lock` Sonarr profile logic. | [Sonarr Setup and Workflows](/slimshadys-arr-setup-guide/docs/sonarr-setup-and-workflows.html) |
-| `2026-05-20` | Clarified how compact `x265` should be preferred without blocking valid German `x264` releases. | [Quality, Sizing, and Downgrades](/slimshadys-arr-setup-guide/docs/quality-sizing-and-downgrades.html) |
+| `2026-06-06` | Added the current `Sonarr` normal-TV and anime language profile policy, including final-state season unmonitoring. | [Sonarr Setup and Workflows](/slimshadys-arr-setup-guide/docs/sonarr-setup-and-workflows.html) |
+| `2026-06-06` | Added the new `Radarr` compact fallback strategy for normal movies and anime movies. | [Radarr Setup and Workflows](/slimshadys-arr-setup-guide/docs/radarr-setup-and-workflows.html) |
+| `2026-06-06` | Documented safer language scoring, English fallback, German replacement upgrades, and parser-signal guardrails. | [Quality, Sizing, and Downgrades](/slimshadys-arr-setup-guide/docs/quality-sizing-and-downgrades.html) |
 | `2026-05-19` | Added stronger introduction boxes and made the app guides easier for non-technical readers to follow step by step. | [Docs Index](/slimshadys-arr-setup-guide/docs/index.html) |
 | `2026-05-18` | Split the stack into dedicated app pages for `Sonarr`, `Radarr`, `Lidarr`, `Jackett`, `Plex`, and `SABnzbd`. | [Setup Checklist](/slimshadys-arr-setup-guide/docs/setup-checklist.html) |
 | `2026-05-16` | Documented the more stable live `SABnzbd` tuning and the newer downgrade workflow lessons. | [SABnzbd Tuning and Reliability](/slimshadys-arr-setup-guide/docs/sabnzbd-tuning-and-reliability.html) |
-| `2026-05-16` | Added the live-tested ARR quality and downgrade changes that made the setup smaller, calmer, and more reliable. | [Quality, Sizing, and Downgrades](/slimshadys-arr-setup-guide/docs/quality-sizing-and-downgrades.html) |
 
 For the full running history, see the [project changelog](https://github.com/Shadow2442/slimshadys-arr-setup-guide/blob/main/CHANGELOG.md).
 
@@ -88,14 +88,14 @@ For the full running history, see the [project changelog](https://github.com/Sha
 
 <div class="scope-card">
   <h3>Latest live tuning that helped</h3>
-  <p>The guide now reflects the newer, more stable configuration that behaved better in real testing:</p>
+  <p>The guide now reflects the newer language and fallback rules that behaved better in real testing:</p>
   <div class="scope-tags">
-    <span><code>SABnzbd Direct Unpack = off</code></span>
-    <span><code>connections = 14</code></span>
-    <span><code>receive_threads = 4</code></span>
-    <span><code>timeout = 45</code></span>
-    <span>smaller downgrade waves</span>
-    <span>curated 480p old-movie lane</span>
+    <span><code>Sonarr German 720p TV</code></span>
+    <span><code>Sonarr anime DE/JAP split</code></span>
+    <span><code>Radarr DE/EN fallback</code></span>
+    <span><code>Radarr anime DE/EN/JP fallback</code></span>
+    <span>English until German exists</span>
+    <span>parser guardrails</span>
   </div>
 </div>
 
@@ -267,8 +267,8 @@ So yes, this guide is not only meant to be read by humans. It can also be handed
 
 - use broad indexers for daily work
 - preserve specialist or quota-limited sources for when they matter
-- prefer `720p` for series
-- prefer compact `1080p` for movies
+- prefer German `720p` for normal series, with separate anime language profiles
+- prefer compact `1080p` for movies, with English fallback and later German replacement
 - treat downgrades as a controlled workflow, not a magic button
 
-If a setting sounds too clever, test it on a few titles first. ARR tools are excellent at turning confidence into comedy.
+If a setting sounds too clever, test it on a few titles first. ARR tools are excellent at doing exactly what you told them, including the part you forgot you told them.

@@ -124,7 +124,7 @@ Recommended base category:
 
 - `tv`
 
-That separation matters. Sonarr should import into the final library, not live forever inside your download folder like a raccoon with admin access.
+That separation matters. Sonarr should import into the final library, not live forever inside your download folder.
 
 ## Base Settings I Recommend
 
@@ -230,6 +230,39 @@ The general principle is:
 
 This makes Sonarr much less gullible when release names look convincing but the actual content is less honest.
 
+### Current Language Policy
+
+The live-tested setup now uses a clearer split between normal series and anime.
+
+For normal TV:
+
+- prefer `German`
+- allow `English` fallback when German is not available yet
+- let later German releases replace English fallback files
+- use `720p` as the normal target for ongoing and active shows
+
+For anime:
+
+- use `Anime DE lock 720p` when German or English dubs are the goal
+- use `Anime JAP lock 720p` when original Japanese audio with German subtitles is acceptable
+- keep both anime profiles at `720p`
+- prefer `German + Japanese` multi-audio when available
+- allow Japanese original audio with German subtitles as a valid anime fallback
+
+The important lesson is that anime should not inherit normal TV language behavior blindly. Anime often has a valid original-language path, while normal series should generally move toward German first and English second.
+
+### Completed Season Monitoring
+
+Once a season has reached its intended final state, unmonitor it.
+
+Use this pattern:
+
+- ended series with complete German `720p` files can be fully unmonitored
+- running series should keep future seasons monitored, but completed German `720p` seasons can be unmonitored
+- anime seasons that have reached the chosen `DE` or `JAP/subbed` profile target can also be unmonitored
+
+This prevents Sonarr from revisiting finished work just because a technically higher source tier appears later.
+
 ## Import Lists and Discovery
 
 In this guide, Sonarr pairs well with:
@@ -289,7 +322,7 @@ So Sonarr did the very Sonarr thing of seeing a shinier source and temporarily f
 
 The fix used here was:
 
-- create a stricter profile such as `HD-720p (German lock)`
+- create a stricter German-focused `720p` profile for protected seasons
 - set `minFormatScore = 1500`
 - keep a modest `Codec - HEVC x265 Bonus`
 - do **not** use a codec penalty so harsh that valid German `x264` releases are locked out
@@ -302,6 +335,23 @@ That combination gives you the useful behavior:
 - valid German `x264` releases still remain possible when they are the best realistic option
 
 This is the practical pattern to copy whenever a finished German season keeps attracting flashy but worse English upgrades.
+
+## Real-World Example: Active German 720p Enforcement
+
+The later live pass tightened the active-series policy:
+
+- running shows were checked for the current profile
+- active and ongoing shows were moved to a German-focused `720p` profile
+- completed German `720p` seasons were unmonitored
+- ended shows that were already complete in German `720p` were unmonitored fully
+
+That gave the library a clean split:
+
+- active gaps stay searchable
+- finished German seasons stay preserved
+- English fallback is allowed only where it is still useful
+
+The practical rule is simple: if it is done, stop touching it; if it is still airing, only monitor what can still improve.
 
 ## Downgrade Workflow
 

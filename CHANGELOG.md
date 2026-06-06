@@ -2,6 +2,26 @@
 
 All notable guide updates for `SlimShady's ARR Setup Guide` are tracked here.
 
+## 2026-06-06
+
+### Added
+
+- Added the current Sonarr language policy for normal TV, anime dubbed profiles, anime original-language/subbed profiles, and completed-season unmonitoring.
+- Added the current Radarr compact fallback profile strategy:
+  - `1080p compact DE/EN fallback`
+  - `720p compact DE/EN fallback`
+  - `1080p compact anime DE/EN/JP fallback`
+  - `720p compact anime DE/EN/JP fallback`
+- Added the bulk Radarr fallback-search workflow for released movies with no German or English file.
+- Added shared quality-guide notes for English fallback, German replacement upgrades, anime Japanese fallback, and safe search chunking.
+
+### Changed
+
+- Documented why hard Radarr release-profile language locks should be disabled in favor of custom-format scoring.
+- Documented the tightened German title-term logic so generic `DUBBED`, generic `MULTi`, and parser-only German signals do not falsely qualify weak releases.
+- Documented the current compact Radarr caps of `8 GB` for `1080p` and `5 GB` for `720p` custom-format matching.
+- Updated the README, homepage, and docs hub so the June language and fallback policy replaces the older May stability notes as the visible current guidance.
+
 ## 2026-05-20
 
 ### Added

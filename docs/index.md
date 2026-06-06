@@ -43,11 +43,11 @@
     </a>
     <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/sonarr-setup-and-workflows.html">
       <strong>Sonarr</strong>
-      <span>Series and anime workflows, 720p-first logic, language scoring, and downgrade lessons that behaved well in practice.</span>
+      <span>German-first normal TV, separate anime DE/JAP profiles, 720p active-series logic, and final-state season monitoring.</span>
     </a>
     <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/radarr-setup-and-workflows.html">
       <strong>Radarr</strong>
-      <span>Compact movie profiles, interactive filtering, 720p and 480p downgrade lanes, and safe batch strategy.</span>
+      <span>Compact DE/EN fallback profiles, anime DE/EN/JP fallback profiles, safer language scoring, and safe batch search strategy.</span>
     </a>
     <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/lidarr-setup-and-workflows.html">
       <strong>Lidarr</strong>
@@ -63,7 +63,7 @@
     </a>
     <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/jackett-setup-and-workflows.html">
       <strong>Jackett</strong>
-      <span>Selective torrent support, fallback thinking, and how not to build a tracker zoo by accident.</span>
+      <span>Selective torrent support, fallback thinking, and keeping tracker coverage deliberate instead of noisy.</span>
     </a>
     <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/plex-setup-and-workflows.html">
       <strong>Plex</strong>
@@ -75,7 +75,7 @@
     </a>
     <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/indexers-and-german-content.html">
       <strong>Indexer Strategy</strong>
-      <span>How to balance broad providers, optional specialist sources, quotas, and fallback logic without turning the stack feral.</span>
+      <span>How to balance broad providers, optional specialist sources, quotas, and fallback logic without wasting searches.</span>
     </a>
     <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/quality-sizing-and-downgrades.html">
       <strong>Quality, Sizes, and Downgrades</strong>
@@ -128,7 +128,8 @@
 
 - Use broad indexers for daily work.
 - Preserve specialist or low-quota sources for when they really matter.
-- Prefer `720p` for series and compact `1080p` for movies.
+- Prefer German `720p` for normal series, with a separate anime language split.
+- Prefer compact `1080p` for movies, with English fallback and German replacement upgrades.
 - Treat `480p` as a curated old-movie lane rather than a magical bulk shortcut.
 - Let `Lidarr` handle music with its own sources and workflow.
 

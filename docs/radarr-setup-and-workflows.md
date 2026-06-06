@@ -59,7 +59,7 @@
   </div>
   <div class="mini-card">
     <h4>Cross-link</h4>
-    <p>The downloader still matters. Pair this page with the SAB page if searches succeed but queues behave like a haunted post office.</p>
+    <p>The downloader still matters. Pair this page with the SAB page if searches succeed but queues stall or imports lag behind.</p>
   </div>
 </div>
 
@@ -188,6 +188,34 @@ One especially useful Radarr rule from this setup is:
 
 That keeps Radarr from over-trusting weak parser signals and lets custom formats do the real language work.
 
+### Current Compact Fallback Profiles
+
+The live setup now uses compact fallback profiles instead of hard language locks.
+
+For normal movies:
+
+- `1080p compact DE/EN fallback`
+- `720p compact DE/EN fallback`
+
+For anime movies:
+
+- `1080p compact anime DE/EN/JP fallback`
+- `720p compact anime DE/EN/JP fallback`
+
+Normal movies should prefer German, allow English while German is not available, and later upgrade from English to German when a proper German release appears.
+
+Anime movies can use the same German and English logic, but may also allow Japanese as a third fallback because original-language anime is often a valid final or temporary state.
+
+The key scoring shape is:
+
+- compact size match makes the release eligible
+- English fallback passes the minimum score
+- Japanese fallback passes only in the anime profile
+- German title terms reach the upgrade cutoff
+- later German releases can replace English fallback files
+
+This is better than a strict German-only profile because the library keeps moving when a new movie has no German release yet.
+
 ## Movie Size Limits
 
 Once the base setup works, apply the practical size rules.
@@ -208,6 +236,13 @@ Recommended compact movie defaults:
 
 Those `720p` values are the later live-tested version. The looser ceiling was needed because some perfectly reasonable long-movie `720p` releases were getting rejected.
 
+The current custom-format size caps used for compact fallback matching are:
+
+- `Compact - 1080p Size = 1080p, max 8 GB`
+- `Compact - 720p Size = 720p, max 5 GB`
+
+These caps are intentionally profile-scored rather than used as a global hammer. That keeps the normal lane compact without making every edge case impossible.
+
 ## Language and Custom Format Strategy
 
 Use the same language-aware philosophy as Sonarr:
@@ -217,6 +252,47 @@ Use the same language-aware philosophy as Sonarr:
 - avoid treating parser guesses as truth
 
 This gives you much more control than relying on title text and hope.
+
+### Avoid Hard Release-Profile Locks
+
+The older Radarr setup used release profiles such as:
+
+- `deutsch`, requiring the literal word `german`
+- `english`, ignoring releases that contained `german`
+
+That caused a real failure mode: a movie with the `german` tag could not download an English fallback even when no German release existed.
+
+The safer pattern is:
+
+- disable hard release-profile language gates
+- keep the quality profile language as `Any`
+- let custom-format scoring decide preference and upgrade behavior
+- use tags for organization, not as hidden language traps
+
+Hard release-profile requirements are tempting, but they are too blunt for fallback workflows.
+
+### Parser Signals Are Not Proof
+
+Radarr can parse some releases as German even when the title only says things like `MULTi.CA` or `VFQ`.
+
+The live-tested fix was:
+
+- score `Language - German Parser Signal` at `0`
+- score explicit German title terms higher
+- do not reward generic `MULTi` by itself
+- do not treat bare `DUBBED` as German
+
+The German title regex should require explicit German evidence, such as:
+
+- `German`
+- `Deutsch`
+- `GER`
+- `DEU`
+- `German Dub`
+- `Deutsch Dub`
+- a real `DL` audio marker, while avoiding `WEB-DL`
+
+This avoids accidentally treating French Canadian, generic multi-language, Chinese dubbed, or other unrelated releases as German.
 
 ## Recommended Refinements and Enhancements
 
@@ -286,6 +362,29 @@ Useful filter ideas from this setup:
 - older-movie candidate lists
 
 This matters because sometimes a compact `1080p x265` is more useful than a technically lower-resolution but bloated `720p` file.
+
+## Bulk Fallback Search Workflow
+
+For movies that are already released but still have no German or English file, use a staged workflow.
+
+Recommended process:
+
+1. Build a dry-run candidate list first.
+2. Include only monitored movies with a past release, cinema, digital, or physical date.
+3. Exclude movies that already have German or English audio.
+4. Assign normal movies to `1080p compact DE/EN fallback`.
+5. Assign anime movies to `1080p compact anime DE/EN/JP fallback`.
+6. Search in chunks rather than one giant wave.
+7. Watch SAB and Radarr history for false positives.
+
+Live testing showed why the test step matters:
+
+- old hard German language gates blocked English fallback
+- bare `DUBBED` incorrectly boosted non-German releases
+- Japanese fallback must be limited to anime
+- active bad grabs should be canceled quickly before the queue fills
+
+This workflow keeps the library moving while still protecting the language target.
 
 ## When Radarr Will Not Auto-Grab Your Favorite Manual Pick
 

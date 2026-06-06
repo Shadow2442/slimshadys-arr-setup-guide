@@ -111,6 +111,13 @@ Recommended default:
 - normal movies in compact `1080p`
 - occasional premium giant version downloaded manually when actually wanted
 
+The current movie language strategy is:
+
+- normal movies use compact `1080p` or `720p` with `German` preferred
+- `English` is allowed as a fallback when German is not available yet
+- later German releases should score high enough to replace English fallback files
+- anime movies may also allow `Japanese` as a third fallback
+
 ### Radarr Main Profile
 
 Good defaults:
@@ -144,6 +151,29 @@ Later live testing justified a slightly looser movie `720p` ceiling:
 
 That kept the storage philosophy intact while allowing reasonable long-movie `720p` files to pass.
 
+The compact custom-format caps currently used for fallback matching are:
+
+- `1080p compact = max 8 GB`
+- `720p compact = max 5 GB`
+
+Those caps are useful as scored custom formats because they encourage compact releases without turning the whole profile into a brittle hard filter.
+
+### Radarr Language Scoring Guardrails
+
+Do not let Radarr treat every language hint as equally trustworthy.
+
+Recommended guardrails:
+
+- keep built-in profile language as `Any`
+- avoid hard release-profile requirements such as `must contain german`
+- let English fallback pass the minimum custom-format score
+- set the German upgrade cutoff higher than English fallback
+- keep generic parser-only German signals at `0`
+- do not reward bare `DUBBED` as German
+- do not reward generic `MULTi` without explicit German evidence
+
+This allows a movie to download in English today and still upgrade to German later without letting weak parser guesses hijack the queue.
+
 ## Series Philosophy
 
 Recommended default:
@@ -156,6 +186,14 @@ One extra real-world refinement is worth calling out:
 - if a finished season already has good German files, do not let Sonarr replace them with larger or English-only releases just because the source tier looks shinier
 
 That is where a stricter per-series profile and selective unmonitoring become more useful than endless theoretical scoring arguments.
+
+The current series language strategy is:
+
+- normal active series use German-preferred `720p`
+- English can remain a fallback when German is not available
+- completed German `720p` seasons should be unmonitored
+- ended shows that are complete in German `720p` can be fully unmonitored
+- anime gets separate `DE` and `JAP/subbed` profiles instead of inheriting normal TV rules
 
 ### Sonarr Series Profile
 
@@ -271,6 +309,18 @@ Recommended batch sizes:
 
 - movies: `10-20`
 - episodes: `5-10`
+
+For large fallback-search waves, use chunking even when the API can accept more.
+
+The live Radarr pass used:
+
+- dry-run inventory first
+- profile assignment in chunks
+- search commands in chunks
+- SAB queue checks during the run
+- immediate cancellation of false-positive grabs
+
+That pattern is slower than one giant search blast, but much easier to trust.
 
 After live testing, that advice got stronger rather than weaker:
 

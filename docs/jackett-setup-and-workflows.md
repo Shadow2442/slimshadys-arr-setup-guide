@@ -120,7 +120,7 @@ For the base setup:
 - copy the working Torznab feed into Sonarr or Radarr
 - keep notes on which ones are stable and which are just loud
 
-That is enough to get useful torrent fallback online without immediately creating a tracker zoo.
+That is enough to get useful torrent fallback online without immediately creating a noisy tracker pile.
 
 ## Recommended Philosophy
 

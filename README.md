@@ -1,6 +1,6 @@
 ﻿# SlimShady's ARR Setup Guide
 
-This is a practical beginner guide for setting up `Sonarr`, `Radarr`, `Lidarr`, `SABnzbd`, `Jackett`, and `Plex` for a reliable home-media workflow without letting the system turn into a chaos goblin.
+This is a practical beginner guide for setting up `Sonarr`, `Radarr`, `Lidarr`, `SABnzbd`, `Jackett`, and `Plex` for a reliable home-media workflow without letting the system turn into a noisy pile of half-matched downloads.
 
 It focuses on:
 
@@ -17,25 +17,26 @@ It focuses on:
 
 This guide is based on a real-world setup that was tuned and tested live, not just copied from disconnected wiki pages.
 
-## Latest Stability and Speed Notes
+## Latest Language and Fallback Notes
 
-The setup behind this guide was refined further after heavier downgrade testing and queue troubleshooting.
+The setup behind this guide was refined further after live `Sonarr` and `Radarr` language testing.
 
 The most useful real-world improvements were:
 
-- `SABnzbd Direct Unpack = off`
-- `SABnzbd connections = 14`
-- `SABnzbd receive_threads = 4`
-- `SABnzbd server timeout = 45`
-- smaller `Radarr` and `Sonarr` downgrade waves instead of giant batch floods
-- treating `480p` as a curated old-movie workflow instead of a mass automation lane
+- `Sonarr` normal TV now prefers German `720p`, with English fallback only where it is still useful
+- `Sonarr` anime now uses separate `DE` and `JAP/subbed` `720p` profiles
+- completed German `720p` seasons can be unmonitored once they reach final state
+- `Radarr` normal movies now use compact `DE/EN` fallback profiles
+- `Radarr` anime movies get separate compact `DE/EN/JP` fallback profiles
+- hard Radarr release-profile language locks are replaced by custom-format scoring
+- parser-only German, generic `MULTi`, and bare `DUBBED` no longer count as proof of German audio
 
 That combination made the live setup:
 
-- more reliable
-- less likely to jam in post-processing
-- less likely to leave ghost `downloading` rows in ARR
-- and slightly faster during normal download work
+- better at downloading English when German is not available yet
+- better at replacing English fallback with German later
+- safer for anime original-language workflows
+- less likely to grab releases that only look correct because of weak title parsing
 
 ## Background and Personal Experience
 
@@ -133,8 +134,8 @@ That page holds the German-specific material so the rest of the guide can stay b
 
 If you only want the short version:
 
-- `Sonarr`: prefer `720p`, allow `1080p` fallback, use compact TV size limits
-- `Radarr`: prefer compact `1080p`, disable `1080p remux` in the main profile
+- `Sonarr`: prefer German `720p` for normal TV, allow English fallback where useful, and use separate `DE` and `JAP/subbed` anime profiles
+- `Radarr`: prefer compact `1080p`, use `DE/EN` fallback for normal movies, and use `DE/EN/JP` fallback only for anime movies
 - `Lidarr`: use it for artists and albums, with its own quality and metadata flow
 - `SABnzbd`: enable `Ignore samples`, clean junk files, blacklist executable extensions, keep `Direct Unpack` off, and use modestly tuned server settings
 - use broad, healthy providers for daily work

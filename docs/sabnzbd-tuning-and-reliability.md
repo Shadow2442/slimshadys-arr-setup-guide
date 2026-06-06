@@ -20,7 +20,7 @@
   </div>
 </div><div class="doc-hero">
   <h2>Make the downloader calmer, cleaner, and slightly faster</h2>
-  <p>This page turns the SAB guidance from the rest of the guide into one practical playbook: what to enable, what to avoid, what improved stability in real testing, and how to squeeze a little more speed out without waking the goblins.</p>
+  <p>This page turns the SAB guidance from the rest of the guide into one practical playbook: what to enable, what to avoid, what improved stability in real testing, and how to squeeze a little more speed out without destabilizing the queue.</p>
   <div class="hero-badges">
     <span>Stability first</span>
     <span>Speed second</span>
@@ -82,7 +82,7 @@ Its job is to:
 - unpack the result
 - hand the finished job back so the ARR app can import it
 
-When SAB behaves well, the rest of the stack feels smooth. When SAB behaves badly, everything starts looking haunted even though the real problem is one stubborn archive in a back room.
+When SAB behaves well, the rest of the stack feels smooth. When SAB behaves badly, everything starts looking broken even though the real problem is one stubborn archive in a back room.
 
 ## Download SABnzbd
 
