@@ -69,6 +69,50 @@
   </section>
 </div>
 
+## Why German-Friendly Is Not German-Only
+
+German-only sounds clean, but it creates a bad availability problem. Some titles appear in English first, then German or German/Multi later. If you block English completely, new content may stay missing even when a watchable bridge release exists.
+
+The better model is a ladder:
+
+1. Prefer German/Multi.
+2. Accept German-only if Multi is not available.
+3. Accept English only when no file exists and no German candidate is available.
+4. Replace English with German/Multi later.
+5. Unmonitor once the final keeper is verified.
+
+## How Sonarr and Radarr Decide
+
+ARR chooses releases from a mix of quality, custom format score, size limits, language parsing, release title, indexer, and cutoff rules. That means a German release can lose if its score is too low, its size is outside the allowed range, or the existing English file has already met the cutoff.
+
+The setup must make German/Multi obviously better than English, while still allowing English to fill empty slots.
+
+## What To Configure
+
+| Configuration | Purpose |
+| --- | --- |
+| German title-term bonus | Rewards clear title proof such as `German`, `Deutsch`, `GER`, or `DEU`. |
+| German parser bonus | Rewards ARR's parsed German signal, but should not be the only proof. |
+| Multi-audio bonus | Rewards real dual-language evidence such as German plus English/original audio. |
+| English fallback rule | Allows English only when no useful file exists or no German candidate is available. |
+| Blocked-language penalties | Prevents French, Turkish, Hebrew, and other unwanted normal-lane releases. |
+| Size and quality limits | Avoids rejecting good compact German releases by accident. |
+
+## Examples
+
+| Release title | Likely decision | Why |
+| --- | --- | --- |
+| `Movie.2026.German.DL.1080p.WEB.h264` | Prefer | Clear German dual-language signal. |
+| `Movie.2026.MULTi.1080p.WEB` | Cautious | Multi alone does not prove German. |
+| `Movie.2026.TRUEFRENCH.1080p.WEB` | Reject | French marker in a normal German/English lane. |
+| `Movie.2026.English.1080p.WEB` | Bridge only | Accept only if no German/Multi file exists. |
+
+## How To Verify
+
+Use interactive search on a known title with German and English candidates. The German/Multi release should have a clearly higher score than the English release. If it does not, fix the custom format scores before trusting automation.
+
+Then test a missing title where only English exists. English should be allowed as a temporary bridge, but it should not prevent a later German/Multi replacement.
+
 <div class="chapter-next">
   <span>Continue</span>
   <a href="/slimshadys-arr-setup-guide/docs/chapter-05-multilanguage-original-language.html">Chapter 5: Multi-Language and Original-Language Setup</a>

@@ -22,6 +22,7 @@ All notable guide updates for `SlimShady's ARR Setup Guide` are tracked here.
 - Reworked the homepage into a short introduction and chapter index instead of a long mixed landing page.
 - Reworked the docs index into a chapter-first navigation hub with app-specific reference pages kept as secondary lookup material.
 - Updated the GitHub Pages description to match the broader setup-guide scope.
+- Expanded all eight setup chapters with practical background sections covering why each decision exists, how the stack behaves, what to configure, how to test it, and which failure modes to watch for.
 
 ## 2026-06-06
 

@@ -80,6 +80,40 @@
   </section>
 </div>
 
+## Why This Guide Exists
+
+Most ARR setups explain how to install apps, but they often skip the part that matters later: why one release should win over another. That missing reasoning is where wrong-language downloads, giant files, bad Plex matches, and surprise full-season grabs usually come from.
+
+This guide is opinionated because the target library is opinionated. The goal is not maximum downloads. The goal is a home media library that feels deliberate:
+
+- original audio is preserved when it matters
+- German audio and subtitles make family playback easy
+- English can bridge availability gaps
+- German/Multi replaces English when it becomes available
+- compact final files stop being touched once they are verified
+
+## How the Stack Thinks
+
+ARR apps do not watch videos or listen to audio like a person. They make decisions from metadata: title terms, indexer language, quality, custom format score, size limits, monitored state, and whether a better release is allowed to replace the current file.
+
+That means the setup has to make the desired outcome obvious to the apps. If German/Multi is the final target, the profiles and custom formats must reward it. If French or Turkish releases are never wanted in normal lanes, they need strong penalties or blocks. If a file is already the final keeper, monitoring should be turned off so it does not get reconsidered.
+
+## What You Configure Later
+
+| Area | Why it matters | Where it is covered |
+| --- | --- | --- |
+| Folders and categories | Keeps downloads, imports, and Plex libraries separated. | Chapter 2 |
+| Profiles and custom formats | Teaches Sonarr and Radarr which releases should win. | Chapters 4-6 |
+| Discovery and automation | Finds missing files and upgrades English bridge files later. | Chapter 3 |
+| Original-language lanes | Prevents anime, Korean, and Chinese logic from leaking into normal media. | Chapter 5 |
+| Operations | Gives you a recovery path when queues, imports, or Plex matching fail. | Chapter 7 |
+
+## First Sanity Check
+
+Before changing scores or adding lists, make sure you can explain the flow in one sentence: "A title enters ARR, ARR chooses a release, the downloader finishes it, ARR imports and renames it, Plex scans the final folder."
+
+If any part of that sentence is not working yet, stay in the base setup chapter before adding smarter language rules.
+
 <div class="chapter-next">
   <span>Continue</span>
   <a href="/slimshadys-arr-setup-guide/docs/chapter-02-base-setup.html">Chapter 2: Base Setup Step by Step</a>

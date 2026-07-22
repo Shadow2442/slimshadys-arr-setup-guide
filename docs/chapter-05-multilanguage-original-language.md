@@ -57,6 +57,60 @@
   </section>
 </div>
 
+## Why Original-Language Lanes Need Boundaries
+
+Multi-language files are the best outcome when they contain the right tracks. The danger is that generic "Multi" can also hide the wrong language mix. A French/Japanese file is technically multi-language, but it is not useful if the goal is German plus original audio.
+
+That is why this guide treats original-language logic as scoped lanes. Anime, Korean, and Chinese media can have different fallback rules, but those rules should apply only when the title actually belongs in that lane.
+
+## The Preferred Language Orders
+
+| Lane | First target | Bridge target | Final target |
+| --- | --- | --- | --- |
+| Normal movies and TV | German plus original/English audio | English if empty | German/Multi compact keeper |
+| Anime | German dub plus Japanese, or English dub plus Japanese | Japanese with useful subtitles | German/Multi or chosen original-language keeper |
+| Korean | Korean audio with English subtitles | English dub if needed | German dub or German/Multi |
+| Chinese | Chinese audio with English subtitles | English dub if needed | German dub or German/Multi |
+
+The key is intent. Original audio is good when it belongs to the title. It is bad when it is just an unwanted language slipping through a vague release name.
+
+## What To Configure
+
+- Keep normal movie and TV profiles German/English focused.
+- Add original-language bonuses only to scoped anime/Korean/Chinese logic.
+- Penalize or block suspicious markers such as `VFQ`, `VFF`, `TRUEFRENCH`, `EN-TR`, `TR-EN`, and `TURG`.
+- Reward real German/Multi evidence more than vague `MULTi`.
+- Use import validation before deleting an existing good file.
+
+## How Import Validation Works
+
+The release title is only a promise. The import parse is closer to the truth. When ARR imports, it can often show parsed language, quality, and release group. If the imported file does not match the intended lane, the safe workflow is:
+
+1. Do not let it replace a better existing file.
+2. Remove or blocklist the bad release.
+3. Strengthen the custom format or marker rule that allowed it.
+4. Search again for the correct lane.
+
+## How To Test It
+
+Pick one normal TV episode, one anime episode, and one Korean or Chinese title if available.
+
+| Test | Expected result |
+| --- | --- |
+| Normal TV with English and German candidates | German/Multi beats English. |
+| Anime with no German dub | English dub plus Japanese or Japanese with subtitles can be valid. |
+| Korean title with Korean/English-sub release | Korean original lane can accept it. |
+| French/Japanese "Multi" for anime movie | Reject unless it also solves the intended language target. |
+
+## Common Failure Modes
+
+| Problem | What usually went wrong |
+| --- | --- |
+| French/Japanese anime file imported | Multi was rewarded without checking whether German or useful subtitles exist. |
+| Normal TV grabs Turkish/English | Blocked-language markers are incomplete. |
+| Good Japanese original rejected | Anime lane is using normal German-only assumptions. |
+| English replaces German/Multi | Language downgrade guard is missing or too weak. |
+
 <div class="chapter-next">
   <span>Continue</span>
   <a href="/slimshadys-arr-setup-guide/docs/chapter-06-archive-size.html">Chapter 6: Archive and Size Strategy</a>

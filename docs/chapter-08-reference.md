@@ -62,3 +62,54 @@
     </div>
   </section>
 </div>
+
+## How To Use This Appendix
+
+The chapters explain the workflow. The reference pages are where you look up a specific tool or rule once the overall model makes sense.
+
+Use this appendix when you already know the area of the problem:
+
+| Need | Go here |
+| --- | --- |
+| A series or anime rule is wrong | Sonarr reference |
+| A movie profile, title match, or compact release is wrong | Radarr reference |
+| Albums, artists, or track metadata are wrong | Lidarr reference |
+| Jobs are stuck, unpacking, or orphaned | SABnzbd reference |
+| Torrent fallback or tracker health is wrong | Jackett reference |
+| Plex matching, split, trash, or playback is wrong | Plex reference |
+| Discovery lists are not adding items | MDBList reference |
+| German indexer priority or language scoring is unclear | German indexer reference |
+| File sizes and downgrade logic are unclear | Quality and size reference |
+
+## Terms Used Throughout The Guide
+
+| Term | Meaning |
+| --- | --- |
+| Bridge file | A temporary acceptable file, often English, used until a better target exists. |
+| Final keeper | A verified file that has reached the intended language, quality, and size state. |
+| German/Multi | A release that includes German audio plus another useful language, ideally original audio or English. |
+| Original-language lane | Scoped logic for anime, Korean, or Chinese content where original audio is intentional. |
+| Blocked marker | A title or language signal that should reject or heavily penalize a release. |
+| Cutoff | The point where ARR considers a profile good enough and may stop upgrading. |
+| Unmonitor | Stop ARR from searching for more replacements for an item. |
+
+## Minimum Reference Setup
+
+| Area | Minimum expectation |
+| --- | --- |
+| Sonarr/Radarr profiles | English bridge allowed only when useful; German/Multi wins later. |
+| Custom formats | Strong German proof, Multi proof, blocked-language penalties, codec/size signals. |
+| Download clients | Separate categories and healthy import paths. |
+| Plex | Final library folders only. |
+| Seerr | Conservative approval and safe default profiles. |
+| Automation | Daily batches, API budget, queue/import checks, final-state unmonitoring. |
+
+## Updating The Guide
+
+Future changes should keep the same structure:
+
+- explain why the decision exists
+- show how the apps actually make the decision
+- list what needs to be configured
+- include a small test or verification step
+- preserve the current card, table, and flow-block design language

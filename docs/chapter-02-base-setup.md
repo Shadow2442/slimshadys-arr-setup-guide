@@ -79,6 +79,58 @@
   </section>
 </div>
 
+## Why the Base Setup Matters
+
+Almost every later problem looks like a language or quality problem at first, but many start with boring wiring: the wrong category, the wrong root folder, Plex watching a temporary path, or a request tool adding too much at once.
+
+The base setup makes the pipeline predictable. Each app should know exactly which downloads belong to it, where finished files should land, and which folder Plex should scan.
+
+## Folder and Category Model
+
+Use one clear final library folder per media type, and one matching downloader category per ARR app.
+
+| Layer | Example | Purpose |
+| --- | --- | --- |
+| SAB temporary folder | `Downloads/incomplete` | Work area while data is still downloading or unpacking. |
+| SAB completed folder | `Downloads/complete` | Handoff area for finished jobs. |
+| Sonarr category | `tv` | Lets Sonarr see only series jobs that belong to it. |
+| Radarr category | `movies` | Lets Radarr see only movie jobs that belong to it. |
+| Lidarr category | `music` | Keeps albums away from video imports. |
+| Plex library folder | `Media/Movies`, `Media/TV`, `Media/Music` | Final scanned library only. |
+
+The important rule is simple: download folders are temporary; library folders are final. Plex should not watch temporary folders.
+
+## What To Configure
+
+| App | Minimum configuration before moving on |
+| --- | --- |
+| SABnzbd | Temporary folder, completed folder, server, API key, categories. |
+| Sonarr | Root folder, downloader connection, `tv` category, one safe profile. |
+| Radarr | Root folder, downloader connection, `movies` category, one safe profile. |
+| Lidarr | Music root folder, downloader connection, `music` category. |
+| Plex | Libraries pointed only at final ARR-managed folders. |
+| Seerr | Default profiles and approvals set conservatively. |
+
+## Test Before Scaling
+
+Do not import hundreds of titles yet. Test one item per lane:
+
+1. Add one movie in Radarr and search it.
+2. Add one episode in Sonarr and search it.
+3. Add one album in Lidarr if you use music automation.
+4. Confirm SAB/qBittorrent receives the correct category.
+5. Confirm ARR imports and renames the finished file.
+6. Confirm Plex sees only the final renamed file.
+
+## Common Early Mistakes
+
+| Symptom | Likely cause | Fix |
+| --- | --- | --- |
+| Download finishes but ARR does not import | Wrong category or completed path. | Check downloader category and ARR download client settings. |
+| Plex shows duplicate or ugly items | Plex watches temporary folders or bad names. | Point Plex only at final libraries and let ARR rename. |
+| A request downloads too much | Seerr auto-approval is too broad. | Require manual approval for full shows and large requests. |
+| Apps fight over downloads | Shared categories. | Give each app its own category. |
+
 <div class="chapter-next">
   <span>Continue</span>
   <a href="/slimshadys-arr-setup-guide/docs/chapter-03-download-pipeline.html">Chapter 3: Download Pipeline and Daily Automation</a>

@@ -62,6 +62,54 @@
   </section>
 </div>
 
+## Why Archive Rules Exist
+
+Without archive rules, automation keeps chasing "better" forever. Better can mean larger, newer, higher resolution, or simply different. That is dangerous when the real goal is a compact, correct, watchable library.
+
+The release ladder separates availability from archive quality. It is fine to accept a larger or less ideal bridge file when nothing else exists. It is not fine to keep upgrading a solved file forever.
+
+## Resolution, Codec, and Size
+
+Resolution is only one part of quality. A compact `1080p x265` file can be a better archive choice than a bloated `720p x264` file. A tiny file can also be too compressed. The goal is to use size rules as steering, not as blind rejection.
+
+| Factor | Why it matters |
+| --- | --- |
+| Resolution | Sets the rough visual target, but not the whole story. |
+| Codec | `x265/HEVC` can deliver smaller files at similar perceived quality. |
+| Runtime | A long movie needs more space than a 22-minute episode. |
+| Audio tracks | Multi-language files need room for more than one audio track. |
+| Source | BluRay, WEB, DVD, and HDTV have different expectations. |
+
+## What To Configure
+
+| Media type | Recommended behavior |
+| --- | --- |
+| Normal TV | Allow German/Multi `1080p` for fast availability, prefer compact German/Multi `720p` as final. |
+| Movies | Prefer compact German/Multi `1080p`; allow English bridge only when needed. |
+| Anime | Use lane-specific language logic before applying archive assumptions. |
+| Old curated media | Use manual judgment; older titles may have valid DVD, 480p, or compact 720p keepers. |
+
+## Size Rules Should Not Block Good Releases
+
+A good compact release can be below a strict size floor. If a German/Multi `1080p` BDRip is efficient, the rule should not reject it just because it is smaller than expected. Size caps and floors should catch obvious nonsense, not punish good encoding.
+
+Use interactive search to inspect rejected releases. If the only rejection reason is size and the title, language, source, and codec are good, tune the size rule.
+
+## Final-State Unmonitoring
+
+Final state means:
+
+- the file has the intended language tracks or subtitles
+- the quality and size are acceptable for the lane
+- Plex sees the right title and file
+- ARR imported and named it correctly
+
+Once those are true, unmonitor the item. Monitoring is for things that still need improvement. A verified keeper does not need daily reconsideration.
+
+## How To Test It
+
+Find one English bridge movie and one German/Multi compact candidate. The German/Multi compact file should win, even if the English file has a shiny quality label. Then verify the file in Plex and unmonitor it.
+
 <div class="chapter-next">
   <span>Continue</span>
   <a href="/slimshadys-arr-setup-guide/docs/chapter-07-operations-troubleshooting.html">Chapter 7: Operations and Troubleshooting</a>

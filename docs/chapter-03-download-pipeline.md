@@ -66,6 +66,62 @@
   </section>
 </div>
 
+## Why Built-In RSS Is Not Enough
+
+RSS is great for new releases, but it is not a complete quality-control system. It sees what appears now. It does not reliably revisit older English bridge files, missing past releases, stalled imports, or titles where German/Multi arrives days later.
+
+That is why this guide uses a daily release-ladder automation on top of normal ARR behavior. ARR still owns the real decisions, imports, and file management. The automation helps ARR look again at the right items.
+
+## Search Types Explained
+
+| Search type | What it does | Best use |
+| --- | --- | --- |
+| RSS sync | Watches newly posted releases from indexers. | New episodes and movies as they appear. |
+| Automatic search | Lets ARR choose the best acceptable release now. | Missing files and normal upgrades. |
+| Interactive search | Shows candidates and rejection reasons. | Debugging scoring, language, and title problems. |
+| Daily automation search | Checks selected missing or upgrade candidates in batches. | Backlog cleanup and German/Multi replacements. |
+
+## What the Daily Automation Should Check
+
+The daily run should focus on high-value candidates instead of hammering every indexer forever.
+
+| Candidate | Why it is checked |
+| --- | --- |
+| Released movies with no file | If German exists, grab it; if only English exists, use English as a bridge. |
+| Released episodes with no file | Same logic, with extra care for running series. |
+| Existing English files | German/Multi may now be available and should replace the bridge file. |
+| New German episode finds | Previous episodes in the same season may now also have German releases. |
+| Queue and import warnings | Completed downloads are useless if ARR never imports them. |
+
+## What To Configure
+
+- Keep ARR profiles and custom formats as the source of truth.
+- Keep daily automation batches limited so indexer API limits survive.
+- Use separate cooldowns for new/running media and older backlog.
+- Validate imports before deleting old files.
+- Unmonitor final verified keepers after the release ladder reaches the final state.
+
+## How To Test It
+
+Pick a small batch, not the whole library:
+
+1. Find 5-10 released titles with no file or English-only files.
+2. Run automatic search or the daily automation test mode.
+3. Check why each candidate was accepted or rejected.
+4. Confirm downloads use the right category.
+5. Confirm imports do not downgrade language.
+6. Confirm final German/Multi keepers get unmonitored.
+
+## Failure Modes
+
+| Symptom | What to inspect |
+| --- | --- |
+| "No downloads found" but manual search finds releases | Scoring, quality cutoff, size limits, or indexer categories are too strict. |
+| Wrong language downloads | Blocked-language custom formats or title markers are incomplete. |
+| Indexer API limits | Batch size or retry behavior is too aggressive. |
+| Queue fills with old English files | English fallback is allowed even when German candidates exist. |
+| Completed downloads sit forever | Import path, category, unpacking, or manual import parsing failed. |
+
 <div class="chapter-next">
   <span>Continue</span>
   <a href="/slimshadys-arr-setup-guide/docs/chapter-04-german-friendly.html">Chapter 4: German-Friendly Setup</a>

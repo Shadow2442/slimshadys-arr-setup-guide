@@ -47,7 +47,7 @@
   <tbody>
     <tr>
       <td><code>2026-07-22</code></td>
-      <td><strong>Chapter rebuild.</strong> Homepage, docs index, and the full guide path were rebuilt around proper setup chapters.</td>
+      <td><strong>Chapter deepening.</strong> Added the missing why/how/configure/test context across all eight setup chapters.</td>
       <td><a href="/slimshadys-arr-setup-guide/docs/index.html">Docs index</a></td>
     </tr>
     <tr>

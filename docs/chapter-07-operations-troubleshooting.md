@@ -65,6 +65,55 @@
   </section>
 </div>
 
+## Why Troubleshooting Starts With Lanes
+
+When something breaks, the whole stack can look guilty. A movie missing in Plex might actually be a Radarr import issue. A Sonarr language problem might actually be a release title that passed scoring. A stuck download might be SAB unpacking, not ARR.
+
+Troubleshoot by lane so you do not fix the wrong layer.
+
+## The Standard Investigation Order
+
+1. Check ARR queue first.
+2. Check the downloader job and category.
+3. Check whether the file exists on disk.
+4. Check manual import parsing and rejection reasons.
+5. Check language and custom format scoring.
+6. Check Plex scan/match only after ARR has a clean final file.
+
+## Common Workflows
+
+| Case | Safe workflow |
+| --- | --- |
+| SAB job stuck unpacking | Pause queue, inspect job, retry or remove only after checking whether ARR still needs it. |
+| qBittorrent torrent stalled | Check progress, metadata, seeds, category, and whether a Usenet replacement exists. |
+| Completed but not imported | Use ARR queue/manual import to see the exact rejection reason. |
+| Wrong language downloaded | Remove, blocklist, strengthen markers, and search again. |
+| Plex merged wrong movies | Rename/move safely, rescan, split, fix match, then empty trash only when intentional. |
+
+## What Not To Do
+
+- Do not delete downloads before confirming ARR has a final file.
+- Do not let Plex manage temporary download folders.
+- Do not fix a language downgrade by only deleting the file; fix the scoring rule too.
+- Do not re-enable broken indexers until a direct test passes.
+- Do not run huge searches while indexers are already rate-limited.
+
+## Verification Checklist
+
+After any repair, confirm:
+
+| Check | Good result |
+| --- | --- |
+| ARR item | Shows the expected file and quality. |
+| Language | Parsed or verified as German/Multi or the intended original-language lane. |
+| Disk path | File lives in the ARR-managed final folder. |
+| Plex | Shows the correct title, year, artwork, and playback item. |
+| Monitoring | Final keepers are unmonitored; bridge files stay monitored. |
+
+## When To Update Rules
+
+If the same problem happens twice, it is no longer just cleanup. It is a rule problem. Add or adjust the custom format, size rule, title marker, profile cutoff, category mapping, or automation guard that would have prevented it.
+
 <div class="chapter-next">
   <span>Continue</span>
   <a href="/slimshadys-arr-setup-guide/docs/chapter-08-reference.html">Chapter 8: Reference Appendix</a>
