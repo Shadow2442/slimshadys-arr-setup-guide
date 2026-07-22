@@ -8,6 +8,7 @@
     <h2>SlimShady's ARR Setup Guide</h2>
     <p class="home-lede">Build a reliable home-media stack with <code>Sonarr</code>, <code>Radarr</code>, <code>Lidarr</code>, <code>SABnzbd</code>, <code>Jackett</code>, <code>Seerr</code>, and <code>Plex</code>, without letting automation turn your library into a noisy pile of half-matched downloads.</p>
     <p>This guide is written from the perspective of a Swiss movie aficionado: keep original versions and original audio where they matter, but make movies and series comfortable for family to watch in their native language.</p>
+    <p><strong>Built from months of real-world setup work.</strong> This guide grew out of months of tuning, breaking, fixing, resetting, and rebuilding my own ARR and Plex stack. More recently I brought Codex into the process as a setup copilot: it helped me audit the messy parts, turn hard-earned lessons into cleaner rules, automate repeat checks, and rebuild the setup with much more confidence instead of starting from scratch blindly again.</p>
     <div class="home-hero-actions">
       <a class="primary-link" href="/slimshadys-arr-setup-guide/docs/chapter-01-start-here.html">Start Chapter 1</a>
       <a class="secondary-link" href="/slimshadys-arr-setup-guide/docs/index.html">Browse All Docs</a>
@@ -33,11 +34,6 @@
     </div>
   </aside>
 </section>
-
-<div class="cinema-note">
-  <strong>Built from months of real-world setup work.</strong>
-  This guide grew out of months of tuning, breaking, fixing, resetting, and rebuilding my own ARR and Plex stack. More recently I brought Codex into the process as a setup copilot: it helped me audit the messy parts, turn hard-earned lessons into cleaner rules, automate repeat checks, and rebuild the setup with much more confidence instead of starting from scratch blindly again.
-</div>
 
 <div class="cinema-note">
   <strong>Questions or feedback?</strong>
