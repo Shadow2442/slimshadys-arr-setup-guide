@@ -18,6 +18,7 @@ All notable guide updates for `SlimShady's ARR Setup Guide` are tracked here.
 - Added explicit chapter coverage for Seerr request safety, Jackett tracker recovery, release-ladder automation, original-language lanes, archive targets, and bad-language cleanup.
 - Added Chapter 9 for Codex-assisted setup, including a master prompt, safe download package, templates, and example automation scripts.
 - Added a public GitHub guide feedback form for project questions, unclear guide sections, broken links, and suggestions, with a safety reminder not to post secrets or private details.
+- Added a homepage AI setup copilot prompt so readers can give Codex or another on-machine AI the guide URL and be walked through the full setup step by step.
 
 ### Changed
 

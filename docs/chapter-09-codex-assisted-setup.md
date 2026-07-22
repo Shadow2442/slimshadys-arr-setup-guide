@@ -46,6 +46,18 @@ ARR setup is not difficult because any single setting is hard. It is difficult b
 
 Codex is useful because it can hold that whole map in working memory, compare settings, explain the consequence of a change, and write small helper scripts. It should still work slowly and visibly. A home media stack is not the place for mysterious automation theatre.
 
+## Quick Prompt For Any On-Machine AI
+
+This guide is written so Codex, or a similar local/on-machine AI assistant, can use it as a step-by-step playbook. The important part is not that the AI does everything alone. The useful part is that it can keep the setup order straight, ask for only the details it needs, adapt examples to the real machine, and test each piece before the next one starts.
+
+Copy this short prompt when you want the AI to guide the setup:
+
+```text
+Use https://shadow2442.github.io/slimshadys-arr-setup-guide/ as the setup guide for my ARR and Plex home media stack. Walk me through it step by step. Start by reading the guide, then ask me for my OS, folders, app URLs, API keys, Plex token, downloader, indexers, and media goals only when needed. Do not print secrets. Inspect before changing anything. Help me configure Sonarr, Radarr, Lidarr, SABnzbd, Plex, Jackett, Seerr, language rules, downloads, and daily automation. Test each stage before moving on.
+```
+
+Use the full master prompt below when the AI is already running on the same machine and can safely inspect local files, services, and app settings.
+
 ## What Codex Should Be Allowed To Do
 
 | Task | Good Codex behavior |

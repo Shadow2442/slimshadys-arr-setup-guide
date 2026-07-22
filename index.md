@@ -44,6 +44,18 @@
   </div>
 </div>
 
+<div class="cinema-note">
+  <strong>Want an AI to walk you through the setup?</strong>
+  If you use Codex or another on-machine AI assistant, give it this guide and ask it to act as your setup copilot. It can read the chapters, ask for your local paths and app URLs when needed, adapt the templates, configure one app at a time, and verify each step before moving on.
+  <br><br>
+  <strong>Starter prompt:</strong>
+  <pre><code>Use https://shadow2442.github.io/slimshadys-arr-setup-guide/ as the setup guide for my ARR and Plex home media stack. Walk me through it step by step. Start by reading the guide, then ask me for my OS, folders, app URLs, API keys, Plex token, downloader, indexers, and media goals only when needed. Do not print secrets. Inspect before changing anything. Help me configure Sonarr, Radarr, Lidarr, SABnzbd, Plex, Jackett, Seerr, language rules, downloads, and daily automation. Test each stage before moving on.</code></pre>
+  <div class="source-chips">
+    <a href="/slimshadys-arr-setup-guide/docs/chapter-09-codex-assisted-setup.html">Open the AI setup chapter</a>
+    <a href="/slimshadys-arr-setup-guide/downloads/examples/codex-master-setup-prompt.md">Download the master prompt</a>
+  </div>
+</div>
+
 ## Latest Guide Updates
 
 <table class="update-ledger">
@@ -55,6 +67,11 @@
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td><code>2026-07-22</code></td>
+      <td><strong>AI setup copilot.</strong> Added a simple starter prompt for Codex or another on-machine AI to guide readers through the full ARR and Plex setup step by step.</td>
+      <td><a href="/slimshadys-arr-setup-guide/docs/chapter-09-codex-assisted-setup.html">AI setup</a></td>
+    </tr>
     <tr>
       <td><code>2026-07-22</code></td>
       <td><strong>Feedback form.</strong> Added a public GitHub feedback form for questions, unclear sections, broken links, and project-related suggestions.</td>
@@ -74,11 +91,6 @@
       <td><code>2026-07-22</code></td>
       <td><strong>Chapter deepening.</strong> Added the missing why/how/configure/test context across all eight setup chapters.</td>
       <td><a href="/slimshadys-arr-setup-guide/docs/index.html">Docs index</a></td>
-    </tr>
-    <tr>
-      <td><code>2026-07-22</code></td>
-      <td><strong>Release ladder.</strong> Added English bridge logic, German/Multi replacement rules, Seerr safety, Jackett recovery, and archive behavior.</td>
-      <td><a href="/slimshadys-arr-setup-guide/docs/chapter-03-download-pipeline.html">Automation</a></td>
     </tr>
   </tbody>
 </table>
