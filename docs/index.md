@@ -1,33 +1,16 @@
-﻿<div class="guide-banner-frame">
+<div class="guide-banner-frame">
   <img class="guide-banner-image" src="/slimshadys-arr-setup-guide/docs/assets/guide-banner.png" alt="SlimShady's ARR Setup Guide banner">
 </div>
-<div class="guide-stats">
-  <div class="guide-stat-card">
-    <span class="guide-stat-value">6</span>
-    <span class="guide-stat-label">Core apps in the stack</span>
-  </div>
-  <div class="guide-stat-card">
-    <span class="guide-stat-value">10</span>
-    <span class="guide-stat-label">Deep-dive guide sections</span>
-  </div>
-  <div class="guide-stat-card">
-    <span class="guide-stat-value">14</span>
-    <span class="guide-stat-label">SAB connections tuned</span>
-  </div>
-  <div class="guide-stat-card">
-    <span class="guide-stat-value">45s</span>
-    <span class="guide-stat-label">Downloader timeout baseline</span>
-  </div>
-</div><div class="guide-hub">
-  <h2>What this guide is about</h2>
-  <p>This page is the clean front door for the full guide system. It explains what the project covers, how the stack fits together, and gives you one tidy place to jump into each part without fighting duplicate navigation like it owes you money.</p>
-  <p>Use it as the map for the whole ARR setup: the homepage is the polished welcome mat, while this page is the prettier control panel for the full docs collection.</p>
+
+<div class="guide-hub">
+  <h2>Documentation Index</h2>
+  <p>This is the full map of the guide. The chapters are the recommended reading path. The app pages are reference material for specific tools.</p>
 
   <div class="hero-badges">
-    <span>One clear navigation hub</span>
-    <span>App-by-app guides</span>
-    <span>Optional regional strategy</span>
-    <span>Live-tested advice</span>
+    <span>Chapter path</span>
+    <span>Specialist sections</span>
+    <span>App references</span>
+    <span>Live-tested rules</span>
   </div>
 
   <div class="hub-actions">
@@ -35,108 +18,98 @@
     <a class="secondary-link" href="https://github.com/Shadow2442/slimshadys-arr-setup-guide">Open GitHub Repo</a>
   </div>
 
-  <div class="hub-section-title">Core guides</div>
+  <div class="hub-section-title">Setup chapters</div>
   <div class="hub-link-grid">
-    <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/setup-checklist.html">
-      <strong>ARR Setup Checklist</strong>
-      <span>Install order, folder basics, categories, Seerr request safety, and the safest path to getting the whole stack online.</span>
+    <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/chapter-01-start-here.html">
+      <strong>1. Start Here</strong>
+      <span>Goal, architecture, reader path, and the rules that shape the whole setup.</span>
     </a>
+    <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/chapter-02-base-setup.html">
+      <strong>2. Base Setup Step by Step</strong>
+      <span>Folders, categories, download clients, ARR apps, Plex, Jackett, and Seerr request safety.</span>
+    </a>
+    <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/chapter-03-download-pipeline.html">
+      <strong>3. Download Pipeline and Daily Automation</strong>
+      <span>Discovery, RSS, queues, imports, Plex scans, daily release-ladder checks, and API budgets.</span>
+    </a>
+    <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/chapter-04-german-friendly.html">
+      <strong>4. German-Friendly Setup</strong>
+      <span>German/Multi preference, English bridge fallback, blocked-language markers, and German indexer strategy.</span>
+    </a>
+    <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/chapter-05-multilanguage-original-language.html">
+      <strong>5. Multi-Language and Original-Language Setup</strong>
+      <span>German/English dual audio, anime, Japanese, Korean, Chinese, subtitles, and import validation.</span>
+    </a>
+    <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/chapter-06-archive-size.html">
+      <strong>6. Archive and Size Strategy</strong>
+      <span>Compact keepers, 720p series finals, 1080p bridges, codec-aware sizing, and unmonitoring.</span>
+    </a>
+    <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/chapter-07-operations-troubleshooting.html">
+      <strong>7. Operations and Troubleshooting</strong>
+      <span>SAB, qBittorrent, imports, Jackett health, Plex matching, and bad-language cleanup.</span>
+    </a>
+    <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/chapter-08-reference.html">
+      <strong>8. Reference Appendix</strong>
+      <span>All app-specific pages, specialist references, changelog links, and quick lookup material.</span>
+    </a>
+  </div>
+
+  <div class="hub-section-title">App references</div>
+  <div class="hub-link-grid">
     <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/sonarr-setup-and-workflows.html">
       <strong>Sonarr</strong>
-      <span>English bridge behavior, German/Multi upgrades, 1080p German bridge releases, compact 720p final states, and anime fallback logic.</span>
+      <span>TV, anime, English bridge behavior, German/Multi upgrades, and compact 720p final states.</span>
     </a>
     <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/radarr-setup-and-workflows.html">
       <strong>Radarr</strong>
-      <span>Compact German/Multi movie targets, English fallback only when needed, same-title protection, and safe batch search strategy.</span>
+      <span>Movies, compact German/Multi targets, title protection, and fallback search strategy.</span>
     </a>
     <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/lidarr-setup-and-workflows.html">
       <strong>Lidarr</strong>
-      <span>Music-specific categories, artist and album monitoring, and why music should not be bullied into movie logic.</span>
+      <span>Music categories, artist and album monitoring, and metadata boundaries.</span>
     </a>
-  </div>
-
-  <div class="hub-section-title">Support guides</div>
-  <div class="hub-link-grid">
     <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/sabnzbd-tuning-and-reliability.html">
       <strong>SABnzbd</strong>
-      <span>Reliability tuning, queue sanity, post-processing lessons, and the settings that made the downloader calmer and faster.</span>
+      <span>Downloader reliability, queue sanity, post-processing, and tuned baseline settings.</span>
     </a>
     <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/jackett-setup-and-workflows.html">
       <strong>Jackett</strong>
-      <span>Selective torrent support, fallback thinking, tracker health recovery, and keeping coverage deliberate instead of noisy.</span>
+      <span>Selective torrent fallback, tracker hygiene, health recovery, and category mapping.</span>
     </a>
     <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/plex-setup-and-workflows.html">
       <strong>Plex</strong>
-      <span>Final library setup, archival HDD organization, metadata boundaries, and clean library scanning.</span>
+      <span>Final library scanning, matching, splitting, trash behavior, and playback boundaries.</span>
+    </a>
+  </div>
+
+  <div class="hub-section-title">Special topics</div>
+  <div class="hub-link-grid">
+    <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/setup-checklist.html">
+      <strong>Setup Checklist</strong>
+      <span>The compact operational checklist for quick setup and sanity checks.</span>
     </a>
     <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/mdblist-import-lists.html">
-      <strong>MDBList</strong>
-      <span>Automated discovery lists for movies and shows and how they feed into ARR without taking over the whole system.</span>
+      <strong>MDBList Import Lists</strong>
+      <span>Automated movie, series, and anime discovery lists.</span>
     </a>
     <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/indexers-and-german-content.html">
-      <strong>Indexer Strategy</strong>
-      <span>How to balance broad providers, optional specialist sources, quotas, and fallback logic without wasting searches.</span>
+      <strong>Indexers and German Content</strong>
+      <span>German-friendly provider roles, scoring, quotas, and original-language lanes.</span>
     </a>
     <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/quality-sizing-and-downgrades.html">
       <strong>Quality, Sizes, and Downgrades</strong>
-      <span>Release-ladder automation, profile logic, size rules, compact keepers, import validation, and storage-aware workflows.</span>
+      <span>Release-ladder principles, size caps, compact keepers, and import cleanup.</span>
     </a>
   </div>
 </div>
 
-<div class="info-grid">
-  <div class="info-card">
-    <h3>Best use</h3>
-    <p>Use this page when you want the shortest route to the exact part of the stack you are configuring, fixing, or trying not to accidentally weaponize.</p>
-  </div>
-  <div class="info-card">
-    <h3>Main outcome</h3>
-    <p>A cleaner reading order, clearer topic separation, and an easier handoff to Codex or another human without sending them into a documentation hedge maze.</p>
-  </div>
-</div>
+## Recommended Reading Path
 
-<div class="mini-grid">
-  <div class="mini-card">
-    <h4>Start here</h4>
-    <p>Use the checklist first if you are building the stack from scratch or doing a major reset.</p>
-  </div>
-  <div class="mini-card">
-    <h4>Then split by app</h4>
-    <p>Read the dedicated Sonarr, Radarr, Lidarr, and SAB pages when you want practical app-by-app tuning.</p>
-  </div>
-  <div class="mini-card">
-    <h4>Keep the rest nearby</h4>
-    <p>Use the indexer, MDBList, quality, Jackett, and Plex guides as shared strategy references across the whole stack.</p>
-  </div>
-</div>
-
-## Recommended Reading Order
-
-1. [Setup Checklist](/slimshadys-arr-setup-guide/docs/setup-checklist.html)
-2. [Sonarr Setup and Workflows](/slimshadys-arr-setup-guide/docs/sonarr-setup-and-workflows.html)
-3. [Radarr Setup and Workflows](/slimshadys-arr-setup-guide/docs/radarr-setup-and-workflows.html)
-4. [Lidarr Setup and Workflows](/slimshadys-arr-setup-guide/docs/lidarr-setup-and-workflows.html)
-5. [SABnzbd Tuning and Reliability](/slimshadys-arr-setup-guide/docs/sabnzbd-tuning-and-reliability.html)
-6. [Jackett Setup and Workflows](/slimshadys-arr-setup-guide/docs/jackett-setup-and-workflows.html)
-7. [Plex Setup and Workflows](/slimshadys-arr-setup-guide/docs/plex-setup-and-workflows.html)
-8. [Indexers and German Content Strategy](/slimshadys-arr-setup-guide/docs/indexers-and-german-content.html)
-9. [MDBList Import Lists](/slimshadys-arr-setup-guide/docs/mdblist-import-lists.html)
-10. [Quality, Sizes, and Downgrades](/slimshadys-arr-setup-guide/docs/quality-sizing-and-downgrades.html)
-11. [Full Guide on GitHub](https://github.com/Shadow2442/slimshadys-arr-setup-guide#readme)
-
-## Quick Philosophy
-
-- Use broad indexers for daily work.
-- Preserve specialist or low-quota sources for when they really matter.
-- Use English fallback as a temporary bridge only.
-- Prefer German/Multi over English even when the German file is a lower everyday quality tier.
-- Allow German/Multi `1080p` TV as a fast bridge, but keep compact German/Multi `720p` as the final series target.
-- Prefer compact German/Multi `1080p` for movies.
-- Use separate anime, Korean, and Chinese original-language lanes instead of forcing normal TV rules onto everything.
-- Block suspicious language markers like `VFQ`, `VFF`, `TRUEFRENCH`, `EN-TR`, `TR-EN`, and `TURG`.
-- Unmonitor verified final-state keepers.
-- Treat `480p` as a curated old-movie lane rather than a magical bulk shortcut.
-- Let `Lidarr` handle music with its own sources and workflow.
-
-If a setting sounds too clever, test it on a few titles before unleashing it on the whole library. Your hard drive will thank you, and SAB might stop composing little tragedies.
-
+1. [Start Here](/slimshadys-arr-setup-guide/docs/chapter-01-start-here.html)
+2. [Base Setup Step by Step](/slimshadys-arr-setup-guide/docs/chapter-02-base-setup.html)
+3. [Download Pipeline and Daily Automation](/slimshadys-arr-setup-guide/docs/chapter-03-download-pipeline.html)
+4. [German-Friendly Setup](/slimshadys-arr-setup-guide/docs/chapter-04-german-friendly.html)
+5. [Multi-Language and Original-Language Setup](/slimshadys-arr-setup-guide/docs/chapter-05-multilanguage-original-language.html)
+6. [Archive and Size Strategy](/slimshadys-arr-setup-guide/docs/chapter-06-archive-size.html)
+7. [Operations and Troubleshooting](/slimshadys-arr-setup-guide/docs/chapter-07-operations-troubleshooting.html)
+8. [Reference Appendix](/slimshadys-arr-setup-guide/docs/chapter-08-reference.html)

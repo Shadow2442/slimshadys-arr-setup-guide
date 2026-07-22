@@ -1,310 +1,85 @@
-﻿<div class="guide-banner-frame">
+<div class="guide-banner-frame">
   <img class="guide-banner-image" src="/slimshadys-arr-setup-guide/docs/assets/guide-banner.png" alt="SlimShady's ARR Setup Guide banner">
 </div>
-<div class="guide-stats">
-  <div class="guide-stat-card">
-    <span class="guide-stat-value">6</span>
-    <span class="guide-stat-label">Core apps in the stack</span>
-  </div>
-  <div class="guide-stat-card">
-    <span class="guide-stat-value">10</span>
-    <span class="guide-stat-label">Deep-dive guide sections</span>
-  </div>
-  <div class="guide-stat-card">
-    <span class="guide-stat-value">14</span>
-    <span class="guide-stat-label">SAB connections tuned</span>
-  </div>
-  <div class="guide-stat-card">
-    <span class="guide-stat-value">45s</span>
-    <span class="guide-stat-label">Downloader timeout baseline</span>
-  </div>
-</div><div class="hero-intro">
-  <h2>What this guide is about</h2>
-  <p>This site is a practical beginner-friendly walkthrough for building a mostly automated media setup with <code>Sonarr</code>, <code>Radarr</code>, <code>Lidarr</code>, <code>SABnzbd</code>, <code>Jackett</code>, and <code>Plex</code>.</p>
-  <p>It is designed for people who want more than a vague feature list. Each major app page explains what the tool is for, where to download it, how to install it, how to do the basic configuration, and only then how to apply the smarter refinements that made this setup cleaner, faster, and more reliable in real testing.</p>
-  <p>It focuses on smarter quality rules, safer quotas, cleaner storage, and the kind of real-world fixes you only learn after ARR tools do something deeply confident and slightly cursed.</p>
+
+<div class="hero-intro">
+  <h2>SlimShady's ARR Setup Guide</h2>
+  <p>A practical step-by-step guide for building a reliable home-media automation stack with <code>Sonarr</code>, <code>Radarr</code>, <code>Lidarr</code>, <code>SABnzbd</code>, <code>Jackett</code>, <code>Seerr</code>, and <code>Plex</code>.</p>
+  <p>The guide is organized like a setup manual: start with the base stack, then add discovery, German-friendly language rules, multi-language and original-language logic, archive sizing, automation scripts, and troubleshooting.</p>
+  <p>If you are new, read the chapters in order. If you already have a working stack, jump directly to the specialist chapter that matches the thing you are fixing.</p>
   <div class="hero-meta">
     <span class="hero-meta-label">Guide traffic:</span>
     <img class="visitor-counter-badge" src="https://visitor-badge.laobi.icu/badge?page_id=Shadow2442.slimshadys-arr-setup-guide&left_text=visitors" alt="Visitor counter">
   </div>
-  <div class="quick-links">
-    <a href="/slimshadys-arr-setup-guide/docs/setup-checklist.html">Start with the checklist</a>
-    <a href="/slimshadys-arr-setup-guide/docs/sonarr-setup-and-workflows.html">See Sonarr setup</a>
-    <a href="/slimshadys-arr-setup-guide/docs/radarr-setup-and-workflows.html">See Radarr setup</a>
-    <a href="/slimshadys-arr-setup-guide/docs/lidarr-setup-and-workflows.html">See Lidarr setup</a>
-    <a href="/slimshadys-arr-setup-guide/docs/sabnzbd-tuning-and-reliability.html">See SAB tuning</a>
-    <a href="/slimshadys-arr-setup-guide/docs/jackett-setup-and-workflows.html">See Jackett setup</a>
-    <a href="/slimshadys-arr-setup-guide/docs/plex-setup-and-workflows.html">See Plex setup</a>
-    <a href="/slimshadys-arr-setup-guide/docs/mdblist-import-lists.html">See MDBList automation</a>
-    <a href="/slimshadys-arr-setup-guide/docs/indexers-and-german-content.html">See German-friendly strategy</a>
-    <a href="/slimshadys-arr-setup-guide/docs/quality-sizing-and-downgrades.html">Review quality and sizes</a>
-    <a href="https://github.com/Shadow2442/slimshadys-arr-setup-guide">Open the GitHub repo</a>
+</div>
+
+## Chapter Index
+
+<div class="hub-link-grid">
+  <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/chapter-01-start-here.html">
+    <strong>1. Start Here</strong>
+    <span>The stack goal, reader path, architecture flow, and the core rules before you touch advanced settings.</span>
+  </a>
+  <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/chapter-02-base-setup.html">
+    <strong>2. Base Setup Step by Step</strong>
+    <span>Folders, categories, SABnzbd, Sonarr, Radarr, Lidarr, Plex, Jackett, and Seerr request safety.</span>
+  </a>
+  <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/chapter-03-download-pipeline.html">
+    <strong>3. Download Pipeline and Daily Automation</strong>
+    <span>Import lists, RSS, queues, imports, Plex scans, release-ladder runs, and API-conscious batches.</span>
+  </a>
+  <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/chapter-04-german-friendly.html">
+    <strong>4. German-Friendly Setup</strong>
+    <span>German/Multi preference, English bridge fallback, blocked languages, title markers, and indexer strategy.</span>
+  </a>
+  <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/chapter-05-multilanguage-original-language.html">
+    <strong>5. Multi-Language and Original-Language Setup</strong>
+    <span>German/English dual audio, anime, Japanese, Korean, Chinese, subtitle fallback, and import validation.</span>
+  </a>
+  <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/chapter-06-archive-size.html">
+    <strong>6. Archive and Size Strategy</strong>
+    <span>Compact movies, 720p series finals, 1080p bridge files, codec-aware sizing, and final-state unmonitoring.</span>
+  </a>
+  <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/chapter-07-operations-troubleshooting.html">
+    <strong>7. Operations and Troubleshooting</strong>
+    <span>SAB, qBittorrent, failed imports, Jackett health, Plex matching, bad-language cleanup, and stuck queues.</span>
+  </a>
+  <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/chapter-08-reference.html">
+    <strong>8. Reference Appendix</strong>
+    <span>App-by-app pages, specialist references, changelog links, and quick lookup material.</span>
+  </a>
+</div>
+
+## How to Use This Guide
+
+<div class="mini-grid">
+  <div class="mini-card">
+    <h4>New setup</h4>
+    <p>Read chapters 1 through 3 first. Only add German-friendly, multi-language, and archive logic after the base stack works.</p>
+  </div>
+  <div class="mini-card">
+    <h4>Existing setup</h4>
+    <p>Jump to the chapter matching the problem: German rules, original-language media, archive sizing, automation, or troubleshooting.</p>
+  </div>
+  <div class="mini-card">
+    <h4>Reference mode</h4>
+    <p>Use chapter 8 when you need app-specific pages for Sonarr, Radarr, Lidarr, SABnzbd, Jackett, Plex, MDBList, or quality settings.</p>
   </div>
 </div>
 
-## Latest Guide Updates
+## Current Operating Model
 
-Use this as the quick project pulse. If you come back after a few days, this table shows what changed, when it changed, and where to read the updated section first.
+- English fallback is a bridge, not a final winner.
+- German/Multi should replace English when available.
+- German/Multi `1080p` TV can be used as a fast bridge.
+- Compact German/Multi `720p` is the normal final TV archive target.
+- Compact German/Multi `1080p` is the normal movie archive target.
+- Anime, Korean, and Chinese titles get scoped original-language fallback lanes.
+- Suspicious markers such as `VFQ`, `VFF`, `TRUEFRENCH`, `EN-TR`, `TR-EN`, and `TURG` are blocked or heavily penalized.
+- Final verified keepers are unmonitored.
 
-| Updated | What changed | Read it here |
-| --- | --- | --- |
-| `2026-07-22` | Added the current daily ARR release-ladder automation: English bridge behavior, German/Multi replacement rules, anime and Korean/Chinese fallback lanes, blocked-language cleanup, and final-state unmonitoring. | [Quality, Sizing, and Downgrades](/slimshadys-arr-setup-guide/docs/quality-sizing-and-downgrades.html) |
-| `2026-07-22` | Updated the Sonarr and Radarr profiles to document German `1080p` bridge releases, compact German final states, stricter language downgrade protection, and request-frontend safety. | [Sonarr Setup and Workflows](/slimshadys-arr-setup-guide/docs/sonarr-setup-and-workflows.html) |
-| `2026-07-22` | Added explicit `Seerr` request safety and updated `Jackett` health/recovery guidance for torrent fallback sources. | [Setup Checklist](/slimshadys-arr-setup-guide/docs/setup-checklist.html) |
-| `2026-06-06` | Added the current `Sonarr` normal-TV and anime language profile policy, including final-state season unmonitoring. | [Sonarr Setup and Workflows](/slimshadys-arr-setup-guide/docs/sonarr-setup-and-workflows.html) |
-| `2026-06-06` | Added the new `Radarr` compact fallback strategy for normal movies and anime movies. | [Radarr Setup and Workflows](/slimshadys-arr-setup-guide/docs/radarr-setup-and-workflows.html) |
-| `2026-06-06` | Documented safer language scoring, English fallback, German replacement upgrades, and parser-signal guardrails. | [Quality, Sizing, and Downgrades](/slimshadys-arr-setup-guide/docs/quality-sizing-and-downgrades.html) |
-| `2026-05-19` | Added stronger introduction boxes and made the app guides easier for non-technical readers to follow step by step. | [Docs Index](/slimshadys-arr-setup-guide/docs/index.html) |
-| `2026-05-18` | Split the stack into dedicated app pages for `Sonarr`, `Radarr`, `Lidarr`, `Jackett`, `Plex`, and `SABnzbd`. | [Setup Checklist](/slimshadys-arr-setup-guide/docs/setup-checklist.html) |
-| `2026-05-16` | Documented the more stable live `SABnzbd` tuning and the newer downgrade workflow lessons. | [SABnzbd Tuning and Reliability](/slimshadys-arr-setup-guide/docs/sabnzbd-tuning-and-reliability.html) |
+## Project Links
 
-For the full running history, see the [project changelog](https://github.com/Shadow2442/slimshadys-arr-setup-guide/blob/main/CHANGELOG.md).
-
-<div class="scope-card">
-  <h3>What you get in this guide</h3>
-  <p>This site is a practical beginner-friendly guide for the full stack and the rules around it:</p>
-  <div class="scope-tags">
-    <span><code>Sonarr</code></span>
-    <span><code>Radarr</code></span>
-    <span><code>Lidarr</code></span>
-    <span><code>SABnzbd</code></span>
-    <span><code>Jackett</code></span>
-    <span><code>Plex</code></span>
-    <span>regional language strategy</span>
-    <span>language-aware automation</span>
-    <span>size control</span>
-    <span>safe downgrade workflows</span>
-  </div>
-</div>
-
-<div class="scope-card">
-  <h3>How to work through it without losing your mind</h3>
-  <p>If you are new, do not try to configure the whole stack in one dramatic weekend battle. Start with the checklist, install one app at a time, confirm the base setup works, and then return for the recommended refinements once the boring foundations are solid.</p>
-  <div class="scope-tags">
-    <span>Understand the app first</span>
-    <span>Install it cleanly</span>
-    <span>Do the base config</span>
-    <span>Add our refinements after that</span>
-    <span>Test on a few titles first</span>
-  </div>
-</div>
-
-<div class="scope-card">
-  <h3>Latest live tuning that helped</h3>
-  <p>The guide now reflects the newer language and fallback rules that behaved better in real testing:</p>
-  <div class="scope-tags">
-    <span><code>English bridge only</code></span>
-    <span><code>German/Multi wins</code></span>
-    <span><code>TV 1080p bridge</code></span>
-    <span><code>TV 720p final</code></span>
-    <span><code>compact movie final</code></span>
-    <span>blocked-language cleanup</span>
-    <span>same-title guardrails</span>
-    <span>final-state unmonitoring</span>
-  </div>
-</div>
-
-<div class="scope-card">
-  <h3>Daily ARR release ladder</h3>
-  <p>The current reference setup runs a daily checked automation pass. It searches released missing items, upgrades English fallback files when German/Multi appears, validates actual import language before replacement, and unmonitors files that reach the final compact state.</p>
-  <div class="scope-tags">
-    <span>quota-aware batches</span>
-    <span>previous-episode catch-up</span>
-    <span>anime original-language lane</span>
-    <span>Korean and Chinese fallback lane</span>
-    <span><code>VFQ</code> / <code>TURG</code> blocks</span>
-    <span>queue and import checks</span>
-  </div>
-</div>
-
-<div class="scope-card">
-  <h3>Seerr and Jackett safety</h3>
-  <p>The guide now calls out request-front-end approval and torrent fallback health separately: Seerr should feed ARR without auto-approving huge surprise imports, and Jackett should stay selective with flaky trackers disabled until they test cleanly again.</p>
-  <div class="scope-tags">
-    <span>manual request approval</span>
-    <span>no full-show surprise grabs</span>
-    <span>ARR profiles still decide</span>
-    <span>selective torrent fallback</span>
-    <span>tracker health checks</span>
-  </div>
-</div>
-
-<div class="intro-box">
-  <h3>Introduction</h3>
-  <p>This guide is meant to be read in layers. First learn what each tool does in plain English. Then install it and get the basic folders, categories, and connections working. Only after the stack behaves normally should you apply the sharper refinements that make it more compact, more reliable, and more pleasant to live with.</p>
-  <p>If you are not highly technical, that is not a problem. The pages are structured so you can go step by step without needing to already understand how all six apps talk to each other on day one.</p>
-</div>
-
-<div class="card-grid">
-  <div class="guide-card">
-    <h3>General setup first</h3>
-    <p>The core docs stay broad on purpose so the main stack is easy to understand even if you are not building around one specific language or region.</p>
-  </div>
-  <div class="guide-card">
-    <h3>Storage-aware quality rules</h3>
-    <p>Compact <code>1080p</code> movies, <code>720p</code>-first series, and downgrade workflows that actually save space instead of creating comedy.</p>
-  </div>
-  <div class="guide-card">
-    <h3>Regional strategy when you need it</h3>
-    <p>If you want a German-friendly setup, there is a dedicated specialist page for language scoring, provider roles, and quota-aware source strategy.</p>
-  </div>
-</div>
-
-## Download the Apps
-
-These are the main applications used in this setup:
-
-| App | Purpose | Download |
-| --- | --- | --- |
-| `Sonarr` | TV series and anime automation | [sonarr.tv](https://sonarr.tv/#download) |
-| `Radarr` | Movie and anime movie automation | [radarr.video](https://radarr.video/#download) |
-| `Lidarr` | Music automation | [lidarr.audio](https://lidarr.audio/#download) |
-| `SABnzbd` | Main Usenet downloader | [sabnzbd.org/downloads](https://sabnzbd.org/downloads) |
-| `Jackett` | Torrent indexer bridge | [GitHub Releases](https://github.com/Jackett/Jackett/releases) |
-| `Plex` | Media server, scraping, and playback | [plex.tv/media-server-downloads](https://www.plex.tv/media-server-downloads/) |
-| `FlareSolverr` | Optional helper for protected torrent sites | [GitHub Releases](https://github.com/FlareSolverr/FlareSolverr/releases) |
-
-Optional but useful:
-
-| App | Purpose | Download |
-| --- | --- | --- |
-| `OpenAI Codex` | Optional configuration assistant and implementation copilot | [OpenAI Academy](https://openai.com/academy/codex/) |
-| `Jellyseerr` | Requests and discovery frontend | [GitHub](https://github.com/Fallenbagel/jellyseerr) |
-| `Prowlarr` | Central ARR indexer management | [prowlarr.com](https://prowlarr.com/) |
-
-## The Setup at a Glance
-
-```mermaid
-flowchart LR
-    classDef source fill:#0f172a,stroke:#38bdf8,stroke-width:2px,color:#e0f2fe
-    classDef arr fill:#172554,stroke:#60a5fa,stroke-width:2px,color:#dbeafe
-    classDef search fill:#052e16,stroke:#4ade80,stroke-width:2px,color:#dcfce7
-    classDef download fill:#3f2a00,stroke:#fbbf24,stroke-width:2px,color:#fef3c7
-    classDef library fill:#3b0764,stroke:#c084fc,stroke-width:2px,color:#f3e8ff
-
-    A["Discovery Layer<br/>MDBList (movies/shows) / Music Import Lists / Manual Add"] --> B["ARR Apps<br/>Sonarr / Radarr / Lidarr"]
-    B --> C["Search Layer<br/>Usenet Indexers / Jackett"]
-    C --> D["Download Layer<br/>SABnzbd / Torrent Client"]
-    D --> E["Library Processing<br/>Import / Rename / Organize"]
-    E --> F["Playback Layer<br/>Plex Library Scan"]
-    F --> G["Ready to Watch / Listen"]
-
-    class A source
-    class B arr
-    class C search
-    class D download
-    class E,F,G library
-```
-
-## What the Full Stack Does
-
-This guide covers more than just choosing a few quality settings.
-
-The real stack works like this:
-
-- `Import Lists` or manual additions feed new movies, series, artists, and albums into the ARR apps
-- the ARR apps search indexers using your rules
-- the download client fetches the release
-- the ARR apps import, rename, and organize the final files
-- `Plex` scans the finished library and makes it available to watch or listen to
-- the daily release-ladder automation revisits monitored fallback files and missing released items, then upgrades them when better language matches appear
-
-When everything is configured properly, it becomes a mostly automated media pipeline instead of a pile of separate tools.
-
-## Who This Is For
-
-This guide is especially useful if:
-
-- you are technical, but not an ARR specialist
-- you work in IT, security, or adjacent technical areas
-- you are comfortable learning systems
-- but you do not want to spend days decoding every Sonarr and Radarr setting from scratch
-
-It is also useful if you are not especially technical, but are willing to:
-
-- work step by step
-- follow a practical checklist
-- use `OpenAI Codex` as a setup assistant instead of trying to configure the whole stack from memory
-
-It comes from real setup work done by someone with technical experience and a practical mindset, not from a developer-only perspective.
-
-It was also built and refined with the support of `OpenAI Codex`, which helped inspect the live configuration, test ideas, compare indexers, and apply changes safely.
-
-## Start Here
-
-- [Full Guide on GitHub](https://github.com/Shadow2442/slimshadys-arr-setup-guide#readme)
-- [Setup Checklist](/slimshadys-arr-setup-guide/docs/setup-checklist.html)
-- [Sonarr Setup and Workflows](/slimshadys-arr-setup-guide/docs/sonarr-setup-and-workflows.html)
-- [Radarr Setup and Workflows](/slimshadys-arr-setup-guide/docs/radarr-setup-and-workflows.html)
-- [Lidarr Setup and Workflows](/slimshadys-arr-setup-guide/docs/lidarr-setup-and-workflows.html)
-- [SABnzbd Tuning and Reliability](/slimshadys-arr-setup-guide/docs/sabnzbd-tuning-and-reliability.html)
-- [Jackett Setup and Workflows](/slimshadys-arr-setup-guide/docs/jackett-setup-and-workflows.html)
-- [Plex Setup and Workflows](/slimshadys-arr-setup-guide/docs/plex-setup-and-workflows.html)
-- [MDBList Import Lists](/slimshadys-arr-setup-guide/docs/mdblist-import-lists.html)
-- [Indexers and German Content Strategy](/slimshadys-arr-setup-guide/docs/indexers-and-german-content.html)
-- [Quality, Sizes, and Downgrades](/slimshadys-arr-setup-guide/docs/quality-sizing-and-downgrades.html)
-
-## MDBList and Auto-Import
-
-`MDBList` is one of the easiest ways to build automated movie and TV discovery without maintaining giant manual watchlists by hand.
-
-In this setup, it works like this:
-
-- your `MDBList` dynamic lists act as the discovery layer for movies and shows
-- `Radarr` and `Sonarr` poll those lists every `5 minutes` in the live reference setup used for this guide
-- new items found on the list are added into the ARR app with your existing quality, language, and root-folder rules
-- once added, they are monitored and then picked up by normal RSS/search behavior
-
-For `Lidarr`, keep the same overall idea but use music-oriented import-list sources instead of `MDBList`.
-
-That makes `MDBList` the front door of the automation chain for movies and shows, while ARR still controls the download rules and final library behavior.
-
-## What This Guide Tries to Do
-
-Most ARR guides explain features.
-
-This one tries to answer:
-
-- what should you actually enable
-- what should you avoid
-- how should you set priorities
-- how do you adapt the stack for language-specific needs without burning through quotas
-- how do you save disk space without downloading worse files by accident
-
-## Want Help Applying It?
-
-If you do not want to implement everything manually, you can use `OpenAI Codex` as a practical ARR setup copilot.
-
-For non-technical users, this is often the easiest way to approach the project:
-
-1. open one section of the guide
-2. ask `Codex` to explain that section in plain English
-3. let `Codex` help apply that exact step
-4. verify the result
-5. then move to the next section
-
-This guide works well as input for Codex, for example if you want help to:
-
-- audit your current `Sonarr`, `Radarr`, `Lidarr`, and `SABnzbd` setup
-- apply the recommended indexer priorities
-- implement language-scoring rules
-- tune quality profiles and size limits
-- build safe downgrade workflows
-- debug import or search issues
-
-So yes, this guide is not only meant to be read by humans. It can also be handed to `Codex` so it can help implement the configuration in your own setup.
-
-## Short Version
-
-- use broad indexers for daily work
-- preserve specialist or quota-limited sources for when they matter
-- use English fallback as a temporary bridge only
-- prefer German/Multi over English even when the German file is a lower everyday quality tier
-- allow German/Multi `1080p` TV as a fast bridge, but keep compact German/Multi `720p` as the final series target
-- prefer compact German/Multi `1080p` for movies
-- use separate anime, Korean, and Chinese original-language lanes instead of forcing normal TV rules onto everything
-- block suspicious language markers like `VFQ`, `VFF`, `TRUEFRENCH`, `EN-TR`, `TR-EN`, and `TURG`
-- unmonitor verified final-state keepers
-- treat downgrades as a controlled workflow, not a magic button
-
-If a setting sounds too clever, test it on a few titles first. ARR tools are excellent at doing exactly what you told them, including the part you forgot you told them.
+- [All Docs](/slimshadys-arr-setup-guide/docs/index.html)
+- [GitHub Repository](https://github.com/Shadow2442/slimshadys-arr-setup-guide)
+- [Changelog](https://github.com/Shadow2442/slimshadys-arr-setup-guide/blob/main/CHANGELOG.md)

@@ -1,6 +1,6 @@
 ﻿# SlimShady's ARR Setup Guide
 
-This is a practical beginner guide for setting up `Sonarr`, `Radarr`, `Lidarr`, `SABnzbd`, `Jackett`, and `Plex` for a reliable home-media workflow without letting the system turn into a noisy pile of half-matched downloads.
+This is a practical chapter-based guide for setting up `Sonarr`, `Radarr`, `Lidarr`, `SABnzbd`, `Jackett`, `Seerr`, and `Plex` for a reliable home-media workflow without letting the system turn into a noisy pile of half-matched downloads.
 
 It focuses on:
 
@@ -21,6 +21,7 @@ This guide is based on a real-world setup that was tuned and tested live, not ju
 
 | Updated | What changed | Read it here |
 | --- | --- | --- |
+| `2026-07-22` | Rebuilt the website around a proper chapter structure: start here, base setup, download pipeline, German-friendly setup, multi-language/original-language setup, archive strategy, operations, and reference appendix. | [Docs Index](docs/index.md) |
 | `2026-07-22` | Added the current daily ARR release-ladder automation: English bridge behavior, German/Multi replacement rules, anime and Korean/Chinese fallback lanes, blocked-language cleanup, and final-state unmonitoring. | [Quality, Sizes, and Downgrades](docs/quality-sizing-and-downgrades.md) |
 | `2026-07-22` | Updated the `Sonarr` and `Radarr` profiles to document German `1080p` bridge releases, compact German final states, stricter language downgrade protection, and request-frontend safety. | [Sonarr Setup and Workflows](docs/sonarr-setup-and-workflows.md) |
 | `2026-07-22` | Added explicit `Seerr` request safety and updated `Jackett` health/recovery guidance for torrent fallback sources. | [Setup Checklist](docs/setup-checklist.md) |
@@ -221,7 +222,23 @@ Practical use cases:
 
 ## Repository Guide
 
-This repository is split into clear app and topic pages:
+This repository is now organized in two layers:
+
+- chapter pages for the main setup guide
+- reference pages for individual apps and specialist topics
+
+Recommended chapter path:
+
+- [Chapter 1: Start Here](docs/chapter-01-start-here.md)
+- [Chapter 2: Base Setup Step by Step](docs/chapter-02-base-setup.md)
+- [Chapter 3: Download Pipeline and Daily Automation](docs/chapter-03-download-pipeline.md)
+- [Chapter 4: German-Friendly Setup](docs/chapter-04-german-friendly.md)
+- [Chapter 5: Multi-Language and Original-Language Setup](docs/chapter-05-multilanguage-original-language.md)
+- [Chapter 6: Archive and Size Strategy](docs/chapter-06-archive-size.md)
+- [Chapter 7: Operations and Troubleshooting](docs/chapter-07-operations-troubleshooting.md)
+- [Chapter 8: Reference Appendix](docs/chapter-08-reference.md)
+
+App and topic references:
 
 - [Setup Checklist](docs/setup-checklist.md)
 - [Sonarr Setup and Workflows](docs/sonarr-setup-and-workflows.md)
@@ -237,16 +254,14 @@ This repository is split into clear app and topic pages:
 
 ## Recommended Reading Order
 
-1. [Setup Checklist](docs/setup-checklist.md)
-2. [Sonarr Setup and Workflows](docs/sonarr-setup-and-workflows.md)
-3. [Radarr Setup and Workflows](docs/radarr-setup-and-workflows.md)
-4. [Lidarr Setup and Workflows](docs/lidarr-setup-and-workflows.md)
-5. [SABnzbd Tuning and Reliability](docs/sabnzbd-tuning-and-reliability.md)
-6. [Jackett Setup and Workflows](docs/jackett-setup-and-workflows.md)
-7. [Plex Setup and Workflows](docs/plex-setup-and-workflows.md)
-8. [MDBList Import Lists](docs/mdblist-import-lists.md)
-9. [Indexers and German Content Strategy](docs/indexers-and-german-content.md)
-10. [Quality, Sizes, and Downgrades](docs/quality-sizing-and-downgrades.md)
+1. [Start Here](docs/chapter-01-start-here.md)
+2. [Base Setup Step by Step](docs/chapter-02-base-setup.md)
+3. [Download Pipeline and Daily Automation](docs/chapter-03-download-pipeline.md)
+4. [German-Friendly Setup](docs/chapter-04-german-friendly.md)
+5. [Multi-Language and Original-Language Setup](docs/chapter-05-multilanguage-original-language.md)
+6. [Archive and Size Strategy](docs/chapter-06-archive-size.md)
+7. [Operations and Troubleshooting](docs/chapter-07-operations-troubleshooting.md)
+8. [Reference Appendix](docs/chapter-08-reference.md)
 
 ## Core Principles
 

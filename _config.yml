@@ -1,5 +1,5 @@
 title: SlimShady's ARR Setup Guide
-description: Practical Sonarr, Radarr, Lidarr, and SABnzbd guidance for German-friendly automation.
+description: Step-by-step ARR setup guide for Sonarr, Radarr, Lidarr, SABnzbd, Jackett, Seerr, Plex, German-friendly automation, multi-language rules, and archive strategy.
 theme: minima
 exclude:
   - README.md

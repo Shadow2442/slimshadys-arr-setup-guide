@@ -2,6 +2,27 @@
 
 All notable guide updates for `SlimShady's ARR Setup Guide` are tracked here.
 
+## 2026-07-22
+
+### Added
+
+- Rebuilt the website around a proper chapter structure:
+  - Chapter 1: Start Here
+  - Chapter 2: Base Setup Step by Step
+  - Chapter 3: Download Pipeline and Daily Automation
+  - Chapter 4: German-Friendly Setup
+  - Chapter 5: Multi-Language and Original-Language Setup
+  - Chapter 6: Archive and Size Strategy
+  - Chapter 7: Operations and Troubleshooting
+  - Chapter 8: Reference Appendix
+- Added explicit chapter coverage for Seerr request safety, Jackett tracker recovery, release-ladder automation, original-language lanes, archive targets, and bad-language cleanup.
+
+### Changed
+
+- Reworked the homepage into a short introduction and chapter index instead of a long mixed landing page.
+- Reworked the docs index into a chapter-first navigation hub with app-specific reference pages kept as secondary lookup material.
+- Updated the GitHub Pages description to match the broader setup-guide scope.
+
 ## 2026-06-06
 
 ### Added
