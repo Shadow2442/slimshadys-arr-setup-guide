@@ -70,6 +70,30 @@
   <p>If queues have ever looked stuck, ghosted, or emotionally unavailable, this is the page that explains what SAB is supposed to do and how to keep it from becoming the weakest link in the stack.</p>
 </div>
 
+<div class="edition-layout">
+  <section class="edition-card accent-green">
+    <span class="section-kicker">SAB operating model</span>
+    <h3>Download, unpack, hand back</h3>
+    <div class="flow-grid">
+      <div class="flow-card"><em>1</em><strong>Receive</strong><span>ARR sends a job with the right category.</span></div>
+      <div class="flow-card"><em>2</em><strong>Download</strong><span>SAB pulls the data and keeps the queue readable.</span></div>
+      <div class="flow-card"><em>3</em><strong>Repair/unpack</strong><span>Failures should be isolated, not jam the whole stack.</span></div>
+      <div class="flow-card"><em>4</em><strong>Import</strong><span>ARR should see the completed path and import it cleanly.</span></div>
+    </div>
+  </section>
+
+  <section class="edition-card">
+    <span class="section-kicker">Reliability checklist</span>
+    <h3>The settings that keep it calm</h3>
+    <div class="rule-grid">
+      <div class="rule-card"><strong>Direct Unpack</strong><span>Turn it off if it creates stuck or confusing queue states.</span></div>
+      <div class="rule-card"><strong>Connections</strong><span>Increase modestly; stable throughput beats dramatic spikes.</span></div>
+      <div class="rule-card"><strong>Timeout</strong><span>A practical timeout catches dead server waits earlier.</span></div>
+      <div class="rule-card"><strong>Orphans</strong><span>Finished orphaned jobs need destination checks before deletion.</span></div>
+    </div>
+  </section>
+</div>
+
 ## What SABnzbd Is and Why You Need It
 
 `SABnzbd` is the downloader in this stack.

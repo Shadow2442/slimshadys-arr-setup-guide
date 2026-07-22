@@ -69,6 +69,30 @@
   <p>If you are new to ARR tools, treat this page like a sequence, not a buffet. Get the downloader, folders, and one clean profile working first. The more advanced tuning is only helpful once that foundation exists.</p>
 </div>
 
+<div class="edition-layout">
+  <section class="edition-card accent-green">
+    <span class="section-kicker">Sonarr operating model</span>
+    <h3>The series ladder</h3>
+    <div class="flow-grid">
+      <div class="flow-card"><em>1</em><strong>Empty episode</strong><span>Accept a sensible English fallback only when no useful file exists.</span></div>
+      <div class="flow-card"><em>2</em><strong>German appears</strong><span>German or German/Multi beats English regardless of tiny quality differences.</span></div>
+      <div class="flow-card"><em>3</em><strong>Archive state</strong><span>Compact German/Multi <code>720p</code> is the preferred final TV keeper.</span></div>
+      <div class="flow-card"><em>4</em><strong>Done</strong><span>After verifying the final file, unmonitor it so it stays solved.</span></div>
+    </div>
+  </section>
+
+  <section class="edition-card">
+    <span class="section-kicker">Language guardrails</span>
+    <h3>What Sonarr should never do</h3>
+    <div class="rule-grid">
+      <div class="rule-card"><strong>No downgrades</strong><span>English should not replace an existing German or German/Multi file.</span></div>
+      <div class="rule-card"><strong>No blocked-language tricks</strong><span>Markers like <code>VFQ</code>, <code>EN-TR</code>, <code>TR-EN</code>, and similar bait should lose hard.</span></div>
+      <div class="rule-card"><strong>Anime is different</strong><span>Original audio with useful subtitles can be the right bridge before German dub exists.</span></div>
+      <div class="rule-card"><strong>Previous episodes matter</strong><span>When a new German episode appears, nearby older English episodes should be checked too.</span></div>
+    </div>
+  </section>
+</div>
+
 ## What Sonarr Is and Why You Need It
 
 `Sonarr` is the ARR app for television, anime series, and ongoing episodic content.

@@ -75,6 +75,30 @@
   </div>
 </div>
 
+<div class="edition-layout">
+  <section class="edition-card accent-green">
+    <span class="section-kicker">Release ladder</span>
+    <h3>Availability first, archive second</h3>
+    <div class="flow-grid">
+      <div class="flow-card"><em>1</em><strong>No file</strong><span>Accept the best safe available release.</span></div>
+      <div class="flow-card"><em>2</em><strong>German/Multi</strong><span>Replace English with German/Multi as soon as it appears.</span></div>
+      <div class="flow-card"><em>3</em><strong>Compact keeper</strong><span>Prefer compact final files over giant temporary wins.</span></div>
+      <div class="flow-card"><em>4</em><strong>Unmonitor</strong><span>Stop scanning once the final state is verified.</span></div>
+    </div>
+  </section>
+
+  <section class="edition-card">
+    <span class="section-kicker">Quality decisions</span>
+    <h3>Use size rules as steering, not handcuffs</h3>
+    <div class="rule-grid">
+      <div class="rule-card"><strong>Movies</strong><span>Compact <code>1080p</code> German/Multi is the normal final target.</span></div>
+      <div class="rule-card"><strong>Series</strong><span>German/Multi <code>1080p</code> can be a bridge; compact <code>720p</code> can be final.</span></div>
+      <div class="rule-card"><strong>Anime</strong><span>Original-language plus subtitles can beat a bad dub or blocked-language file.</span></div>
+      <div class="rule-card"><strong>Small BDRips</strong><span>Efficient <code>x265</code> releases should not be rejected just for being small.</span></div>
+    </div>
+  </section>
+</div>
+
 This page focuses on quality profiles, size limits, and how to downgrade safely without accidentally downloading worse and larger files.
 
 These settings sit in the middle of the automation chain:

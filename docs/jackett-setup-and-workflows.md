@@ -70,6 +70,29 @@
   <p>Jackett works best when it stays tidy and deliberate. If you add twenty trackers before you understand one, you are not building coverage, you are building a small confusing zoo.</p>
 </div>
 
+<div class="edition-layout">
+  <section class="edition-card accent-green">
+    <span class="section-kicker">Jackett operating model</span>
+    <h3>Torrent support is a fallback lane</h3>
+    <div class="rule-grid">
+      <div class="rule-card"><strong>Selective sources</strong><span>Add sources because they solve a real gap, not because the checkbox exists.</span></div>
+      <div class="rule-card"><strong>Health matters</strong><span>Disable failing indexers until searches and feeds are healthy again.</span></div>
+      <div class="rule-card"><strong>Categories matter</strong><span>Use narrow supported categories so ARR does not ingest irrelevant noise.</span></div>
+      <div class="rule-card"><strong>qBittorrent cleanup</strong><span>Stalled metadata and dead seeds need periodic attention.</span></div>
+    </div>
+  </section>
+
+  <section class="edition-card">
+    <span class="section-kicker">Recovery lane</span>
+    <h3>When a tracker fails</h3>
+    <div class="flow-grid">
+      <div class="flow-card"><em>1</em><strong>Test direct</strong><span>Check both a normal search and the no-query/top feed.</span></div>
+      <div class="flow-card"><em>2</em><strong>Disable safely</strong><span>Remove it from ARR while it is rate-limited or broken.</span></div>
+      <div class="flow-card"><em>3</em><strong>Restore narrowly</strong><span>Re-enable only when the source is healthy and categories are sane.</span></div>
+    </div>
+  </section>
+</div>
+
 ## What Jackett Is and Why You Need It
 
 `Jackett` is the bridge between ARR apps and torrent indexers.

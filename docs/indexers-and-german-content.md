@@ -64,6 +64,33 @@
   </div>
 </div>
 
+<div class="edition-layout">
+  <section class="edition-card accent-green">
+    <span class="section-kicker">Source strategy</span>
+    <h3>Use each indexer for the job it is good at</h3>
+    <div class="rule-grid">
+      <div class="rule-card"><strong>Broad sources</strong><span>Carry normal daily RSS and common English/German availability.</span></div>
+      <div class="rule-card"><strong>German specialists</strong><span>Save quota for titles where German availability is the actual problem.</span></div>
+      <div class="rule-card"><strong>Torrent fallback</strong><span>Use narrowly when Usenet cannot cover the title or version.</span></div>
+      <div class="rule-card"><strong>Health checks</strong><span>Disable broken sources quickly, then re-enable only after direct tests pass.</span></div>
+    </div>
+  </section>
+
+  <section class="edition-card">
+    <span class="section-kicker">Language scoring</span>
+    <h3>Good German beats vague Multi</h3>
+    <table>
+      <thead><tr><th>Signal</th><th>Meaning</th><th>Action</th></tr></thead>
+      <tbody>
+        <tr><td><code>German</code>, <code>Deutsch</code>, <code>DL</code></td><td>Useful German/Multi evidence.</td><td>Strong positive score.</td></tr>
+        <tr><td><code>MULTi</code> only</td><td>Potentially useful, but vague.</td><td>Accept only with better supporting evidence.</td></tr>
+        <tr><td><code>VFQ</code>, <code>FR</code>, <code>EN-TR</code>, <code>TURG</code></td><td>Wrong-language or bait marker.</td><td>Hard block or severe penalty.</td></tr>
+        <tr><td>Original-language anime/Korean/Chinese</td><td>Valid specialist lane.</td><td>Prefer original audio with useful subtitles before dub upgrades.</td></tr>
+      </tbody>
+    </table>
+  </section>
+</div>
+
 This page focuses on the practical German-specific layer for `Sonarr`, `Radarr`, and indexer strategy.
 
 ## When to Use This Page

@@ -69,6 +69,30 @@
   <p>The later sections are intentionally more advanced, but they are not the starting point. First make sure Radarr can find, send, and import a movie correctly. After that, the smarter storage and filter logic becomes much easier to trust.</p>
 </div>
 
+<div class="edition-layout">
+  <section class="edition-card accent-green">
+    <span class="section-kicker">Radarr operating model</span>
+    <h3>The movie ladder</h3>
+    <div class="flow-grid">
+      <div class="flow-card"><em>1</em><strong>No file yet</strong><span>Use German/Multi first; use English only when German is genuinely unavailable.</span></div>
+      <div class="flow-card"><em>2</em><strong>Better language appears</strong><span>German/Multi should beat English even when the English file looks clean.</span></div>
+      <div class="flow-card"><em>3</em><strong>Compact keeper</strong><span>Compact German/Multi <code>1080p</code> is the normal final movie state.</span></div>
+      <div class="flow-card"><em>4</em><strong>Protect the match</strong><span>Same-year and similar-title movies need strict title checks before grabbing.</span></div>
+    </div>
+  </section>
+
+  <section class="edition-card">
+    <span class="section-kicker">Scoring priorities</span>
+    <h3>How Radarr should think</h3>
+    <div class="rule-grid">
+      <div class="rule-card"><strong>German title terms</strong><span>Strong positive score when the release name clearly signals German.</span></div>
+      <div class="rule-card"><strong>Parser signal</strong><span>German parser evidence helps, but title terms and audio validation still matter.</span></div>
+      <div class="rule-card"><strong>Compact size caps</strong><span>Guide size gently; do not reject good compact BDRips just for being efficient.</span></div>
+      <div class="rule-card"><strong>Final unmonitor</strong><span>Verified compact German/Multi files should stop being churn candidates.</span></div>
+    </div>
+  </section>
+</div>
+
 ## What Radarr Is and Why You Need It
 
 `Radarr` is the ARR app for movies and anime movies.

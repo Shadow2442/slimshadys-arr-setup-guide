@@ -69,6 +69,30 @@ This checklist is meant for people who are willing to configure things properly,
   </div>
 </div>
 
+<div class="edition-layout">
+  <section class="edition-card accent-green">
+    <span class="section-kicker">Build order</span>
+    <h3>The clean installation path</h3>
+    <div class="flow-grid">
+      <div class="flow-card"><em>1</em><strong>Downloader</strong><span>Set SAB/qBittorrent folders and categories first.</span></div>
+      <div class="flow-card"><em>2</em><strong>ARR apps</strong><span>Wire Sonarr, Radarr, and Lidarr to the downloader.</span></div>
+      <div class="flow-card"><em>3</em><strong>Libraries</strong><span>Point Plex only at final managed media folders.</span></div>
+      <div class="flow-card"><em>4</em><strong>Automation</strong><span>Add lists, release-ladder checks, and monitoring after the basics work.</span></div>
+    </div>
+  </section>
+
+  <section class="edition-card">
+    <span class="section-kicker">First-pass sanity checks</span>
+    <h3>Do these before importing hundreds of items</h3>
+    <div class="rule-grid">
+      <div class="rule-card"><strong>One movie test</strong><span>Search, download, import, rename, and scan in Plex.</span></div>
+      <div class="rule-card"><strong>One episode test</strong><span>Confirm season folders, episode naming, and final path.</span></div>
+      <div class="rule-card"><strong>One album test</strong><span>Check Lidarr tags and Plex album grouping.</span></div>
+      <div class="rule-card"><strong>One bad release test</strong><span>Verify blocklist and language penalties behave as expected.</span></div>
+    </div>
+  </section>
+</div>
+
 ## 1. Core Apps
 
 - Install `SABnzbd`

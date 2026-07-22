@@ -1,6 +1,6 @@
 <div class="doc-hero">
   <h2>Chapter 5: Multi-Language and Original-Language Setup</h2>
-  <p>Handle German/English dual audio, anime, Korean titles, Chinese titles, subtitles, and original-language fallbacks without mixing every rule into one giant profile.</p>
+  <p>This chapter keeps original-language media respectful without letting every non-German release sneak into the normal TV and movie lanes.</p>
   <div class="hero-badges">
     <span>Multi-audio</span>
     <span>Anime</span>
@@ -15,56 +15,49 @@
   <a href="/slimshadys-arr-setup-guide/">Home</a>
 </div>
 
-## Normal Movie and TV Ladder
+<div class="edition-layout">
+  <section class="edition-card accent-green">
+    <span class="section-kicker">Normal media</span>
+    <h3>Movies and TV that are not special language cases</h3>
+    <div class="flow-grid">
+      <div class="flow-card"><em>1</em><strong>German plus English</strong><span>Best family-friendly and original-friendly result.</span></div>
+      <div class="flow-card"><em>2</em><strong>German audio</strong><span>Good target when Multi is not available.</span></div>
+      <div class="flow-card"><em>3</em><strong>English fallback</strong><span>Only when no German/Multi candidate exists yet.</span></div>
+    </div>
+  </section>
 
-For normal non-anime, non-Korean, non-Chinese titles:
+  <section class="edition-card">
+    <span class="section-kicker">Scoped original lanes</span>
+    <h3>Different content needs different fallback logic</h3>
+    <table>
+      <thead><tr><th>Content type</th><th>Bridge order</th><th>Final target</th></tr></thead>
+      <tbody>
+        <tr><td>Anime</td><td>English dub + original, German-subbed original, then best Japanese original if subtitle proof is unclear.</td><td>German dub or German plus original multi-audio.</td></tr>
+        <tr><td>Korean</td><td>Korean audio with English subtitles, then English dub.</td><td>German dub or German/Multi.</td></tr>
+        <tr><td>Chinese</td><td>Chinese audio with English subtitles, then English dub.</td><td>German dub or German/Multi.</td></tr>
+      </tbody>
+    </table>
+  </section>
 
-1. German plus English multi-audio
-2. German audio
-3. English fallback only if no German/Multi candidate exists
+  <section class="edition-card accent-gold">
+    <span class="section-kicker">Import truth</span>
+    <h3>Trust the parsed import, not the sales pitch</h3>
+    <div class="rule-grid">
+      <div class="rule-card"><strong>Indexer title</strong><span>Can be optimistic, incomplete, or just wrong.</span></div>
+      <div class="rule-card"><strong>Manual import parse</strong><span>The safer place to verify actual language before replacing a file.</span></div>
+      <div class="rule-card"><strong>Bad Multi</strong><span>If Multi parses as French/Turkish/Hebrew without target audio, blocklist it.</span></div>
+      <div class="rule-card"><strong>Safe replacement</strong><span>Delete the old file only after the new file is verified.</span></div>
+    </div>
+  </section>
 
-English should fill empty slots. It should not replace German/Multi.
+  <section class="edition-card">
+    <span class="section-kicker">Boundaries</span>
+    <h3>Do not let special rules leak</h3>
+    <p>Japanese, Korean, and Chinese fallback behavior is valid only for titles where that original language actually belongs. A normal English or German show should not pass because it accidentally matches an anime or Korean fallback rule.</p>
+  </section>
+</div>
 
-## Anime Ladder
-
-Recommended anime order:
-
-1. German dub or German plus original-language multi-audio
-2. English dub plus original audio
-3. German-subbed original audio
-4. best Japanese original when no clear German subtitle proof exists
-
-This matches real anime availability better than forcing every show through normal TV rules.
-
-## Korean Ladder
-
-Recommended Korean order:
-
-1. Korean original audio plus English subtitles
-2. English dub
-3. German dub or German/Multi
-
-German remains the final upgrade target when available, but Korean original with English subtitles is a valid bridge.
-
-## Chinese Ladder
-
-Recommended Chinese order:
-
-1. Chinese original audio plus English subtitles
-2. English dub
-3. German dub or German/Multi
-
-Keep this scoped to Chinese titles. Do not let Chinese fallback rules make unrelated normal TV releases pass.
-
-## Import Validation
-
-For any suspicious `MULTi` release:
-
-- inspect ARR manual-import parsing
-- verify actual language before replacing an existing file
-- blocklist bad imports
-- re-search if the release is French, Turkish, Hebrew, or otherwise outside the intended lane
-
-## Continue
-
-Next: [Chapter 6: Archive and Size Strategy](/slimshadys-arr-setup-guide/docs/chapter-06-archive-size.html)
+<div class="chapter-next">
+  <span>Continue</span>
+  <a href="/slimshadys-arr-setup-guide/docs/chapter-06-archive-size.html">Chapter 6: Archive and Size Strategy</a>
+</div>

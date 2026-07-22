@@ -1,6 +1,6 @@
 <div class="doc-hero">
   <h2>Chapter 8: Reference Appendix</h2>
-  <p>This is the reference shelf: app pages, specialist setup pages, and the latest update trail.</p>
+  <p>The reference shelf: app-specific pages, specialist topics, changelog, and source links for quick lookup after the guided chapters.</p>
   <div class="hero-badges">
     <span>App pages</span>
     <span>Special topics</span>
@@ -15,31 +15,50 @@
   <a href="/slimshadys-arr-setup-guide/docs/index.html">All docs</a>
 </div>
 
-## App References
+<div class="edition-layout">
+  <section class="edition-card accent-green">
+    <span class="section-kicker">App references</span>
+    <h3>Tool-specific deep dives</h3>
+    <div class="reference-grid">
+      <a class="reference-card" href="/slimshadys-arr-setup-guide/docs/sonarr-setup-and-workflows.html"><strong>Sonarr</strong><span>Series, anime, language, profile, and queue behavior.</span></a>
+      <a class="reference-card" href="/slimshadys-arr-setup-guide/docs/radarr-setup-and-workflows.html"><strong>Radarr</strong><span>Movies, compact profiles, title protection, and fallback search.</span></a>
+      <a class="reference-card" href="/slimshadys-arr-setup-guide/docs/lidarr-setup-and-workflows.html"><strong>Lidarr</strong><span>Music, artists, albums, metadata, and monitoring.</span></a>
+      <a class="reference-card" href="/slimshadys-arr-setup-guide/docs/sabnzbd-tuning-and-reliability.html"><strong>SABnzbd</strong><span>Downloader reliability and queue tuning.</span></a>
+      <a class="reference-card" href="/slimshadys-arr-setup-guide/docs/jackett-setup-and-workflows.html"><strong>Jackett</strong><span>Torrent fallback and tracker health.</span></a>
+      <a class="reference-card" href="/slimshadys-arr-setup-guide/docs/plex-setup-and-workflows.html"><strong>Plex</strong><span>Library scan, match, split, and playback.</span></a>
+    </div>
+  </section>
 
-- [Sonarr Setup and Workflows](/slimshadys-arr-setup-guide/docs/sonarr-setup-and-workflows.html)
-- [Radarr Setup and Workflows](/slimshadys-arr-setup-guide/docs/radarr-setup-and-workflows.html)
-- [Lidarr Setup and Workflows](/slimshadys-arr-setup-guide/docs/lidarr-setup-and-workflows.html)
-- [SABnzbd Tuning and Reliability](/slimshadys-arr-setup-guide/docs/sabnzbd-tuning-and-reliability.html)
-- [Jackett Setup and Workflows](/slimshadys-arr-setup-guide/docs/jackett-setup-and-workflows.html)
-- [Plex Setup and Workflows](/slimshadys-arr-setup-guide/docs/plex-setup-and-workflows.html)
+  <section class="edition-card">
+    <span class="section-kicker">Special topics</span>
+    <h3>Rules and strategy references</h3>
+    <div class="reference-grid">
+      <a class="reference-card" href="/slimshadys-arr-setup-guide/docs/setup-checklist.html"><strong>Setup Checklist</strong><span>Compact operational setup and sanity checks.</span></a>
+      <a class="reference-card" href="/slimshadys-arr-setup-guide/docs/mdblist-import-lists.html"><strong>MDBList</strong><span>Movie, series, and anime discovery lists.</span></a>
+      <a class="reference-card" href="/slimshadys-arr-setup-guide/docs/indexers-and-german-content.html"><strong>German Indexers</strong><span>Provider roles, scoring, quotas, and original-language lanes.</span></a>
+      <a class="reference-card" href="/slimshadys-arr-setup-guide/docs/quality-sizing-and-downgrades.html"><strong>Quality and Sizes</strong><span>Release ladder, size caps, compact keepers, and cleanup.</span></a>
+    </div>
+  </section>
 
-## Specialist References
+  <section class="edition-card accent-gold">
+    <span class="section-kicker">Latest update trail</span>
+    <h3>Recent guide history</h3>
+    <table>
+      <thead><tr><th>Date</th><th>Change</th></tr></thead>
+      <tbody>
+        <tr><td><code>2026-07-22</code></td><td>Chapter structure, release ladder, Seerr safety, Jackett recovery, original-language lanes, archive targets, and bad-language cleanup.</td></tr>
+        <tr><td><code>2026-06-06</code></td><td>German-friendly Sonarr and Radarr language profile policy.</td></tr>
+        <tr><td><code>2026-05-18</code></td><td>Dedicated app pages for the main stack.</td></tr>
+      </tbody>
+    </table>
+  </section>
 
-- [Setup Checklist](/slimshadys-arr-setup-guide/docs/setup-checklist.html)
-- [MDBList Import Lists](/slimshadys-arr-setup-guide/docs/mdblist-import-lists.html)
-- [Indexers and German Content Strategy](/slimshadys-arr-setup-guide/docs/indexers-and-german-content.html)
-- [Quality, Sizes, and Downgrades](/slimshadys-arr-setup-guide/docs/quality-sizing-and-downgrades.html)
-
-## Latest Guide Updates
-
-| Updated | What changed |
-| --- | --- |
-| `2026-07-22` | Added the release-ladder automation, Seerr request safety, Jackett health recovery, blocked-language cleanup, original-language lanes, and compact final-state unmonitoring. |
-| `2026-06-06` | Added German-friendly Sonarr and Radarr language profile policy. |
-| `2026-05-18` | Split the guide into dedicated app pages. |
-
-## GitHub
-
-- [Open the repository](https://github.com/Shadow2442/slimshadys-arr-setup-guide)
-- [Read the changelog](https://github.com/Shadow2442/slimshadys-arr-setup-guide/blob/main/CHANGELOG.md)
+  <section class="edition-card">
+    <span class="section-kicker">Repository</span>
+    <h3>Project links</h3>
+    <div class="source-chips">
+      <a href="https://github.com/Shadow2442/slimshadys-arr-setup-guide">Open the repository</a>
+      <a href="https://github.com/Shadow2442/slimshadys-arr-setup-guide/blob/main/CHANGELOG.md">Read the changelog</a>
+    </div>
+  </section>
+</div>

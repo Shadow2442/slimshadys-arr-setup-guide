@@ -64,6 +64,30 @@
   </div>
 </div>
 
+<div class="edition-layout">
+  <section class="edition-card accent-green">
+    <span class="section-kicker">Discovery model</span>
+    <h3>MDBList adds interest; ARR decides downloads</h3>
+    <div class="flow-grid">
+      <div class="flow-card"><em>1</em><strong>List updates</strong><span>MDBList tracks new or curated movies and shows.</span></div>
+      <div class="flow-card"><em>2</em><strong>ARR syncs</strong><span>Sonarr and Radarr import new entries on their list schedule.</span></div>
+      <div class="flow-card"><em>3</em><strong>Profiles apply</strong><span>Language, quality, and size rules still decide what gets downloaded.</span></div>
+      <div class="flow-card"><em>4</em><strong>Automation audits</strong><span>Daily checks catch missing files and better German/Multi upgrades.</span></div>
+    </div>
+  </section>
+
+  <section class="edition-card">
+    <span class="section-kicker">Safe list design</span>
+    <h3>Keep discovery exciting, not reckless</h3>
+    <div class="rule-grid">
+      <div class="rule-card"><strong>Separate movies and series</strong><span>Each ARR app should receive only content it actually owns.</span></div>
+      <div class="rule-card"><strong>Use sane filters</strong><span>Year, rating, availability, and media type filters prevent junk floods.</span></div>
+      <div class="rule-card"><strong>No music here</strong><span>Lidarr discovery belongs on music-native sources.</span></div>
+      <div class="rule-card"><strong>Watch request defaults</strong><span>Seerr should add with safe monitored state and the correct default profile.</span></div>
+    </div>
+  </section>
+</div>
+
 This page explains why `mdblist.com` is one of the easiest ways to automate discovery for `Radarr` and `Sonarr`, and how it fits into the rest of the ARR stack.
 
 ## Why MDBList is Useful

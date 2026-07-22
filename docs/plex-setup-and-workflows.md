@@ -69,6 +69,29 @@
   <p>The main idea is simple: ARR apps should prepare and organize the media first, and Plex should then present and play it. If those roles stay clean, Plex becomes one of the easiest parts of the whole setup.</p>
 </div>
 
+<div class="edition-layout">
+  <section class="edition-card accent-green">
+    <span class="section-kicker">Plex operating model</span>
+    <h3>Presentation, not file management</h3>
+    <div class="rule-grid">
+      <div class="rule-card"><strong>Final folders only</strong><span>Plex should scan ARR-managed library paths, not temporary download folders.</span></div>
+      <div class="rule-card"><strong>Clean names</strong><span>Radarr and Sonarr naming conventions make Plex matching easier.</span></div>
+      <div class="rule-card"><strong>Split carefully</strong><span>When Plex merges similar titles, split first, then fix the match.</span></div>
+      <div class="rule-card"><strong>Trash discipline</strong><span>Empty trash only when you intentionally want Plex to forget a removed item.</span></div>
+    </div>
+  </section>
+
+  <section class="edition-card">
+    <span class="section-kicker">Mismatch workflow</span>
+    <h3>When Plex picks the wrong movie</h3>
+    <div class="flow-grid">
+      <div class="flow-card"><em>1</em><strong>Verify file</strong><span>Confirm folder, year, edition, and actual media are correct.</span></div>
+      <div class="flow-card"><em>2</em><strong>Split or move</strong><span>Separate the item without destroying the good file.</span></div>
+      <div class="flow-card"><em>3</em><strong>Fix match</strong><span>Use the correct title/year and rescan after the path is stable.</span></div>
+    </div>
+  </section>
+</div>
+
 ## What Plex Is and Why You Need It
 
 `Plex` is the final playback and presentation layer in this stack.

@@ -4,12 +4,12 @@
 
 <div class="doc-hero">
   <h2>Chapter 1: Start Here</h2>
-  <p>This chapter explains the goal of the setup, the moving parts, and the order you should follow before touching advanced language or archive rules.</p>
+  <p>This is the orientation layer: what the stack is for, why the language rules exist, and how to move through the guide without turning setup day into a tiny private IT incident.</p>
   <div class="hero-badges">
     <span>Big picture first</span>
-    <span>Beginner path</span>
-    <span>Advanced path</span>
-    <span>Stack map</span>
+    <span>Swiss private use</span>
+    <span>Original versions</span>
+    <span>Family playback</span>
   </div>
 </div>
 
@@ -19,84 +19,68 @@
   <a href="/slimshadys-arr-setup-guide/docs/index.html">All docs</a>
 </div>
 
-## What This Setup Is
+<div class="edition-layout">
+  <section class="edition-card accent-green">
+    <span class="section-kicker">The premise</span>
+    <h3>A Swiss movie-lover's automation stack</h3>
+    <p>This guide is written from the perspective of a Swiss movie aficionado who wants two things at once: preserve original versions and original audio where they matter, while making movies and series easy for family to watch in their native language.</p>
+    <p>The result is not a generic "download whatever" setup. It is a language-aware, archive-aware, family-friendly media workflow.</p>
+  </section>
 
-This guide builds a home-media automation stack around:
+  <section class="edition-card">
+    <span class="section-kicker">The stack</span>
+    <h3>What the tools do</h3>
+    <div class="rule-grid">
+      <div class="rule-card"><strong>Sonarr</strong><span>TV and anime series automation.</span></div>
+      <div class="rule-card"><strong>Radarr</strong><span>Movies and anime movie automation.</span></div>
+      <div class="rule-card"><strong>Lidarr</strong><span>Music, artists, albums, and metadata flow.</span></div>
+      <div class="rule-card"><strong>SABnzbd</strong><span>Main Usenet downloader and unpacking engine.</span></div>
+      <div class="rule-card"><strong>Jackett</strong><span>Optional torrent fallback when Usenet is not enough.</span></div>
+      <div class="rule-card"><strong>Plex</strong><span>Final library scan, matching, and playback.</span></div>
+      <div class="rule-card"><strong>Seerr</strong><span>Optional request front door for family and discovery.</span></div>
+    </div>
+  </section>
 
-- `Sonarr` for TV and anime series
-- `Radarr` for movies and anime movies
-- `Lidarr` for music
-- `SABnzbd` as the main Usenet downloader
-- `Jackett` as optional torrent fallback
-- `Plex` as the final playback library
-- `Seerr` as an optional request and discovery frontend
+  <section class="edition-card accent-gold">
+    <span class="section-kicker">Swiss context</span>
+    <h3>Private use, not public distribution</h3>
+    <p>This guide assumes Swiss private use: personal media organization, original-version preservation, and family viewing. It is not a guide for uploading, public redistribution, commercial sharing, or running an open media service.</p>
+    <p>The Swiss Federal Institute of Intellectual Property explains that downloading or streaming works for private use is allowed, including from illegal sources, while uploading or making works available online is not allowed. Article 19 of the Swiss Copyright Act defines private use to include personal use and use within a circle of closely connected people such as relatives or friends.</p>
+    <div class="source-chips">
+      <a href="https://www.ige.ch/en/protecting-your-ip/copyright/using-a-work/copyright-on-the-internet">Swiss IPI source</a>
+      <a href="https://www.fedlex.admin.ch/eli/cc/1993/1798_1798_1798/en">Fedlex Art. 19</a>
+    </div>
+  </section>
 
-It is written from the perspective of a Swiss movie aficionado who cares about two things at the same time:
+  <section class="edition-card">
+    <span class="section-kicker">Reading path</span>
+    <h3>Follow the chapters in this order</h3>
+    <div class="flow-grid">
+      <div class="flow-card"><em>1</em><strong>Build the base stack</strong><span>Folders, categories, ARR apps, downloader, and Plex first.</span></div>
+      <div class="flow-card"><em>2</em><strong>Prove the pipeline</strong><span>One movie and one episode should download, import, rename, and appear in Plex.</span></div>
+      <div class="flow-card"><em>3</em><strong>Add discovery</strong><span>MDBList and Seerr come after the base rules are sane.</span></div>
+      <div class="flow-card"><em>4</em><strong>Add language rules</strong><span>German-friendly, Multi, anime, Korean, and Chinese logic.</span></div>
+      <div class="flow-card"><em>5</em><strong>Add archive behavior</strong><span>Compact keepers, bridge files, and final-state unmonitoring.</span></div>
+      <div class="flow-card"><em>6</em><strong>Automate carefully</strong><span>Daily release ladder, catch-up checks, import cleanup, and quota limits.</span></div>
+    </div>
+  </section>
 
-- preserving original movie versions, original audio, and proper multi-language releases
-- making movies and series easy for family to watch in their native language
+  <section class="edition-card accent-green">
+    <span class="section-kicker">Core rules</span>
+    <h3>The whole guide in seven rules</h3>
+    <div class="rule-grid">
+      <div class="rule-card"><strong>ARR owns imports</strong><span>Let Sonarr, Radarr, and Lidarr handle naming and final paths.</span></div>
+      <div class="rule-card"><strong>Plex scans finals</strong><span>Plex should see clean library folders, not temporary download chaos.</span></div>
+      <div class="rule-card"><strong>English is a bridge</strong><span>It fills gaps but should not beat German/Multi later.</span></div>
+      <div class="rule-card"><strong>German/Multi wins</strong><span>Language beats shiny source-tier upgrades when family playback matters.</span></div>
+      <div class="rule-card"><strong>Original lanes are scoped</strong><span>Anime, Korean, and Chinese rules stay in their lanes.</span></div>
+      <div class="rule-card"><strong>Final means unmonitored</strong><span>Verified keepers should stop attracting unnecessary replacements.</span></div>
+      <div class="rule-card"><strong>Requests need brakes</strong><span>Keep large Seerr requests manually approved.</span></div>
+    </div>
+  </section>
+</div>
 
-The goal is not just “download things automatically.”
-
-The goal is:
-
-- clean folders
-- predictable imports
-- German-friendly language behavior
-- compact archive files
-- safe fallback when German is not available yet
-- fewer bad surprises from parser guesses, wrong titles, and weird language releases
-
-## Swiss Private-Use Context
-
-This guide assumes Swiss private use.
-
-In Switzerland, private use is treated differently from public redistribution. The Swiss Federal Institute of Intellectual Property explains that downloading or streaming works for private use is allowed, including from illegal sources, but uploading or making works available online is not allowed. Article 19 of the Swiss Copyright Act defines private use to include personal use and use within a circle of closely connected people such as relatives or friends.
-
-That means the setup described here is framed around private Swiss media use, original-version preservation, and family viewing. It is not a guide for public distribution, commercial sharing, uploading, or running an open media service.
-
-Sources:
-
-- [Swiss Federal Institute of Intellectual Property: Copyright on the internet](https://www.ige.ch/en/protecting-your-ip/copyright/using-a-work/copyright-on-the-internet)
-- [Fedlex: Federal Act on Copyright and Related Rights, Art. 19 Private use](https://www.fedlex.admin.ch/eli/cc/1993/1798_1798_1798/en)
-
-## The Reader Path
-
-Use this order:
-
-1. Build the base stack.
-2. Confirm one movie and one episode can download, import, rename, and appear in Plex.
-3. Add discovery and request tools.
-4. Apply German-friendly and multi-language rules.
-5. Apply archive and size rules.
-6. Add the daily release-ladder automation.
-7. Use the app reference pages when a specific tool needs fixing.
-
-Do not begin with the clever parts. A sharp language profile on top of broken download folders is still broken, just wearing a nicer hat.
-
-## Stack Flow
-
-```mermaid
-flowchart LR
-    A["Discovery<br/>MDBList / Seerr / Manual Add"] --> B["ARR Apps<br/>Sonarr / Radarr / Lidarr"]
-    B --> C["Search<br/>Usenet Indexers / Jackett"]
-    C --> D["Download<br/>SABnzbd / qBittorrent"]
-    D --> E["Import<br/>Rename / Organize / Validate"]
-    E --> F["Plex<br/>Scan / Match / Play"]
-    G["Daily Release Ladder"] --> B
-    G --> E
-```
-
-## Core Rules
-
-- Let ARR own naming and importing.
-- Let Plex scan final library folders only.
-- Use English fallback as a temporary bridge, not a final winner.
-- Let German/Multi replace English even across normal quality-tier boundaries.
-- Keep original-language lanes scoped to anime, Korean, and Chinese content.
-- Unmonitor verified final-state keepers.
-- Keep request approval manual for large requests.
-
-## Continue
-
-Next: [Chapter 2: Base Setup Step by Step](/slimshadys-arr-setup-guide/docs/chapter-02-base-setup.html)
+<div class="chapter-next">
+  <span>Continue</span>
+  <a href="/slimshadys-arr-setup-guide/docs/chapter-02-base-setup.html">Chapter 2: Base Setup Step by Step</a>
+</div>

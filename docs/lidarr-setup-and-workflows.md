@@ -70,6 +70,29 @@
   <p>The goal is to get one clean music lane running without accidentally dragging music into your movie logic or drowning in metadata chaos on day one.</p>
 </div>
 
+<div class="edition-layout">
+  <section class="edition-card accent-green">
+    <span class="section-kicker">Lidarr operating model</span>
+    <h3>Music is metadata-first</h3>
+    <div class="rule-grid">
+      <div class="rule-card"><strong>Artist identity</strong><span>Keep artist folders and MusicBrainz matches clean before chasing albums.</span></div>
+      <div class="rule-card"><strong>Album completeness</strong><span>Track count, track order, and tags matter more than raw download success.</span></div>
+      <div class="rule-card"><strong>Separate category</strong><span>Music downloads should never share movie or TV downloader categories.</span></div>
+      <div class="rule-card"><strong>Completed albums</strong><span>Once quality, metadata, and tracklist are verified, unmonitor the album.</span></div>
+    </div>
+  </section>
+
+  <section class="edition-card">
+    <span class="section-kicker">Common fix lane</span>
+    <h3>When Plex shows a weird duplicate album</h3>
+    <div class="flow-grid">
+      <div class="flow-card"><em>1</em><strong>Check tags</strong><span>One bad track can create a separate Plex album.</span></div>
+      <div class="flow-card"><em>2</em><strong>Fix metadata</strong><span>Align album, artist, disc, and track fields.</span></div>
+      <div class="flow-card"><em>3</em><strong>Rescan</strong><span>Let Lidarr and Plex refresh after the tags are stable.</span></div>
+    </div>
+  </section>
+</div>
+
 ## What Lidarr Is and Why You Need It
 
 `Lidarr` is the ARR app for music.
