@@ -2,99 +2,156 @@
   <img class="guide-banner-image" src="/slimshadys-arr-setup-guide/docs/assets/guide-banner.png" alt="SlimShady's ARR Setup Guide banner">
 </div>
 
-<div class="hero-intro">
-  <h2>SlimShady's ARR Setup Guide</h2>
-  <p>A practical step-by-step guide for building a reliable home-media automation stack with <code>Sonarr</code>, <code>Radarr</code>, <code>Lidarr</code>, <code>SABnzbd</code>, <code>Jackett</code>, <code>Seerr</code>, and <code>Plex</code>.</p>
-  <p>This guide is written from the perspective of a Swiss movie aficionado who wants to preserve original versions of films while also making movies and series comfortable for family to watch in their native language.</p>
-  <p>The guide is organized like a setup manual: start with the base stack, then add discovery, German-friendly language rules, multi-language and original-language logic, archive sizing, automation scripts, and troubleshooting.</p>
-  <p>If you are new, read the chapters in order. If you already have a working stack, jump directly to the specialist chapter that matches the thing you are fixing.</p>
-  <div class="hero-meta">
-    <span class="hero-meta-label">Guide traffic:</span>
-    <img class="visitor-counter-badge" src="https://visitor-badge.laobi.icu/badge?page_id=Shadow2442.slimshadys-arr-setup-guide&left_text=visitors" alt="Visitor counter">
+<section class="home-hero">
+  <div class="home-hero-copy">
+    <p class="home-kicker">Swiss private-use media automation guide</p>
+    <h2>SlimShady's ARR Setup Guide</h2>
+    <p class="home-lede">Build a reliable home-media stack with <code>Sonarr</code>, <code>Radarr</code>, <code>Lidarr</code>, <code>SABnzbd</code>, <code>Jackett</code>, <code>Seerr</code>, and <code>Plex</code>, without letting automation turn your library into a noisy pile of half-matched downloads.</p>
+    <p>This guide is written from the perspective of a Swiss movie aficionado: keep original versions and original audio where they matter, but make movies and series comfortable for family to watch in their native language.</p>
+    <div class="home-hero-actions">
+      <a class="primary-link" href="/slimshadys-arr-setup-guide/docs/chapter-01-start-here.html">Start Chapter 1</a>
+      <a class="secondary-link" href="/slimshadys-arr-setup-guide/docs/index.html">Browse All Docs</a>
+    </div>
   </div>
-</div>
 
-## Swiss Private-Use Context
-
-This guide assumes a Swiss private-use context: personal media organization, original-language preservation, and private family viewing.
-
-Under Swiss copyright law, private use is treated differently from public distribution. The Swiss Federal Institute of Intellectual Property explains that downloading or streaming works for private use is allowed, including from illegal sources, while uploading or making works available online is not allowed. Article 19 of the Swiss Copyright Act defines private use to include personal use and use within a circle of closely connected people such as relatives or friends.
-
-That is the legal frame this guide is written for: private Swiss use, not public redistribution, commercial sharing, or uploading.
-
-Sources:
-
-- [Swiss Federal Institute of Intellectual Property: Copyright on the internet](https://www.ige.ch/en/protecting-your-ip/copyright/using-a-work/copyright-on-the-internet)
-- [Fedlex: Federal Act on Copyright and Related Rights, Art. 19 Private use](https://www.fedlex.admin.ch/eli/cc/1993/1798_1798_1798/en)
+  <aside class="home-hero-panel">
+    <div class="home-panel-card">
+      <strong>Legal frame</strong>
+      <span>Swiss private use, original-version preservation, and family viewing. Not public redistribution, uploading, or an open media service.</span>
+    </div>
+    <div class="home-panel-card">
+      <strong>Core promise</strong>
+      <span>English can fill a gap. German/Multi wins when available. Final verified keepers are unmonitored.</span>
+    </div>
+    <div class="home-source-row">
+      <a href="https://www.ige.ch/en/protecting-your-ip/copyright/using-a-work/copyright-on-the-internet">Swiss IPI</a>
+      <a href="https://www.fedlex.admin.ch/eli/cc/1993/1798_1798_1798/en">Copyright Act Art. 19</a>
+    </div>
+    <div class="hero-meta">
+      <span class="hero-meta-label">Guide traffic:</span>
+      <img class="visitor-counter-badge" src="https://visitor-badge.laobi.icu/badge?page_id=Shadow2442.slimshadys-arr-setup-guide&left_text=visitors" alt="Visitor counter">
+    </div>
+  </aside>
+</section>
 
 ## Latest Guide Updates
 
-<div class="latest-updates">
-  <a class="latest-update-card" href="https://github.com/Shadow2442/slimshadys-arr-setup-guide/blob/main/CHANGELOG.md">
-    <strong>2026-07-22</strong>
-    <span>Rebuilt the site into a proper chapter-based setup guide and added the newest release-ladder, Seerr, Jackett, language, and archive rules.</span>
-  </a>
-  <a class="latest-update-card" href="https://github.com/Shadow2442/slimshadys-arr-setup-guide/blob/main/CHANGELOG.md">
-    <strong>2026-06-06</strong>
-    <span>Added the current Sonarr/Radarr German-friendly fallback strategy, compact profiles, parser guardrails, and bulk fallback-search notes.</span>
-  </a>
-  <a class="latest-update-card" href="https://github.com/Shadow2442/slimshadys-arr-setup-guide/blob/main/CHANGELOG.md">
-    <strong>2026-05-20</strong>
-    <span>Added the Lucifer language-protection case study and safer German season preservation guidance.</span>
-  </a>
-  <a class="latest-update-card" href="https://github.com/Shadow2442/slimshadys-arr-setup-guide/blob/main/CHANGELOG.md">
-    <strong>2026-05-19</strong>
-    <span>Expanded app pages with clearer introductions, install guidance, and beginner-friendly setup flow.</span>
-  </a>
-  <a class="latest-update-card" href="https://github.com/Shadow2442/slimshadys-arr-setup-guide/blob/main/CHANGELOG.md">
-    <strong>2026-05-18</strong>
-    <span>Split the guide into dedicated Sonarr, Radarr, Lidarr, Jackett, Plex, SABnzbd, and German strategy pages.</span>
-  </a>
-</div>
+<table class="update-ledger">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Update</th>
+      <th>Start Here</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>2026-07-22</code></td>
+      <td><strong>Chapter rebuild.</strong> Homepage, docs index, and the full guide path were rebuilt around proper setup chapters.</td>
+      <td><a href="/slimshadys-arr-setup-guide/docs/index.html">Docs index</a></td>
+    </tr>
+    <tr>
+      <td><code>2026-07-22</code></td>
+      <td><strong>Release ladder.</strong> Added English bridge logic, German/Multi replacement rules, Seerr safety, Jackett recovery, and archive behavior.</td>
+      <td><a href="/slimshadys-arr-setup-guide/docs/chapter-03-download-pipeline.html">Automation</a></td>
+    </tr>
+    <tr>
+      <td><code>2026-06-06</code></td>
+      <td><strong>German-friendly rules.</strong> Added Sonarr/Radarr fallback strategy, compact profiles, parser guardrails, and bulk fallback-search notes.</td>
+      <td><a href="/slimshadys-arr-setup-guide/docs/chapter-04-german-friendly.html">German setup</a></td>
+    </tr>
+    <tr>
+      <td><code>2026-05-20</code></td>
+      <td><strong>Language protection.</strong> Added the Lucifer case study and safer German season preservation guidance.</td>
+      <td><a href="/slimshadys-arr-setup-guide/docs/sonarr-setup-and-workflows.html">Sonarr</a></td>
+    </tr>
+    <tr>
+      <td><code>2026-05-19</code></td>
+      <td><strong>Beginner polish.</strong> Expanded app pages with clearer introductions, install guidance, and setup flow.</td>
+      <td><a href="https://github.com/Shadow2442/slimshadys-arr-setup-guide/blob/main/CHANGELOG.md">Changelog</a></td>
+    </tr>
+  </tbody>
+</table>
 
 ## Chapter Index
 
-<div class="hub-link-grid chapter-link-grid">
-  <a class="hub-link-card chapter-link-card" href="/slimshadys-arr-setup-guide/docs/chapter-01-start-here.html">
-    <strong>1. Start Here</strong>
-    <span>The stack goal, reader path, architecture flow, and the core rules before you touch advanced settings.</span>
+<div class="chapter-grid">
+  <a class="chapter-card" href="/slimshadys-arr-setup-guide/docs/chapter-01-start-here.html">
+    <span class="chapter-number">01</span>
+    <span class="chapter-label">Orientation</span>
+    <strong>Start Here</strong>
+    <span>The stack goal, reader path, architecture flow, Swiss private-use context, and core rules.</span>
+    <em>Open chapter</em>
   </a>
-  <a class="hub-link-card chapter-link-card" href="/slimshadys-arr-setup-guide/docs/chapter-02-base-setup.html">
-    <strong>2. Base Setup Step by Step</strong>
+  <a class="chapter-card" href="/slimshadys-arr-setup-guide/docs/chapter-02-base-setup.html">
+    <span class="chapter-number">02</span>
+    <span class="chapter-label">Foundation</span>
+    <strong>Base Setup Step by Step</strong>
     <span>Folders, categories, SABnzbd, Sonarr, Radarr, Lidarr, Plex, Jackett, and Seerr request safety.</span>
+    <em>Open chapter</em>
   </a>
-  <a class="hub-link-card chapter-link-card" href="/slimshadys-arr-setup-guide/docs/chapter-03-download-pipeline.html">
-    <strong>3. Download Pipeline and Daily Automation</strong>
+  <a class="chapter-card" href="/slimshadys-arr-setup-guide/docs/chapter-03-download-pipeline.html">
+    <span class="chapter-number">03</span>
+    <span class="chapter-label">Automation</span>
+    <strong>Download Pipeline and Daily Automation</strong>
     <span>Import lists, RSS, queues, imports, Plex scans, release-ladder runs, and API-conscious batches.</span>
+    <em>Open chapter</em>
   </a>
-  <a class="hub-link-card chapter-link-card" href="/slimshadys-arr-setup-guide/docs/chapter-04-german-friendly.html">
-    <strong>4. German-Friendly Setup</strong>
+  <a class="chapter-card" href="/slimshadys-arr-setup-guide/docs/chapter-04-german-friendly.html">
+    <span class="chapter-number">04</span>
+    <span class="chapter-label">Language</span>
+    <strong>German-Friendly Setup</strong>
     <span>German/Multi preference, English bridge fallback, blocked languages, title markers, and indexer strategy.</span>
+    <em>Open chapter</em>
   </a>
-  <a class="hub-link-card chapter-link-card" href="/slimshadys-arr-setup-guide/docs/chapter-05-multilanguage-original-language.html">
-    <strong>5. Multi-Language and Original-Language Setup</strong>
+  <a class="chapter-card" href="/slimshadys-arr-setup-guide/docs/chapter-05-multilanguage-original-language.html">
+    <span class="chapter-number">05</span>
+    <span class="chapter-label">Original versions</span>
+    <strong>Multi-Language and Original-Language Setup</strong>
     <span>German/English dual audio, anime, Japanese, Korean, Chinese, subtitle fallback, and import validation.</span>
+    <em>Open chapter</em>
   </a>
-  <a class="hub-link-card chapter-link-card" href="/slimshadys-arr-setup-guide/docs/chapter-06-archive-size.html">
-    <strong>6. Archive and Size Strategy</strong>
+  <a class="chapter-card" href="/slimshadys-arr-setup-guide/docs/chapter-06-archive-size.html">
+    <span class="chapter-number">06</span>
+    <span class="chapter-label">Archive</span>
+    <strong>Archive and Size Strategy</strong>
     <span>Compact movies, 720p series finals, 1080p bridge files, codec-aware sizing, and final-state unmonitoring.</span>
+    <em>Open chapter</em>
   </a>
-  <a class="hub-link-card chapter-link-card" href="/slimshadys-arr-setup-guide/docs/chapter-07-operations-troubleshooting.html">
-    <strong>7. Operations and Troubleshooting</strong>
+  <a class="chapter-card" href="/slimshadys-arr-setup-guide/docs/chapter-07-operations-troubleshooting.html">
+    <span class="chapter-number">07</span>
+    <span class="chapter-label">Maintenance</span>
+    <strong>Operations and Troubleshooting</strong>
     <span>SAB, qBittorrent, failed imports, Jackett health, Plex matching, bad-language cleanup, and stuck queues.</span>
+    <em>Open chapter</em>
   </a>
-  <a class="hub-link-card chapter-link-card" href="/slimshadys-arr-setup-guide/docs/chapter-08-reference.html">
-    <strong>8. Reference Appendix</strong>
+  <a class="chapter-card" href="/slimshadys-arr-setup-guide/docs/chapter-08-reference.html">
+    <span class="chapter-number">08</span>
+    <span class="chapter-label">Lookup</span>
+    <strong>Reference Appendix</strong>
     <span>App-by-app pages, specialist references, changelog links, and quick lookup material.</span>
+    <em>Open chapter</em>
   </a>
 </div>
+
+## Operating Model
+
+| Rule Area | Practical Rule | Why It Exists |
+| --- | --- | --- |
+| Language fallback | English is a bridge, not a final winner. | Keeps new content watchable without locking the library into English-only files. |
+| German/Multi upgrade | German/Multi should replace English when available. | Family-friendly playback and original-version preservation can coexist. |
+| TV archive | German/Multi `1080p` can be a bridge; compact German/Multi `720p` is the normal final target. | Fast availability first, sane long-term storage later. |
+| Movie archive | Compact German/Multi `1080p` is the normal movie target. | Good quality without giant files unless manually chosen. |
+| Original-language media | Anime, Korean, and Chinese titles get scoped fallback lanes. | Original versions matter, but rules must not leak into unrelated shows. |
+| Safety | `VFQ`, `VFF`, `TRUEFRENCH`, `EN-TR`, `TR-EN`, and `TURG` are blocked or heavily penalized. | Prevents misleading releases from slipping through as fake Multi/German matches. |
+| Final state | Verified keepers are unmonitored. | Done means done; ARR does not need to keep poking finished work. |
 
 ## How to Use This Guide
 
 <div class="mini-grid">
   <div class="mini-card">
     <h4>New setup</h4>
-    <p>Read chapters 1 through 3 first. Only add German-friendly, multi-language, and archive logic after the base stack works.</p>
+    <p>Read chapters 1 through 3 first. Add German-friendly, multi-language, and archive rules only after the base stack works.</p>
   </div>
   <div class="mini-card">
     <h4>Existing setup</h4>
@@ -105,17 +162,6 @@ Sources:
     <p>Use chapter 8 when you need app-specific pages for Sonarr, Radarr, Lidarr, SABnzbd, Jackett, Plex, MDBList, or quality settings.</p>
   </div>
 </div>
-
-## Current Operating Model
-
-- English fallback is a bridge, not a final winner.
-- German/Multi should replace English when available.
-- German/Multi `1080p` TV can be used as a fast bridge.
-- Compact German/Multi `720p` is the normal final TV archive target.
-- Compact German/Multi `1080p` is the normal movie archive target.
-- Anime, Korean, and Chinese titles get scoped original-language fallback lanes.
-- Suspicious markers such as `VFQ`, `VFF`, `TRUEFRENCH`, `EN-TR`, `TR-EN`, and `TURG` are blocked or heavily penalized.
-- Final verified keepers are unmonitored.
 
 ## Project Links
 
