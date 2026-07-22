@@ -34,6 +34,11 @@
   </aside>
 </section>
 
+<div class="cinema-note">
+  <strong>Built from months of real-world setup work.</strong>
+  This guide grew out of months of tuning, breaking, fixing, resetting, and rebuilding my own ARR and Plex stack. More recently I brought Codex into the process as a setup copilot: it helped me audit the messy parts, turn hard-earned lessons into cleaner rules, automate repeat checks, and rebuild the setup with much more confidence instead of starting from scratch blindly again.
+</div>
+
 ## Latest Guide Updates
 
 <table class="update-ledger">
