@@ -528,6 +528,94 @@ a:hover {
   line-height: 1.45;
 }
 
+.latest-updates {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin: 0.85rem 0 1.7rem;
+}
+
+.latest-update-card {
+  display: grid;
+  grid-template-columns: minmax(110px, 0.16fr) 1fr;
+  gap: 14px;
+  align-items: start;
+  padding: 0.86rem 1rem;
+  border-radius: 14px;
+  border: 1px solid rgba(96, 165, 250, 0.22);
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.94), rgba(17, 24, 39, 0.9));
+  box-shadow: 0 12px 24px rgba(2, 6, 23, 0.16);
+  color: #e5eefc;
+  text-decoration: none;
+}
+
+.latest-update-card:hover {
+  border-color: rgba(96, 165, 250, 0.56);
+  background: linear-gradient(135deg, rgba(20, 31, 54, 0.96), rgba(30, 41, 59, 0.92));
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.latest-update-card strong {
+  color: #bfdbfe;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.latest-update-card span {
+  color: #dbeafe;
+  line-height: 1.45;
+}
+
+.chapter-link-grid {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.chapter-link-card {
+  position: relative;
+  min-height: 132px;
+  padding: 1.18rem 3rem 1.12rem 1.18rem;
+  border-color: rgba(96, 165, 250, 0.34);
+  background:
+    linear-gradient(135deg, rgba(37, 99, 235, 0.18), transparent 34%),
+    linear-gradient(180deg, rgba(15, 23, 42, 0.98), rgba(22, 32, 51, 0.94));
+  box-shadow: 0 18px 38px rgba(2, 6, 23, 0.28);
+  transition: transform 0.14s ease, border-color 0.14s ease, box-shadow 0.14s ease, background 0.14s ease;
+}
+
+.chapter-link-card::after {
+  content: "Open";
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  padding: 0.22rem 0.5rem;
+  border-radius: 999px;
+  border: 1px solid rgba(96, 165, 250, 0.28);
+  background: rgba(37, 99, 235, 0.16);
+  color: #bfdbfe;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.chapter-link-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(96, 165, 250, 0.72);
+  background:
+    linear-gradient(135deg, rgba(37, 99, 235, 0.26), transparent 36%),
+    linear-gradient(180deg, rgba(20, 31, 54, 0.98), rgba(30, 41, 59, 0.95));
+  box-shadow: 0 24px 48px rgba(2, 6, 23, 0.36);
+}
+
+.chapter-link-card strong {
+  color: #f8fafc;
+  font-size: 1.12rem;
+}
+
+.chapter-link-card span {
+  color: #dbeafe;
+}
+
 .info-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -671,5 +759,21 @@ a:hover {
 
   .guide-stats {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .latest-update-card {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+  .chapter-link-card {
+    min-height: 0;
+    padding-right: 1.1rem;
+  }
+
+  .chapter-link-card::after {
+    position: static;
+    display: inline-block;
+    margin-top: 0.85rem;
   }
 }

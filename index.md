@@ -13,38 +13,63 @@
   </div>
 </div>
 
+## Latest Guide Updates
+
+<div class="latest-updates">
+  <a class="latest-update-card" href="https://github.com/Shadow2442/slimshadys-arr-setup-guide/blob/main/CHANGELOG.md">
+    <strong>2026-07-22</strong>
+    <span>Rebuilt the site into a proper chapter-based setup guide and added the newest release-ladder, Seerr, Jackett, language, and archive rules.</span>
+  </a>
+  <a class="latest-update-card" href="https://github.com/Shadow2442/slimshadys-arr-setup-guide/blob/main/CHANGELOG.md">
+    <strong>2026-06-06</strong>
+    <span>Added the current Sonarr/Radarr German-friendly fallback strategy, compact profiles, parser guardrails, and bulk fallback-search notes.</span>
+  </a>
+  <a class="latest-update-card" href="https://github.com/Shadow2442/slimshadys-arr-setup-guide/blob/main/CHANGELOG.md">
+    <strong>2026-05-20</strong>
+    <span>Added the Lucifer language-protection case study and safer German season preservation guidance.</span>
+  </a>
+  <a class="latest-update-card" href="https://github.com/Shadow2442/slimshadys-arr-setup-guide/blob/main/CHANGELOG.md">
+    <strong>2026-05-19</strong>
+    <span>Expanded app pages with clearer introductions, install guidance, and beginner-friendly setup flow.</span>
+  </a>
+  <a class="latest-update-card" href="https://github.com/Shadow2442/slimshadys-arr-setup-guide/blob/main/CHANGELOG.md">
+    <strong>2026-05-18</strong>
+    <span>Split the guide into dedicated Sonarr, Radarr, Lidarr, Jackett, Plex, SABnzbd, and German strategy pages.</span>
+  </a>
+</div>
+
 ## Chapter Index
 
-<div class="hub-link-grid">
-  <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/chapter-01-start-here.html">
+<div class="hub-link-grid chapter-link-grid">
+  <a class="hub-link-card chapter-link-card" href="/slimshadys-arr-setup-guide/docs/chapter-01-start-here.html">
     <strong>1. Start Here</strong>
     <span>The stack goal, reader path, architecture flow, and the core rules before you touch advanced settings.</span>
   </a>
-  <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/chapter-02-base-setup.html">
+  <a class="hub-link-card chapter-link-card" href="/slimshadys-arr-setup-guide/docs/chapter-02-base-setup.html">
     <strong>2. Base Setup Step by Step</strong>
     <span>Folders, categories, SABnzbd, Sonarr, Radarr, Lidarr, Plex, Jackett, and Seerr request safety.</span>
   </a>
-  <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/chapter-03-download-pipeline.html">
+  <a class="hub-link-card chapter-link-card" href="/slimshadys-arr-setup-guide/docs/chapter-03-download-pipeline.html">
     <strong>3. Download Pipeline and Daily Automation</strong>
     <span>Import lists, RSS, queues, imports, Plex scans, release-ladder runs, and API-conscious batches.</span>
   </a>
-  <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/chapter-04-german-friendly.html">
+  <a class="hub-link-card chapter-link-card" href="/slimshadys-arr-setup-guide/docs/chapter-04-german-friendly.html">
     <strong>4. German-Friendly Setup</strong>
     <span>German/Multi preference, English bridge fallback, blocked languages, title markers, and indexer strategy.</span>
   </a>
-  <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/chapter-05-multilanguage-original-language.html">
+  <a class="hub-link-card chapter-link-card" href="/slimshadys-arr-setup-guide/docs/chapter-05-multilanguage-original-language.html">
     <strong>5. Multi-Language and Original-Language Setup</strong>
     <span>German/English dual audio, anime, Japanese, Korean, Chinese, subtitle fallback, and import validation.</span>
   </a>
-  <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/chapter-06-archive-size.html">
+  <a class="hub-link-card chapter-link-card" href="/slimshadys-arr-setup-guide/docs/chapter-06-archive-size.html">
     <strong>6. Archive and Size Strategy</strong>
     <span>Compact movies, 720p series finals, 1080p bridge files, codec-aware sizing, and final-state unmonitoring.</span>
   </a>
-  <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/chapter-07-operations-troubleshooting.html">
+  <a class="hub-link-card chapter-link-card" href="/slimshadys-arr-setup-guide/docs/chapter-07-operations-troubleshooting.html">
     <strong>7. Operations and Troubleshooting</strong>
     <span>SAB, qBittorrent, failed imports, Jackett health, Plex matching, bad-language cleanup, and stuck queues.</span>
   </a>
-  <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/chapter-08-reference.html">
+  <a class="hub-link-card chapter-link-card" href="/slimshadys-arr-setup-guide/docs/chapter-08-reference.html">
     <strong>8. Reference Appendix</strong>
     <span>App-by-app pages, specialist references, changelog links, and quick lookup material.</span>
   </a>
