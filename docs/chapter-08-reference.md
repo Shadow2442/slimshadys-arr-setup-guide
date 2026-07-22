@@ -48,6 +48,7 @@
     <table>
       <thead><tr><th>Date</th><th>Change</th></tr></thead>
       <tbody>
+        <tr><td><code>2026-07-22</code></td><td>Added the AI setup copilot prompt so readers can give Codex or another on-machine AI the guide URL and be walked through the full setup step by step.</td></tr>
         <tr><td><code>2026-07-22</code></td><td>Chapter structure, release ladder, Seerr safety, Jackett recovery, original-language lanes, archive targets, and bad-language cleanup.</td></tr>
         <tr><td><code>2026-06-06</code></td><td>German-friendly Sonarr and Radarr language profile policy.</td></tr>
         <tr><td><code>2026-05-18</code></td><td>Dedicated app pages for the main stack.</td></tr>
