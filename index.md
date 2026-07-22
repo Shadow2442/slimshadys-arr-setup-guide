@@ -4,7 +4,7 @@
 
 <section class="home-hero">
   <div class="home-hero-copy">
-    <p class="home-kicker">Swiss private-use media automation guide - how to completely automate your home media library with ARR and Plex</p>
+    <p class="home-kicker">How to completely automate your home media library with ARR and Plex</p>
     <h2>SlimShady's ARR Setup Guide</h2>
     <p class="home-lede">Build a reliable home-media stack with <code>Sonarr</code>, <code>Radarr</code>, <code>Lidarr</code>, <code>SABnzbd</code>, <code>Jackett</code>, <code>Seerr</code>, and <code>Plex</code>, without letting automation turn your library into a noisy pile of half-matched downloads.</p>
     <p>This guide is written from the perspective of a Swiss movie aficionado: keep original versions and original audio where they matter, but make movies and series comfortable for family to watch in their native language.</p>
