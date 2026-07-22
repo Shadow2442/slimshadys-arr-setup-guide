@@ -111,6 +111,20 @@ The important rule is simple: download folders are temporary; library folders ar
 | Plex | Libraries pointed only at final ARR-managed folders. |
 | Seerr | Default profiles and approvals set conservatively. |
 
+## Plex API and ARR Connect Setup
+
+Plex can notice file changes by watching its library folders, but the cleaner ARR setup is to also let `Sonarr`, `Radarr`, and `Lidarr` notify Plex after they import, upgrade, rename, or delete media. That connection uses Plex's API through each ARR app's `Connect` settings.
+
+| ARR app | Where to configure | Recommended use |
+| --- | --- | --- |
+| Sonarr | `Settings -> Connect -> Plex Media Server` | Trigger Plex updates after episode import, upgrade, rename, or delete. |
+| Radarr | `Settings -> Connect -> Plex Media Server` | Trigger Plex updates after movie import, upgrade, rename, or delete. |
+| Lidarr | `Settings -> Connect -> Plex Media Server` | Trigger Plex updates after album import or metadata-path changes. |
+
+The important boundary stays the same: ARR uses the Plex API only to say "please update this library." ARR still manages the files. Plex still scans only final library folders.
+
+For first setup, add Plex as a connection in each ARR app, authenticate/select the Plex server, choose the matching Plex library, test the connection, and save it. If the test fails, fix the Plex server URL, token/session, or library selection before trusting automatic scans.
+
 ## Test Before Scaling
 
 Do not import hundreds of titles yet. Test one item per lane:
@@ -120,7 +134,8 @@ Do not import hundreds of titles yet. Test one item per lane:
 3. Add one album in Lidarr if you use music automation.
 4. Confirm SAB/qBittorrent receives the correct category.
 5. Confirm ARR imports and renames the finished file.
-6. Confirm Plex sees only the final renamed file.
+6. Confirm the ARR Plex connection triggers a scan or update.
+7. Confirm Plex sees only the final renamed file.
 
 ## Common Early Mistakes
 

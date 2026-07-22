@@ -47,8 +47,8 @@
   <tbody>
     <tr>
       <td><code>2026-07-22</code></td>
-      <td><strong>Chapter deepening.</strong> Added the missing why/how/configure/test context across all eight setup chapters.</td>
-      <td><a href="/slimshadys-arr-setup-guide/docs/index.html">Docs index</a></td>
+      <td><strong>Plex API integration.</strong> Added ARR Connect guidance so Sonarr, Radarr, and Lidarr can notify Plex after imports and upgrades.</td>
+      <td><a href="/slimshadys-arr-setup-guide/docs/plex-setup-and-workflows.html">Plex setup</a></td>
     </tr>
     <tr>
       <td><code>2026-07-22</code></td>

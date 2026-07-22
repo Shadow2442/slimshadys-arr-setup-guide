@@ -90,6 +90,17 @@
       <div class="flow-card"><em>3</em><strong>Fix match</strong><span>Use the correct title/year and rescan after the path is stable.</span></div>
     </div>
   </section>
+
+  <section class="edition-card accent-gold">
+    <span class="section-kicker">ARR Connect</span>
+    <h3>Use the Plex API as a scan trigger</h3>
+    <div class="rule-grid">
+      <div class="rule-card"><strong>Sonarr</strong><span>Notify Plex after episode import, upgrade, rename, or delete.</span></div>
+      <div class="rule-card"><strong>Radarr</strong><span>Notify Plex after movie import, upgrade, rename, or delete.</span></div>
+      <div class="rule-card"><strong>Lidarr</strong><span>Notify Plex after album import or library changes.</span></div>
+      <div class="rule-card"><strong>Boundary</strong><span>The API triggers scans; it does not make Plex responsible for file management.</span></div>
+    </div>
+  </section>
 </div>
 
 ## What Plex Is and Why You Need It
@@ -205,6 +216,62 @@ For a clean first configuration:
 
 This is intentionally boring. Boring is excellent here.
 
+## Plex API Integration for ARR Apps
+
+`Sonarr`, `Radarr`, and `Lidarr` can talk to Plex through their `Connect` settings. This is useful because ARR knows exactly when a file was imported, upgraded, renamed, or deleted. Instead of waiting for Plex to eventually notice a folder change, ARR can tell Plex to update the relevant library.
+
+This is not a replacement for clean folder structure. It is a notification layer on top of clean folder structure.
+
+## What the Plex Connection Does
+
+| Event | What ARR does | What Plex should do |
+| --- | --- | --- |
+| Import | ARR moves and renames the finished file. | Scan/update the matching Plex library. |
+| Upgrade | ARR replaces the old file with a better file. | Refresh the item so Plex points at the new file. |
+| Rename | ARR changes folders or filenames. | Update paths and metadata references. |
+| Delete | ARR removes a file intentionally. | Refresh so stale items can disappear or be trashed intentionally. |
+
+## How To Configure ARR to Notify Plex
+
+In each ARR app, use:
+
+1. Open `Settings -> Connect`.
+2. Add `Plex Media Server`.
+3. Authenticate or provide the Plex connection details.
+4. Select the correct Plex server.
+5. Select the matching Plex library: movies for Radarr, TV for Sonarr, music for Lidarr.
+6. Enable useful triggers such as import, upgrade, rename, and delete.
+7. Test the connection.
+8. Save only after the test succeeds.
+
+Use one Plex connection per ARR app. Do not point Radarr at the TV library or Sonarr at the movie library. This sounds obvious until a bad connection quietly makes Plex refresh the wrong place.
+
+## Plex Token and Authentication
+
+ARR needs permission to talk to Plex. Depending on the ARR version and Plex setup, that can happen through a sign-in flow or through a Plex token/session. Treat the token like a password: do not publish it, paste it into screenshots, or commit it into documentation.
+
+If a Plex connection suddenly stops working, the token/session may have expired, the server URL may have changed, or Plex may no longer be reachable from the machine running the ARR app.
+
+## Auto-Scan vs ARR Connect
+
+| Method | Strength | Weakness |
+| --- | --- | --- |
+| Plex automatic library scan | Simple and works without ARR integration. | Can lag, miss edge cases, or scan too broadly. |
+| ARR Plex Connect | Precise trigger after import, upgrade, rename, or delete. | Needs a working Plex API connection. |
+| Manual Plex scan | Good for repairs and verification. | Not automation. |
+
+The best setup usually uses both: Plex watches the final folders, and ARR also tells Plex when it has changed something important.
+
+## Troubleshooting Plex Connect
+
+| Symptom | Likely cause | Fix |
+| --- | --- | --- |
+| Test fails in ARR | Wrong Plex URL, token/session issue, or server not reachable. | Re-authenticate, check the server address, and test from the ARR machine. |
+| Plex scans but item is missing | ARR imported to a folder outside the Plex library. | Fix root folders and Plex library paths. |
+| Wrong library updates | ARR connection points at the wrong Plex library. | Select the correct Plex library in the connection. |
+| Plex keeps stale items | Trash was not emptied or delete event did not refresh. | Refresh the library, inspect trash behavior, and empty trash only when intentional. |
+| Duplicate items appear | Plex sees both temporary and final folders. | Remove temporary paths from Plex libraries. |
+
 ## Why This Matters
 
 When ARR handles naming and organization correctly:
@@ -236,9 +303,11 @@ These are not glamorous settings, but they are the difference between a library 
 5. Let `Sonarr`, `Radarr`, and `Lidarr` own the import and rename logic.
 6. In Plex, create separate libraries for movies, series, and music.
 7. Point each Plex library only at its final ARR-managed folder.
-8. Run a first scan and verify metadata matching on a few known-good imports.
-9. Check that Plex is not indexing temporary folders, samples, failed downloads, or staging leftovers.
-10. Only after that, treat the library structure as production-ready.
+8. Add Plex as a `Connect` integration in Sonarr, Radarr, and Lidarr.
+9. Test each ARR Plex connection and confirm it targets the correct Plex library.
+10. Run a first scan and verify metadata matching on a few known-good imports.
+11. Check that Plex is not indexing temporary folders, samples, failed downloads, or staging leftovers.
+12. Only after that, treat the library structure as production-ready.
 
 If those basics are clean, Plex usually becomes the easiest part of the whole stack.
 
