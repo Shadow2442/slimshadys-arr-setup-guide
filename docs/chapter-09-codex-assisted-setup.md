@@ -91,19 +91,65 @@ The download package is a curated set of safe files. It includes the public guid
   <a class="reference-card" href="/slimshadys-arr-setup-guide/downloads/package-manifest.md"><strong>Package Manifest</strong><span>What is included, what is excluded, and why.</span></a>
 </div>
 
+## Direct Downloads
+
+<div class="edition-layout">
+  <section class="edition-card accent-green">
+    <span class="section-kicker">Start here</span>
+    <h3>Codex and package files</h3>
+    <div class="source-chips">
+      <a href="/slimshadys-arr-setup-guide/downloads/examples/codex-master-setup-prompt.md">Master setup prompt</a>
+      <a href="/slimshadys-arr-setup-guide/downloads/README.md">Downloads README</a>
+      <a href="/slimshadys-arr-setup-guide/downloads/package-manifest.md">Package manifest</a>
+      <a href="https://github.com/Shadow2442/slimshadys-arr-setup-guide/archive/refs/heads/main.zip">Repository ZIP</a>
+    </div>
+  </section>
+
+  <section class="edition-card">
+    <span class="section-kicker">Templates</span>
+    <h3>Safe setup templates</h3>
+    <div class="source-chips">
+      <a href="/slimshadys-arr-setup-guide/downloads/templates/folder-layout-example.md">Folder layout</a>
+      <a href="/slimshadys-arr-setup-guide/downloads/templates/sabnzbd-categories-example.md">SAB categories</a>
+      <a href="/slimshadys-arr-setup-guide/downloads/templates/sonarr-profile-template.md">Sonarr profile</a>
+      <a href="/slimshadys-arr-setup-guide/downloads/templates/radarr-profile-template.md">Radarr profile</a>
+      <a href="/slimshadys-arr-setup-guide/downloads/templates/blocked-language-markers-template.md">Blocked markers</a>
+      <a href="/slimshadys-arr-setup-guide/downloads/templates/plex-arr-connect-template.md">Plex Connect</a>
+      <a href="/slimshadys-arr-setup-guide/downloads/templates/seerr-request-defaults-template.md">Seerr defaults</a>
+    </div>
+  </section>
+
+  <section class="edition-card accent-gold">
+    <span class="section-kicker">Automation examples</span>
+    <h3>Scripts to review before use</h3>
+    <div class="source-chips">
+      <a href="/slimshadys-arr-setup-guide/downloads/examples/env.example">Environment example</a>
+      <a href="/slimshadys-arr-setup-guide/downloads/examples/config.example.json">Config example</a>
+      <a href="/slimshadys-arr-setup-guide/downloads/scripts/arr-release-ladder.example.ps1">Release ladder</a>
+      <a href="/slimshadys-arr-setup-guide/downloads/scripts/arr-queue-health.example.ps1">Queue health</a>
+      <a href="/slimshadys-arr-setup-guide/downloads/scripts/arr-language-downgrade-guard.example.ps1">Language guard</a>
+      <a href="/slimshadys-arr-setup-guide/downloads/scripts/arr-previous-episode-catchup.example.ps1">Previous episode catch-up</a>
+      <a href="/slimshadys-arr-setup-guide/downloads/scripts/plex-refresh-after-import.example.ps1">Plex refresh</a>
+      <a href="/slimshadys-arr-setup-guide/downloads/scripts/indexer-health-check.example.ps1">Indexer health</a>
+      <a href="/slimshadys-arr-setup-guide/downloads/scripts/arr-api-budget-report.example.ps1">API budget</a>
+      <a href="/slimshadys-arr-setup-guide/downloads/scripts/build-safe-guide-package.ps1">Package builder</a>
+    </div>
+  </section>
+</div>
+
 ## Recommended Setup Order With Downloads
 
 | Step | File | Use it for |
 | --- | --- | --- |
-| 1 | `folder-layout-example.md` | Decide final media folders and temporary download folders. |
-| 2 | `sabnzbd-categories-example.md` | Create matching downloader categories. |
-| 3 | `sonarr-profile-template.md` | Build the TV language ladder. |
-| 4 | `radarr-profile-template.md` | Build the compact movie language ladder. |
-| 5 | `blocked-language-markers-template.md` | Add protection against wrong-language grabs. |
-| 6 | `plex-arr-connect-template.md` | Connect ARR apps to Plex scan triggers. |
-| 7 | `seerr-request-defaults-template.md` | Keep family requests safe. |
-| 8 | `config.example.json` and `env.example` | Create private local automation config. |
-| 9 | `arr-*.example.ps1` scripts | Review, adapt, dry-run, then automate carefully. |
+| 1 | [folder-layout-example.md](/slimshadys-arr-setup-guide/downloads/templates/folder-layout-example.md) | Decide final media folders and temporary download folders. |
+| 2 | [sabnzbd-categories-example.md](/slimshadys-arr-setup-guide/downloads/templates/sabnzbd-categories-example.md) | Create matching downloader categories. |
+| 3 | [sonarr-profile-template.md](/slimshadys-arr-setup-guide/downloads/templates/sonarr-profile-template.md) | Build the TV language ladder. |
+| 4 | [radarr-profile-template.md](/slimshadys-arr-setup-guide/downloads/templates/radarr-profile-template.md) | Build the compact movie language ladder. |
+| 5 | [blocked-language-markers-template.md](/slimshadys-arr-setup-guide/downloads/templates/blocked-language-markers-template.md) | Add protection against wrong-language grabs. |
+| 6 | [plex-arr-connect-template.md](/slimshadys-arr-setup-guide/downloads/templates/plex-arr-connect-template.md) | Connect ARR apps to Plex scan triggers. |
+| 7 | [seerr-request-defaults-template.md](/slimshadys-arr-setup-guide/downloads/templates/seerr-request-defaults-template.md) | Keep family requests safe. |
+| 8 | [config.example.json](/slimshadys-arr-setup-guide/downloads/examples/config.example.json) and [env.example](/slimshadys-arr-setup-guide/downloads/examples/env.example) | Create private local automation config. |
+| 9 | [example scripts](/slimshadys-arr-setup-guide/docs/downloads.html#example-automation-scripts) | Review, adapt, dry-run, then automate carefully. |
 
 ## Final Verification
 
