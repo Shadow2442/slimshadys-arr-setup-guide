@@ -5,6 +5,7 @@
 <div class="hero-intro">
   <h2>SlimShady's ARR Setup Guide</h2>
   <p>A practical step-by-step guide for building a reliable home-media automation stack with <code>Sonarr</code>, <code>Radarr</code>, <code>Lidarr</code>, <code>SABnzbd</code>, <code>Jackett</code>, <code>Seerr</code>, and <code>Plex</code>.</p>
+  <p>This guide is written from the perspective of a Swiss movie aficionado who wants to preserve original versions of films while also making movies and series comfortable for family to watch in their native language.</p>
   <p>The guide is organized like a setup manual: start with the base stack, then add discovery, German-friendly language rules, multi-language and original-language logic, archive sizing, automation scripts, and troubleshooting.</p>
   <p>If you are new, read the chapters in order. If you already have a working stack, jump directly to the specialist chapter that matches the thing you are fixing.</p>
   <div class="hero-meta">
@@ -12,6 +13,19 @@
     <img class="visitor-counter-badge" src="https://visitor-badge.laobi.icu/badge?page_id=Shadow2442.slimshadys-arr-setup-guide&left_text=visitors" alt="Visitor counter">
   </div>
 </div>
+
+## Swiss Private-Use Context
+
+This guide assumes a Swiss private-use context: personal media organization, original-language preservation, and private family viewing.
+
+Under Swiss copyright law, private use is treated differently from public distribution. The Swiss Federal Institute of Intellectual Property explains that downloading or streaming works for private use is allowed, including from illegal sources, while uploading or making works available online is not allowed. Article 19 of the Swiss Copyright Act defines private use to include personal use and use within a circle of closely connected people such as relatives or friends.
+
+That is the legal frame this guide is written for: private Swiss use, not public redistribution, commercial sharing, or uploading.
+
+Sources:
+
+- [Swiss Federal Institute of Intellectual Property: Copyright on the internet](https://www.ige.ch/en/protecting-your-ip/copyright/using-a-work/copyright-on-the-internet)
+- [Fedlex: Federal Act on Copyright and Related Rights, Art. 19 Private use](https://www.fedlex.admin.ch/eli/cc/1993/1798_1798_1798/en)
 
 ## Latest Guide Updates
 

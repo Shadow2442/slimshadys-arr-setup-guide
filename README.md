@@ -2,6 +2,8 @@
 
 This is a practical chapter-based guide for setting up `Sonarr`, `Radarr`, `Lidarr`, `SABnzbd`, `Jackett`, `Seerr`, and `Plex` for a reliable home-media workflow without letting the system turn into a noisy pile of half-matched downloads.
 
+It is written from the perspective of a Swiss movie aficionado who wants to preserve original versions of films while also making movies and series comfortable for family to watch in their native language.
+
 It focuses on:
 
 - `Sonarr` for series and anime
@@ -16,6 +18,19 @@ It focuses on:
 - practical troubleshooting based on real testing
 
 This guide is based on a real-world setup that was tuned and tested live, not just copied from disconnected wiki pages.
+
+## Swiss Private-Use Context
+
+This guide assumes Swiss private use: personal media organization, original-version preservation, and private family viewing.
+
+Under Swiss copyright law, private use is treated differently from public distribution. The Swiss Federal Institute of Intellectual Property explains that downloading or streaming works for private use is allowed, including from illegal sources, while uploading or making works available online is not allowed. Article 19 of the Swiss Copyright Act defines private use to include personal use and use within a circle of closely connected people such as relatives or friends.
+
+This guide is framed for private Swiss use, not public redistribution, commercial sharing, uploading, or running an open media service.
+
+Sources:
+
+- [Swiss Federal Institute of Intellectual Property: Copyright on the internet](https://www.ige.ch/en/protecting-your-ip/copyright/using-a-work/copyright-on-the-internet)
+- [Fedlex: Federal Act on Copyright and Related Rights, Art. 19 Private use](https://www.fedlex.admin.ch/eli/cc/1993/1798_1798_1798/en)
 
 ## Latest Guide Updates
 
