@@ -44,7 +44,7 @@
   </div>
 </div>
 
-<div class="cinema-note">
+<div class="cinema-note ai-copilot-note">
   <strong>Want an AI to walk you through the setup?</strong>
   If you use Codex or another on-machine AI assistant, give it this guide and ask it to act as your setup copilot. It can read the chapters, ask for your local paths and app URLs when needed, adapt the templates, configure one app at a time, and verify each step before moving on.
   <br><br>

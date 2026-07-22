@@ -1090,6 +1090,24 @@ a:hover {
   color: #fde68a;
 }
 
+.ai-copilot-note {
+  border-color: rgba(34, 211, 238, 0.28);
+  background:
+    linear-gradient(135deg, rgba(34, 211, 238, 0.14), transparent 42%),
+    linear-gradient(180deg, rgba(12, 28, 43, 0.96), rgba(17, 36, 52, 0.92));
+  color: #d9fbff;
+}
+
+.ai-copilot-note strong {
+  color: #67e8f9;
+}
+
+.ai-copilot-note pre {
+  border: 1px solid rgba(34, 211, 238, 0.18);
+  background: rgba(2, 12, 23, 0.72);
+  color: #e0faff;
+}
+
 .cinema-note pre {
   margin: 0.75rem 0 0;
   padding: 0.85rem;
