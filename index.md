@@ -17,7 +17,7 @@
   <aside class="home-hero-panel">
     <div class="home-panel-card">
       <strong>Core promise</strong>
-      <span>I built this for a real home library: keep the original versions I care about, make German or family-friendly versions easy to watch, use English only as a temporary bridge, and stop touching files once they are verified keepers.</span>
+      <span>I built this for my own home library: I prefer keeping films and shows as multi-language files with the original audio, a German audio track, and useful subtitles. That way I can still switch to the original version when I want the real thing, while my family can simply press play and watch in German.</span>
     </div>
     <div class="home-panel-card">
       <strong>Legal notice</strong>
