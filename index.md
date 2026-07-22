@@ -57,6 +57,11 @@
   <tbody>
     <tr>
       <td><code>2026-07-22</code></td>
+      <td><strong>Feedback form.</strong> Added a public GitHub feedback form for questions, unclear sections, broken links, and project-related suggestions.</td>
+      <td><a href="https://github.com/Shadow2442/slimshadys-arr-setup-guide/issues/new/choose">Send feedback</a></td>
+    </tr>
+    <tr>
+      <td><code>2026-07-22</code></td>
       <td><strong>Codex and downloads.</strong> Added a Codex-assisted setup chapter, master prompt, templates, and safe example automation scripts.</td>
       <td><a href="/slimshadys-arr-setup-guide/docs/chapter-09-codex-assisted-setup.html">Codex setup</a></td>
     </tr>
@@ -74,11 +79,6 @@
       <td><code>2026-07-22</code></td>
       <td><strong>Release ladder.</strong> Added English bridge logic, German/Multi replacement rules, Seerr safety, Jackett recovery, and archive behavior.</td>
       <td><a href="/slimshadys-arr-setup-guide/docs/chapter-03-download-pipeline.html">Automation</a></td>
-    </tr>
-    <tr>
-      <td><code>2026-06-06</code></td>
-      <td><strong>German-friendly rules.</strong> Added Sonarr/Radarr fallback strategy, compact profiles, parser guardrails, and bulk fallback-search notes.</td>
-      <td><a href="/slimshadys-arr-setup-guide/docs/chapter-04-german-friendly.html">German setup</a></td>
     </tr>
   </tbody>
 </table>
