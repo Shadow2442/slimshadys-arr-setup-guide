@@ -280,7 +280,7 @@ a:hover {
 }
 
 .guide-stats {
-  display: grid;
+  display: none;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 14px;
   margin: 0.1rem 0 1rem;
@@ -332,6 +332,11 @@ a:hover {
   border-top: 1px solid rgba(148, 163, 184, 0.12);
 }
 
+.post-content > h2 {
+  margin-top: 2rem;
+  margin-bottom: 0.8rem;
+}
+
 .page-content p,
 .page-content li {
   color: $text;
@@ -340,6 +345,18 @@ a:hover {
 .page-content ul,
 .page-content ol {
   margin-left: 1.1rem;
+}
+
+.page-content ul:not(.post-list),
+.page-content ol {
+  padding: 0.85rem 1.05rem 0.85rem 1.65rem;
+  border-radius: 18px;
+  border: 1px solid rgba(96, 165, 250, 0.12);
+  background: rgba(15, 23, 42, 0.42);
+}
+
+.page-content li + li {
+  margin-top: 0.34rem;
 }
 
 .page-content code {
