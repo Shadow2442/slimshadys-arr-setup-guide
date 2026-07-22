@@ -16,6 +16,7 @@ All notable guide updates for `SlimShady's ARR Setup Guide` are tracked here.
   - Chapter 7: Operations and Troubleshooting
   - Chapter 8: Reference Appendix
 - Added explicit chapter coverage for Seerr request safety, Jackett tracker recovery, release-ladder automation, original-language lanes, archive targets, and bad-language cleanup.
+- Added Chapter 9 for Codex-assisted setup, including a master prompt, safe download package, templates, and example automation scripts.
 
 ### Changed
 
@@ -24,6 +25,7 @@ All notable guide updates for `SlimShady's ARR Setup Guide` are tracked here.
 - Updated the GitHub Pages description to match the broader setup-guide scope.
 - Expanded all eight setup chapters with practical background sections covering why each decision exists, how the stack behaves, what to configure, how to test it, and which failure modes to watch for.
 - Added Plex API integration guidance for `Sonarr`, `Radarr`, and `Lidarr` using ARR `Connect` settings to trigger Plex library updates after imports, upgrades, renames, and deletes.
+- Added a `downloads/` package area with setup templates, example scripts, placeholder config files, and a package manifest that explains what is safe to ship.
 
 ## 2026-06-06
 

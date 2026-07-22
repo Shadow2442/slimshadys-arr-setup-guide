@@ -37,6 +37,7 @@ Sources:
 | Updated | What changed | Read it here |
 | --- | --- | --- |
 | `2026-07-22` | Rebuilt the website around a proper chapter structure: start here, base setup, download pipeline, German-friendly setup, multi-language/original-language setup, archive strategy, operations, and reference appendix. | [Docs Index](docs/index.md) |
+| `2026-07-22` | Added Codex-assisted setup material, a master prompt, downloadable templates, example automation scripts, and a package manifest. | [Codex-Assisted Setup](docs/chapter-09-codex-assisted-setup.md) |
 | `2026-07-22` | Added the current daily ARR release-ladder automation: English bridge behavior, German/Multi replacement rules, anime and Korean/Chinese fallback lanes, blocked-language cleanup, and final-state unmonitoring. | [Quality, Sizes, and Downgrades](docs/quality-sizing-and-downgrades.md) |
 | `2026-07-22` | Updated the `Sonarr` and `Radarr` profiles to document German `1080p` bridge releases, compact German final states, stricter language downgrade protection, and request-frontend safety. | [Sonarr Setup and Workflows](docs/sonarr-setup-and-workflows.md) |
 | `2026-07-22` | Added explicit `Seerr` request safety and updated `Jackett` health/recovery guidance for torrent fallback sources. | [Setup Checklist](docs/setup-checklist.md) |

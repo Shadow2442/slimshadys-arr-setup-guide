@@ -1,0 +1,20 @@
+{
+  "limits": {
+    "maxDailyIndexerHits": 800,
+    "maxMoviesPerRun": 100,
+    "maxEpisodesPerRun": 200,
+    "newMediaCooldownDays": 1,
+    "backlogCooldownDays": 30
+  },
+  "languageLadder": {
+    "normal": ["german_multi", "german", "english_bridge"],
+    "anime": ["german_multi", "english_dub_plus_original", "german_subbed_original", "japanese_original"],
+    "korean": ["korean_english_subs", "english_dub", "german_multi"],
+    "chinese": ["chinese_english_subs", "english_dub", "german_multi"]
+  },
+  "blockedMarkers": ["VFQ", "VFF", "TRUEFRENCH", "FRENCH", "EN-TR", "TR-EN", "TURG", "HEBREW"],
+  "finalState": {
+    "unmonitorVerifiedGermanMulti": true,
+    "keepBridgeFilesMonitored": true
+  }
+}

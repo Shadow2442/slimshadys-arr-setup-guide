@@ -47,8 +47,18 @@
   <tbody>
     <tr>
       <td><code>2026-07-22</code></td>
+      <td><strong>Codex and downloads.</strong> Added a Codex-assisted setup chapter, master prompt, templates, and safe example automation scripts.</td>
+      <td><a href="/slimshadys-arr-setup-guide/docs/chapter-09-codex-assisted-setup.html">Codex setup</a></td>
+    </tr>
+    <tr>
+      <td><code>2026-07-22</code></td>
       <td><strong>Plex API integration.</strong> Added ARR Connect guidance so Sonarr, Radarr, and Lidarr can notify Plex after imports and upgrades.</td>
       <td><a href="/slimshadys-arr-setup-guide/docs/plex-setup-and-workflows.html">Plex setup</a></td>
+    </tr>
+    <tr>
+      <td><code>2026-07-22</code></td>
+      <td><strong>Chapter deepening.</strong> Added the missing why/how/configure/test context across all eight setup chapters.</td>
+      <td><a href="/slimshadys-arr-setup-guide/docs/index.html">Docs index</a></td>
     </tr>
     <tr>
       <td><code>2026-07-22</code></td>
@@ -59,16 +69,6 @@
       <td><code>2026-06-06</code></td>
       <td><strong>German-friendly rules.</strong> Added Sonarr/Radarr fallback strategy, compact profiles, parser guardrails, and bulk fallback-search notes.</td>
       <td><a href="/slimshadys-arr-setup-guide/docs/chapter-04-german-friendly.html">German setup</a></td>
-    </tr>
-    <tr>
-      <td><code>2026-05-20</code></td>
-      <td><strong>Language protection.</strong> Added the Lucifer case study and safer German season preservation guidance.</td>
-      <td><a href="/slimshadys-arr-setup-guide/docs/sonarr-setup-and-workflows.html">Sonarr</a></td>
-    </tr>
-    <tr>
-      <td><code>2026-05-19</code></td>
-      <td><strong>Beginner polish.</strong> Expanded app pages with clearer introductions, install guidance, and setup flow.</td>
-      <td><a href="https://github.com/Shadow2442/slimshadys-arr-setup-guide/blob/main/CHANGELOG.md">Changelog</a></td>
     </tr>
   </tbody>
 </table>
@@ -132,6 +132,13 @@
     <span>App-by-app pages, specialist references, changelog links, and quick lookup material.</span>
     <em>Open chapter</em>
   </a>
+  <a class="chapter-card" href="/slimshadys-arr-setup-guide/docs/chapter-09-codex-assisted-setup.html">
+    <span class="chapter-number">09</span>
+    <span class="chapter-label">Copilot</span>
+    <strong>Codex-Assisted Setup and Downloads</strong>
+    <span>Master prompt, safe templates, example scripts, package manifest, and fully guided setup order.</span>
+    <em>Open chapter</em>
+  </a>
 </div>
 
 ## Operating Model
@@ -166,5 +173,6 @@
 ## Project Links
 
 - [All Docs](/slimshadys-arr-setup-guide/docs/index.html)
+- [Downloads and Templates](/slimshadys-arr-setup-guide/docs/downloads.html)
 - [GitHub Repository](https://github.com/Shadow2442/slimshadys-arr-setup-guide)
 - [Changelog](https://github.com/Shadow2442/slimshadys-arr-setup-guide/blob/main/CHANGELOG.md)

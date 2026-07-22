@@ -52,6 +52,10 @@
       <strong>8. Reference Appendix</strong>
       <span>All app-specific pages, specialist references, changelog links, and quick lookup material.</span>
     </a>
+    <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/chapter-09-codex-assisted-setup.html">
+      <strong>9. Codex-Assisted Setup and Downloads</strong>
+      <span>Master prompt, safe templates, example scripts, package manifest, and guided automation order.</span>
+    </a>
   </div>
 
   <div class="hub-section-title">App references</div>
@@ -100,6 +104,10 @@
       <strong>Quality, Sizes, and Downgrades</strong>
       <span>Release-ladder principles, size caps, compact keepers, and import cleanup.</span>
     </a>
+    <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/downloads.html">
+      <strong>Downloads and Templates</strong>
+      <span>Curated public package files, setup templates, example scripts, and the master Codex prompt.</span>
+    </a>
   </div>
 </div>
 
@@ -113,3 +121,4 @@
 6. [Archive and Size Strategy](/slimshadys-arr-setup-guide/docs/chapter-06-archive-size.html)
 7. [Operations and Troubleshooting](/slimshadys-arr-setup-guide/docs/chapter-07-operations-troubleshooting.html)
 8. [Reference Appendix](/slimshadys-arr-setup-guide/docs/chapter-08-reference.html)
+9. [Codex-Assisted Setup and Downloads](/slimshadys-arr-setup-guide/docs/chapter-09-codex-assisted-setup.html)

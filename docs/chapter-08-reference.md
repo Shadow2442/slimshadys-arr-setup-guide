@@ -11,6 +11,7 @@
 
 <div class="doc-nav">
   <a href="/slimshadys-arr-setup-guide/docs/chapter-07-operations-troubleshooting.html">Previous</a>
+  <a href="/slimshadys-arr-setup-guide/docs/chapter-09-codex-assisted-setup.html">Next</a>
   <a href="/slimshadys-arr-setup-guide/">Home</a>
   <a href="/slimshadys-arr-setup-guide/docs/index.html">All docs</a>
 </div>
@@ -37,6 +38,7 @@
       <a class="reference-card" href="/slimshadys-arr-setup-guide/docs/mdblist-import-lists.html"><strong>MDBList</strong><span>Movie, series, and anime discovery lists.</span></a>
       <a class="reference-card" href="/slimshadys-arr-setup-guide/docs/indexers-and-german-content.html"><strong>German Indexers</strong><span>Provider roles, scoring, quotas, and original-language lanes.</span></a>
       <a class="reference-card" href="/slimshadys-arr-setup-guide/docs/quality-sizing-and-downgrades.html"><strong>Quality and Sizes</strong><span>Release ladder, size caps, compact keepers, and cleanup.</span></a>
+      <a class="reference-card" href="/slimshadys-arr-setup-guide/docs/downloads.html"><strong>Downloads</strong><span>Templates, example scripts, master prompt, and package manifest.</span></a>
     </div>
   </section>
 
@@ -80,6 +82,7 @@ Use this appendix when you already know the area of the problem:
 | Discovery lists are not adding items | MDBList reference |
 | German indexer priority or language scoring is unclear | German indexer reference |
 | File sizes and downgrade logic are unclear | Quality and size reference |
+| You want Codex to help configure the stack | Chapter 9 and Downloads |
 
 ## Terms Used Throughout The Guide
 
@@ -113,3 +116,8 @@ Future changes should keep the same structure:
 - list what needs to be configured
 - include a small test or verification step
 - preserve the current card, table, and flow-block design language
+
+<div class="chapter-next">
+  <span>Continue</span>
+  <a href="/slimshadys-arr-setup-guide/docs/chapter-09-codex-assisted-setup.html">Chapter 9: Codex-Assisted Setup and Downloads</a>
+</div>
