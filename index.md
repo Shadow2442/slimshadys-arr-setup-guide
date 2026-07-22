@@ -39,6 +39,15 @@
   This guide grew out of months of tuning, breaking, fixing, resetting, and rebuilding my own ARR and Plex stack. More recently I brought Codex into the process as a setup copilot: it helped me audit the messy parts, turn hard-earned lessons into cleaner rules, automate repeat checks, and rebuild the setup with much more confidence instead of starting from scratch blindly again.
 </div>
 
+<div class="cinema-note">
+  <strong>Questions or feedback?</strong>
+  If something in the guide is unclear, missing, or broken, open a public GitHub feedback issue. Keep it project-related and do not include API keys, Plex tokens, private server URLs, personal media lists, or anything else sensitive.
+  <div class="source-chips">
+    <a href="https://github.com/Shadow2442/slimshadys-arr-setup-guide/issues/new/choose">Send feedback on GitHub</a>
+    <a href="https://github.com/Shadow2442/slimshadys-arr-setup-guide/issues">View open feedback</a>
+  </div>
+</div>
+
 ## Latest Guide Updates
 
 <table class="update-ledger">

@@ -1,0 +1,55 @@
+name: Guide feedback
+description: Ask a project-related question or suggest an improvement for the ARR setup guide.
+title: "[Feedback]: "
+labels:
+  - guide-feedback
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve the guide.
+
+        Please do not include API keys, Plex tokens, passwords, private server URLs, personal media lists, or anything else sensitive. GitHub issues are public.
+  - type: dropdown
+    id: feedback_type
+    attributes:
+      label: Feedback type
+      options:
+        - Question about the guide
+        - Setup clarification
+        - Missing topic
+        - Bug or broken link
+        - Template or script feedback
+        - Other project-related feedback
+    validations:
+      required: true
+  - type: input
+    id: page
+    attributes:
+      label: Page or chapter
+      description: Which page, chapter, template, or script is this about?
+      placeholder: "Example: Chapter 4, Plex setup page, arr-release-ladder.example.ps1"
+    validations:
+      required: false
+  - type: textarea
+    id: message
+    attributes:
+      label: Message
+      description: What confused you, what should be improved, or what question do you have?
+      placeholder: "Describe the issue or question. Keep it project-related and avoid private details."
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What would help?
+      description: Optional. Tell me what answer, example, diagram, template, or clarification would make this easier.
+    validations:
+      required: false
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety check
+      options:
+        - label: I did not include API keys, tokens, passwords, private server URLs, or other sensitive personal information.
+          required: true
