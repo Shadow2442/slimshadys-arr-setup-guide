@@ -82,6 +82,7 @@ This checklist is meant for people who are willing to configure things properly,
 Optional:
 
 - install `FlareSolverr` if some Jackett-backed torrent sites require challenge solving
+- install `Jellyseerr` or `Overseerr` if you want a request and discovery frontend
 - use `OpenAI Codex` if you want a practical setup assistant instead of configuring everything by hand
 
 Useful downloads:
@@ -93,6 +94,7 @@ Useful downloads:
 - `Jackett`: [GitHub Releases](https://github.com/Jackett/Jackett/releases)
 - `Plex`: [plex.tv/media-server-downloads](https://www.plex.tv/media-server-downloads/)
 - `FlareSolverr`: [GitHub Releases](https://github.com/FlareSolverr/FlareSolverr/releases)
+- `Jellyseerr`: [GitHub](https://github.com/Fallenbagel/jellyseerr)
 - `OpenAI Codex`: [OpenAI Academy](https://openai.com/academy/codex/)
 
 ## 1a. Understand the Flow
@@ -140,8 +142,10 @@ If you want the deeper reasoning and troubleshooting flow, read the dedicated pa
 
 Recommended default philosophy:
 
-- prefer `720p`
-- allow `1080p` fallback
+- use English fallback only as a temporary bridge
+- prefer German/Multi upgrades over English-only releases
+- allow German/Multi `1080p` as a fast bridge
+- keep compact German/Multi `720p` as the final archival target
 - use compact TV size limits
 
 Recommended extra settings:
@@ -154,7 +158,9 @@ Recommended extra settings:
 
 Recommended default philosophy:
 
-- compact `1080p`
+- compact German/Multi `1080p`
+- English fallback only when no file exists or no German/Multi candidate is available
+- strict title matching for same-year or similar-title releases
 - manual exceptions for giant premium releases
 
 Recommended extra settings:
@@ -208,13 +214,46 @@ Remember:
 - priority is only a tiebreaker
 - all enabled indexers are still searched
 
+### Jackett torrent fallback
+
+If you use `Jackett`, keep it selective.
+
+Recommended policy:
+
+- add only trackers you actually use
+- test each tracker inside Jackett before adding it to ARR
+- use tracker-specific Torznab feeds, not broad all-source noise
+- keep categories scoped to the ARR app, such as movie/video categories for Radarr
+- disable trackers that produce repeated failures, Cloudflare errors, rate limits, or bad results
+- re-enable a failed tracker only after both a normal search and a no-query/top-feed test are healthy
+
+Jackett is best as a fallback bridge next to Usenet, not as the center of the whole system.
+
 ## 8. Language Strategy
 
 Recommended universal rule:
 
 - build language-aware custom formats for the audio and subtitle combinations you actually care about
 - do not trust parser labels on faith
+- block suspicious non-target markers such as `VFQ`, `VFF`, `TRUEFRENCH`, `EN-TR`, `TR-EN`, and `TURG`
+- use scoped original-language fallback lanes for anime, Korean, and Chinese titles
+- unmonitor verified final-state compact German/Multi files
 - keep the regional or German-specific model on the dedicated specialist page
+
+## 8a. Seerr Request Frontend
+
+Use `Jellyseerr`, `Overseerr`, or a similar request frontend as a discovery and approval layer, not as a way around ARR rules.
+
+Recommended policy:
+
+- disable broad user auto-approval
+- manually approve large requests
+- avoid auto-monitoring every season for newly requested shows unless you truly want the whole show
+- send approved movies to the current standard Radarr profile
+- send approved series to the current standard Sonarr profile
+- let ARR handle search, download, import, rename, quality, and language replacement
+
+This prevents one request from adding a massive full-series queue by accident.
 
 ## 9. Movie Size Targets
 

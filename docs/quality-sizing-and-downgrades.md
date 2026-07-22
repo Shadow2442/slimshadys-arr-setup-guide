@@ -104,6 +104,21 @@ This matters because:
 
 - `1080p x265` can be smaller than `720p x264`
 
+## Release-Ladder Principle
+
+The current automation model is a release ladder, not a single hard quality profile.
+
+The important rule is:
+
+- fallback files are allowed to make something watchable
+- German/Multi files are the upgrade target
+- compact verified final files should be unmonitored
+
+That prevents two bad extremes:
+
+- strict German-only profiles that miss new movies and episodes for days
+- loose fallback profiles that later replace good German files with English or blocked-language releases
+
 ## Movie Philosophy
 
 Recommended default:
@@ -114,9 +129,10 @@ Recommended default:
 The current movie language strategy is:
 
 - normal movies use compact `1080p` or `720p` with `German` preferred
-- `English` is allowed as a fallback when German is not available yet
+- `English` is allowed as a fallback only when no file exists or no German/Multi candidate is available
 - later German releases should score high enough to replace English fallback files
 - anime movies may also allow `Japanese` as a third fallback
+- German/Multi should not be replaced by English-only files just because the English release has a higher source tier
 
 ### Radarr Main Profile
 
@@ -153,10 +169,12 @@ That kept the storage philosophy intact while allowing reasonable long-movie `72
 
 The compact custom-format caps currently used for fallback matching are:
 
-- `1080p compact = max 8 GB`
+- `1080p compact = max 4.8 GB` in the tighter compact reference setup
 - `720p compact = max 5 GB`
 
 Those caps are useful as scored custom formats because they encourage compact releases without turning the whole profile into a brittle hard filter.
+
+For compact `1080p` BluRay and BDRip releases, keep the lower bound permissive enough for real compact encodes. Good German/Multi `1080p` releases can sit around `1.7-2.1 GB`, especially with efficient codecs.
 
 ### Radarr Language Scoring Guardrails
 
@@ -191,18 +209,41 @@ The current series language strategy is:
 
 - normal active series use German-preferred `720p`
 - English can remain a fallback when German is not available
-- completed German `720p` seasons should be unmonitored
-- ended shows that are complete in German `720p` can be fully unmonitored
-- anime gets separate `DE` and `JAP/subbed` profiles instead of inheriting normal TV rules
+- German/Multi `1080p` can be accepted as a bridge for speed
+- compact German/Multi `720p` is the normal final archival target
+- completed final-state episodes and seasons should be unmonitored
+- anime, Korean, and Chinese titles get scoped original-language fallback behavior instead of inheriting normal TV rules
 
 ### Sonarr Series Profile
 
 Recommended:
 
 - put `720p` above `1080p`
-- leave `1080p` enabled as fallback
+- leave `1080p` enabled as fallback and German/Multi bridge
 - use a delay profile for `720p-first` series if you want to give smaller releases time to appear
-- keep a separate stricter profile for curated or finished German seasons where language protection matters more than chasing tiny source-tier upgrades
+- avoid creating many one-off strict profiles; keep standard profiles readable and let scoring plus automation guard the language ladder
+
+The standard behavior should be:
+
+- English fills an empty slot when no German/Multi candidate exists
+- German/Multi beats English regardless of source-tier glamour
+- German/Multi `1080p` remains monitored as a bridge
+- compact German/Multi `720p` becomes final and can be unmonitored
+
+For anime:
+
+- German dub or German plus original-language multi-audio is best
+- English dub plus original audio is usually better than weak German-subbed-only releases
+- German-subbed original audio is acceptable
+- best Japanese original is acceptable when no clear German subtitle proof exists
+
+For Korean and Chinese:
+
+- original audio with English subtitles is the first fallback
+- English dub is the next fallback
+- German dub or German/Multi is the final upgrade target
+
+Keep these regional fallbacks scoped. Do not let Korean, Japanese, or Chinese fallback rules apply to unrelated normal TV.
 
 ### Sonarr TV Size Targets
 
@@ -327,6 +368,7 @@ After live testing, that advice got stronger rather than weaker:
 - small waves keep SAB calmer
 - smaller waves expose bad releases earlier
 - giant downgrade pushes create more queue drama than value
+- daily automation should respect a realistic external API budget, such as a maximum around `800` indexer hits per day
 
 Why:
 
@@ -342,8 +384,29 @@ Be cautious with releases that look like:
 - `Teil 1`
 - `CD1`
 - `Disc 1`
+- `VFQ`
+- `VFF`
+- `TRUEFRENCH`
+- `EN-TR`
+- `TR-EN`
+- `TURG`
+- Turkish-only or Hebrew-only title markers when those languages are not part of the intended original-language lane
 
 These often create manual-import headaches, especially for movies.
+
+## Import Validation and Cleanup
+
+The automation should not blindly trust the release listing after a download finishes.
+
+For completed warning or import-pending jobs:
+
+- inspect the ARR manual-import parse result
+- compare actual parsed language against the intended ladder
+- remove and blocklist blocked-language grabs before they replace a good file
+- only delete an old English file after the new German/Multi file has been verified as a safe import
+- rescan and rename after import so Plex sees the normal ARR-managed path
+
+This catches cases where an indexer title looked like `German` or `MULTi`, but Sonarr or Radarr parsed the actual release as English plus French, Turkish, Hebrew, or another blocked language.
 
 ## When to Stop Tightening
 

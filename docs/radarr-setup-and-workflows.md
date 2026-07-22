@@ -209,12 +209,30 @@ Anime movies can use the same German and English logic, but may also allow Japan
 The key scoring shape is:
 
 - compact size match makes the release eligible
-- English fallback passes the minimum score
+- English fallback passes the minimum score only when no file exists or no German/Multi candidate is available
 - Japanese fallback passes only in the anime profile
 - German title terms reach the upgrade cutoff
 - later German releases can replace English fallback files
+- German/Multi files must not be replaced by English-only files
+- suspicious language markers are blocked or strongly penalized
 
 This is better than a strict German-only profile because the library keeps moving when a new movie has no German release yet.
+
+### Daily Movie Release Ladder
+
+The reference setup uses a daily Radarr pass for released monitored movies.
+
+It should:
+
+- find released movies with no file
+- find existing English fallback files that can now be upgraded
+- search in quota-aware batches
+- prefer compact German/Multi `1080p`
+- accept English only when no German/Multi candidate is available
+- protect against same-year or similar-title false positives
+- unmonitor verified compact German/Multi final files
+
+Title protection is important. A release can look attractive but still belong to the wrong movie when names and years are close. The automation should compare the Radarr movie title, release title, year, alternate titles, and known wrong-title patterns before grabbing.
 
 ## Movie Size Limits
 
@@ -238,10 +256,12 @@ Those `720p` values are the later live-tested version. The looser ceiling was ne
 
 The current custom-format size caps used for compact fallback matching are:
 
-- `Compact - 1080p Size = 1080p, max 8 GB`
+- `Compact - 1080p Size = 1080p, max 4.8 GB` in the tighter compact reference setup
 - `Compact - 720p Size = 720p, max 5 GB`
 
 These caps are intentionally profile-scored rather than used as a global hammer. That keeps the normal lane compact without making every edge case impossible.
+
+Some compact `1080p` BluRay releases are legitimately small. A `1080p` BDRip around `1.7-2.1 GB` can be acceptable when the release is German/Multi, especially when the group and codec are trusted. Do not make the lower size bound so high that good compact German releases are rejected.
 
 ## Language and Custom Format Strategy
 
@@ -278,9 +298,10 @@ Radarr can parse some releases as German even when the title only says things li
 The live-tested fix was:
 
 - score `Language - German Parser Signal` at `0`
-- score explicit German title terms higher
+- score explicit German title terms high enough to beat English fallback
 - do not reward generic `MULTi` by itself
 - do not treat bare `DUBBED` as German
+- block or heavily penalize French/Turkish/Hebrew-style title markers unless that language is intentionally part of the title's original-language lane
 
 The German title regex should require explicit German evidence, such as:
 
@@ -293,6 +314,20 @@ The German title regex should require explicit German evidence, such as:
 - a real `DL` audio marker, while avoiding `WEB-DL`
 
 This avoids accidentally treating French Canadian, generic multi-language, Chinese dubbed, or other unrelated releases as German.
+
+Useful blocked-language title markers include:
+
+- `VFQ`
+- `VFF`
+- `TRUEFRENCH`
+- `FRENCH`
+- `EN-TR`
+- `TR-EN`
+- `TURG`
+- Turkish-only markers
+- Hebrew-only markers
+
+Chinese, Japanese, and Korean should be allowed only in scoped original-language fallback lanes for titles where that is expected.
 
 ## Recommended Refinements and Enhancements
 
@@ -440,6 +475,7 @@ If the profile sounds clever enough to save the universe, test it on ten movies 
 8. Use the newer `720p` size caps.
 9. Build the `HD 720p downgrade` lane for controlled space-saving waves.
 10. Build the stricter `SD 480p downgrade` lane only for curated older-movie work.
-11. Unmonitor manual low-res keepers once you are happy with them.
+11. Keep request frontends on manual approval so one request cannot auto-add and monitor hundreds of unwanted movies or seasons.
+12. Unmonitor manual low-res or compact German/Multi keepers once you are happy with them.
 
 That order matches how the setup became more reliable in live testing instead of more decorative.

@@ -39,15 +39,15 @@
   <div class="hub-link-grid">
     <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/setup-checklist.html">
       <strong>ARR Setup Checklist</strong>
-      <span>Install order, folder basics, categories, and the safest path to getting the whole stack online.</span>
+      <span>Install order, folder basics, categories, Seerr request safety, and the safest path to getting the whole stack online.</span>
     </a>
     <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/sonarr-setup-and-workflows.html">
       <strong>Sonarr</strong>
-      <span>German-first normal TV, separate anime DE/JAP profiles, 720p active-series logic, and final-state season monitoring.</span>
+      <span>English bridge behavior, German/Multi upgrades, 1080p German bridge releases, compact 720p final states, and anime fallback logic.</span>
     </a>
     <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/radarr-setup-and-workflows.html">
       <strong>Radarr</strong>
-      <span>Compact DE/EN fallback profiles, anime DE/EN/JP fallback profiles, safer language scoring, and safe batch search strategy.</span>
+      <span>Compact German/Multi movie targets, English fallback only when needed, same-title protection, and safe batch search strategy.</span>
     </a>
     <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/lidarr-setup-and-workflows.html">
       <strong>Lidarr</strong>
@@ -63,7 +63,7 @@
     </a>
     <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/jackett-setup-and-workflows.html">
       <strong>Jackett</strong>
-      <span>Selective torrent support, fallback thinking, and keeping tracker coverage deliberate instead of noisy.</span>
+      <span>Selective torrent support, fallback thinking, tracker health recovery, and keeping coverage deliberate instead of noisy.</span>
     </a>
     <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/plex-setup-and-workflows.html">
       <strong>Plex</strong>
@@ -79,7 +79,7 @@
     </a>
     <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/quality-sizing-and-downgrades.html">
       <strong>Quality, Sizes, and Downgrades</strong>
-      <span>Profile logic, size rules, compact keepers, and storage-aware workflows that save space for real.</span>
+      <span>Release-ladder automation, profile logic, size rules, compact keepers, import validation, and storage-aware workflows.</span>
     </a>
   </div>
 </div>
@@ -128,8 +128,13 @@
 
 - Use broad indexers for daily work.
 - Preserve specialist or low-quota sources for when they really matter.
-- Prefer German `720p` for normal series, with a separate anime language split.
-- Prefer compact `1080p` for movies, with English fallback and German replacement upgrades.
+- Use English fallback as a temporary bridge only.
+- Prefer German/Multi over English even when the German file is a lower everyday quality tier.
+- Allow German/Multi `1080p` TV as a fast bridge, but keep compact German/Multi `720p` as the final series target.
+- Prefer compact German/Multi `1080p` for movies.
+- Use separate anime, Korean, and Chinese original-language lanes instead of forcing normal TV rules onto everything.
+- Block suspicious language markers like `VFQ`, `VFF`, `TRUEFRENCH`, `EN-TR`, `TR-EN`, and `TURG`.
+- Unmonitor verified final-state keepers.
 - Treat `480p` as a curated old-movie lane rather than a magical bulk shortcut.
 - Let `Lidarr` handle music with its own sources and workflow.
 

@@ -17,19 +17,30 @@ It focuses on:
 
 This guide is based on a real-world setup that was tuned and tested live, not just copied from disconnected wiki pages.
 
+## Latest Guide Updates
+
+| Updated | What changed | Read it here |
+| --- | --- | --- |
+| `2026-07-22` | Added the current daily ARR release-ladder automation: English bridge behavior, German/Multi replacement rules, anime and Korean/Chinese fallback lanes, blocked-language cleanup, and final-state unmonitoring. | [Quality, Sizes, and Downgrades](docs/quality-sizing-and-downgrades.md) |
+| `2026-07-22` | Updated the `Sonarr` and `Radarr` profiles to document German `1080p` bridge releases, compact German final states, stricter language downgrade protection, and request-frontend safety. | [Sonarr Setup and Workflows](docs/sonarr-setup-and-workflows.md) |
+| `2026-07-22` | Added explicit `Seerr` request safety and updated `Jackett` health/recovery guidance for torrent fallback sources. | [Setup Checklist](docs/setup-checklist.md) |
+| `2026-07-22` | Added Jackett tracker recovery details for Cloudflare, rate limits, failed top-feed/no-query tests, and narrow ARR category mapping. | [Jackett Setup and Workflows](docs/jackett-setup-and-workflows.md) |
+
 ## Latest Language and Fallback Notes
 
-The setup behind this guide was refined further after live `Sonarr` and `Radarr` language testing.
+The setup behind this guide was refined further after live `Sonarr` and `Radarr` language testing, including the daily release-ladder automation used in the reference setup.
 
 The most useful real-world improvements were:
 
-- `Sonarr` normal TV now prefers German `720p`, with English fallback only where it is still useful
-- `Sonarr` anime now uses separate `DE` and `JAP/subbed` `720p` profiles
-- completed German `720p` seasons can be unmonitored once they reach final state
+- `Sonarr` normal TV can use English only as a bridge when no German file exists yet
+- German or German plus English multi-audio should beat English-only releases regardless of quality tier
+- `Sonarr` may accept German `1080p` as a fast bridge, but compact German `720p` remains the archival target
+- completed German/Multi final-state episodes and seasons can be unmonitored once verified
 - `Radarr` normal movies now use compact `DE/EN` fallback profiles
-- `Radarr` anime movies get separate compact `DE/EN/JP` fallback profiles
+- `Radarr` anime movies get separate compact `DE/EN/JP` fallback behavior
 - hard Radarr release-profile language locks are replaced by custom-format scoring
 - parser-only German, generic `MULTi`, and bare `DUBBED` no longer count as proof of German audio
+- suspicious language markers such as `VFQ`, `VFF`, `TRUEFRENCH`, `EN-TR`, `TR-EN`, `TURG`, Turkish-only, Hebrew-only, and similar non-target signals should be blocked or heavily penalized
 
 That combination made the live setup:
 
@@ -37,6 +48,7 @@ That combination made the live setup:
 - better at replacing English fallback with German later
 - safer for anime original-language workflows
 - less likely to grab releases that only look correct because of weak title parsing
+- safer after import, because the automation checks actual parsed import language before replacing an existing file
 
 ## Background and Personal Experience
 
@@ -75,7 +87,7 @@ Optional but very useful additions:
 - `Import Lists` in `Sonarr`, `Radarr`, and `Lidarr`
 - `MDBList` as one of the easiest ways to build dynamic auto-import lists for movies and shows
 - `Lidarr` import lists for music-oriented sources like `Last.fm` and `Headphones`
-- `Jellyseerr` or similar request or discovery frontends
+- `Jellyseerr`, `Overseerr`, or similar request and discovery frontends
 - `FlareSolverr` if some torrent sites behind `Jackett` need anti-bot handling
 
 ## Download Links
@@ -113,6 +125,52 @@ At a high level, the process looks like this:
 7. `Plex` scans the library folders, scrapes metadata, and updates the libraries
 8. The media is ready to watch or listen to without further manual work
 
+## Daily Release-Ladder Automation
+
+The reference setup also uses a daily ARR maintenance run that checks monitored movies and episodes against the language ladder.
+
+The automation does four jobs:
+
+- find missing movies, episodes, and weak English fallback files that are already released
+- search in throttled batches so indexer quotas are not burned in one noisy wave
+- download the best currently available release according to the language ladder
+- verify imports, clean bad blocked-language grabs, and unmonitor final compact German/Multi keepers
+
+The current operating rules are:
+
+- if no file exists, accept English only when no better German/Multi candidate exists
+- if a German/Multi candidate exists, prefer it over English even when the English file has a higher quality tier
+- for normal TV, use German/Multi `1080p` as a speed bridge, but keep compact German/Multi `720p` as the final archival state
+- for movies, prefer compact German/Multi `1080p` and avoid `2160p`, remux, or wrong-title same-year traps unless chosen manually
+- for anime, prefer German dub or German multi, then English dub plus original audio, then German-subbed original audio, then best original Japanese when no clear subtitle proof exists
+- for Korean and Chinese titles, allow original audio with English subtitles as the fallback path, then English dub, then German dub or German/Multi as the final target
+- when a new German episode is found, scan earlier episodes in the same show or season because German catch-up releases often arrive together
+- once a file reaches its final verified state, unmonitor it so ARR does not keep poking a finished item
+
+The automation should also self-heal important settings drift, including German parser/title scores, compact size caps, selected release-group bonuses such as `FuN`, profile cutoffs, and blocked-language markers.
+
+## Seerr Request Frontend Safety
+
+Request frontends such as `Jellyseerr` and `Overseerr` are useful, but they should not be allowed to bypass the careful ARR rules.
+
+Recommended policy:
+
+- disable broad user auto-approval
+- manually approve large requests, especially full TV shows
+- do not auto-monitor every season by default unless you really want the whole show
+- route approved movies and series into the current standard ARR profiles
+- let `Radarr` and `Sonarr` own the final download, import, rename, and language logic
+
+This prevents one friendly request from becoming hundreds of surprise downloads, while still keeping Seerr useful as the front door for discovery.
+
+## Jackett Health and Torrent Fallback
+
+`Jackett` is covered in its own setup page, but the current live rule is worth repeating: keep it selective.
+
+Use Jackett for torrent fallback, not as the primary search engine for everything. Test noisy or flaky trackers manually, disable sources that cause repeated ARR health warnings, and only re-enable them after both a normal search and a no-query/top-feed style test are healthy again.
+
+For tracker categories, keep the categories narrow and relevant to the ARR app. For movie use, that usually means movie/video categories only, not every category a tracker exposes.
+
 ## Regional and Language-Specific Strategy
 
 The core setup in this guide is intentionally general.
@@ -134,12 +192,13 @@ That page holds the German-specific material so the rest of the guide can stay b
 
 If you only want the short version:
 
-- `Sonarr`: prefer German `720p` for normal TV, allow English fallback where useful, and use separate `DE` and `JAP/subbed` anime profiles
-- `Radarr`: prefer compact `1080p`, use `DE/EN` fallback for normal movies, and use `DE/EN/JP` fallback only for anime movies
+- `Sonarr`: allow English only as a bridge, prefer German/Multi upgrades, allow German `1080p` bridge releases, and archive at compact German/Multi `720p`
+- `Radarr`: prefer compact German/Multi `1080p`, allow English fallback only when no file or German candidate exists, and protect against wrong same-year title matches
 - `Lidarr`: use it for artists and albums, with its own quality and metadata flow
 - `SABnzbd`: enable `Ignore samples`, clean junk files, blacklist executable extensions, keep `Direct Unpack` off, and use modestly tuned server settings
 - use broad, healthy providers for daily work
 - keep specialist or low-quota providers as selective backups
+- keep request frontends such as `Jellyseerr` on manual approval for large requests, especially full-series imports
 
 ## Use Codex as a Setup Copilot
 
@@ -174,6 +233,7 @@ This repository is split into clear app and topic pages:
 - [MDBList Import Lists](docs/mdblist-import-lists.md)
 - [Indexers and German Content Strategy](docs/indexers-and-german-content.md)
 - [Quality, Sizes, and Downgrades](docs/quality-sizing-and-downgrades.md)
+- request frontend safety is covered in this README and the setup checklist
 
 ## Recommended Reading Order
 
@@ -194,6 +254,8 @@ This repository is split into clear app and topic pages:
 - Use categories that match each ARR app cleanly
 - Let the ARR apps handle naming and importing
 - Let `Plex` handle scraping, library presentation, and playback
+- Let fallback downloads be temporary bridges, not permanent winners
+- Verify actual import language before deleting or replacing an existing good file
 - Keep your main setup general, and add specialist language strategy only when you really need it
 - Change one thing at a time and test on real titles before you declare victory
 

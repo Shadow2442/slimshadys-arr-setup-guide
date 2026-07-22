@@ -160,11 +160,38 @@ Once Jackett is working, the useful refinements are:
 
 That keeps torrent support helpful instead of decorative and fragile.
 
+## Tracker Health and Recovery
+
+Some Jackett-backed trackers fail in ways that ARR can only report as an indexer health warning.
+
+Common failure causes:
+
+- Cloudflare or anti-bot pages
+- tracker API outages
+- rate limits
+- top-feed or no-query endpoints failing while normal searches still look partly alive
+- category mappings that do not match what `Sonarr` or `Radarr` expects
+
+The safest live workflow is:
+
+1. disable the failing tracker in ARR so it stops creating health noise
+2. test the tracker directly in Jackett
+3. test both a normal search and a no-query or top-feed style request
+4. keep it disabled while either test still fails
+5. re-enable it only after both tests are healthy
+6. keep the category list narrow and relevant to the ARR app
+
+For Radarr movie usage, do not enable every category the tracker exposes. Use only movie/video categories that the tracker actually supports.
+
+If a tracker keeps flapping, leave it as a manual fallback instead of letting it take part in daily automation.
+
 ## Good Habits
 
 - test sources manually
 - remove the ones that consistently return junk
 - avoid keeping broken or dead sources just because they used to work once
+- keep notes on which trackers are temporarily disabled and why
+- verify category IDs before reconnecting a tracker to ARR
 
 If a source creates more weird matches than useful results, that is not “coverage.”
 That is clutter wearing a fake moustache.

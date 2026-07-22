@@ -205,16 +205,47 @@ The core rule is simple:
 
 - do not trust `MULTi` alone as proof of German audio
 
-A better German-friendly preference order is:
+A better German-friendly preference order for normal movies and TV is:
 
-1. proven `German + Japanese` multi-audio
+1. proven `German + English` or `German + original-language` multi-audio
 2. confirmed `German audio`
-3. `English audio`
+3. `English audio` only as a bridge when no German/Multi candidate exists
 4. weak `multi-audio`
-5. `Japanese audio + German subtitles`
-6. other fallbacks
+5. scoped original-language fallback for anime, Korean, or Chinese titles
+6. other fallbacks only when intentionally allowed
 
 That keeps the stack from treating every shiny `MULTi` release as if it magically matches your real preference.
+
+### Original-Language Lanes
+
+Do not use one global fallback rule for everything.
+
+Use scoped lanes:
+
+- anime: German dub or German multi, then English dub plus original audio, then German-subbed original audio, then best Japanese original
+- Korean titles: Korean audio plus English subtitles, then English dub, then German dub or German/Multi
+- Chinese titles: Chinese audio plus English subtitles, then English dub, then German dub or German/Multi
+- normal TV and movies: English fallback only until German/Multi appears
+
+The point is to respect original-language media without letting unrelated releases slip through as generic `Any` language matches.
+
+### Blocked-Language Guardrails
+
+Block or heavily penalize languages and title markers that are not part of the intended ladder.
+
+Useful examples:
+
+- `VFQ`
+- `VFF`
+- `TRUEFRENCH`
+- `FRENCH`
+- `EN-TR`
+- `TR-EN`
+- `TURG`
+- Turkish-only releases
+- Hebrew-only releases
+
+If a blocked-language release still downloads because an indexer labeled it badly, the import cleanup lane should inspect the manual-import parse result, remove the bad download, blocklist it, and search again.
 
 ## Suggested Custom Formats for German-Friendly Setups
 
@@ -232,8 +263,8 @@ Useful building blocks:
 
 Example scoring model from the live setup behind this guide:
 
-- `German Parser Signal = 0`
-- `German Title Terms = 1600`
+- `German Parser Signal = 1600` only when paired with stronger evidence in the current reference setup
+- `German Title Terms = 2100`
 - `German Japanese Proven Multi Audio = 600`
 - `English Audio Fallback = 500`
 - `Dual Multi Audio = 300`
@@ -242,15 +273,17 @@ Example scoring model from the live setup behind this guide:
 - `Japanese Audio Fallback = 50`
 - `Original Audio Fallback = 75`
 
-Treat those values as a strong sample, not religious law.
+Treat those values as a strong sample, not religious law. The important part is the shape: German/Multi must outrank English fallback, while parser-only or generic multi signals must not be enough to beat real language evidence.
 
 ## Sonarr Notes
 
 For `Sonarr`, this German-friendly strategy works best when paired with:
 
 - `720p` first, `1080p` fallback
+- German/Multi `1080p` as a bridge when it appears before compact `720p`
 - compact TV size caps
 - codec-aware downgrade logic if you use a downgrade lane
+- daily previous-episode catch-up when a new German episode appears
 
 The German-specific part lives in the custom formats and scoring, not in trying to force every parser label to be honest.
 
@@ -261,6 +294,7 @@ For `Radarr`, pair this German-friendly strategy with:
 - a compact `1080p` main profile
 - built-in profile language set to `Any`
 - downgrade lanes that stay size-aware instead of blindly chasing lower resolutions
+- strict title matching so same-year or similar-title releases do not hijack a movie
 
 That keeps the language layer and the quality layer separated cleanly.
 

@@ -48,6 +48,9 @@ Use this as the quick project pulse. If you come back after a few days, this tab
 
 | Updated | What changed | Read it here |
 | --- | --- | --- |
+| `2026-07-22` | Added the current daily ARR release-ladder automation: English bridge behavior, German/Multi replacement rules, anime and Korean/Chinese fallback lanes, blocked-language cleanup, and final-state unmonitoring. | [Quality, Sizing, and Downgrades](/slimshadys-arr-setup-guide/docs/quality-sizing-and-downgrades.html) |
+| `2026-07-22` | Updated the Sonarr and Radarr profiles to document German `1080p` bridge releases, compact German final states, stricter language downgrade protection, and request-frontend safety. | [Sonarr Setup and Workflows](/slimshadys-arr-setup-guide/docs/sonarr-setup-and-workflows.html) |
+| `2026-07-22` | Added explicit `Seerr` request safety and updated `Jackett` health/recovery guidance for torrent fallback sources. | [Setup Checklist](/slimshadys-arr-setup-guide/docs/setup-checklist.html) |
 | `2026-06-06` | Added the current `Sonarr` normal-TV and anime language profile policy, including final-state season unmonitoring. | [Sonarr Setup and Workflows](/slimshadys-arr-setup-guide/docs/sonarr-setup-and-workflows.html) |
 | `2026-06-06` | Added the new `Radarr` compact fallback strategy for normal movies and anime movies. | [Radarr Setup and Workflows](/slimshadys-arr-setup-guide/docs/radarr-setup-and-workflows.html) |
 | `2026-06-06` | Documented safer language scoring, English fallback, German replacement upgrades, and parser-signal guardrails. | [Quality, Sizing, and Downgrades](/slimshadys-arr-setup-guide/docs/quality-sizing-and-downgrades.html) |
@@ -90,12 +93,39 @@ For the full running history, see the [project changelog](https://github.com/Sha
   <h3>Latest live tuning that helped</h3>
   <p>The guide now reflects the newer language and fallback rules that behaved better in real testing:</p>
   <div class="scope-tags">
-    <span><code>Sonarr German 720p TV</code></span>
-    <span><code>Sonarr anime DE/JAP split</code></span>
-    <span><code>Radarr DE/EN fallback</code></span>
-    <span><code>Radarr anime DE/EN/JP fallback</code></span>
-    <span>English until German exists</span>
-    <span>parser guardrails</span>
+    <span><code>English bridge only</code></span>
+    <span><code>German/Multi wins</code></span>
+    <span><code>TV 1080p bridge</code></span>
+    <span><code>TV 720p final</code></span>
+    <span><code>compact movie final</code></span>
+    <span>blocked-language cleanup</span>
+    <span>same-title guardrails</span>
+    <span>final-state unmonitoring</span>
+  </div>
+</div>
+
+<div class="scope-card">
+  <h3>Daily ARR release ladder</h3>
+  <p>The current reference setup runs a daily checked automation pass. It searches released missing items, upgrades English fallback files when German/Multi appears, validates actual import language before replacement, and unmonitors files that reach the final compact state.</p>
+  <div class="scope-tags">
+    <span>quota-aware batches</span>
+    <span>previous-episode catch-up</span>
+    <span>anime original-language lane</span>
+    <span>Korean and Chinese fallback lane</span>
+    <span><code>VFQ</code> / <code>TURG</code> blocks</span>
+    <span>queue and import checks</span>
+  </div>
+</div>
+
+<div class="scope-card">
+  <h3>Seerr and Jackett safety</h3>
+  <p>The guide now calls out request-front-end approval and torrent fallback health separately: Seerr should feed ARR without auto-approving huge surprise imports, and Jackett should stay selective with flaky trackers disabled until they test cleanly again.</p>
+  <div class="scope-tags">
+    <span>manual request approval</span>
+    <span>no full-show surprise grabs</span>
+    <span>ARR profiles still decide</span>
+    <span>selective torrent fallback</span>
+    <span>tracker health checks</span>
   </div>
 </div>
 
@@ -177,6 +207,7 @@ The real stack works like this:
 - the download client fetches the release
 - the ARR apps import, rename, and organize the final files
 - `Plex` scans the finished library and makes it available to watch or listen to
+- the daily release-ladder automation revisits monitored fallback files and missing released items, then upgrades them when better language matches appear
 
 When everything is configured properly, it becomes a mostly automated media pipeline instead of a pile of separate tools.
 
@@ -267,8 +298,13 @@ So yes, this guide is not only meant to be read by humans. It can also be handed
 
 - use broad indexers for daily work
 - preserve specialist or quota-limited sources for when they matter
-- prefer German `720p` for normal series, with separate anime language profiles
-- prefer compact `1080p` for movies, with English fallback and later German replacement
+- use English fallback as a temporary bridge only
+- prefer German/Multi over English even when the German file is a lower everyday quality tier
+- allow German/Multi `1080p` TV as a fast bridge, but keep compact German/Multi `720p` as the final series target
+- prefer compact German/Multi `1080p` for movies
+- use separate anime, Korean, and Chinese original-language lanes instead of forcing normal TV rules onto everything
+- block suspicious language markers like `VFQ`, `VFF`, `TRUEFRENCH`, `EN-TR`, `TR-EN`, and `TURG`
+- unmonitor verified final-state keepers
 - treat downgrades as a controlled workflow, not a magic button
 
 If a setting sounds too clever, test it on a few titles first. ARR tools are excellent at doing exactly what you told them, including the part you forgot you told them.

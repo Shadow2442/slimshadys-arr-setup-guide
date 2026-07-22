@@ -232,24 +232,49 @@ This makes Sonarr much less gullible when release names look convincing but the 
 
 ### Current Language Policy
 
-The live-tested setup now uses a clearer split between normal series and anime.
+The live-tested setup now uses a clearer release ladder instead of a strict German-only wall.
 
 For normal TV:
 
 - prefer `German`
-- allow `English` fallback when German is not available yet
-- let later German releases replace English fallback files
-- use `720p` as the normal target for ongoing and active shows
+- allow `English` fallback only when no file exists yet and no German/Multi candidate is available
+- never allow English-only or blocked-language releases to replace an existing German/Multi file
+- let later German or German plus English multi-audio releases replace English fallback files
+- allow German/Multi `1080p` as a fast bridge when that is the first good German release
+- keep compact German/Multi `720p` as the final archival target for normal TV
 
 For anime:
 
-- use `Anime DE lock 720p` when German or English dubs are the goal
-- use `Anime JAP lock 720p` when original Japanese audio with German subtitles is acceptable
-- keep both anime profiles at `720p`
-- prefer `German + Japanese` multi-audio when available
-- allow Japanese original audio with German subtitles as a valid anime fallback
+- prefer German dub or German plus original-language multi-audio when available
+- prefer English dub plus original audio over weak German-subbed-only releases when that is the better watchable version
+- use German-subbed original audio as a valid fallback
+- if there is no clear German subtitle proof, accept the best original Japanese release because it usually carries English subtitles
+- keep compact `720p` as the normal anime archival target unless a specific show needs a manual exception
 
-The important lesson is that anime should not inherit normal TV language behavior blindly. Anime often has a valid original-language path, while normal series should generally move toward German first and English second.
+For Korean and Chinese series:
+
+- allow original Korean or Chinese audio with English subtitles as the first fallback path
+- then prefer English dub if it exists
+- then replace with German dub or German/Multi when available
+- keep these original-language lanes scoped to the matching regional content
+
+The important lesson is that anime, Korean shows, and Chinese shows should not inherit normal TV language behavior blindly. Original-language media often has a valid fallback path, while normal TV should generally move toward German first and English second.
+
+### Daily Release-Ladder Automation
+
+The reference setup runs a daily checked automation pass for monitored shows and episodes.
+
+It should:
+
+- scan released missing episodes and existing English fallback files
+- search in limited batches to protect indexer quotas
+- prefer German/Multi whenever available
+- accept English only as a bridge when no German/Multi exists yet
+- validate actual manual-import language before replacing an old file
+- remove and blocklist bad grabs that parse as French, Turkish, Hebrew, or another blocked language
+- when a new German episode is found, scan earlier episodes in the same show or season for German upgrades
+
+This last point matters for active series. If episode `8` appears in German, episodes `1-7` often have German releases too, even if Sonarr never upgraded them by RSS alone.
 
 ### Completed Season Monitoring
 
@@ -257,9 +282,10 @@ Once a season has reached its intended final state, unmonitor it.
 
 Use this pattern:
 
-- ended series with complete German `720p` files can be fully unmonitored
-- running series should keep future seasons monitored, but completed German `720p` seasons can be unmonitored
-- anime seasons that have reached the chosen `DE` or `JAP/subbed` profile target can also be unmonitored
+- ended series with complete compact German/Multi `720p` files can be fully unmonitored
+- running series should keep future episodes monitored, but completed final-state episodes or seasons can be unmonitored
+- German/Multi `1080p` bridge files should stay monitored until the compact `720p` final appears
+- anime seasons that have reached the chosen German, English-dub/original, or original-language final target can also be unmonitored
 
 This prevents Sonarr from revisiting finished work just because a technically higher source tier appears later.
 
@@ -336,6 +362,13 @@ That combination gives you the useful behavior:
 
 This is the practical pattern to copy whenever a finished German season keeps attracting flashy but worse English upgrades.
 
+The newer preference is to avoid creating many one-off strict profiles. Keep the standard profiles simple and let custom-format scoring plus the automation guard enforce the ladder:
+
+- English fallback can fill an empty slot
+- English fallback cannot downgrade a German/Multi slot
+- German/Multi can upgrade English even across normal quality-tier boundaries
+- compact final-state files are unmonitored after verification
+
 ## Real-World Example: Active German 720p Enforcement
 
 The later live pass tightened the active-series policy:
@@ -350,6 +383,7 @@ That gave the library a clean split:
 - active gaps stay searchable
 - finished German seasons stay preserved
 - English fallback is allowed only where it is still useful
+- German catch-up searches revisit earlier episodes when a new German episode appears
 
 The practical rule is simple: if it is done, stop touching it; if it is still airing, only monitor what can still improve.
 
