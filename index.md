@@ -16,12 +16,12 @@
 
   <aside class="home-hero-panel">
     <div class="home-panel-card">
-      <strong>Legal frame</strong>
-      <span>Swiss private use, original-version preservation, and family viewing. Not public redistribution, uploading, or an open media service.</span>
+      <strong>Core promise</strong>
+      <span>I built this for a real home library: keep the original versions I care about, make German or family-friendly versions easy to watch, use English only as a temporary bridge, and stop touching files once they are verified keepers.</span>
     </div>
     <div class="home-panel-card">
-      <strong>Core promise</strong>
-      <span>English can fill a gap. German/Multi wins when available. Final verified keepers are unmonitored.</span>
+      <strong>Legal notice</strong>
+      <span>This setup is written from my Swiss private-use perspective, where my personal use case is legal. That may not be true where you live. Please respect your local laws, service rules, copyright rules, and common sense; do not use this as a public redistribution setup.</span>
     </div>
     <div class="home-source-row">
       <a href="https://www.ige.ch/en/protecting-your-ip/copyright/using-a-work/copyright-on-the-internet">Swiss IPI</a>
