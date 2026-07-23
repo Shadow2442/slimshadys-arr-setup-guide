@@ -2,6 +2,10 @@
 
 This is a practical chapter-based guide for setting up `Sonarr`, `Radarr`, `Lidarr`, `SABnzbd`, `Jackett`, `Seerr`, and `Plex` for a reliable home-media workflow without letting the system turn into a noisy pile of half-matched downloads.
 
+[Open the full website version](https://shadow2442.github.io/slimshadys-arr-setup-guide/)
+
+> On mobile GitHub, the GitHub Pages website link can be hidden or easy to miss. Use the link above if you landed on this README first.
+
 It is written from the perspective of a Swiss movie aficionado who wants to preserve original versions of films while also making movies and series comfortable for family to watch in their native language.
 
 It focuses on:
@@ -36,6 +40,7 @@ Sources:
 
 | Updated | What changed | Read it here |
 | --- | --- | --- |
+| `2026-07-23` | Added a mobile readability pass and a clear website link near the top of the README for mobile GitHub visitors. | [Website](https://shadow2442.github.io/slimshadys-arr-setup-guide/) |
 | `2026-07-22` | Rebuilt the website around a proper chapter structure: start here, base setup, download pipeline, German-friendly setup, multi-language/original-language setup, archive strategy, operations, and reference appendix. | [Docs Index](docs/index.md) |
 | `2026-07-22` | Added Codex-assisted setup material, a master prompt, downloadable templates, example automation scripts, and a package manifest. | [Codex-Assisted Setup](docs/chapter-09-codex-assisted-setup.md) |
 | `2026-07-22` | Added the current daily ARR release-ladder automation: English bridge behavior, German/Multi replacement rules, anime and Korean/Chinese fallback lanes, blocked-language cleanup, and final-state unmonitoring. | [Quality, Sizes, and Downgrades](docs/quality-sizing-and-downgrades.md) |
