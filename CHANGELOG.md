@@ -2,6 +2,14 @@
 
 All notable guide updates for `SlimShady's ARR Setup Guide` are tracked here.
 
+## 2026-07-23
+
+### Changed
+
+- Added a mobile readability pass for the GitHub Pages guide after Reddit feedback.
+- Tightened mobile spacing, converted dense grids to one-column layouts on small screens, wrapped code safely, and made tables stack into readable mobile cards.
+- Added the mobile readability pass to the latest guide updates on the homepage.
+
 ## 2026-07-22
 
 ### Added

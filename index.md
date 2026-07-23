@@ -68,6 +68,11 @@
   </thead>
   <tbody>
     <tr>
+      <td><code>2026-07-23</code></td>
+      <td><strong>Mobile readability pass.</strong> Added a simpler mobile layout for phones: tighter spacing, one-column cards, wrapped code blocks, and stacked tables.</td>
+      <td><a href="/slimshadys-arr-setup-guide/">Home</a></td>
+    </tr>
+    <tr>
       <td><code>2026-07-22</code></td>
       <td><strong>AI setup copilot.</strong> Added a simple starter prompt for Codex or another on-machine AI to guide readers through the full ARR and Plex setup step by step.</td>
       <td><a href="/slimshadys-arr-setup-guide/docs/chapter-09-codex-assisted-setup.html">AI setup</a></td>
@@ -86,11 +91,6 @@
       <td><code>2026-07-22</code></td>
       <td><strong>Plex API integration.</strong> Added ARR Connect guidance so Sonarr, Radarr, and Lidarr can notify Plex after imports and upgrades.</td>
       <td><a href="/slimshadys-arr-setup-guide/docs/plex-setup-and-workflows.html">Plex setup</a></td>
-    </tr>
-    <tr>
-      <td><code>2026-07-22</code></td>
-      <td><strong>Chapter deepening.</strong> Added the missing why/how/configure/test context across all eight setup chapters.</td>
-      <td><a href="/slimshadys-arr-setup-guide/docs/index.html">Docs index</a></td>
     </tr>
   </tbody>
 </table>
