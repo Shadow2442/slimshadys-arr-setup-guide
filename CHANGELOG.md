@@ -9,6 +9,8 @@ All notable guide updates for `SlimShady's ARR Setup Guide` are tracked here.
 - Added a mobile readability pass for the GitHub Pages guide after Reddit feedback.
 - Tightened mobile spacing, converted dense grids to one-column layouts on small screens, wrapped code safely, and made tables stack into readable mobile cards.
 - Added the mobile readability pass to the latest guide updates on the homepage.
+- Added a related-guides section explaining how this practical setup guide fits next to TRaSH Guides and PCJones' German Usenet guide.
+- Added TRaSH and PCJones positioning to the reference appendix and README so readers can quickly understand what to use each guide for.
 
 ## 2026-07-22
 

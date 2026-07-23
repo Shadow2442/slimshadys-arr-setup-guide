@@ -85,6 +85,32 @@ Use this appendix when you already know the area of the problem:
 | File sizes and downgrade logic are unclear | Quality and size reference |
 | You want Codex to help configure the stack | Chapter 9 and Downloads |
 
+## Related Guides And What This One Adds
+
+There are already excellent ARR resources, and this guide is not trying to pretend they do not exist. The difference is focus.
+
+<div class="comparison-panel compact-panel">
+  <div class="comparison-grid">
+    <div class="comparison-card">
+      <strong>TRaSH Guides</strong>
+      <span>Best for deep ARR concepts: quality profiles, custom formats, scoring, naming, and the technical logic behind upgrades.</span>
+      <a href="https://trash-guides.info/">Open TRaSH Guides</a>
+    </div>
+    <div class="comparison-card">
+      <strong>PCJones Usenet Guide</strong>
+      <span>Best for German Usenet orientation: providers, indexers, German/DL basics, and the regional download ecosystem.</span>
+      <a href="https://github.com/PCJones/usenet-guide">Open PCJones guide</a>
+    </div>
+    <div class="comparison-card">
+      <strong>This guide</strong>
+      <span>Best for an opinionated end-to-end home-library setup: German/Multi targets, English bridge behavior, anime/Korean/Chinese lanes, Seerr safety, Plex integration, queue cleanup, daily automation, and Codex-assisted runbooks.</span>
+      <a href="/slimshadys-arr-setup-guide/docs/chapter-01-start-here.html">Start the setup path</a>
+    </div>
+  </div>
+</div>
+
+Use the big reference projects when you want to understand the raw ARR building blocks. Use this guide when you want a practical path through the whole system and the maintenance rules that keep a family Plex library pleasant after the first setup excitement wears off.
+
 ## Terms Used Throughout The Guide
 
 | Term | Meaning |

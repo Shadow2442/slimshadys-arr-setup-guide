@@ -56,6 +56,26 @@
   </div>
 </div>
 
+<section class="comparison-panel">
+  <span class="section-kicker">Related guides</span>
+  <h3>How this guide fits next to TRaSH and PCJones</h3>
+  <p>I see this guide as a practical companion, not a replacement for the big reference projects. <a href="https://trash-guides.info/">TRaSH Guides</a> are still the deep technical reference for profiles, custom formats, and scoring. <a href="https://github.com/PCJones/usenet-guide">PCJones' Usenet Guide</a> is a strong German/DL Usenet foundation. This site focuses on the messy home-library layer around them: how the parts connect, why the rules exist, how English fallback gets replaced later, how German/Multi becomes the keeper, and how to keep Plex, Seerr, ARR apps, download clients, and daily checks working together.</p>
+  <div class="comparison-grid">
+    <div class="comparison-card">
+      <strong>Use TRaSH for</strong>
+      <span>Detailed custom-format concepts, quality-profile mechanics, and advanced ARR scoring background.</span>
+    </div>
+    <div class="comparison-card">
+      <strong>Use PCJones for</strong>
+      <span>German Usenet orientation, indexer/provider context, and a proven dual-language starting point.</span>
+    </div>
+    <div class="comparison-card">
+      <strong>Use this guide for</strong>
+      <span>A full Swiss private-use Plex/ARR setup with German-friendly rules, original-language lanes, request safety, compact archive targets, runbooks, and Codex-assisted automation.</span>
+    </div>
+  </div>
+</section>
+
 ## Latest Guide Updates
 
 <table class="update-ledger">
@@ -67,6 +87,11 @@
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td><code>2026-07-23</code></td>
+      <td><strong>Related guide positioning.</strong> Added a clear explanation of how this practical setup guide relates to TRaSH Guides and PCJones' German Usenet guide.</td>
+      <td><a href="/slimshadys-arr-setup-guide/docs/chapter-08-reference.html">Reference</a></td>
+    </tr>
     <tr>
       <td><code>2026-07-23</code></td>
       <td><strong>Mobile readability pass.</strong> Added a simpler mobile layout for phones: tighter spacing, one-column cards, wrapped code blocks, and stacked tables.</td>
@@ -86,11 +111,6 @@
       <td><code>2026-07-22</code></td>
       <td><strong>Codex and downloads.</strong> Added a Codex-assisted setup chapter, master prompt, templates, and safe example automation scripts.</td>
       <td><a href="/slimshadys-arr-setup-guide/docs/chapter-09-codex-assisted-setup.html">Codex setup</a></td>
-    </tr>
-    <tr>
-      <td><code>2026-07-22</code></td>
-      <td><strong>Plex API integration.</strong> Added ARR Connect guidance so Sonarr, Radarr, and Lidarr can notify Plex after imports and upgrades.</td>
-      <td><a href="/slimshadys-arr-setup-guide/docs/plex-setup-and-workflows.html">Plex setup</a></td>
     </tr>
   </tbody>
 </table>

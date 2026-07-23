@@ -40,6 +40,7 @@ Sources:
 
 | Updated | What changed | Read it here |
 | --- | --- | --- |
+| `2026-07-23` | Added a related-guides section that explains how this practical setup guide fits next to TRaSH Guides and PCJones' German Usenet guide. | [Reference Appendix](docs/chapter-08-reference.md) |
 | `2026-07-23` | Added a mobile readability pass and a clear website link near the top of the README for mobile GitHub visitors. | [Website](https://shadow2442.github.io/slimshadys-arr-setup-guide/) |
 | `2026-07-22` | Rebuilt the website around a proper chapter structure: start here, base setup, download pipeline, German-friendly setup, multi-language/original-language setup, archive strategy, operations, and reference appendix. | [Docs Index](docs/index.md) |
 | `2026-07-22` | Added Codex-assisted setup material, a master prompt, downloadable templates, example automation scripts, and a package manifest. | [Codex-Assisted Setup](docs/chapter-09-codex-assisted-setup.md) |
@@ -297,10 +298,13 @@ App and topic references:
 
 ## Sources and Inspiration
 
+- [TRaSH Guides](https://trash-guides.info/) for deep ARR profile, custom-format, scoring, and quality concepts
 - [PCJones Usenet Guide](https://github.com/PCJones/usenet-guide#2-usenet-indexer)
 - Servarr docs for `Sonarr`, `Radarr`, `Lidarr`, and indexer priorities
 - real-world ARR tuning and live testing
 - practical debugging of quota limits, failed grabs, language mismatches, and import problems
+
+This guide is meant as a practical companion to those references: the source guides explain many of the building blocks, while this project shows how I connect them into one German-friendly Plex/ARR home-library workflow with Seerr, Plex, download clients, daily checks, archive rules, and Codex-assisted runbooks.
 
 In other words:
 

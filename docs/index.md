@@ -50,7 +50,7 @@
     </a>
     <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/chapter-08-reference.html">
       <strong>8. Reference Appendix</strong>
-      <span>All app-specific pages, specialist references, changelog links, and quick lookup material.</span>
+      <span>All app-specific pages, related-guide comparison, specialist references, changelog links, and quick lookup material.</span>
     </a>
     <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/chapter-09-codex-assisted-setup.html">
       <strong>9. Codex-Assisted Setup and Downloads</strong>
@@ -107,6 +107,10 @@
     <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/downloads.html">
       <strong>Downloads and Templates</strong>
       <span>Curated public package files, setup templates, example scripts, and the master Codex prompt.</span>
+    </a>
+    <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/chapter-08-reference.html#related-guides-and-what-this-one-adds">
+      <strong>Related Guides</strong>
+      <span>Where TRaSH Guides, PCJones' German Usenet guide, and this end-to-end Plex/ARR setup guide each fit best.</span>
     </a>
   </div>
 </div>
