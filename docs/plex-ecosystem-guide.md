@@ -174,6 +174,7 @@ Keep the rule simple: Plex may be exposed intentionally; ARR, download clients, 
 | --- | --- |
 | Plex | Use Plex Remote Access or a deliberate proxy/tunnel setup. Test from outside the LAN. |
 | Sonarr/Radarr/Lidarr | Keep LAN/VPN/admin-only. Use strong passwords and avoid public exposure. |
+| Seerr/Jellyseerr/Overseerr | Treat as semi-public only if you intentionally offer requests to family or friends. Use authentication, conservative permissions, safe default profiles, and keep Plex Watchlist auto-request limited to trusted users. |
 | SABnzbd/qBittorrent | Keep private. These can control downloads and files. |
 | Jackett/Prowlarr | Keep private. They hold indexer access and search capability. |
 | Dashboards | Public only if auth is strong and no sensitive admin app is exposed casually. |
