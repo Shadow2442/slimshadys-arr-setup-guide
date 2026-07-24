@@ -42,7 +42,7 @@ Sources:
 
 | Updated | What changed | Read it here |
 | --- | --- | --- |
-| `2026-07-24` | Added a concrete Quick Start installation path plus deployment choices for Windows LAN, Docker, hosted servers, reverse proxies, dashboards, and mounted storage. | [Quick Start Installation](docs/quick-start-installation.md) |
+| `2026-07-24` | Added a concrete Quick Start installation path plus expanded deployment choices for Windows 11 servers, Docker, hosted servers, WebDAV/cloud storage, dashboards, reverse proxies, and mounted storage. | [Quick Start Installation](docs/quick-start-installation.md) |
 | `2026-07-23` | Added a related-guides section that explains how this practical setup guide fits next to TRaSH Guides and PCJones' German Usenet guide. | [Reference Appendix](docs/chapter-08-reference.md) |
 | `2026-07-23` | Added a mobile readability pass and a clear website link near the top of the README for mobile GitHub visitors. | [Website](https://shadow2442.github.io/slimshadys-arr-setup-guide/) |
 | `2026-07-22` | Rebuilt the website around a proper chapter structure: start here, base setup, download pipeline, German-friendly setup, multi-language/original-language setup, archive strategy, operations, and reference appendix. | [Docs Index](docs/index.md) |

@@ -18,7 +18,7 @@
 
 <div class="quickstart-warning">
   <strong>Do not copy my paths blindly.</strong>
-  The examples below use neutral placeholder names. Replace drive letters, folder names, ports, hostnames, quality goals, and language preferences with your own setup. If your server uses Docker, unionfs, rclone, WebDAV, or remote storage, keep the logic but adapt the paths.
+  The examples below use neutral placeholder names. Replace drive letters, folder names, ports, hostnames, quality goals, and language preferences with your own setup. If your server uses Docker, unionfs, rclone, WebDAV, cloud storage, or remote storage, keep the logic but adapt the paths. See <a href="/slimshadys-arr-setup-guide/docs/deployment-options.html">Deployment Options</a> before choosing that path.
 </div>
 
 ## The Public-Friendly Setup Path

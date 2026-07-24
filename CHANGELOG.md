@@ -9,7 +9,8 @@ All notable guide updates for `SlimShady's ARR Setup Guide` are tracked here.
 - Added a public-friendly Quick Start installation path before the deeper chapters.
 - Added copyable first-run setup steps, folder placeholders, safe initial profiles, verification checklists, and collapsible explanation/alternative blocks.
 - Added clearer guidance that paths, folder names, languages, quality goals, and deployment style must be customized instead of copied blindly.
-- Added a deployment options reference for Windows LAN, Docker, hosted servers, reverse proxies, dashboards, Cloudflare-style tunnels, and mounted storage.
+- Added a deployment options reference for Windows 11 home servers, Docker, hosted servers, reverse proxies, dashboards, WebDAV, Google Drive/Dropbox-style cloud storage, Cloudflare-style tunnels, and mounted storage.
+- Added a dashboard matrix covering simple bookmarks, local DNS/hosts shortcuts, Homepage, Homarr, Organizr, Dashy, Homer, Heimdall, and admin-only grouping for ARR/download/indexer tools.
 
 ### Changed
 
