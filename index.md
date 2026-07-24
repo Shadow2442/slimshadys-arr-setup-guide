@@ -91,6 +91,11 @@
   <tbody>
     <tr>
       <td><code>2026-07-24</code></td>
+      <td><strong>Quality modes and AI guardrails.</strong> Added archive-first, availability-first, and cinema-first guidance, clearer bridge-vs-keeper storage rules, and stricter AI verification behavior.</td>
+      <td><a href="/slimshadys-arr-setup-guide/docs/quality-sizing-and-downgrades.html">Quality modes</a></td>
+    </tr>
+    <tr>
+      <td><code>2026-07-24</code></td>
       <td><strong>Plex ecosystem map.</strong> Added the broader guide backbone covering server choices, storage, playback, metadata, users, dashboards, security, operations, and migration.</td>
       <td><a href="/slimshadys-arr-setup-guide/docs/plex-ecosystem-guide.html">Plex ecosystem</a></td>
     </tr>
@@ -108,11 +113,6 @@
       <td><code>2026-07-23</code></td>
       <td><strong>Mobile readability pass.</strong> Added a simpler mobile layout for phones: tighter spacing, one-column cards, wrapped code blocks, and stacked tables.</td>
       <td><a href="/slimshadys-arr-setup-guide/">Home</a></td>
-    </tr>
-    <tr>
-      <td><code>2026-07-22</code></td>
-      <td><strong>AI setup copilot.</strong> Added a simple starter prompt for Codex or another on-machine AI to guide readers through the full ARR and Plex setup step by step.</td>
-      <td><a href="/slimshadys-arr-setup-guide/docs/chapter-09-codex-assisted-setup.html">AI setup</a></td>
     </tr>
   </tbody>
 </table>

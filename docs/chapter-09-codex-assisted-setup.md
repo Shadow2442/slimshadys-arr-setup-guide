@@ -46,6 +46,21 @@ ARR setup is not difficult because any single setting is hard. It is difficult b
 
 Codex is useful because it can hold that whole map in working memory, compare settings, explain the consequence of a change, and write small helper scripts. It should still work slowly and visibly. A home media stack is not the place for mysterious automation theatre.
 
+## AI Guardrails: Verify, Then Act
+
+Prompts are living instructions. If the assistant suggests a bad change, tighten the rule, document the safer behavior, and test again. The goal is not to make the AI sound confident. The goal is to make the setup more predictable.
+
+| Before action | What the AI should do |
+| --- | --- |
+| Inspect | Read the current app settings, folders, profiles, queues, and health state before proposing changes. |
+| Summarize | Explain what it found without printing API keys, tokens, private paths, server URLs, databases, or logs. |
+| Dry-run | Describe the intended change and the expected result before applying anything risky. |
+| Back up | Back up or export databases/configs before profile rewrites, imports, deletes, or migration work. |
+| Batch small | Test one title, one profile, one import path, or one queue cleanup before scaling. |
+| Verify | Confirm the app state, file result, Plex scan, and remaining queue after the change. |
+
+A useful AI assistant may recommend actions. It should not treat release titles as proof, delete files before checking the destination, publish private config values, expose admin apps, or bulk-import a whole library before the basic path is proven.
+
 ## Quick Prompt For Any On-Machine AI
 
 This guide is written so Codex, or a similar local/on-machine AI assistant, can use it as a step-by-step playbook. The important part is not that the AI does everything alone. The useful part is that it can keep the setup order straight, ask for only the details it needs, adapt examples to the real machine, and test each piece before the next one starts.

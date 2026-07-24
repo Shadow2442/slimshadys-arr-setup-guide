@@ -40,6 +40,7 @@
     <div class="reference-grid">
       <a class="reference-card" href="#arr-download-pipeline"><strong>ARR pipeline</strong><span>Sonarr, Radarr, Lidarr, SABnzbd, Jackett/Prowlarr, and import categories.</span></a>
       <a class="reference-card" href="#language-and-archive-model"><strong>Language ladder</strong><span>German-friendly, Multi, anime, Korean, Chinese, English fallback, and final states.</span></a>
+      <a class="reference-card" href="#quality-philosophy-keeper-bridge-or-wait"><strong>Quality modes</strong><span>Archive-first, availability-first, and cinema-first decisions before scoring.</span></a>
       <a class="reference-card" href="#operations-and-automation"><strong>Operations</strong><span>Daily checks, queues, stuck downloads, bad imports, and final-state unmonitoring.</span></a>
     </div>
   </section>
@@ -90,6 +91,18 @@ Plex should see clean final libraries. Download clients and ARR working folders 
 
 For cloud or WebDAV storage, treat mount stability as a core service. If the mount disappears, Plex and ARR can both make bad decisions. Keep a small local cache where it helps, monitor mount health, and avoid letting import jobs write into unreliable paths blindly.
 
+### Keeper Vs Transient Storage
+
+Not every file deserves the same storage treatment. A clean library separates short-lived working files from files that are meant to stay.
+
+| State | Where it belongs | Rule |
+| --- | --- | --- |
+| Temporary downloads | Downloader working folders | Never scanned by Plex. Safe to retry, repair, or remove after import. |
+| Bridge files | ARR final folders, still monitored | Accept only if the chosen profile allows them, and let better releases replace them later. |
+| Final keepers | Plex library folders | Verified language, quality, naming, and playback. These can be unmonitored once stable. |
+| Premium manual copies | Separate profile or manual handling | Remux, 4K, IMAX, or collector copies should be intentional, not accidental upgrades. |
+| Cloud or mounted archive | Synced or mounted final library | Verify locally first when possible; monitor mount health before automatic deletes. |
+
 ## ARR Download Pipeline
 
 The working chain is:
@@ -116,6 +129,18 @@ This guide is German-friendly but not German-only. The goal is a library that ke
 | Music | Complete album with correct tracks and metadata | Better quality if available | Verified album unmonitored |
 
 Blocked-language markers belong in scoring and post-import checks. A release that says `MULTi` is not automatically good; it should still prove German, intended original audio, or an allowed fallback path.
+
+## Quality Philosophy: Keeper, Bridge, Or Wait
+
+Quality is not just resolution. A `1080p` file can still be a bad watch if it is a camera recording, has messy audio, hardcoded subtitles, or misleading release tags. Decide which mode each library uses before exposing requests to other users.
+
+| Mode | What it means | Recommended use |
+| --- | --- | --- |
+| Archive-first | Wait for clean `WEB`, `BluRay`, or proven `DVD` releases and reject obvious early capture files. | Default mode for movies, family libraries, and anything you want to keep. |
+| Availability-first | Allow a temporary lower-quality bridge, keep it monitored, then replace it with a better release later. | Optional admin-only lane for rare or time-sensitive media. |
+| Cinema-first | If only bad early releases exist, do not download them. Wait or watch the movie outside the stack. | Best for people who care more about the first viewing than "available now". |
+
+Normal public/default profiles should reject or heavily penalize markers like `CAM`, `CAMRip`, `TS`, `TELESYNC`, `HDTS`, `TC`, `TELECINE`, `HDTC`, `MIC`, `MD`, and `LINE`. If you allow them at all, give that lane a clear temporary name so nobody mistakes it for the proper library path.
 
 ## Request Flow And Users
 

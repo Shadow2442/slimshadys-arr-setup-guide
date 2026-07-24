@@ -12,12 +12,17 @@ All notable guide updates for `SlimShady's ARR Setup Guide` are tracked here.
 - Added clearer guidance that paths, folder names, languages, quality goals, and deployment style must be customized instead of copied blindly.
 - Added a deployment options reference for Windows 11 home servers, Docker, hosted servers, reverse proxies, dashboards, WebDAV, Google Drive/Dropbox-style cloud storage, Cloudflare-style tunnels, and mounted storage.
 - Added a dashboard matrix covering simple bookmarks, local DNS/hosts shortcuts, Homepage, Homarr, Organizr, Dashy, Homer, Heimdall, and admin-only grouping for ARR/download/indexer tools.
+- Added release quality modes for archive-first, availability-first, and cinema-first setups.
+- Added normal-profile guardrails for early capture markers such as `CAM`, `TS`, `HDTC`, `HDTS`, `MIC`, `MD`, and `LINE`.
+- Added keeper-vs-bridge storage guidance so temporary files, final library files, cloud mounts, and manual premium releases are handled differently.
+- Added AI guardrails that require inspection, summary, dry-run, backup, small batches, and verification before risky changes.
 
 ### Changed
 
 - Updated the homepage, docs index, and README so new readers start with concrete setup steps before the long-form reasoning.
 - Updated the homepage, docs index, reference appendix, and README so the new Plex ecosystem map becomes the visible umbrella for the broader guide.
 - Updated the reference appendix so advanced deployment choices are separated from the beginner setup path.
+- Lightened muted site text and added explicit contrast overrides for table, caption, small, metadata, and details text.
 
 ## 2026-07-23
 

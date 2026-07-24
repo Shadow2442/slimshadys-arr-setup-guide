@@ -143,6 +143,30 @@ That prevents two bad extremes:
 - strict German-only profiles that miss new movies and episodes for days
 - loose fallback profiles that later replace good German files with English or blocked-language releases
 
+## Release Quality Modes
+
+Pick the quality philosophy before tuning scores. This prevents the profile from quietly accepting files you would never actually want in the library.
+
+| Mode | Default stance | Configure it like this | Good for |
+| --- | --- | --- | --- |
+| Archive-first | Wait for clean releases and keep only files that belong in the library. | Reject or strongly penalize bad early markers, prefer compact `WEB`, `BluRay`, or proven `DVD` releases, and unmonitor final keepers after verification. | Family libraries and long-term collections. |
+| Availability-first | Allow a temporary bridge only when no clean release exists yet. | Put early or lower-quality releases in a separate profile/tag, keep them monitored, and make better German/Multi or original-language releases replace them later. | People who knowingly want "something now" and accept cleanup later. |
+| Cinema-first | Do not automate bad early movie files at all. | Reject early capture markers and wait for a proper home release, or watch the movie outside the automation path. | Movie-first users who would rather wait than archive a bad experience. |
+
+The recommended public default is archive-first. Availability-first can be useful, but it should be explicit and reversible. Do not hide bad early releases inside the normal profile where they look like ordinary keepers.
+
+### Bad Early Release Markers
+
+Treat these as reject or heavy-penalty markers in normal profiles:
+
+- `CAM`, `CAMRip`
+- `TS`, `TELESYNC`, `HDTS`
+- `TC`, `TELECINE`, `HDTC`
+- `MIC`, `MD`, `LINE`
+- `HC` or hardcoded subtitles, unless you deliberately need that specific subtitle behavior
+
+If you keep an availability-first lane, make it obvious in the name, for example `Temporary Bridge - Replace Later`. It should never be the default request profile for family users.
+
 ## Movie Philosophy
 
 Recommended default:

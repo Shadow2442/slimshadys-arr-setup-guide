@@ -55,6 +55,18 @@ The storage choice decides how painful imports, scans, deletes, and upgrades bec
 
 For cloud-backed setups, the safer model is usually: download locally, import locally, verify locally, then move or sync to cloud. Directly downloading or importing into a cloud mount can work, but it is less forgiving when the provider rate-limits, disconnects, or delays file operations.
 
+### Keeper Storage Vs Bridge Storage
+
+Storage planning gets easier when you stop treating every file as permanent. Keep download work areas, temporary bridge releases, and final archive files conceptually separate even when they live on the same physical disk.
+
+| Storage role | Suggested handling |
+| --- | --- |
+| Download cache | Fast local disk if possible. It can be cleaned aggressively because ARR imports the final file elsewhere. |
+| Temporary bridge releases | Keep monitored, allow later upgrades, and avoid syncing them as if they are final collector files. |
+| Final archive files | Stable Plex library path, clear naming, backups for configs/metadata, and optional unmonitoring after verification. |
+| Cloud or WebDAV archive | Use local import/cache first when possible, then sync or move after verification. Watch mount health before automatic deletes. |
+| Manual premium files | Use a separate profile or manual workflow for Remux, 4K, IMAX, or special editions so automation does not balloon storage by accident. |
+
 ## Dashboard And Local Shortcuts
 
 A normal home setup does not need a full reverse proxy on day one, but it should still be pleasant to use.

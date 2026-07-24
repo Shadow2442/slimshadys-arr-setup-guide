@@ -45,6 +45,7 @@ Sources:
 
 | Updated | What changed | Read it here |
 | --- | --- | --- |
+| `2026-07-24` | Added quality-mode guidance for archive-first, availability-first, and cinema-first setups, plus clearer bridge-vs-keeper storage rules and stricter AI verification guardrails. | [Quality, Sizes, and Downgrades](docs/quality-sizing-and-downgrades.md) |
 | `2026-07-24` | Added a Plex ecosystem map that broadens the guide beyond ARR into Plex server design, storage, playback, metadata, users, dashboards, security, operations, and migration. | [Plex Ecosystem Guide](docs/plex-ecosystem-guide.md) |
 | `2026-07-24` | Added a concrete Quick Start installation path plus expanded deployment choices for Windows 11 servers, Docker, hosted servers, WebDAV/cloud storage, dashboards, reverse proxies, and mounted storage. | [Quick Start Installation](docs/quick-start-installation.md) |
 | `2026-07-23` | Added a related-guides section that explains how this practical setup guide fits next to TRaSH Guides and PCJones' German Usenet guide. | [Reference Appendix](docs/chapter-08-reference.md) |
