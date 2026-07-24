@@ -38,6 +38,7 @@
       <a class="reference-card" href="/slimshadys-arr-setup-guide/docs/mdblist-import-lists.html"><strong>MDBList</strong><span>Movie, series, and anime discovery lists.</span></a>
       <a class="reference-card" href="/slimshadys-arr-setup-guide/docs/indexers-and-german-content.html"><strong>German Indexers</strong><span>Provider roles, scoring, quotas, and original-language lanes.</span></a>
       <a class="reference-card" href="/slimshadys-arr-setup-guide/docs/quality-sizing-and-downgrades.html"><strong>Quality and Sizes</strong><span>Release ladder, size caps, compact keepers, and cleanup.</span></a>
+      <a class="reference-card" href="/slimshadys-arr-setup-guide/docs/deployment-options.html"><strong>Deployment Options</strong><span>Windows LAN, Docker, reverse proxy, dashboards, and mounted storage choices.</span></a>
       <a class="reference-card" href="/slimshadys-arr-setup-guide/docs/downloads.html"><strong>Downloads</strong><span>Templates, example scripts, master prompt, and package manifest.</span></a>
     </div>
   </section>
@@ -83,6 +84,7 @@ Use this appendix when you already know the area of the problem:
 | Discovery lists are not adding items | MDBList reference |
 | German indexer priority or language scoring is unclear | German indexer reference |
 | File sizes and downgrade logic are unclear | Quality and size reference |
+| Your setup uses Docker, reverse proxy, hosted servers, or mounted storage | Deployment options |
 | You want Codex to help configure the stack | Chapter 9 and Downloads |
 
 ## Related Guides And What This One Adds

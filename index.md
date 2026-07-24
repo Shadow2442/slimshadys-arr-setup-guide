@@ -10,7 +10,8 @@
     <p>This guide is written from the perspective of a Swiss movie aficionado: keep original versions and original audio where they matter, but make movies and series comfortable for family to watch in their native language.</p>
     <p><strong>Built from months of real-world setup work.</strong> This guide grew out of months of tuning, breaking, fixing, resetting, and rebuilding my own ARR and Plex stack. More recently I brought Codex into the process as a setup copilot: it helped me audit the messy parts, turn hard-earned lessons into cleaner rules, automate repeat checks, and rebuild the setup with much more confidence instead of starting from scratch blindly again.</p>
     <div class="home-hero-actions">
-      <a class="primary-link" href="/slimshadys-arr-setup-guide/docs/chapter-01-start-here.html">Start Chapter 1</a>
+      <a class="primary-link" href="/slimshadys-arr-setup-guide/docs/quick-start-installation.html">Start Quick Setup</a>
+      <a class="secondary-link" href="/slimshadys-arr-setup-guide/docs/chapter-01-start-here.html">Read Chapter 1</a>
       <a class="secondary-link" href="/slimshadys-arr-setup-guide/docs/index.html">Browse All Docs</a>
     </div>
   </div>
@@ -88,6 +89,11 @@
   </thead>
   <tbody>
     <tr>
+      <td><code>2026-07-24</code></td>
+      <td><strong>Quick Start setup path.</strong> Added concrete setup steps, customization warnings, collapsible explanations, and deployment choices for non-Windows or remote setups.</td>
+      <td><a href="/slimshadys-arr-setup-guide/docs/quick-start-installation.html">Quick Start</a></td>
+    </tr>
+    <tr>
       <td><code>2026-07-23</code></td>
       <td><strong>Related guide positioning.</strong> Added a clear explanation of how this practical setup guide relates to TRaSH Guides and PCJones' German Usenet guide.</td>
       <td><a href="/slimshadys-arr-setup-guide/docs/chapter-08-reference.html">Reference</a></td>
@@ -107,17 +113,19 @@
       <td><strong>Feedback form.</strong> Added a public GitHub feedback form for questions, unclear sections, broken links, and project-related suggestions.</td>
       <td><a href="https://github.com/Shadow2442/slimshadys-arr-setup-guide/issues/new/choose">Send feedback</a></td>
     </tr>
-    <tr>
-      <td><code>2026-07-22</code></td>
-      <td><strong>Codex and downloads.</strong> Added a Codex-assisted setup chapter, master prompt, templates, and safe example automation scripts.</td>
-      <td><a href="/slimshadys-arr-setup-guide/docs/chapter-09-codex-assisted-setup.html">Codex setup</a></td>
-    </tr>
   </tbody>
 </table>
 
 ## Chapter Index
 
 <div class="chapter-grid">
+  <a class="chapter-card" href="/slimshadys-arr-setup-guide/docs/quick-start-installation.html">
+    <span class="chapter-number">00</span>
+    <span class="chapter-label">Quick path</span>
+    <strong>Quick Start Installation</strong>
+    <span>The concrete first-run path: folders, install order, safe profiles, tests, and what to customize before scaling.</span>
+    <em>Open chapter</em>
+  </a>
   <a class="chapter-card" href="/slimshadys-arr-setup-guide/docs/chapter-01-start-here.html">
     <span class="chapter-number">01</span>
     <span class="chapter-label">Orientation</span>

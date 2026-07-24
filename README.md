@@ -6,6 +6,8 @@ This is a practical chapter-based guide for setting up `Sonarr`, `Radarr`, `Lida
 
 > On mobile GitHub, the GitHub Pages website link can be hidden or easy to miss. Use the link above if you landed on this README first.
 
+[Start with the Quick Start Installation path](docs/quick-start-installation.md)
+
 It is written from the perspective of a Swiss movie aficionado who wants to preserve original versions of films while also making movies and series comfortable for family to watch in their native language.
 
 It focuses on:
@@ -40,6 +42,7 @@ Sources:
 
 | Updated | What changed | Read it here |
 | --- | --- | --- |
+| `2026-07-24` | Added a concrete Quick Start installation path plus deployment choices for Windows LAN, Docker, hosted servers, reverse proxies, dashboards, and mounted storage. | [Quick Start Installation](docs/quick-start-installation.md) |
 | `2026-07-23` | Added a related-guides section that explains how this practical setup guide fits next to TRaSH Guides and PCJones' German Usenet guide. | [Reference Appendix](docs/chapter-08-reference.md) |
 | `2026-07-23` | Added a mobile readability pass and a clear website link near the top of the README for mobile GitHub visitors. | [Website](https://shadow2442.github.io/slimshadys-arr-setup-guide/) |
 | `2026-07-22` | Rebuilt the website around a proper chapter structure: start here, base setup, download pipeline, German-friendly setup, multi-language/original-language setup, archive strategy, operations, and reference appendix. | [Docs Index](docs/index.md) |
@@ -213,7 +216,11 @@ That page holds the German-specific material so the rest of the guide can stay b
 
 ## Quick Start
 
-If you only want the short version:
+If you only want the practical first-run setup path, start here:
+
+- [Quick Start Installation](docs/quick-start-installation.md)
+
+The short policy version is:
 
 - `Sonarr`: allow English only as a bridge, prefer German/Multi upgrades, allow German `1080p` bridge releases, and archive at compact German/Multi `720p`
 - `Radarr`: prefer compact German/Multi `1080p`, allow English fallback only when no file or German candidate exists, and protect against wrong same-year title matches
@@ -251,6 +258,7 @@ This repository is now organized in two layers:
 
 Recommended chapter path:
 
+- [Quick Start Installation](docs/quick-start-installation.md)
 - [Chapter 1: Start Here](docs/chapter-01-start-here.md)
 - [Chapter 2: Base Setup Step by Step](docs/chapter-02-base-setup.md)
 - [Chapter 3: Download Pipeline and Daily Automation](docs/chapter-03-download-pipeline.md)
@@ -272,18 +280,20 @@ App and topic references:
 - [MDBList Import Lists](docs/mdblist-import-lists.md)
 - [Indexers and German Content Strategy](docs/indexers-and-german-content.md)
 - [Quality, Sizes, and Downgrades](docs/quality-sizing-and-downgrades.md)
+- [Deployment Options](docs/deployment-options.md)
 - request frontend safety is covered in this README and the setup checklist
 
 ## Recommended Reading Order
 
-1. [Start Here](docs/chapter-01-start-here.md)
-2. [Base Setup Step by Step](docs/chapter-02-base-setup.md)
-3. [Download Pipeline and Daily Automation](docs/chapter-03-download-pipeline.md)
-4. [German-Friendly Setup](docs/chapter-04-german-friendly.md)
-5. [Multi-Language and Original-Language Setup](docs/chapter-05-multilanguage-original-language.md)
-6. [Archive and Size Strategy](docs/chapter-06-archive-size.md)
-7. [Operations and Troubleshooting](docs/chapter-07-operations-troubleshooting.md)
-8. [Reference Appendix](docs/chapter-08-reference.md)
+1. [Quick Start Installation](docs/quick-start-installation.md)
+2. [Start Here](docs/chapter-01-start-here.md)
+3. [Base Setup Step by Step](docs/chapter-02-base-setup.md)
+4. [Download Pipeline and Daily Automation](docs/chapter-03-download-pipeline.md)
+5. [German-Friendly Setup](docs/chapter-04-german-friendly.md)
+6. [Multi-Language and Original-Language Setup](docs/chapter-05-multilanguage-original-language.md)
+7. [Archive and Size Strategy](docs/chapter-06-archive-size.md)
+8. [Operations and Troubleshooting](docs/chapter-07-operations-troubleshooting.md)
+9. [Reference Appendix](docs/chapter-08-reference.md)
 
 ## Core Principles
 

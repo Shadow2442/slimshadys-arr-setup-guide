@@ -1189,6 +1189,116 @@ a:hover {
   color: #ffffff;
 }
 
+.quickstart-warning {
+  margin: 1rem 0 1.35rem;
+  padding: 1rem 1.1rem;
+  border-radius: 18px;
+  border: 1px solid rgba(251, 191, 36, 0.34);
+  background:
+    linear-gradient(135deg, rgba(251, 191, 36, 0.16), transparent 42%),
+    linear-gradient(180deg, rgba(30, 41, 59, 0.92), rgba(15, 23, 42, 0.92));
+  color: #fde68a;
+  box-shadow: 0 16px 32px rgba(2, 6, 23, 0.2);
+}
+
+.quickstart-warning strong {
+  color: #fef3c7;
+}
+
+.quickstart-warning a {
+  color: #bfdbfe;
+  font-weight: 900;
+}
+
+.setup-steps {
+  display: grid;
+  gap: 16px;
+  margin: 1rem 0 1.6rem;
+}
+
+.setup-step-card {
+  position: relative;
+  padding: 1.1rem 1.14rem 1.16rem 4rem;
+  border-radius: 22px;
+  border: 1px solid rgba(96, 165, 250, 0.22);
+  background:
+    linear-gradient(135deg, rgba(37, 99, 235, 0.13), transparent 38%),
+    linear-gradient(180deg, rgba(15, 23, 42, 0.96), rgba(22, 32, 51, 0.92));
+  box-shadow: 0 18px 36px rgba(2, 6, 23, 0.22);
+}
+
+.setup-step-card > span:first-child {
+  position: absolute;
+  left: 1.08rem;
+  top: 1.05rem;
+  display: inline-flex;
+  width: 2rem;
+  height: 2rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 1px solid rgba(74, 222, 128, 0.34);
+  background: rgba(20, 83, 45, 0.28);
+  color: #bbf7d0;
+  font-weight: 900;
+}
+
+.setup-step-card h3 {
+  margin: 0 0 0.42rem;
+  color: #f8fafc;
+}
+
+.setup-step-card p {
+  color: #dbeafe;
+}
+
+.setup-step-card details,
+.page-content details {
+  margin: 0.85rem 0 0;
+  border-radius: 14px;
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  background: rgba(2, 6, 23, 0.26);
+  overflow: hidden;
+}
+
+.setup-step-card summary,
+.page-content summary {
+  cursor: pointer;
+  padding: 0.72rem 0.82rem;
+  color: #bfdbfe;
+  font-weight: 900;
+}
+
+.setup-step-card details p,
+.page-content details p {
+  margin: 0;
+  padding: 0 0.82rem 0.82rem;
+  color: #dbeafe;
+}
+
+.checklist-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 0.8rem;
+}
+
+.checklist-grid label {
+  display: flex;
+  gap: 0.55rem;
+  align-items: flex-start;
+  padding: 0.72rem 0.82rem;
+  border-radius: 14px;
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  background: rgba(15, 23, 42, 0.62);
+  color: #dbeafe;
+}
+
+.checklist-grid input {
+  margin-top: 0.22rem;
+  accent-color: #4ade80;
+}
+
 .source-chips {
   display: flex;
   flex-wrap: wrap;
@@ -1528,6 +1638,8 @@ a:hover {
   .reference-card,
   .comparison-panel,
   .comparison-card,
+  .quickstart-warning,
+  .setup-step-card,
   .info-card,
   .mini-card,
   .cinema-note,
@@ -1543,8 +1655,22 @@ a:hover {
   .guide-hub,
   .scope-card,
   .edition-card,
-  .chapter-card {
+  .chapter-card,
+  .setup-step-card {
     padding: 1rem;
+  }
+
+  .setup-step-card {
+    padding-left: 1rem;
+  }
+
+  .setup-step-card > span:first-child {
+    position: static;
+    margin-bottom: 0.58rem;
+  }
+
+  .checklist-grid {
+    grid-template-columns: 1fr;
   }
 
   .home-hero-copy h2,

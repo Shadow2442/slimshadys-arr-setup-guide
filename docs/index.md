@@ -20,6 +20,10 @@
 
   <div class="hub-section-title">Setup chapters</div>
   <div class="hub-link-grid">
+    <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/quick-start-installation.html">
+      <strong>0. Quick Start Installation</strong>
+      <span>The concrete first-run path: choose edition, create folders, install apps, set safe profiles, and test before scaling.</span>
+    </a>
     <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/chapter-01-start-here.html">
       <strong>1. Start Here</strong>
       <span>Goal, architecture, reader path, and the rules that shape the whole setup.</span>
@@ -108,6 +112,10 @@
       <strong>Downloads and Templates</strong>
       <span>Curated public package files, setup templates, example scripts, and the master Codex prompt.</span>
     </a>
+    <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/deployment-options.html">
+      <strong>Deployment Options</strong>
+      <span>Simple Windows LAN, Docker, hosted servers, reverse proxies, dashboards, and mounted storage tradeoffs.</span>
+    </a>
     <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/chapter-08-reference.html#related-guides-and-what-this-one-adds">
       <strong>Related Guides</strong>
       <span>Where TRaSH Guides, PCJones' German Usenet guide, and this end-to-end Plex/ARR setup guide each fit best.</span>
@@ -117,12 +125,13 @@
 
 ## Recommended Reading Path
 
-1. [Start Here](/slimshadys-arr-setup-guide/docs/chapter-01-start-here.html)
-2. [Base Setup Step by Step](/slimshadys-arr-setup-guide/docs/chapter-02-base-setup.html)
-3. [Download Pipeline and Daily Automation](/slimshadys-arr-setup-guide/docs/chapter-03-download-pipeline.html)
-4. [German-Friendly Setup](/slimshadys-arr-setup-guide/docs/chapter-04-german-friendly.html)
-5. [Multi-Language and Original-Language Setup](/slimshadys-arr-setup-guide/docs/chapter-05-multilanguage-original-language.html)
-6. [Archive and Size Strategy](/slimshadys-arr-setup-guide/docs/chapter-06-archive-size.html)
-7. [Operations and Troubleshooting](/slimshadys-arr-setup-guide/docs/chapter-07-operations-troubleshooting.html)
-8. [Reference Appendix](/slimshadys-arr-setup-guide/docs/chapter-08-reference.html)
-9. [Codex-Assisted Setup and Downloads](/slimshadys-arr-setup-guide/docs/chapter-09-codex-assisted-setup.html)
+1. [Quick Start Installation](/slimshadys-arr-setup-guide/docs/quick-start-installation.html)
+2. [Start Here](/slimshadys-arr-setup-guide/docs/chapter-01-start-here.html)
+3. [Base Setup Step by Step](/slimshadys-arr-setup-guide/docs/chapter-02-base-setup.html)
+4. [Download Pipeline and Daily Automation](/slimshadys-arr-setup-guide/docs/chapter-03-download-pipeline.html)
+5. [German-Friendly Setup](/slimshadys-arr-setup-guide/docs/chapter-04-german-friendly.html)
+6. [Multi-Language and Original-Language Setup](/slimshadys-arr-setup-guide/docs/chapter-05-multilanguage-original-language.html)
+7. [Archive and Size Strategy](/slimshadys-arr-setup-guide/docs/chapter-06-archive-size.html)
+8. [Operations and Troubleshooting](/slimshadys-arr-setup-guide/docs/chapter-07-operations-troubleshooting.html)
+9. [Reference Appendix](/slimshadys-arr-setup-guide/docs/chapter-08-reference.html)
+10. [Codex-Assisted Setup and Downloads](/slimshadys-arr-setup-guide/docs/chapter-09-codex-assisted-setup.html)

@@ -14,9 +14,15 @@
 </div>
 
 <div class="doc-nav">
+  <a href="/slimshadys-arr-setup-guide/docs/quick-start-installation.html">Quick Start</a>
   <a href="/slimshadys-arr-setup-guide/">Home</a>
   <a href="/slimshadys-arr-setup-guide/docs/chapter-02-base-setup.html">Next chapter</a>
   <a href="/slimshadys-arr-setup-guide/docs/index.html">All docs</a>
+</div>
+
+<div class="quickstart-warning">
+  <strong>Looking for exact setup steps?</strong>
+  Start with <a href="/slimshadys-arr-setup-guide/docs/quick-start-installation.html">Quick Start Installation</a>. This chapter explains the model and decisions behind the setup, so the rules do not feel like magic numbers later.
 </div>
 
 <div class="edition-layout">
