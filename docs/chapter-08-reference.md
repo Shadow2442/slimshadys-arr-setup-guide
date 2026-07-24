@@ -34,6 +34,7 @@
     <span class="section-kicker">Special topics</span>
     <h3>Rules and strategy references</h3>
     <div class="reference-grid">
+      <a class="reference-card" href="/slimshadys-arr-setup-guide/docs/plex-ecosystem-guide.html"><strong>Plex Ecosystem</strong><span>Server choices, storage, playback, users, dashboards, security, operations, and migration.</span></a>
       <a class="reference-card" href="/slimshadys-arr-setup-guide/docs/setup-checklist.html"><strong>Setup Checklist</strong><span>Compact operational setup and sanity checks.</span></a>
       <a class="reference-card" href="/slimshadys-arr-setup-guide/docs/mdblist-import-lists.html"><strong>MDBList</strong><span>Movie, series, and anime discovery lists.</span></a>
       <a class="reference-card" href="/slimshadys-arr-setup-guide/docs/indexers-and-german-content.html"><strong>German Indexers</strong><span>Provider roles, scoring, quotas, and original-language lanes.</span></a>
@@ -49,6 +50,7 @@
     <table>
       <thead><tr><th>Date</th><th>Change</th></tr></thead>
       <tbody>
+        <tr><td><code>2026-07-24</code></td><td>Added the Plex ecosystem map so readers can orient around server design, storage, playback, metadata, users, dashboards, security, operations, and migration before diving into ARR tuning.</td></tr>
         <tr><td><code>2026-07-22</code></td><td>Added the AI setup copilot prompt so readers can give Codex or another on-machine AI the guide URL and be walked through the full setup step by step.</td></tr>
         <tr><td><code>2026-07-22</code></td><td>Chapter structure, release ladder, Seerr safety, Jackett recovery, original-language lanes, archive targets, and bad-language cleanup.</td></tr>
         <tr><td><code>2026-06-06</code></td><td>German-friendly Sonarr and Radarr language profile policy.</td></tr>
@@ -84,6 +86,7 @@ Use this appendix when you already know the area of the problem:
 | Discovery lists are not adding items | MDBList reference |
 | German indexer priority or language scoring is unclear | German indexer reference |
 | File sizes and downgrade logic are unclear | Quality and size reference |
+| You want the whole Plex ecosystem map | Plex Ecosystem Guide |
 | Your setup uses Docker, reverse proxy, hosted servers, or mounted storage | Deployment options |
 | You want Codex to help configure the stack | Chapter 9 and Downloads |
 

@@ -4,7 +4,7 @@
 
 <div class="guide-hub">
   <h2>Documentation Index</h2>
-  <p>This is the full map of the guide. The chapters are the recommended reading path. The app pages are reference material for specific tools.</p>
+  <p>This is the full map of the Plex ecosystem guide. The chapters are the recommended reading path. The app pages are reference material for specific tools.</p>
 
   <div class="hero-badges">
     <span>Chapter path</span>
@@ -20,6 +20,10 @@
 
   <div class="hub-section-title">Setup chapters</div>
   <div class="hub-link-grid">
+    <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/plex-ecosystem-guide.html">
+      <strong>Plex Ecosystem Guide</strong>
+      <span>The umbrella map for server choices, storage, playback, metadata, users, dashboards, security, ARR automation, operations, and migration.</span>
+    </a>
     <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/quick-start-installation.html">
       <strong>0. Quick Start Installation</strong>
       <span>The concrete first-run path: choose edition, create folders, install apps, set safe profiles, and test before scaling.</span>
@@ -92,6 +96,10 @@
 
   <div class="hub-section-title">Special topics</div>
   <div class="hub-link-grid">
+    <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/plex-ecosystem-guide.html">
+      <strong>Plex Ecosystem Map</strong>
+      <span>Whole-stack context for Plex server design, storage, users, metadata, dashboards, remote access, daily maintenance, and recovery.</span>
+    </a>
     <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/setup-checklist.html">
       <strong>Setup Checklist</strong>
       <span>The compact operational checklist for quick setup and sanity checks.</span>
@@ -125,13 +133,14 @@
 
 ## Recommended Reading Path
 
-1. [Quick Start Installation](/slimshadys-arr-setup-guide/docs/quick-start-installation.html)
-2. [Start Here](/slimshadys-arr-setup-guide/docs/chapter-01-start-here.html)
-3. [Base Setup Step by Step](/slimshadys-arr-setup-guide/docs/chapter-02-base-setup.html)
-4. [Download Pipeline and Daily Automation](/slimshadys-arr-setup-guide/docs/chapter-03-download-pipeline.html)
-5. [German-Friendly Setup](/slimshadys-arr-setup-guide/docs/chapter-04-german-friendly.html)
-6. [Multi-Language and Original-Language Setup](/slimshadys-arr-setup-guide/docs/chapter-05-multilanguage-original-language.html)
-7. [Archive and Size Strategy](/slimshadys-arr-setup-guide/docs/chapter-06-archive-size.html)
-8. [Operations and Troubleshooting](/slimshadys-arr-setup-guide/docs/chapter-07-operations-troubleshooting.html)
-9. [Reference Appendix](/slimshadys-arr-setup-guide/docs/chapter-08-reference.html)
-10. [Codex-Assisted Setup and Downloads](/slimshadys-arr-setup-guide/docs/chapter-09-codex-assisted-setup.html)
+1. [Plex Ecosystem Guide](/slimshadys-arr-setup-guide/docs/plex-ecosystem-guide.html)
+2. [Quick Start Installation](/slimshadys-arr-setup-guide/docs/quick-start-installation.html)
+3. [Start Here](/slimshadys-arr-setup-guide/docs/chapter-01-start-here.html)
+4. [Base Setup Step by Step](/slimshadys-arr-setup-guide/docs/chapter-02-base-setup.html)
+5. [Download Pipeline and Daily Automation](/slimshadys-arr-setup-guide/docs/chapter-03-download-pipeline.html)
+6. [German-Friendly Setup](/slimshadys-arr-setup-guide/docs/chapter-04-german-friendly.html)
+7. [Multi-Language and Original-Language Setup](/slimshadys-arr-setup-guide/docs/chapter-05-multilanguage-original-language.html)
+8. [Archive and Size Strategy](/slimshadys-arr-setup-guide/docs/chapter-06-archive-size.html)
+9. [Operations and Troubleshooting](/slimshadys-arr-setup-guide/docs/chapter-07-operations-troubleshooting.html)
+10. [Reference Appendix](/slimshadys-arr-setup-guide/docs/chapter-08-reference.html)
+11. [Codex-Assisted Setup and Downloads](/slimshadys-arr-setup-guide/docs/chapter-09-codex-assisted-setup.html)

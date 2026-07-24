@@ -6,10 +6,11 @@
   <div class="home-hero-copy">
     <p class="home-kicker">How to completely automate your home media library with ARR and Plex</p>
     <h2>SlimShady's ARR Setup Guide</h2>
-    <p class="home-lede">Build a reliable home-media stack with <code>Sonarr</code>, <code>Radarr</code>, <code>Lidarr</code>, <code>SABnzbd</code>, <code>Jackett</code>, <code>Seerr</code>, and <code>Plex</code>, without letting automation turn your library into a noisy pile of half-matched downloads.</p>
+    <p class="home-lede">Build a reliable Plex ecosystem with <code>Sonarr</code>, <code>Radarr</code>, <code>Lidarr</code>, <code>SABnzbd</code>, <code>Jackett</code>, <code>Seerr</code>, storage, dashboards, request safety, playback sanity, and daily automation, without letting the stack turn your library into a noisy pile of half-matched downloads.</p>
     <p>This guide is written from the perspective of a Swiss movie aficionado: keep original versions and original audio where they matter, but make movies and series comfortable for family to watch in their native language.</p>
     <p><strong>Built from months of real-world setup work.</strong> This guide grew out of months of tuning, breaking, fixing, resetting, and rebuilding my own ARR and Plex stack. More recently I brought Codex into the process as a setup copilot: it helped me audit the messy parts, turn hard-earned lessons into cleaner rules, automate repeat checks, and rebuild the setup with much more confidence instead of starting from scratch blindly again.</p>
     <div class="home-hero-actions">
+      <a class="primary-link" href="/slimshadys-arr-setup-guide/docs/plex-ecosystem-guide.html">Explore Plex Ecosystem</a>
       <a class="primary-link" href="/slimshadys-arr-setup-guide/docs/quick-start-installation.html">Start Quick Setup</a>
       <a class="secondary-link" href="/slimshadys-arr-setup-guide/docs/chapter-01-start-here.html">Read Chapter 1</a>
       <a class="secondary-link" href="/slimshadys-arr-setup-guide/docs/index.html">Browse All Docs</a>
@@ -90,6 +91,11 @@
   <tbody>
     <tr>
       <td><code>2026-07-24</code></td>
+      <td><strong>Plex ecosystem map.</strong> Added the broader guide backbone covering server choices, storage, playback, metadata, users, dashboards, security, operations, and migration.</td>
+      <td><a href="/slimshadys-arr-setup-guide/docs/plex-ecosystem-guide.html">Plex ecosystem</a></td>
+    </tr>
+    <tr>
+      <td><code>2026-07-24</code></td>
       <td><strong>Quick Start setup path.</strong> Added concrete setup steps, customization warnings, collapsible explanations, and deployment choices for non-Windows or remote setups.</td>
       <td><a href="/slimshadys-arr-setup-guide/docs/quick-start-installation.html">Quick Start</a></td>
     </tr>
@@ -108,17 +114,19 @@
       <td><strong>AI setup copilot.</strong> Added a simple starter prompt for Codex or another on-machine AI to guide readers through the full ARR and Plex setup step by step.</td>
       <td><a href="/slimshadys-arr-setup-guide/docs/chapter-09-codex-assisted-setup.html">AI setup</a></td>
     </tr>
-    <tr>
-      <td><code>2026-07-22</code></td>
-      <td><strong>Feedback form.</strong> Added a public GitHub feedback form for questions, unclear sections, broken links, and project-related suggestions.</td>
-      <td><a href="https://github.com/Shadow2442/slimshadys-arr-setup-guide/issues/new/choose">Send feedback</a></td>
-    </tr>
   </tbody>
 </table>
 
 ## Chapter Index
 
 <div class="chapter-grid">
+  <a class="chapter-card" href="/slimshadys-arr-setup-guide/docs/plex-ecosystem-guide.html">
+    <span class="chapter-number">MAP</span>
+    <span class="chapter-label">Whole system</span>
+    <strong>Plex Ecosystem Guide</strong>
+    <span>The umbrella map for Plex server design, storage, ARR automation, requests, dashboards, metadata, playback, security, operations, and migration.</span>
+    <em>Open guide</em>
+  </a>
   <a class="chapter-card" href="/slimshadys-arr-setup-guide/docs/quick-start-installation.html">
     <span class="chapter-number">00</span>
     <span class="chapter-label">Quick path</span>

@@ -6,6 +6,7 @@ All notable guide updates for `SlimShady's ARR Setup Guide` are tracked here.
 
 ### Added
 
+- Added a Plex ecosystem guide backbone that broadens the site beyond ARR tuning into server choices, storage, playback, metadata, users, request flow, dashboards, security, operations, and migration.
 - Added a public-friendly Quick Start installation path before the deeper chapters.
 - Added copyable first-run setup steps, folder placeholders, safe initial profiles, verification checklists, and collapsible explanation/alternative blocks.
 - Added clearer guidance that paths, folder names, languages, quality goals, and deployment style must be customized instead of copied blindly.
@@ -15,6 +16,7 @@ All notable guide updates for `SlimShady's ARR Setup Guide` are tracked here.
 ### Changed
 
 - Updated the homepage, docs index, and README so new readers start with concrete setup steps before the long-form reasoning.
+- Updated the homepage, docs index, reference appendix, and README so the new Plex ecosystem map becomes the visible umbrella for the broader guide.
 - Updated the reference appendix so advanced deployment choices are separated from the beginner setup path.
 
 ## 2026-07-23

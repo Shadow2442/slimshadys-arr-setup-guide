@@ -1,12 +1,14 @@
 ﻿# SlimShady's ARR Setup Guide
 
-This is a practical chapter-based guide for setting up `Sonarr`, `Radarr`, `Lidarr`, `SABnzbd`, `Jackett`, `Seerr`, and `Plex` for a reliable home-media workflow without letting the system turn into a noisy pile of half-matched downloads.
+This is a practical chapter-based guide for building a complete Plex home-media ecosystem: Plex server design, storage layout, playback sanity, metadata hygiene, request safety, dashboards, `Sonarr`, `Radarr`, `Lidarr`, `SABnzbd`, `Jackett`, `Seerr`, language-aware automation, and daily maintenance without letting the system turn into a noisy pile of half-matched downloads.
 
 [Open the full website version](https://shadow2442.github.io/slimshadys-arr-setup-guide/)
 
 > On mobile GitHub, the GitHub Pages website link can be hidden or easy to miss. Use the link above if you landed on this README first.
 
 [Start with the Quick Start Installation path](docs/quick-start-installation.md)
+
+[Open the Plex Ecosystem Guide](docs/plex-ecosystem-guide.md)
 
 It is written from the perspective of a Swiss movie aficionado who wants to preserve original versions of films while also making movies and series comfortable for family to watch in their native language.
 
@@ -18,6 +20,7 @@ It focuses on:
 - `SABnzbd` for Usenet downloads
 - `Jackett` for optional torrent support
 - `Plex` for final library playback
+- server, storage, dashboard, user, metadata, and playback design
 - language-aware automation
 - file-size control
 - safe downgrade workflows
@@ -42,6 +45,7 @@ Sources:
 
 | Updated | What changed | Read it here |
 | --- | --- | --- |
+| `2026-07-24` | Added a Plex ecosystem map that broadens the guide beyond ARR into Plex server design, storage, playback, metadata, users, dashboards, security, operations, and migration. | [Plex Ecosystem Guide](docs/plex-ecosystem-guide.md) |
 | `2026-07-24` | Added a concrete Quick Start installation path plus expanded deployment choices for Windows 11 servers, Docker, hosted servers, WebDAV/cloud storage, dashboards, reverse proxies, and mounted storage. | [Quick Start Installation](docs/quick-start-installation.md) |
 | `2026-07-23` | Added a related-guides section that explains how this practical setup guide fits next to TRaSH Guides and PCJones' German Usenet guide. | [Reference Appendix](docs/chapter-08-reference.md) |
 | `2026-07-23` | Added a mobile readability pass and a clear website link near the top of the README for mobile GitHub visitors. | [Website](https://shadow2442.github.io/slimshadys-arr-setup-guide/) |
@@ -49,7 +53,6 @@ Sources:
 | `2026-07-22` | Added Codex-assisted setup material, a master prompt, downloadable templates, example automation scripts, and a package manifest. | [Codex-Assisted Setup](docs/chapter-09-codex-assisted-setup.md) |
 | `2026-07-22` | Added the current daily ARR release-ladder automation: English bridge behavior, German/Multi replacement rules, anime and Korean/Chinese fallback lanes, blocked-language cleanup, and final-state unmonitoring. | [Quality, Sizes, and Downgrades](docs/quality-sizing-and-downgrades.md) |
 | `2026-07-22` | Updated the `Sonarr` and `Radarr` profiles to document German `1080p` bridge releases, compact German final states, stricter language downgrade protection, and request-frontend safety. | [Sonarr Setup and Workflows](docs/sonarr-setup-and-workflows.md) |
-| `2026-07-22` | Added explicit `Seerr` request safety and updated `Jackett` health/recovery guidance for torrent fallback sources. | [Setup Checklist](docs/setup-checklist.md) |
 | `2026-07-22` | Added Jackett tracker recovery details for Cloudflare, rate limits, failed top-feed/no-query tests, and narrow ARR category mapping. | [Jackett Setup and Workflows](docs/jackett-setup-and-workflows.md) |
 
 ## Latest Language and Fallback Notes
