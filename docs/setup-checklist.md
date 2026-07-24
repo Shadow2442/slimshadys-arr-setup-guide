@@ -353,7 +353,21 @@ Useful prompts include:
 
 This guide can be used directly as the configuration reference for Codex.
 
-## 14. Where This Checklist Came From
+## 14. After The Core Works
+
+Once Plex playback, ARR imports, downloader categories, Seerr requests, and quality profiles are stable, decide whether any optional companion apps are actually useful.
+
+Good next additions:
+
+- a dashboard such as Homepage or Homarr if daily admin feels scattered
+- Bazarr if subtitles are missing or inconsistent
+- Tautulli if Plex playback and user activity need better visibility
+- Prowlarr if indexer management should move into a more ARR-native workflow
+- Kometa if Plex collections and metadata polish become a real goal
+
+Skip extra tools until the core setup behaves predictably. The optional-app roadmap is here: [Optional Companion Apps And Finishing Touches](/slimshadys-arr-setup-guide/docs/optional-companion-apps.html).
+
+## 15. Where This Checklist Came From
 
 This checklist is based on:
 
@@ -365,7 +379,7 @@ This checklist is based on:
 
 It was built from actual setup experience, with the support of `OpenAI Codex`, not just copied from generic default settings.
 
-## 15. If You Are Non-Technical
+## 16. If You Are Non-Technical
 
 That is fine.
 

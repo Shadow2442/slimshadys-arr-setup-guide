@@ -91,6 +91,11 @@
   <tbody>
     <tr>
       <td><code>2026-07-24</code></td>
+      <td><strong>Optional companion apps.</strong> Added a final roadmap for dashboards, Bazarr subtitles, Tautulli monitoring, Prowlarr, Recyclarr, Kometa, notifications, and what to skip until later.</td>
+      <td><a href="/slimshadys-arr-setup-guide/docs/optional-companion-apps.html">Companion apps</a></td>
+    </tr>
+    <tr>
+      <td><code>2026-07-24</code></td>
       <td><strong>Quality modes and AI guardrails.</strong> Added archive-first, availability-first, and cinema-first guidance, clearer bridge-vs-keeper storage rules, and stricter AI verification behavior.</td>
       <td><a href="/slimshadys-arr-setup-guide/docs/quality-sizing-and-downgrades.html">Quality modes</a></td>
     </tr>
@@ -108,11 +113,6 @@
       <td><code>2026-07-23</code></td>
       <td><strong>Related guide positioning.</strong> Added a clear explanation of how this practical setup guide relates to TRaSH Guides and PCJones' German Usenet guide.</td>
       <td><a href="/slimshadys-arr-setup-guide/docs/chapter-08-reference.html">Reference</a></td>
-    </tr>
-    <tr>
-      <td><code>2026-07-23</code></td>
-      <td><strong>Mobile readability pass.</strong> Added a simpler mobile layout for phones: tighter spacing, one-column cards, wrapped code blocks, and stacked tables.</td>
-      <td><a href="/slimshadys-arr-setup-guide/">Home</a></td>
     </tr>
   </tbody>
 </table>
@@ -197,6 +197,13 @@
     <span>Master prompt, safe templates, example scripts, package manifest, and fully guided setup order.</span>
     <em>Open chapter</em>
   </a>
+  <a class="chapter-card" href="/slimshadys-arr-setup-guide/docs/optional-companion-apps.html">
+    <span class="chapter-number">ADD</span>
+    <span class="chapter-label">Finishing layer</span>
+    <strong>Optional Companion Apps</strong>
+    <span>Dashboards, Bazarr subtitles, Tautulli monitoring, Prowlarr, Recyclarr, Kometa, health alerts, and tools to skip until later.</span>
+    <em>Open roadmap</em>
+  </a>
 </div>
 
 <details class="full-index-panel">
@@ -243,6 +250,7 @@
         <li><a href="/slimshadys-arr-setup-guide/docs/chapter-07-operations-troubleshooting.html">Chapter 7: Operations And Troubleshooting</a> - stuck queues, failed imports, bad files, Plex issues, and recovery flows.</li>
         <li><a href="/slimshadys-arr-setup-guide/docs/chapter-08-reference.html">Chapter 8: Reference Appendix</a> - specialist guide positioning, app references, and lookup links.</li>
         <li><a href="/slimshadys-arr-setup-guide/docs/chapter-09-codex-assisted-setup.html">Chapter 9: Codex-Assisted Setup And Downloads</a> - AI setup prompt, guardrails, templates, and example automation scripts.</li>
+        <li><a href="/slimshadys-arr-setup-guide/docs/optional-companion-apps.html">Optional Companion Apps And Finishing Touches</a> - dashboards, subtitles, monitoring, metadata polish, profile sync, notifications, and what to skip.</li>
         <li><a href="/slimshadys-arr-setup-guide/docs/deployment-options.html">Deployment Options</a> - Windows 11, Docker, hosted servers, reverse proxies, dashboards, WebDAV, cloud mounts, and storage roles.</li>
         <li><a href="/slimshadys-arr-setup-guide/docs/setup-checklist.html">Setup Checklist</a> - a practical checklist for install, configuration, testing, and handoff.</li>
         <li><a href="/slimshadys-arr-setup-guide/docs/downloads.html">Downloads And Templates</a> - safe public templates, example scripts, prompt files, and package notes.</li>

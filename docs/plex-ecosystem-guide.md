@@ -53,6 +53,7 @@
       <a class="reference-card" href="#request-flow-and-users"><strong>Requests</strong><span>Seerr, Plex Watchlist, auto-approval, auto-request safety, and user permissions.</span></a>
       <a class="reference-card" href="#metadata-and-library-hygiene"><strong>Metadata</strong><span>Naming, matching, splitting, posters, collections, trash, and scans.</span></a>
       <a class="reference-card" href="#dashboards-and-admin-surface"><strong>Dashboards</strong><span>Homepage, Homarr, Organizr, Dashy, Homer, and admin-only app grouping.</span></a>
+      <a class="reference-card" href="/slimshadys-arr-setup-guide/docs/optional-companion-apps.html"><strong>Companion apps</strong><span>Bazarr, Tautulli, Prowlarr, Recyclarr, Kometa, dashboards, and notification tools.</span></a>
     </div>
   </section>
 </div>
@@ -191,6 +192,8 @@ A dashboard is optional, but it helps once the stack has more than three moving 
 | Dashy, Homer, Heimdall | Simple launchpad-style pages. |
 | Reverse proxy start page | Useful for Docker/server setups, but keep sensitive tools behind auth and local access rules. |
 
+For a broader "what should I add next?" roadmap, see [Optional Companion Apps And Finishing Touches](/slimshadys-arr-setup-guide/docs/optional-companion-apps.html). It covers dashboards, Bazarr subtitles, Tautulli monitoring, Prowlarr, Recyclarr, Kometa, notifications, and what to skip until the core stack is stable.
+
 ## Security And Remote Access
 
 Keep the rule simple: Plex may be exposed intentionally; ARR, download clients, indexers, and admin dashboards should be private unless you really know what you are doing.
@@ -258,6 +261,7 @@ The north star: someone should be able to start with only a Windows PC or small 
 | German Usenet reference | [PCJones Usenet Guide](https://github.com/PCJones/usenet-guide) |
 | Cloud mount reference | [rclone Google Drive backend](https://rclone.org/drive/) |
 | Docker/server stack reference | [DockServer](https://github.com/dockserver/dockserver) |
+| Companion apps roadmap | [Optional Companion Apps](/slimshadys-arr-setup-guide/docs/optional-companion-apps.html) |
 
 <div class="chapter-next">
   <span>Continue</span>

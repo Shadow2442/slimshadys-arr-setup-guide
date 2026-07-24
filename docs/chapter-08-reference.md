@@ -40,6 +40,7 @@
       <a class="reference-card" href="/slimshadys-arr-setup-guide/docs/indexers-and-german-content.html"><strong>German Indexers</strong><span>Provider roles, scoring, quotas, and original-language lanes.</span></a>
       <a class="reference-card" href="/slimshadys-arr-setup-guide/docs/quality-sizing-and-downgrades.html"><strong>Quality and Sizes</strong><span>Release ladder, size caps, compact keepers, and cleanup.</span></a>
       <a class="reference-card" href="/slimshadys-arr-setup-guide/docs/deployment-options.html"><strong>Deployment Options</strong><span>Windows LAN, Docker, reverse proxy, dashboards, and mounted storage choices.</span></a>
+      <a class="reference-card" href="/slimshadys-arr-setup-guide/docs/optional-companion-apps.html"><strong>Companion Apps</strong><span>Dashboards, subtitles, monitoring, metadata polish, profile sync, and what to skip.</span></a>
       <a class="reference-card" href="/slimshadys-arr-setup-guide/docs/downloads.html"><strong>Downloads</strong><span>Templates, example scripts, master prompt, and package manifest.</span></a>
     </div>
   </section>
@@ -51,6 +52,7 @@
       <thead><tr><th>Date</th><th>Change</th></tr></thead>
       <tbody>
         <tr><td><code>2026-07-24</code></td><td>Added the Plex ecosystem map so readers can orient around server design, storage, playback, metadata, users, dashboards, security, operations, and migration before diving into ARR tuning.</td></tr>
+        <tr><td><code>2026-07-24</code></td><td>Added the optional companion-app roadmap for dashboards, subtitles, monitoring, metadata polish, profile sync, and notification tools.</td></tr>
         <tr><td><code>2026-07-22</code></td><td>Added the AI setup copilot prompt so readers can give Codex or another on-machine AI the guide URL and be walked through the full setup step by step.</td></tr>
         <tr><td><code>2026-07-22</code></td><td>Chapter structure, release ladder, Seerr safety, Jackett recovery, original-language lanes, archive targets, and bad-language cleanup.</td></tr>
         <tr><td><code>2026-06-06</code></td><td>German-friendly Sonarr and Radarr language profile policy.</td></tr>
@@ -88,6 +90,7 @@ Use this appendix when you already know the area of the problem:
 | File sizes and downgrade logic are unclear | Quality and size reference |
 | You want the whole Plex ecosystem map | Plex Ecosystem Guide |
 | Your setup uses Docker, reverse proxy, hosted servers, or mounted storage | Deployment options |
+| You want to know which optional apps are worth adding later | Optional companion apps |
 | You want Codex to help configure the stack | Chapter 9 and Downloads |
 
 ## Related Guides And What This One Adds

@@ -45,6 +45,7 @@ Sources:
 
 | Updated | What changed | Read it here |
 | --- | --- | --- |
+| `2026-07-24` | Added a final optional companion-app roadmap covering dashboards, Bazarr subtitles, Tautulli monitoring, Prowlarr, Recyclarr, Kometa, health notifications, and what to skip until later. | [Optional Companion Apps](docs/optional-companion-apps.md) |
 | `2026-07-24` | Added quality-mode guidance for archive-first, availability-first, and cinema-first setups, plus clearer bridge-vs-keeper storage rules and stricter AI verification guardrails. | [Quality, Sizes, and Downgrades](docs/quality-sizing-and-downgrades.md) |
 | `2026-07-24` | Added a Plex ecosystem map that broadens the guide beyond ARR into Plex server design, storage, playback, metadata, users, dashboards, security, operations, and migration. | [Plex Ecosystem Guide](docs/plex-ecosystem-guide.md) |
 | `2026-07-24` | Added a concrete Quick Start installation path plus expanded deployment choices for Windows 11 servers, Docker, hosted servers, WebDAV/cloud storage, dashboards, reverse proxies, and mounted storage. | [Quick Start Installation](docs/quick-start-installation.md) |
@@ -119,6 +120,7 @@ Optional but very useful additions:
 - `Lidarr` import lists for music-oriented sources like `Last.fm` and `Headphones`
 - `Jellyseerr`, `Overseerr`, or similar request and discovery frontends
 - `FlareSolverr` if some torrent sites behind `Jackett` need anti-bot handling
+- optional companion apps such as dashboards, `Bazarr`, `Tautulli`, `Prowlarr`, `Recyclarr`, and `Kometa` after the core stack is stable
 
 ## Download Links
 
@@ -141,6 +143,9 @@ Optional:
 | `OpenAI Codex` | Optional configuration assistant and implementation copilot | [Codex overview](https://openai.com/academy/codex/) |
 | `Jellyseerr` | Requests and discovery frontend | [GitHub](https://github.com/Fallenbagel/jellyseerr) |
 | `Prowlarr` | Central indexer management across ARR apps | [prowlarr.com](https://prowlarr.com/) |
+| `Bazarr` | Subtitle management for Sonarr/Radarr libraries | [bazarr.media](https://www.bazarr.media/) |
+| `Tautulli` | Plex monitoring, watch history, playback detail, and notifications | [tautulli.com](https://tautulli.com/) |
+| `Kometa` | Plex collections, playlists, overlays, and metadata polish | [kometa.wiki](https://kometa.wiki/) |
 
 ## How the Full Automation Flow Works
 
@@ -271,6 +276,7 @@ Recommended chapter path:
 - [Chapter 6: Archive and Size Strategy](docs/chapter-06-archive-size.md)
 - [Chapter 7: Operations and Troubleshooting](docs/chapter-07-operations-troubleshooting.md)
 - [Chapter 8: Reference Appendix](docs/chapter-08-reference.md)
+- [Optional Companion Apps and Finishing Touches](docs/optional-companion-apps.md)
 
 App and topic references:
 
@@ -285,6 +291,7 @@ App and topic references:
 - [Indexers and German Content Strategy](docs/indexers-and-german-content.md)
 - [Quality, Sizes, and Downgrades](docs/quality-sizing-and-downgrades.md)
 - [Deployment Options](docs/deployment-options.md)
+- [Optional Companion Apps](docs/optional-companion-apps.md)
 - request frontend safety is covered in this README and the setup checklist
 
 ## Recommended Reading Order
@@ -298,6 +305,7 @@ App and topic references:
 7. [Archive and Size Strategy](docs/chapter-06-archive-size.md)
 8. [Operations and Troubleshooting](docs/chapter-07-operations-troubleshooting.md)
 9. [Reference Appendix](docs/chapter-08-reference.md)
+10. [Optional Companion Apps and Finishing Touches](docs/optional-companion-apps.md)
 
 ## Core Principles
 

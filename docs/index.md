@@ -64,6 +64,10 @@
       <strong>9. Codex-Assisted Setup and Downloads</strong>
       <span>Master prompt, safe templates, example scripts, package manifest, and guided automation order.</span>
     </a>
+    <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/optional-companion-apps.html">
+      <strong>Optional Companion Apps</strong>
+      <span>Dashboards, Bazarr, Tautulli, Prowlarr, Recyclarr, Kometa, notifications, and what to skip until later.</span>
+    </a>
   </div>
 
   <div class="hub-section-title">App references</div>
@@ -91,6 +95,10 @@
     <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/plex-setup-and-workflows.html">
       <strong>Plex</strong>
       <span>Final library scanning, matching, splitting, trash behavior, and playback boundaries.</span>
+    </a>
+    <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/optional-companion-apps.html">
+      <strong>Companion Apps</strong>
+      <span>When to add Bazarr, Tautulli, Prowlarr, Recyclarr, Kometa, dashboards, and notifications.</span>
     </a>
   </div>
 
@@ -124,6 +132,10 @@
       <strong>Deployment Options</strong>
       <span>Simple Windows LAN, Docker, hosted servers, reverse proxies, dashboards, and mounted storage tradeoffs.</span>
     </a>
+    <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/optional-companion-apps.html">
+      <strong>Optional Companion Apps</strong>
+      <span>The final roadmap for subtitles, monitoring, dashboards, metadata polish, profile sync, and health notifications.</span>
+    </a>
     <a class="hub-link-card" href="/slimshadys-arr-setup-guide/docs/chapter-08-reference.html#related-guides-and-what-this-one-adds">
       <strong>Related Guides</strong>
       <span>Where TRaSH Guides, PCJones' German Usenet guide, and this end-to-end Plex/ARR setup guide each fit best.</span>
@@ -144,3 +156,4 @@
 9. [Operations and Troubleshooting](/slimshadys-arr-setup-guide/docs/chapter-07-operations-troubleshooting.html)
 10. [Reference Appendix](/slimshadys-arr-setup-guide/docs/chapter-08-reference.html)
 11. [Codex-Assisted Setup and Downloads](/slimshadys-arr-setup-guide/docs/chapter-09-codex-assisted-setup.html)
+12. [Optional Companion Apps And Finishing Touches](/slimshadys-arr-setup-guide/docs/optional-companion-apps.html)

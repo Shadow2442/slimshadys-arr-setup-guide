@@ -16,6 +16,7 @@ All notable guide updates for `SlimShady's ARR Setup Guide` are tracked here.
 - Added normal-profile guardrails for early capture markers such as `CAM`, `TS`, `HDTC`, `HDTS`, `MIC`, `MD`, and `LINE`.
 - Added keeper-vs-bridge storage guidance so temporary files, final library files, cloud mounts, and manual premium releases are handled differently.
 - Added AI guardrails that require inspection, summary, dry-run, backup, small batches, and verification before risky changes.
+- Added an optional companion-app roadmap covering Homepage, Homarr, Organizr, Bazarr, Tautulli, Prowlarr, Recyclarr, Kometa, uptime/notification tools, and advanced tools to skip until later.
 
 ### Changed
 

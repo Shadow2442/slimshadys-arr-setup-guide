@@ -83,6 +83,8 @@ A normal home setup does not need a full reverse proxy on day one, but it should
 
 Do not publish ARR apps directly without protection. If family users only need requests, expose Seerr or Plex, not every admin tool.
 
+For help choosing between dashboards and related finishing tools, use [Optional Companion Apps And Finishing Touches](/slimshadys-arr-setup-guide/docs/optional-companion-apps.html). The short version: bookmarks are fine for one admin, Homepage or Homarr are the friendliest dashboard upgrades, and Organizr is useful if you prefer a portal/tab style.
+
 ### Suggested Dashboard Layout
 
 Keep the dashboard simple. It should reduce tab chaos, not become another hobby project unless you want it to.
