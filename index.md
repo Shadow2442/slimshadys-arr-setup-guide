@@ -199,6 +199,59 @@
   </a>
 </div>
 
+<details class="full-index-panel">
+  <summary>
+    <span>Open full text index</span>
+    <small>All chapters, detail pages, downloads, and references in one compact list.</small>
+  </summary>
+  <div class="full-index-grid">
+    <section>
+      <h3>Core Setup Path</h3>
+      <ul>
+        <li><a href="/slimshadys-arr-setup-guide/docs/plex-ecosystem-guide.html">Plex Ecosystem Guide</a> - the whole-system map for Plex, ARR, requests, storage, playback, dashboards, security, and operations.</li>
+        <li><a href="/slimshadys-arr-setup-guide/docs/quick-start-installation.html">Quick Start Installation</a> - the first-run path for folders, apps, profiles, checks, and safe defaults.</li>
+        <li><a href="/slimshadys-arr-setup-guide/docs/chapter-01-start-here.html">Chapter 1: Start Here</a> - goals, legal context, architecture, and basic rules.</li>
+        <li><a href="/slimshadys-arr-setup-guide/docs/chapter-02-base-setup.html">Chapter 2: Base Setup Step by Step</a> - install order, folders, apps, categories, and request safety.</li>
+        <li><a href="/slimshadys-arr-setup-guide/docs/chapter-03-download-pipeline.html">Chapter 3: Download Pipeline and Daily Automation</a> - import lists, queues, scans, release-ladder logic, and daily checks.</li>
+      </ul>
+    </section>
+    <section>
+      <h3>Language And Quality</h3>
+      <ul>
+        <li><a href="/slimshadys-arr-setup-guide/docs/chapter-04-german-friendly.html">Chapter 4: German-Friendly Setup</a> - German/Multi preference, English bridge fallback, blocked markers, and indexer strategy.</li>
+        <li><a href="/slimshadys-arr-setup-guide/docs/chapter-05-multilanguage-original-language.html">Chapter 5: Multi-Language And Original-Language Setup</a> - original audio, subtitles, anime, Korean, Chinese, and scoped fallback lanes.</li>
+        <li><a href="/slimshadys-arr-setup-guide/docs/chapter-06-archive-size.html">Chapter 6: Archive And Size Strategy</a> - compact keepers, bridge files, size caps, codecs, and final-state unmonitoring.</li>
+        <li><a href="/slimshadys-arr-setup-guide/docs/quality-sizing-and-downgrades.html">Quality, Sizes, And Downgrades</a> - quality modes, release markers, size targets, downgrade guards, and storage sanity.</li>
+        <li><a href="/slimshadys-arr-setup-guide/docs/indexers-and-german-content.html">Indexers And German Content</a> - finding German/Multi releases and keeping misleading language tags out.</li>
+      </ul>
+    </section>
+    <section>
+      <h3>App Deep Dives</h3>
+      <ul>
+        <li><a href="/slimshadys-arr-setup-guide/docs/sonarr-setup-and-workflows.html">Sonarr Setup And Workflows</a> - series profiles, monitoring, imports, episode handling, and language replacement.</li>
+        <li><a href="/slimshadys-arr-setup-guide/docs/radarr-setup-and-workflows.html">Radarr Setup And Workflows</a> - movie profiles, compact targets, fallback behavior, and premium manual copies.</li>
+        <li><a href="/slimshadys-arr-setup-guide/docs/lidarr-setup-and-workflows.html">Lidarr Setup And Workflows</a> - music imports, album matching, metadata, and library cleanup.</li>
+        <li><a href="/slimshadys-arr-setup-guide/docs/sabnzbd-tuning-and-reliability.html">SABnzbd Tuning And Reliability</a> - categories, connection tuning, unpack behavior, queue health, and failure recovery.</li>
+        <li><a href="/slimshadys-arr-setup-guide/docs/jackett-setup-and-workflows.html">Jackett Setup And Workflows</a> - indexer setup, category mapping, failed searches, Cloudflare checks, and tracker recovery.</li>
+        <li><a href="/slimshadys-arr-setup-guide/docs/plex-setup-and-workflows.html">Plex Setup And Workflows</a> - libraries, matching, playback, users, scans, and server behavior.</li>
+        <li><a href="/slimshadys-arr-setup-guide/docs/mdblist-import-lists.html">MDBList Import Lists</a> - list import patterns, source filtering, and automation inputs.</li>
+      </ul>
+    </section>
+    <section>
+      <h3>Operations And Reference</h3>
+      <ul>
+        <li><a href="/slimshadys-arr-setup-guide/docs/chapter-07-operations-troubleshooting.html">Chapter 7: Operations And Troubleshooting</a> - stuck queues, failed imports, bad files, Plex issues, and recovery flows.</li>
+        <li><a href="/slimshadys-arr-setup-guide/docs/chapter-08-reference.html">Chapter 8: Reference Appendix</a> - specialist guide positioning, app references, and lookup links.</li>
+        <li><a href="/slimshadys-arr-setup-guide/docs/chapter-09-codex-assisted-setup.html">Chapter 9: Codex-Assisted Setup And Downloads</a> - AI setup prompt, guardrails, templates, and example automation scripts.</li>
+        <li><a href="/slimshadys-arr-setup-guide/docs/deployment-options.html">Deployment Options</a> - Windows 11, Docker, hosted servers, reverse proxies, dashboards, WebDAV, cloud mounts, and storage roles.</li>
+        <li><a href="/slimshadys-arr-setup-guide/docs/setup-checklist.html">Setup Checklist</a> - a practical checklist for install, configuration, testing, and handoff.</li>
+        <li><a href="/slimshadys-arr-setup-guide/docs/downloads.html">Downloads And Templates</a> - safe public templates, example scripts, prompt files, and package notes.</li>
+        <li><a href="/slimshadys-arr-setup-guide/docs/index.html">All Docs Page</a> - the normal documentation landing page.</li>
+      </ul>
+    </section>
+  </div>
+</details>
+
 ## Operating Model
 
 | Rule Area | Practical Rule | Why It Exists |
